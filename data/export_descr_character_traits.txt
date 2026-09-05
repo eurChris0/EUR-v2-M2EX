@@ -17409,7 +17409,7 @@ Trigger SupplyShip1
 
     Affects SuppliesAdded  2  Chance  100
     Affects Supplies  1  Chance  100
-    Affects Trait SuppliedBySea  1  Chance  100
+    Affects SuppliedBySea  1  Chance  100
 
 ;In a ship for 1 turn. Resupply 1/4
 ;------------------------------------------
@@ -17421,7 +17421,7 @@ Trigger SupplyShipReset
           and Trait SuppliedBySea > 0
 	and I_EventCounter supplies_eur = 1
 
-    Affects Trait SuppliedBySea  -1  Chance  100
+    Affects SuppliedBySea  -1  Chance  100
 
 ;keeps this trait set at 0 unless it fulfills trigger each turn
 ;------------------------------------------
