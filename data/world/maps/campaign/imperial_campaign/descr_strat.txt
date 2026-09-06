@@ -11930,44 +11930,6 @@ unit		Goblin Archers			exp 0 armour 0 weapon_lvl 0
 unit		Goblin Archers			exp 0 armour 0 weapon_lvl 0
 unit		Goblin Archers			exp 0 armour 0 weapon_lvl 0
 
-region Amon_Hen_Province
-farming_level 0
-famine_threat 0
-watchtower 301 249
-watchtower 293 251
-
-region Ghazabul_Province
-farming_level 0
-famine_threat 0
-watchtower 389 426
-watchtower 370 428
-watchtower 380 438
-
-region Luinond_Province
-farming_level 0
-famine_threat 0
-watchtower 27 417
-watchtower 20 403
-watchtower 31 402
-watchtower 42 402
-watchtower 43 414
-fort	43 420 elven_fort culture greek
-
-region Longbottom_Province
-farming_level 0
-famine_threat 0
-watchtower 146 374
-
-region Bar_Nirnaeth_Province
-farming_level 0
-famine_threat 0
-watchtower 361 237
-
-region Emyn_Nu_Fuin_Province
-farming_level 0
-famine_threat 0
-fort	329 392 elven_fort culture greek
-
 faction_standings	sicily,	0.80	denmark
 faction_standings	sicily,	1.00	turks
 faction_standings	sicily,	1.00	milan
@@ -12803,7 +12765,7 @@ faction_relationships 	england,	at_war_with 		sicily, slave
 ;Dol-Guldur		   
 faction_relationships 	poland,		at_war_with 		mongols, ireland, norway, timurids, slave
 faction_relationships	poland,     allied_to			papal_states
-faction_relationships	poland,		protectorate_of		england
+faction_relationships	poland,		allied_to		england
 
 ;Isengard
 faction_relationships 	france,		at_war_with 		slave
@@ -12812,12 +12774,12 @@ faction_relationships	france,		allied_to		aztecs
 ;Dunland
 faction_relationships 	aztecs,		at_war_with 		milan, slave
 faction_relationships	aztecs,		allied_to		hre
-faction_relationships	aztecs,		protectorate_of		france
+faction_relationships	aztecs,		allied_to		france
 
 ;Harad  
 faction_relationships 	spain,		at_war_with		sicily, slave
 faction_relationships	spain,		allied_to		khand
-faction_relationships	spain,		protectorate_of		england
+faction_relationships	spain,		allied_to		england
 
 ;Umbar
 faction_relationships 	russia,		at_war_with 		slave
@@ -12848,7 +12810,7 @@ faction_relationships	hungary, allied_to		moors, norway
 ;Khazad-dum
 faction_relationships 	norway, at_war_with 		slave, hre, poland
 faction_relationships	norway, allied_to			hungary
-faction_relationships	norway, protectorate_of		moors
+faction_relationships	norway, allied_to		moors
 
 ;Imladris
 faction_relationships 	saxons, at_war_with 		slave, portugal, hre
@@ -12887,12 +12849,12 @@ faction_relationships 	portugal, allied_to		   gundabad, hre
 ;Rhun
 faction_relationships 	venice, at_war_with 		slave, moors
 faction_relationships	venice, allied_to			khand
-faction_relationships	venice, protectorate_of		england
+faction_relationships	venice, allied_to		england
 
 ;Khand
 faction_relationships 	khand, at_war_with 			slave, sicily
 faction_relationships	khand, allied_to			spain, venice
-faction_relationships	khand, protectorate_of		england
+faction_relationships	khand, allied_to		england
 
 ;papal_states
 faction_relationships	papal_states, allied_to	england, poland
@@ -12924,6 +12886,44 @@ faction_relationships 	slave, at_war_with 			teutonic_order, aztecs, hre, poland
 ; amon_sul_fort culture eastern_european - (Weathertop/Amon Sul battlemap, has custom fort CSM)
 ; dunharrow_fort culture middle_eastern - (Dunharrow battlemap, uses encampement fort CSM)
 ; cirith_ungol_fort culture middle_eastern - (Cirith Ungol, uses encampement fort CSM)
+
+region Amon_Hen_Province
+farming_level 0
+famine_threat 0
+watchtower 301 249
+watchtower 293 251
+
+region Ghazabul_Province
+farming_level 0
+famine_threat 0
+watchtower 389 426
+watchtower 370 428
+watchtower 380 438
+
+region Luinond_Province
+farming_level 0
+famine_threat 0
+watchtower 27 417
+watchtower 20 403
+watchtower 31 402
+watchtower 42 402
+watchtower 43 414
+fort	43 420 elven_fort culture greek
+
+region Longbottom_Province
+farming_level 0
+famine_threat 0
+watchtower 146 374
+
+region Bar_Nirnaeth_Province
+farming_level 0
+famine_threat 0
+watchtower 361 237
+
+region Emyn_Nu_Fuin_Province
+farming_level 0
+famine_threat 0
+fort	329 392 elven_fort culture greek
 
 region Amon_Eithel_Province
 farming_level 0
