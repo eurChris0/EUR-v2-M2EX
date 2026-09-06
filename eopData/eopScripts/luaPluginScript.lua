@@ -5,11 +5,11 @@
 --local mobdebug = require "helpers/mobdebug"
 --mobdebug.start('127.0.0.1', 8818)
 
-to_log = true
+to_log = false
 collect_stats = false
 
 dev_enabled = false
-eur_main_scripts = true
+eur_main_scripts = false
 eur_overrides = true
 
 auto_turn = false
