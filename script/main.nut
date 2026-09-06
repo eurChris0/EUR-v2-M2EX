@@ -45,7 +45,7 @@ local MODULES = [
     "helper.eurUpgradeSave",
 
     "eur.dev.chrisDev",
-    "eur.dev.eurLayoutEditor",
+    //"eur.dev.eurLayoutEditor",
     "eur.chris_setts.chrisAddResBU",
     "helper.EopLuaHelpers",
     "eur.confed.eurRK",
