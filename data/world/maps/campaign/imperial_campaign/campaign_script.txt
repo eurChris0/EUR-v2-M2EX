@@ -3214,21 +3214,6 @@ end_monitor
         end_if
         if not I_IsFactionAIControlled khand
             historic_event khand_start factions { khand, }
-            if I_IsFactionAIControlled spain
-            and I_SettlementOwner Far_Harad = slave
-                set_event_counter garrison_skip 1
-                spawn_army
-                    faction spain
-                    character	random_name, named character, age 26, x 360, y 75, family, direction S, label harad_attackers_10
-                    traits		BadManRace 1, Haradrim 1, AIBoost 1, GoodAdministrator 1, GoodAttacker 1, GoodCommander 2, BattleChivalryEvil 2, LogisticalSkill 1, StrategyChivalryEvil 1, LoyaltyStarter 1, PietyStarter 1, Energetic 1
-                    unit		Black Snake Guard					exp 5 armour 0 weapon_lvl 0				
-                    unit		Southron Warband			exp 2 armour 0 weapon_lvl 0
-                    unit		Haradrim Archers			exp 2 armour 0 weapon_lvl 0					
-                end
-                set_event_counter garrison_skip 0
-                console_command auto_win attacker
-                siege_settlement harad_attackers_10, Far_Harad, attack	
-            end_if
         end_if
         if not I_IsFactionAIControlled milan		
             historic_event rohan_start factions { milan, }
