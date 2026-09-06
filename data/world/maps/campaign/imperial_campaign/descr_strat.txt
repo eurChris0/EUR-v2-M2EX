@@ -1233,7 +1233,7 @@ resource	timber,		334,	222	;East Osgiliath
 ;###########################
 
 faction	sicily, trader caesar
-ai_label dunedain
+ai_label default
 denari			13000
 denari_kings_purse	0
 
@@ -1993,7 +1993,7 @@ settlement
 	region Amon_Hen_Province
 
 	year_founded 0
-	population 115
+	population 1200
 	plan_set default_set
 	faction_creator sicily
 
@@ -2003,7 +2003,7 @@ settlement
 	}
 	building
 	{
-		type core_building wooden_wall
+		type core_building wooden_pallisade
 	}
 	building
 	{
@@ -2051,7 +2051,7 @@ settlement
 	}
 	building
 	{
-		type core_building wooden_pallisade
+		type core_building stone_wall
 	}
 	building
 	{
@@ -2060,10 +2060,6 @@ settlement
 	building
 	{
 		type hinterland_mines mines
-	}
-	building
-	{
-		type port elf_haven
 	}
 }
 
@@ -2336,7 +2332,7 @@ relative		Hirluin, Mithel, Brandir, end
 ;##### Faction: LINDON #####
 ;###############################
 faction	denmark, comfortable guy
-ai_label dunedain
+ai_label default
 denari			18000
 denari_kings_purse	1500
 
@@ -2499,7 +2495,8 @@ unit		Elven Boat				exp 2 armour 0 weapon_lvl 0
 
 character_record	Gwestiel, female, age 38, dead 30, never_a_leader
 character_record	Findemaxa, female, age 17, alive 3, never_a_leader
-character_record	Falathiel, female, age 17, alive, never_a_leader
+; Disconnected duplicate; Falathiel is defined in Imladris below.
+;character_record	Falathiel, female, age 17, alive, never_a_leader
 character_record	Haldaraina, female, age 16, alive, never_a_leader
 character_record	Taurion, male, age 2, alive, never_a_leader
 character_record	Maidhion, male, age 1, alive, never_a_leader
@@ -2515,7 +2512,7 @@ relative 		Galdor, Haldaraina, Hirgon, end
 ;##########################
 
 faction	milan, comfortable subotai
-ai_label rohan
+ai_label default
 denari			10000
 denari_kings_purse	1500
 
@@ -2896,7 +2893,7 @@ relative 		Eomund, Theodwyn, Eomer, Eowyn, end
 ;#######################################
 
 faction	normans,  craftsman caesar
-ai_label goblins
+ai_label default
 denari			8500
 denari_kings_purse	2000
 
@@ -2992,7 +2989,7 @@ unit		Blue Crag Blunt 			exp 1 armour 0 weapon_lvl 0
 ;#############################
 
 faction	turks, comfortable henry
-ai_label arnor
+ai_label default
 denari			14000
 denari_kings_purse	2500
 
@@ -3439,7 +3436,7 @@ relative 		Halbarad, Darla, end
 ;#########################
 
 faction	scotland, comfortable doge
-ai_label dale
+ai_label default
 denari			8000
 denari_kings_purse	1500
 
@@ -3661,7 +3658,7 @@ relative 		Halward, Mathilda, Biarn, end
 ;###################################
 
 faction	timurids, comfortable knud
-ai_label anduin
+ai_label default
 denari			14000
 denari_kings_purse	1500
 
@@ -3978,7 +3975,7 @@ unit		Beorning Shapeshifters					exp 2 armour 0 weapon_lvl 0
 unit		Woodman Warriors					exp 1 armour 1 weapon_lvl 0   				
 unit		Woodman Warriors					exp 1 armour 1 weapon_lvl 0  
 
-character	Radagast, named character, male, age 25, x 282, y 352, portrait Radagast, battle_model radagast, hero_ability BEORN, label radagast 1
+character	Radagast, named character, male, age 25, x 282, y 352, portrait Radagast, battle_model radagast, hero_ability BEORN, label radagast_1
 traits      Radagast 1, Hero 1, MaiaRace 1, Brave 2, GoodAttacker 2, GoodCommander 4, InspiringSpeaker 1, Intelligent 1, Just 2, Loyal 2, LoyaltyStarter 1, PietyStarter 1, StrategyChivalryGood 2, NaturalMilitarySkill 1, NaturalManagementSkill 1
 ancillaries	radagast_staff, radagast_bird, radagast_herbs
 army
@@ -4051,7 +4048,7 @@ relative 		Gleowine, Nienor, end
 ;##############################
 
 faction	byzantium, trader heinrich
-ai_label dale
+ai_label default
 denari			12500
 denari_kings_purse	0
 
@@ -4245,7 +4242,7 @@ relative 		Forthwin, Asta, Froedhir, Arva, end
 ;###########################
 
 faction	moors, craftsman roger
-ai_label dwarves
+ai_label default
 denari			16000
 denari_kings_purse	2000
 
@@ -4353,7 +4350,7 @@ settlement
 	}
 	building
 	{
-		type core_building wooden_wall
+		type core_building wooden_pallisade
 	}
 }
 
@@ -4436,7 +4433,7 @@ relative		Gloin, Lokk, Gimli, end
 ;##############################
 
 faction	hungary, craftsman richard
-ai_label dwarves
+ai_label default
 denari			8500
 denari_kings_purse	1000
 
@@ -4586,7 +4583,7 @@ relative		Gor, Drumba, Grain, Nar, end
 ;###############################
 
 faction	norway, craftsman roger
-ai_label dwarves
+ai_label default
 denari			5000
 denari_kings_purse	0
 
@@ -4664,7 +4661,7 @@ relative		Balin, Amma, end
 ;###########################
 
 faction	saxons, comfortable guy
-ai_label elves
+ai_label default
 denari			13000
 denari_kings_purse	2500
 
@@ -4774,7 +4771,7 @@ unit		Bow Quendi				exp 1 armour 1 weapon_lvl 0
 unit		Bow Quendi				exp 1 armour 1 weapon_lvl 0
 unit		Amanyar Swordmasters		exp 1 armour 0 weapon_lvl 0
 
-character	Elladan, named character, male, heir, age 18, x 242, y 378, portrait Elladan, battle_model twins_elladan, hero_ability Light_of_the_Faith, label elladan_1
+character	Elladan, named character, male, age 18, x 242, y 378, portrait Elladan, battle_model twins_elladan, hero_ability Light_of_the_Faith, label elladan_1
 traits		Elladan 1, CustomBG 1, Hero 1, ElvenRace 1, Noldor 1, HouseElrond 1, FactionHeirCustom 1, Handsome 1, HeroAbilityElf 1, Brave 2, RenownLegacy 2, GoodAmbusher 1, GoodCommander 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1, RangerExperience 1, DespisesOrcs 1,
 ancillaries	light_earendil, noldor_shield
 army
@@ -4826,7 +4823,7 @@ relative 		Gildor, Almarea, Rochendil, end
 
 
 faction    egypt, comfortable guy
-ai_label elves
+ai_label default
 dead_until_resurrected
 denari                12000
 denari_kings_purse    3000
@@ -4869,7 +4866,7 @@ denari_kings_purse    3000
 ;###############################
 
 faction	ireland, comfortable wyvadslaw
-ai_label elves
+ai_label default
 denari			8500
 denari_kings_purse	1250
 
@@ -4969,7 +4966,7 @@ settlement
 	}
 }
 
-settlement
+settlement castle
 {
 	level town
 	region Cerin_Amroth_Province
@@ -5041,7 +5038,7 @@ relative		Haldir, Calmiriel, end
 ;######################################
 
 faction	mongols, comfortable arslan
-ai_label elves
+ai_label default
 denari			9000
 denari_kings_purse	1250
 
@@ -5175,7 +5172,7 @@ relative		Thranduil, Meldiriel, Legolas, Caladwen, end
 ;##############################
 
 faction	teutonic_order, comfortable knud
-ai_label enedwaith
+ai_label default
 denari			7000
 denari_kings_purse	1000
 
@@ -5268,7 +5265,7 @@ relative		Tremac, Marhere, Donnchaidh, end
 ;#########################
 
 faction	venice, trader doge
-ai_label evil_men
+ai_label default
 denari			14000
 denari_kings_purse	2500
 
@@ -5387,7 +5384,7 @@ relative 		Amdur, Kuzu, Mukhalkhu, Marwan, Mufarrij, Mahtab, end
 ;###########################
 
 faction	england, religious heinrich
-ai_label orcs
+ai_label default
 denari			10000
 denari_kings_purse	1500
 
@@ -5720,7 +5717,7 @@ settlement castle
 	}
 }
 
-settlement
+settlement castle
 {
 	level large_city
 	region Cirith_Ungol_Province
@@ -5766,7 +5763,7 @@ settlement
 	region Yrch_Estolad_Province
 
 	year_founded 0
-	population 1610
+	population 300
 	plan_set default_set
 	faction_creator england
 
@@ -5824,7 +5821,7 @@ settlement
 	}
 }
 
-character	Sauron, named character, male, leader, x 505, y 480, portrait sauron, battle_model sauron_general, hero_ability SAURON, label sauron_1
+character	Sauron, named character, male, leader, x 507, y 480, portrait sauron, battle_model sauron_general, hero_ability SAURON, label sauron_1
 traits		Sauron 1, CustomBG 1, Hero 1, MaiaRace 1, FactionLeaderCustom 1, HeroAbilitySauron 1, FearGeneral 1, BattleFear 6, DeceiverVirtue 3, GoodAttacker 4, GoodDefender 3, GoodCommander 4, HaleAndHearty 3, NightBattleCapable 1, InspiringSpeaker 3, Brave 4, SauronEpithet 1
 ancillaries	king_mordor, sauron_mace
 army
@@ -5968,7 +5965,7 @@ unit		Orc Host			exp 0 armour 0 weapon_lvl 0
 unit		Orc Archers			exp 0 armour 0 weapon_lvl 0
 
 faction	poland, religious saladin
-ai_label orcs
+ai_label default
 denari			15000
 denari_kings_purse	2500
 
@@ -6113,7 +6110,7 @@ relative 		Nazguld, Urd, Nazgule, Nazgulf, Ulairon, end
 ;#############################
 
 faction	france, religious doge
-ai_label isengard
+ai_label default
 denari			10000
 denari_kings_purse	2250
 
@@ -6189,7 +6186,7 @@ ancillaries	grima_dagger, crebain_grima, grima_horse
 ;############################
 
 faction	aztecs, comfortable doge
-ai_label dunland
+ai_label default
 denari			9000
 denari_kings_purse	1400
 
@@ -6363,7 +6360,7 @@ relative		Menthar, Guhiel, end
 ;##########################
 
 faction	hre, craftsman caesar
-ai_label goblins
+ai_label default
 denari			8500
 denari_kings_purse	1500
 
@@ -6570,7 +6567,7 @@ relative		Agorolg, Grurd, Athrug, end
 ;##########################
 
 faction	gundabad, fortified robert
-ai_label goblins
+ai_label default
 denari			13000
 denari_kings_purse	2500
 
@@ -6685,7 +6682,7 @@ relative		Ghurzog, Huskashla, end
 ;###########################
 
 faction	portugal, craftsman wyvadslaw
-ai_label angmar
+ai_label default
 denari			12000
 denari_kings_purse	2000
 
@@ -6872,7 +6869,7 @@ relative 		Morholt, Signy, end
 ;##########################
 
 faction	spain, comfortable tzar
-ai_label evil_men
+ai_label default
 denari			6500
 denari_kings_purse	2100
 
@@ -6986,7 +6983,7 @@ relative		Utbah, Suhayr, Peshtin, Tamruben, Ramlah, end
 ;##########################
 
 faction	khand, trader subotai
-ai_label khand
+ai_label default
 denari			4500
 denari_kings_purse	1000
 
@@ -7229,7 +7226,7 @@ relative 		Toghrul, Ovaisa, Shahriyar, end
 ;##########################
 
 faction	russia, sailor roger
-ai_label dark_numenoreans
+ai_label default
 re_emergent
 denari			8000
 denari_kings_purse	1000
@@ -10180,7 +10177,7 @@ settlement
 	}
 	building
 	{
-		type core_building wooden_wall
+		type core_building wooden_pallisade
 	}
 	building
 	{
@@ -10209,10 +10206,6 @@ settlement
 	building
 	{
 		type core_building wooden_wall
-	}
-	building
-	{
-		type port port
 	}
 	building
 	{
@@ -10248,7 +10241,7 @@ settlement
 	}
 	building
 	{
-		type core_building wooden_wall
+		type core_building wooden_pallisade
 	}
 }
 
@@ -10284,7 +10277,7 @@ settlement
 	}
 }
 
-settlement
+settlement castle
 {
 	level town
 	region Caras_Gelebren_Province
@@ -10342,7 +10335,7 @@ unit		Hasharii Shadows				    exp 2 armour 0 weapon_lvl 0
 unit		Hasharii Blades				    exp 2 armour 0 weapon_lvl 0
 unit		Southron Warband			exp 2 armour 0 weapon_lvl 0
 
-character	sub_faction portugal, Hunvorn, named character, general, male, age 39, x 181, y 364, portrait wight, battle_model barrow_wight_king ;Mangelen
+character	sub_faction portugal, Hunvorn, named character, male, age 39, x 181, y 364, portrait wight, battle_model barrow_wight_king ;Mangelen
 army
 unit		Rebel Barrow Wights     			exp 2 armour 0 weapon_lvl 1
 unit		Rebel Barrow Wights     			exp 1 armour 0 weapon_lvl 0
@@ -10429,7 +10422,7 @@ unit		Loke-Rim Spearmen						exp 1 armour 0 weapon_lvl 0
 unit		Loke-Rim Archers						exp 1 armour 0 weapon_lvl 0
 unit		Variag Swordsmen						exp 1 armour 0 weapon_lvl 0
 
-character	sub_faction venice, Maltok, named character, male, age 29, x 378, y 256, battle_model khand_general; Varfest_Province Army
+character	sub_faction venice, Maltok, named character, male, age 29, x 378, y 256, battle_model khand_general ; Varfest_Province Army
 traits		BadManRace 1, VariagTribe 1, AridWarrior 1, GoodDefender 1, GoodCommander 3, Just 1, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1, GoodCavalryGeneral 1, Energetic 1
 ancillaries	steppe_horse
 army
@@ -10440,7 +10433,7 @@ unit		Khamuls Shadow Rangers			exp 1 armour 0 weapon_lvl 0
 unit		Khamuls Shadow Rangers					exp 1 armour 0 weapon_lvl 0
 unit		Khamuls Shadow Rangers				exp 0 armour 0 weapon_lvl 0
 
-character	sub_faction venice, Kutula, named character, male, age 29, x 378, y 255, battle_model khand_general; Varfest
+character	sub_faction venice, Kutula, named character, male, age 29, x 378, y 255, battle_model khand_general ; Varfest
 traits		BadManRace 1, VariagTribe 1, AridWarrior 1, GoodDefender 1, GoodCommander 4, Just 1, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1, GoodCavalryGeneral 1, Energetic 1
 ancillaries	steppe_horse
 army
@@ -11066,7 +11059,7 @@ unit		Black Pit Archers			exp 2 armour 1 weapon_lvl 0
 unit		Goblin Band				exp 2 armour 0 weapon_lvl 0
 unit		Goblin Band				exp 2 armour 0 weapon_lvl 0
 
-character	sub_faction hre, Kothug, named character, general, male, age 39, x 159, y 406, portrait wight, battle_model barrow_wight_king ;fornost
+character	sub_faction hre, Kothug, named character, male, age 39, x 159, y 406, portrait wight, battle_model barrow_wight_king ;fornost
 traits		WraithRace 1, FearGeneral 1, BattleFear 1 
 army
 unit		Rebel Barrow Wights			exp 2 armour 1 weapon_lvl 0
@@ -11936,6 +11929,44 @@ unit		Goblin Band			exp 0 armour 0 weapon_lvl 0
 unit		Goblin Archers			exp 0 armour 0 weapon_lvl 0
 unit		Goblin Archers			exp 0 armour 0 weapon_lvl 0
 unit		Goblin Archers			exp 0 armour 0 weapon_lvl 0
+
+region Amon_Hen_Province
+farming_level 0
+famine_threat 0
+watchtower 301 249
+watchtower 293 251
+
+region Ghazabul_Province
+farming_level 0
+famine_threat 0
+watchtower 389 426
+watchtower 370 428
+watchtower 380 438
+
+region Luinond_Province
+farming_level 0
+famine_threat 0
+watchtower 27 417
+watchtower 20 403
+watchtower 31 402
+watchtower 42 402
+watchtower 43 414
+fort	43 420 elven_fort culture greek
+
+region Longbottom_Province
+farming_level 0
+famine_threat 0
+watchtower 146 374
+
+region Bar_Nirnaeth_Province
+farming_level 0
+famine_threat 0
+watchtower 361 237
+
+region Emyn_Nu_Fuin_Province
+farming_level 0
+famine_threat 0
+fort	329 392 elven_fort culture greek
 
 faction_standings	sicily,	0.80	denmark
 faction_standings	sicily,	1.00	turks
@@ -12923,8 +12954,6 @@ farming_level 0
 famine_threat 0
 watchtower 309 237
 watchtower 293 241
-watchtower 301 249
-watchtower 293 251
 fort 	288 228 gondor_fort culture gondor
 fort 	322 230 gondor_fort culture gondor
 
@@ -13041,13 +13070,10 @@ fort	343 431 dwarven_fort culture southern_european
 region Iron_Hills_Province ;Kirikhgathol
 farming_level 0
 famine_threat 0
-watchtower 389 426
 watchtower 409 431
-watchtower 370 428
 watchtower 437 413
 watchtower 442 423
 watchtower 423 425
-watchtower 380 438
 
 region Near_Rhun_Province;OrocarniS
 farming_level 0
@@ -13386,20 +13412,14 @@ watchtower 54 418
 watchtower 58 430
 watchtower 49 431
 watchtower 36 425
-watchtower 27 417
 watchtower 19 416
-watchtower 20 403
 watchtower 20 390
 watchtower 27 380
 watchtower 31 391
-watchtower 31 402
-watchtower 42 402
-watchtower 43 414
 watchtower 21 446
 watchtower 11 445
 watchtower 15 456
 watchtower 27 446
-fort	43 420 elven_fort culture greek
 
 region Mithlond_Province
 farming_level 0
@@ -13481,7 +13501,6 @@ fort 	294 416 elven_fort culture greek
 region Central_Mirkwood_Province ;Eryn Dholen
 farming_level 0
 famine_threat 0
-fort	329 392 elven_fort culture greek
 
 region Middle_Mirkwood_Province ;Enethaur
 farming_level 0
@@ -13582,7 +13601,6 @@ fort 	174 339 gondor_fort culture gondor
 region Shire_West_Province
 farming_level 0
 famine_threat 0
-watchtower 146 374
 
 region High_Pass_Province
 farming_level 0
@@ -13815,7 +13833,6 @@ famine_threat 0
 region Gorgoroth_Province
 farming_level 0
 famine_threat 0
-watchtower 361 237
 
 ;###################
 ;##### Scripts #####

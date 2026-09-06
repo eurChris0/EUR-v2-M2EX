@@ -1,5 +1,5 @@
 22 serialization::archive 3 0 0 0 0 1617 0 0
-5 blank 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+5 blank 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 14 MTW2_Swordsman 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 19 ghash_overseer_upg0
 1 1
 50 unit_models/_Units/mordor/ghash_overseer_upg0.mesh 14000
@@ -95930,24 +95930,14 @@
 5 milan
 67 unit_models/_Units/eregion/textures/heavenly_officer_attach.texture
 61 unit_models/_Units/eregion/textures/template_att_norm.texture 0
-4
+2
 4 none
 16 MTW2_2HSwordsman 0
 1
 24 MTW2_2HSwordsman_Primary
 0 
-5 horse
-25 MTW2_HR_Non_Shield_nostun 0
-1
-18 MTW2_Sword_Primary
-0 
 8 elephant
 18 MTW2_Elephant_Crew 0
-1
-18 MTW2_Sword_Primary
-0 
-5 camel
-25 MTW2_HR_Non_Shield_nostun 0
 1
 18 MTW2_Sword_Primary
 0 -1 0 0 0 0 0 0
@@ -96388,24 +96378,14 @@
 5 milan
 60 unit_models/_Units/eregion/textures/ecthelion_attach.texture
 61 unit_models/_Units/eregion/textures/template_att_norm.texture 0
-4
+2
 4 none
 16 MTW2_2HSwordsman 0
 1
 24 MTW2_2HSwordsman_Primary
 0 
-5 horse
-25 MTW2_HR_Non_Shield_nostun 0
-1
-18 MTW2_Sword_Primary
-0 
 8 elephant
 18 MTW2_Elephant_Crew 0
-1
-18 MTW2_Sword_Primary
-0 
-5 camel
-25 MTW2_HR_Non_Shield_nostun 0
 1
 18 MTW2_Sword_Primary
 0 -1 0 0 0 0 0 0

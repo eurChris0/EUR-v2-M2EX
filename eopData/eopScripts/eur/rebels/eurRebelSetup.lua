@@ -22,7 +22,7 @@ local BANNERS = {
     "banner_symbol_papacy.tga",
     "banner_symbol_poland.tga",
     "banner_symbol_portugal.tga",
-    "#banner_symbol_rebels.tga",
+    "banner_symbol_rebels.tga",
     "banner_symbol_russia.tga",
     "banner_symbol_saxons.tga",
     "banner_symbol_scotland.tga",

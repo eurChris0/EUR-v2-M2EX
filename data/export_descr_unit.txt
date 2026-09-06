@@ -4947,7 +4947,7 @@ stat_food               60, 300
 stat_cost			1, 250, 100, 75, 75, 250, 4, 36
 armour_ug_levels        1, 2
 armour_ug_models        militia, militia_upg
-ownership               milan, slave, russia, turks
+ownership               milan, slave, russia, turks, scotland
 era 0                   milan
 era 1                   milan
 era 2                   milan
