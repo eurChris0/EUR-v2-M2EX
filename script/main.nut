@@ -98,6 +98,7 @@ local MODULES = [
     "eur.spoils.eurAltLoot",
     "eur.campaign.eurAddCustomBGUnits",
     "eur.campaign.eurDifficulty",
+    "eur.campaign.eurForeverWars",
     "eur.campaign.eurCustomGenerals",
     "eur.campaign.eurEvolvingFactions",
     "eur.battle.eursetBattleMapPKG",
@@ -108,6 +109,8 @@ local MODULES = [
     "eur.campaign.eurReviveFactions",
     "eur.campaign.eurBuildFort",
     "eur.campaign.eurStatusIcons",
+
+    // Native battle-AI integration and related campaign behavior.
     "eur.battle.eurBattleAI",
 
     "eur.helmsbrick.eurHelmsBrick",
@@ -126,6 +129,7 @@ local MODULES = [
     "eur.garrisons.eurGarrisonsList",
     "eur.garrisons.eurGarrisons",
 
+    // Event-trigger helpers used by campaign systems, including AI inputs.
     "helper.eurCampaignTriggers",
     "helper.eurBattleTriggers",
     "helper.eurCharacterTriggers",
@@ -134,8 +138,8 @@ local MODULES = [
     "helper.eurCounterTriggers",
     "helper.eurOtherTriggers",
 
-    "eur_ai.strategy",
-    "eur_ai.snapshot",
+    // Historical EUR campaign-AI rule program. Registers the Squirrel LTGD hook.
+    "eur_ai.main",
 ]
 
 // Plugin-script binding-form requires (eurHelmsBrick = require(...), eurMerge = ..., etc.) that

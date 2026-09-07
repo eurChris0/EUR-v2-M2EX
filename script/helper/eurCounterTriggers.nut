@@ -2,6 +2,9 @@ if (::EUR.EUR_EVENT_TRIGGERS.counter) {
 
     ::events.on("EventCounter", function(eventData) {
         ::EUR.logHelper("onEventCounter")
+        if (::EUR.foreverWarUsesCounter(eventData.eventCounter)) {
+            ::EUR.applyForeverWars(::game.campaign())
+        }
         if (eventData.eventCounter == "elven_union") {
             ::EUR.removeAiGarrison(::EUR.eur_player_faction, false)
             ::EUR.eurElvenUnion.fixWoodElvesUnion()

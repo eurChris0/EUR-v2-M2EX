@@ -18,7 +18,13 @@
     ::EUR.repaintStyles()
 
     local campaign = ::game.campaign()
-    if (campaign != null) { campaign.setEventCounter("mithlond_controlled", 1) }
+    if (campaign != null) {
+        // Reconcile the table on load so older saves gain its current rules and transitions.
+        if (!::EUR.applyForeverWars(campaign)) {
+            println("eur: failed to apply one or more forever-war rules")
+        }
+        campaign.setEventCounter("mithlond_controlled", 1)
+    }
 
     ::game.campaign().setEventCounter("mithlond_controlled", 1)
     ::EUR.startLog(::game.modPath())
