@@ -18,6 +18,8 @@
     function() { ::EUR.eurGlobalRecruitment.scroll = null },
     function() { ::EUR.eurReviveUI.built = false },
     function() { ::EUR.eurEregion.built = false },
+    function() { ::EUR.eurBuildFort.built = false },
+    function() { ::EUR.eurStatusIcons.built = false },
 ]
 
 ::EUR.recalibrate <- function() {

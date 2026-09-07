@@ -106,6 +106,13 @@ class eurScroll {
         local hit = ::UI.imageButton(seal.img, width, height, x, y)
         ::UI.popHitMode()
 
+        // Per-window, not for every scroll: a caller that wants one sets scroll.closeTip after
+        // create(). Absent by default, so no other window grows a tooltip it never had.
+        if (("closeTip" in scroll) && scroll.closeTip != null) {
+            ::UI.tooltipAt(x, y, width, height)
+            ::UI.tooltip(0, scroll.closeTip)
+        }
+
         if (hit.hovered) {
             local sink = hit.held ? ::UI.getStyle(::UI.Metric.pressOffset) : 0
             local dx = sink, dy = sink

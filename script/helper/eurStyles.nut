@@ -248,6 +248,8 @@ local function metricSheet(rows) {
     },
 
     fort_button = {
+        [::UI.Cap.autoScalePos]       = 1,
+        [::UI.Cap.autoScaleDraw]      = 1,
         [::UI.Metric.fontSize]        = 12,
         [::UI.Metric.gap]             = 1,
         [::UI.Metric.indent]          = 0,
@@ -359,7 +361,7 @@ local TOOLTIP_TOKENS = [
     [::UI.Colour,  "tooltipBorder", [255, 245, 139, 255]],
     [::UI.Surface, "tooltip",       [0, 0, 0, 127]],
     [::UI.Metric,  "tooltipPadX",   4],
-    [::UI.Metric,  "tooltipPadY",   4],
+    [::UI.Metric,  "tooltipPadY",   2],
     [::UI.Metric,  "roundTooltip",  0],
     [::UI.Metric,  "borderTooltip", 2],
     [::UI.Metric,  "tooltipOffX",   24],

@@ -35,6 +35,7 @@ class eurGlobalRecruitment {
         notifLit = [255, 255, 255, 13], notifDim = [0, 0, 0, 140],
         notifHoverLift = 20, notifHeldLift = 40,
 
+        tipRowCount = 32,
         queueLabelGapY = 10, queueLabelRowH = 22,
         queueCardW = 64, queueCardH = 64, queueCardGapX = 0, queueCardGapY = 0, queueRowGapY = 10,
         queueTint = [255, 255, 255, 26],
@@ -53,6 +54,8 @@ class eurGlobalRecruitment {
     }
 
     scroll = null
+    tipBody = 0
+    tipRows = null
     canvas = 0
     buttonCanvas = 0
     sortAzCheck = 0
@@ -624,12 +627,14 @@ class eurGlobalRecruitment {
         this.scroll = ::EUR.scroll.create(this.layout.windowW, this.layout.windowH, 0, 0, function() {
             ::EUR.window_states.show_globalrecruit_window = false
         })
+        this.scroll.closeTip <- "Close this scroll"
         this.canvas = ::UI.canvas(0, 0)
         ::UI.placeAbsolute(this.canvas)
         ::UI.canvasDraw(this.canvas, function() { self.drawWindow() })
 
         this.sortAzCheck = ::UI.checkbox("A-Z")
         ::UI.placeAbsolute(this.sortAzCheck)
+        ::UI.tooltip(this.sortAzCheck, "Sort settlements in the UI alphabetically.")
         ::UI.checkboxChange(this.sortAzCheck, function(value) {
             ::EUR.game_options.global_sort_aphabetically = (value != 0)
             if (value != 0) { ::EUR.game_options.global_sort_distance = false }
@@ -638,6 +643,7 @@ class eurGlobalRecruitment {
         })
         this.sortDistanceCheck = ::UI.checkbox("Distance")
         ::UI.placeAbsolute(this.sortDistanceCheck)
+        ::UI.tooltip(this.sortDistanceCheck, "Sort settlements in the UI by distance to the local settlement.")
         ::UI.checkboxChange(this.sortDistanceCheck, function(value) {
             ::EUR.game_options.global_sort_distance = (value != 0)
             if (value != 0) { ::EUR.game_options.global_sort_aphabetically = false }
@@ -646,6 +652,7 @@ class eurGlobalRecruitment {
         })
         this.hideEmptyCheck = ::UI.checkbox("Hide empty")
         ::UI.placeAbsolute(this.hideEmptyCheck)
+        ::UI.tooltip(this.hideEmptyCheck, "Hide settlements that have no units to recruit, or have all their recruited units hidden.")
         ::UI.checkboxChange(this.hideEmptyCheck, function(value) {
             ::EUR.game_options.global_recruitment_hidenounits = (value != 0)
             self.recruitCheckGlobal()
@@ -653,6 +660,7 @@ class eurGlobalRecruitment {
         })
         this.filterCheck = ::UI.checkbox("Filter Units")
         ::UI.placeAbsolute(this.filterCheck)
+        ::UI.tooltip(this.filterCheck, "Filter which units appear in the Global Recruitment UI.")
         ::UI.checkboxChange(this.filterCheck, function(value) {
             self.filterOpen = (value != 0)
             if (self.filterOpen) { self.notifOpen = false }
@@ -660,6 +668,7 @@ class eurGlobalRecruitment {
         })
         this.notifCheck = ::UI.checkbox("Notification")
         ::UI.placeAbsolute(this.notifCheck)
+        ::UI.tooltip(this.notifCheck, "Enable notification icon when specified units are available to recruit.")
         ::UI.checkboxChange(this.notifCheck, function(value) {
             self.notifOpen = (value != 0)
             if (self.notifOpen) { self.filterOpen = false }
@@ -683,6 +692,71 @@ class eurGlobalRecruitment {
         ::UI.widgetVisible(this.notifCheck, false)
         if ("gamePanelWindow" in ::UI) { ::UI.gamePanelWindow(this.scroll.window, 0) }
         ::EUR.registerLeftWindow("show_globalrecruit_window", this.scroll.window)
+
+        // The card tooltip is a WIDGET body so each line can carry its own colour, built once and
+        // re-aimed every frame - the plain-string form resolves one ink for the whole box. Hidden
+        // rows drop out of the layout, so the line count varies at a fixed handle count.
+        // A label draws in Font.body; the plain-string tooltip draws in Font.small. Match it, or the
+        // coloured tooltips come out in a different face and size from every other EUR tooltip. The
+        // box itself is drawn by the tooltip pass, so the body carries no chrome and no row gap.
+        this.tipRows = []
+        this.tipBody = ::UI.beginTooltip(0)
+        ::UI.setWidgetStyle(this.tipBody, ::UI.Surface.panel, [0, 0, 0, 0])
+        ::UI.setWidgetStyle(this.tipBody, ::UI.Metric.padX, ::UI.getStyle(::UI.Metric.tooltipPadX))
+        ::UI.setWidgetStyle(this.tipBody, ::UI.Metric.padY, ::UI.getStyle(::UI.Metric.tooltipPadY))
+        ::UI.setWidgetStyle(this.tipBody, ::UI.Metric.gap, 0)
+        // A font TOKEN reads 0 when the theme leaves it unset, and the plain tooltip's face comes
+        // from a C++ fallback no token exposes - so pushing Font.small's value pushes 0, which means
+        // "unset". The id has to come from UI.fonts() by name, the way this file already does for
+        // its own rows.
+        local smallId = 0
+        local faces = ::UI.fonts()
+        if (faces != null) {
+            foreach (f in faces) { if (f.name == ::fonts.game.verdanaSml) { smallId = f.id } }
+        }
+        for (local i = 0; i < this.layout.tipRowCount; i += 1) {
+            local row = ::UI.labelColoured("", 255, 255, 255, 255)
+            if (smallId != 0) { ::UI.setWidgetStyle(row, ::UI.Font.body, smallId) }
+            this.tipRows.append(row)
+        }
+        ::UI.endTooltip()
+        ::UI.setParent(0)
+    }
+
+    function textLines(str) {
+        local out = [], start = 0
+        while (start <= str.len()) {
+            local at = str.indexof("\n", start)
+            if (at == null) { out.append(str.slice(start)); break }
+            out.append(str.slice(start, at))
+            start = at + 1
+        }
+        return out
+    }
+
+    // The Lua's semantic colours: cyan global, green actionable local, gold waiting on the pool,
+    // grey everything blocked.
+    function statusTint(unit, layer) {
+        if (layer.action == "global") { return [0, 255, 255] }
+        if (layer.action == "local") { return [77, 255, 77] }
+        if (unit.availablePool < 1) { return [255, 214, 0] }
+        return [204, 204, 204]
+    }
+
+    // lines are [text, tint] - a null tint takes the theme's own tooltip ink.
+    function showTipLines(x, y, w, h, lines) {
+        if (this.tipRows == null) return
+        local ink = ::UI.getStyle(::UI.Colour.tooltipText)
+        for (local i = 0; i < this.tipRows.len(); i += 1) {
+            local on = i < lines.len()
+            ::UI.widgetVisible(this.tipRows[i], on)
+            if (!on) continue
+            ::UI.textSet(this.tipRows[i], lines[i][0])
+            local tint = (lines[i][1] == null) ? ink : lines[i][1]
+            ::UI.textColour(this.tipRows[i], tint[0], tint[1], tint[2], 255)
+        }
+        ::UI.tooltipAt(x, y, w, h)
+        ::UI.tooltipContent(0, this.tipBody)
     }
 
     function contentArea() {
@@ -1156,20 +1230,19 @@ class eurGlobalRecruitment {
         ::UI.text("" + unit.availablePool.tointeger())
         ::UI.popStyle()
 
-        ::UI.tooltipAt(originX, originY, cardW, cardH)
-        local tip = unit.localizedName
-        tip += "\n" + this.cardStatsAdjusted(unit.eduType, info, unit.xp)
-        tip += "\n"
-        if (layer.action != null) {
-            tip += "\n" + "Recruitment cost: " + layer.cost + " gold."
-            tip += "\n" + "Recruitment time: " + layer.time + " turns."
+        local lines = [[unit.localizedName, null]]
+        foreach (row in this.textLines(this.cardStatsAdjusted(unit.eduType, info, unit.xp))) {
+            lines.append([row, null])
         }
-        tip += "\n" + layer.status
+        lines.append(["", null])
+        lines.append(["Recruitment cost: " + layer.cost + " gold.", null])
+        lines.append(["Recruitment time: " + layer.time + " turns.", null])
+        lines.append([layer.status, this.statusTint(unit, layer)])
         if (layer.action == "global") {
-            tip += "\n" + "Right click to add unit to local queue. Cost: " + unit.cost
-                 + " gold. Time: " + unit.recruitTime + " turns."
+            lines.append(["Right click to add unit to local queue. Cost: " + unit.cost
+                          + " gold. Time: " + unit.recruitTime + " turns.", [191, 191, 191]])
         }
-        ::UI.tooltip(0, tip)
+        this.showTipLines(originX, originY, cardW, cardH, lines)
 
         if (actedRight && layer.action != null) {
             this.addToLocalQueue(unit.getRecruitmentOption, settname)

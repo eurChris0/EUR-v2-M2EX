@@ -15,29 +15,44 @@ class eurReplenishment {
         for (local x = 0; x < faction.fortCount; x++) {
             local fort = faction.fort(x)
             if (fort.army != null && fort.siegeCount == 0) {
-                this.replenishArmy(fort.army, faction, bonus, false, false, false)
+                this.replenishArmy(fort.army, faction, bonus)
             }
         }
         for (local x = 0; x < faction.settlementCount; x++) {
             local settlement = faction.settlement(x)
             if (settlement.army != null && settlement.siegeCount == 0) {
-                local waystation = settlement.hasBuildingLevel("military_academy", false)
-                local aquaduct   = settlement.hasBuildingLevel("aqueduct", true)
-                this.replenishArmy(settlement.army, faction, bonus, waystation, aquaduct, false)
+                this.replenishArmy(settlement.army, faction, bonus)
             }
         }
         if (::EUR.replen_always) {
             for (local x = 0; x < faction.armyCount; x++) {
                 local army = faction.army(x)
                 if (army != null && !(army.inSettlement() || army.inFort())) {
-                    this.replenishArmy(army, faction, bonus, false, false, true)
+                    this.replenishArmy(army, faction, bonus)
                 }
             }
         }
     }
 
-    // one army's units. isField selects the field rate (own/allied/other) instead of the garrison rate.
-    function replenishArmy(army, faction, bonus, waystation, aquaduct, isField) {
+    // Everything about one army's replenishment that does not depend on the unit: the divisors
+    // replenUnit folds in, and the same numbers as percentages for the UI. Null when the army does
+    // not replenish at all - besieged, or in the field with replen_always off. ONE computation for
+    // both callers; the Lua's UI copy disagreed with the real one and counted the global bonus
+    // twice, as points and again as a multiplier.
+    function armyPlan(army, faction) {
+        if (army == null || faction == null) return null
+
+        local sett = army.inSettlement()
+        local fort = (sett == null) ? army.inFort() : null
+        if (sett != null && sett.siegeCount != 0) return null
+        if (fort != null && fort.siegeCount != 0) return null
+
+        local isField = (sett == null && fort == null)
+        if (isField && !::EUR.replen_always) return null
+
+        local waystation = (sett != null) && sett.hasBuildingLevel("military_academy", false)
+        local aquaduct   = (sett != null) && sett.hasBuildingLevel("aqueduct", true)
+
         local goblin = ::EUR.tableContains(::EUR.goblin_factions, faction.name)
         local men    = ::EUR.tableContains(::EUR.men_factions, faction.name)
 
@@ -47,14 +62,57 @@ class eurReplenishment {
         local roadDivisor = (road_level != 0 && ::EUR.replen_values.replen_road_level[road_level] != 0)
                             ? ::EUR.replen_values.replen_road_level[road_level] : 0
 
+        local allied = false
         local fieldDivisor = 0
         if (isField) {
-            fieldDivisor = ::EUR.replen_values.replen_field_other
             if (owner != null) {
-                if (owner == faction) { fieldDivisor = ::EUR.replen_values.replen_field_own }
-                else if (::EUR.eur_campaign.checkStance(::Enum.DiplomaticRelation.alliance, faction, owner)) { fieldDivisor = ::EUR.replen_values.replen_field_own }
+                if (owner == faction) { allied = true }
+                else if (::EUR.eur_campaign.checkStance(::Enum.DiplomaticRelation.alliance, faction, owner)) { allied = true }
             }
+            fieldDivisor = allied ? ::EUR.replen_values.replen_field_own : ::EUR.replen_values.replen_field_other
         }
+
+        // pre-bonus divisors, in source order
+        local pre = []
+        if (roadDivisor != 0) pre.append(roadDivisor)
+        if (!isField && ::EUR.replen_values.replen_multi != 0) pre.append(::EUR.replen_values.replen_multi)
+        if (goblin && ::EUR.replen_values.goblin_bonus != null && ::EUR.replen_values.goblin_bonus > 0) pre.append(::EUR.replen_values.goblin_bonus)
+        if (men    && ::EUR.replen_values.men_bonus    != null && ::EUR.replen_values.men_bonus    > 0) pre.append(::EUR.replen_values.men_bonus)
+        if (isField && fieldDivisor != 0) pre.append(fieldDivisor)
+
+        // post-bonus divisors (settlements only)
+        local post = []
+        if (!isField) {
+            if (waystation && ::EUR.replen_values.waystation_bonus != 0) post.append(::EUR.replen_values.waystation_bonus)
+            if (aquaduct   && ::EUR.replen_values.aquaduct_bonus   != 0) post.append(::EUR.replen_values.aquaduct_bonus)
+        }
+
+        local plan = {
+            isField = isField, waystation = waystation, aquaduct = aquaduct, allied = allied,
+            pre = pre, post = post,
+            basePct       = isField ? 0 : ::EUR.safe_round_divide(100, ::EUR.replen_values.replen_multi),
+            waystationPct = waystation ? ::EUR.safe_round_divide(100, ::EUR.replen_values.waystation_bonus) : 0,
+            aquaductPct   = aquaduct ? ::EUR.safe_round_divide(100, ::EUR.replen_values.aquaduct_bonus) : 0,
+            roadPct       = ::EUR.safe_round_divide(100, roadDivisor),
+            fieldPct      = isField ? ::EUR.safe_round_divide(100, fieldDivisor) : 0,
+            goblinPct     = goblin ? ::EUR.safe_round_divide(100, ::EUR.replen_values.goblin_bonus) : 0,
+            menPct        = men ? ::EUR.safe_round_divide(100, ::EUR.replen_values.men_bonus) : 0,
+            globalBonus   = (::EUR.replen_values.replen_bonus != null) ? ::EUR.replen_values.replen_bonus : 0,
+            ratePct       = 0,
+        }
+        plan.ratePct = plan.basePct + plan.waystationPct + plan.aquaductPct + plan.roadPct
+                       + plan.fieldPct + plan.goblinPct + plan.menPct
+        // A MULTIPLIER, the way replenUnit applies it - not a term.
+        if (plan.globalBonus > 0) {
+            plan.ratePct = (plan.ratePct * (1 + plan.globalBonus / 100.0)).tointeger()
+        }
+        return plan
+    }
+
+    // one army's units, off the plan above.
+    function replenishArmy(army, faction, bonus) {
+        local plan = this.armyPlan(army, faction)
+        if (plan == null) return
 
         for (local i = 0; i < army.unitCount; i++) {
             local stack_unit = army.unit(i)
@@ -62,22 +120,7 @@ class eurReplenishment {
             if (stack_unit.name != null && stack_unit.name.indexof("Garrison") != null) continue
             if (stack_unit.type.category == 4) continue
 
-            // pre-bonus divisors, in source order
-            local pre = []
-            if (roadDivisor != 0) pre.append(roadDivisor)
-            if (!isField && ::EUR.replen_values.replen_multi != 0) pre.append(::EUR.replen_values.replen_multi)
-            if (goblin && ::EUR.replen_values.goblin_bonus != null && ::EUR.replen_values.goblin_bonus > 0) pre.append(::EUR.replen_values.goblin_bonus)
-            if (men    && ::EUR.replen_values.men_bonus    != null && ::EUR.replen_values.men_bonus    > 0) pre.append(::EUR.replen_values.men_bonus)
-            if (isField && fieldDivisor != 0) pre.append(fieldDivisor)
-
-            // post-bonus divisors (settlements only)
-            local post = []
-            if (!isField) {
-                if (waystation && ::EUR.replen_values.waystation_bonus != 0) post.append(::EUR.replen_values.waystation_bonus)
-                if (aquaduct   && ::EUR.replen_values.aquaduct_bonus   != 0) post.append(::EUR.replen_values.aquaduct_bonus)
-            }
-
-            this.replenUnit(stack_unit, faction, bonus, pre, post)
+            this.replenUnit(stack_unit, faction, bonus, plan.pre, plan.post)
         }
     }
 
