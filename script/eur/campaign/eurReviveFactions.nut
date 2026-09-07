@@ -439,6 +439,11 @@
 }
 
 class eurReviveUI {
+    // Authored against the GAME's 1024x768 space, like every other HUD-anchored EUR button.
+    layout = {
+        buttonX = 1170, buttonY = 210, buttonSize = 50,
+    }
+
     choiceScroll = null
     contentCanvas = 0
     buttonCanvas = 0
@@ -471,7 +476,8 @@ class eurReviveUI {
         })
 
         ::UI.setParent(0)
-        this.buttonCanvas = ::UI.canvas(50, 50, 1170, 210)
+        this.buttonCanvas = ::UI.canvas(this.layout.buttonSize, this.layout.buttonSize,
+                                        this.layout.buttonX, this.layout.buttonY)
         ::UI.canvasDraw(this.buttonCanvas, function() { self.drawButton() })
 
         ::UI.popStyle()
@@ -520,7 +526,8 @@ class eurReviveUI {
         local icon = canAfford ? ::EUR.revive_yes : ::EUR.revive_no
         if (icon == null) return
 
-        if (::UI.imageButton(icon.img, 50, 50, 1170, 210).clicked && canAfford && !::EUR.show_revive_choice) {
+        if (::UI.imageButton(icon.img, this.layout.buttonSize, this.layout.buttonSize,
+                             this.layout.buttonX, this.layout.buttonY).clicked && canAfford && !::EUR.show_revive_choice) {
             ::EUR.show_revive_choice = true
             ::EUR.revive_sett = sett
             ::EUR.revive_faction = ::EUR.eur_campaign.factionByName(reviveName)

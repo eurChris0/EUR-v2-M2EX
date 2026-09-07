@@ -45,6 +45,7 @@ local MODULES = [
     "helper.eurUpgradeSave",
 
     "eur.dev.chrisDev",
+    // parked - the layout/UI editor debug window is off for now
     //"eur.dev.eurLayoutEditor",
     "eur.chris_setts.chrisAddResBU",
     "helper.EopLuaHelpers",
