@@ -400,7 +400,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1000, 500, 200, 200, 1000, 1, 140
 armour_ug_levels        4, 5, 6
-armour_ug_models        sentinel
+armour_ug_models        sentinel, sentinel, sentinel
 ownership               egypt, slave
 era 0                   egypt
 era 1                   egypt
@@ -480,7 +480,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1000, 375, 125, 125, 1000, 1, 100
 armour_ug_levels        4, 5
-armour_ug_models        tower_bodyguard
+armour_ug_models        tower_bodyguard, tower_bodyguard
 ownership               sicily, slave, united
 era 0                   sicily
 era 1                   sicily
@@ -517,7 +517,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 385, 200, 200, 1200, 1, 117
 armour_ug_levels        4, 5
-armour_ug_models        steward_guard
+armour_ug_models        steward_guard, steward_guard
 ownership               sicily, slave, turks, united
 era 0                   sicily
 era 1                   sicily
@@ -594,7 +594,7 @@ stat_charge_dist        5
 stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 350, 145, 75, 75, 350, 4, 53
-armour_ug_levels        1, 2, 3, 4, 5
+armour_ug_levels        1, 2, 3, 4
 armour_ug_models        territorial_guardsmen_upg0, territorial_guardsmen_upg1, territorial_guardsmen_upg2, territorial_guardsmen_upg3
 ownership               sicily, slave, turks, united, russia
 era 0                   sicily
@@ -633,7 +633,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 360, 155, 125, 125, 360, 4, 76
 armour_ug_levels        2, 3, 5
-armour_ug_models        lamedon_clansmen, lamedon_clansmen_upg1
+armour_ug_models        lamedon_clansmen, lamedon_clansmen_upg1, lamedon_clansmen_upg1
 ownership               sicily, slave, turks, united
 era 0                   sicily
 era 1                   sicily
@@ -671,7 +671,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 340, 160, 75, 75, 340, 4, 86
 armour_ug_levels        2, 3, 5
-armour_ug_models        gondor_lebennin_guardsmen, gondor_lebennin_guardsmen_ug1
+armour_ug_models        gondor_lebennin_guardsmen, gondor_lebennin_guardsmen_ug1, gondor_lebennin_guardsmen_ug1
 ownership               sicily, slave, turks, united, russia
 era 0                   sicily
 era 1                   sicily
@@ -710,7 +710,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 340, 165, 75, 75, 340, 4, 33
 armour_ug_levels        2, 5
-armour_ug_models        anfalas_slingers
+armour_ug_models        anfalas_slingers, anfalas_slingers
 ownership               sicily, slave, turks, united
 era 0                   sicily
 era 1                   sicily
@@ -786,7 +786,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 450, 225, 125, 125, 450, 4, 75
 armour_ug_levels        2, 5
-armour_ug_models        blackroot_archers
+armour_ug_models        blackroot_archers, blackroot_archers
 ownership               sicily, slave, turks, united
 era 0                   sicily
 era 1                   sicily
@@ -826,7 +826,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 750, 275, 125, 125, 750, 3, 72
 armour_ug_levels        2, 3, 4, 5
-armour_ug_models        territorial_cavalry_upg0, territorial_cavalry_upg2, territorial_cavalry_upg3
+armour_ug_models        territorial_cavalry_upg0, territorial_cavalry_upg2, territorial_cavalry_upg3, territorial_cavalry_upg3
 ownership               sicily, slave, turks, united, russia
 era 0                   sicily
 era 1                   sicily
@@ -866,7 +866,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 750, 325, 125, 125, 660, 3, 87
 armour_ug_levels        2, 3, 4, 5
-armour_ug_models        gondor_pikes, gondor_pikes_upg1, gondor_pikes_upg2
+armour_ug_models        gondor_pikes, gondor_pikes_upg1, gondor_pikes_upg2, gondor_pikes_upg2
 ownership               sicily, slave, turks, united, russia
 era 0                   sicily
 era 1                   sicily
@@ -903,7 +903,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 750, 350, 125, 125, 675, 3, 90
 armour_ug_levels        2, 3, 4, 5
-armour_ug_models        gondor_infantry, gondor_infantry_ug1, gondor_infantry_ug2
+armour_ug_models        gondor_infantry, gondor_infantry_ug1, gondor_infantry_ug2, gondor_infantry_ug2
 ownership               sicily, slave, turks, united, russia
 era 0                   sicily
 era 1                   sicily
@@ -941,7 +941,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 725, 350, 125, 125, 650, 3, 90
 armour_ug_levels        2, 3, 4, 5
-armour_ug_models        gondor_spearmen, gondor_spearmen_ug1, gondor_spearmen_ug2
+armour_ug_models        gondor_spearmen, gondor_spearmen_ug1, gondor_spearmen_ug2, gondor_spearmen_ug2
 ownership               sicily, slave, turks, united, russia
 era 0                   sicily
 era 1                   sicily
@@ -978,7 +978,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 800, 420, 125, 125, 800, 3, 108
 armour_ug_levels        2, 3, 5
-armour_ug_models        lossarnach_ug0, lossarnach_ug1
+armour_ug_models        lossarnach_ug0, lossarnach_ug1, lossarnach_ug1
 ownership               sicily, slave, turks, united
 era 0                   sicily
 era 1                   sicily
@@ -1016,7 +1016,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 780, 400, 125, 125, 780, 3, 87
 armour_ug_levels        2, 3, 5
-armour_ug_models        ringlovale_pike, ringlovale_pike_upg
+armour_ug_models        ringlovale_pike, ringlovale_pike_upg, ringlovale_pike_upg
 ownership               sicily, slave, turks, united
 era 0                   sicily
 era 1                   sicily
@@ -1054,7 +1054,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 725, 390, 125, 125, 725, 3, 76
 armour_ug_levels        2, 5
-armour_ug_models        pinnath_gelin_footmen
+armour_ug_models        pinnath_gelin_footmen, pinnath_gelin_footmen
 ownership               sicily, slave, turks, united
 era 0                   sicily
 era 1                   sicily
@@ -1092,7 +1092,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 700, 300, 125, 125, 620, 3, 90
 armour_ug_levels        2, 3, 4, 5
-armour_ug_models        gondor_archers, gondor_archers_ug1, gondor_archers_ug2
+armour_ug_models        gondor_archers, gondor_archers_ug1, gondor_archers_ug2, gondor_archers_ug2
 ownership               sicily, slave, turks, united, russia
 era 0                   sicily
 era 1                   sicily
@@ -1130,7 +1130,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1050, 400, 125, 125, 1050, 2, 105
 armour_ug_levels        2, 3, 4, 5
-armour_ug_models        gondor_cavalry, gondor_cavalry_ug1, gondor_cavalry_ug2
+armour_ug_models        gondor_cavalry, gondor_cavalry_ug1, gondor_cavalry_ug2, gondor_cavalry_ug2
 ownership               sicily, slave, turks, united, russia
 era 0                   sicily
 era 1                   sicily
@@ -1169,7 +1169,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1100, 400, 125, 125, 1100, 2, 110
 armour_ug_levels        2, 5
-armour_ug_models        pinnath_cavalry
+armour_ug_models        pinnath_cavalry, pinnath_cavalry
 ownership               sicily, slave, turks, united
 era 0                   sicily
 era 1                   sicily
@@ -1208,7 +1208,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 950, 550, 125, 125, 850, 2, 127
 armour_ug_levels        3, 5
-armour_ug_models        citadel_guard2
+armour_ug_models        citadel_guard2, citadel_guard2
 ownership               sicily, slave, turks, united
 era 0                   sicily
 era 1                   sicily
@@ -1245,7 +1245,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 975, 450, 125, 125, 875, 2, 110
 armour_ug_levels        3, 4, 5
-armour_ug_models        osgiliath_pikemen, osgiliath_pikemen_upg1
+armour_ug_models        osgiliath_pikemen, osgiliath_pikemen_upg1, osgiliath_pikemen_upg1
 ownership               sicily, slave, turks, united, russia
 era 0                   sicily
 era 1                   sicily
@@ -1282,7 +1282,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 950, 500, 125, 125, 950, 2, 90
 armour_ug_levels        3, 4, 5
-armour_ug_models        anorien_defender
+armour_ug_models        anorien_defender, anorien_defender, anorien_defender
 ownership               sicily, slave, turks, united
 era 0                   sicily
 era 1                   sicily
@@ -1321,7 +1321,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 900, 475, 125, 125, 850, 2, 90
 armour_ug_levels        3, 5
-armour_ug_models        anorien_wardens
+armour_ug_models        anorien_wardens, anorien_wardens
 ownership               sicily, slave, turks, united
 era 0                   sicily
 era 1                   sicily
@@ -1359,7 +1359,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 900, 550, 125, 125, 780, 2, 86
 armour_ug_levels        3, 4, 5
-armour_ug_models        rangers_ithilien, rangers_ithilien_upg
+armour_ug_models        rangers_ithilien, rangers_ithilien_upg, rangers_ithilien_upg
 ownership               sicily, slave, turks, united
 era 0                   sicily
 era 1                   sicily
@@ -1397,7 +1397,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 950, 340, 125, 125, 950, 1, 86
 armour_ug_levels        3, 4, 5
-armour_ug_models        rangers_ithilien, rangers_ithilien_upg
+armour_ug_models        rangers_ithilien, rangers_ithilien_upg, rangers_ithilien_upg
 ownership               sicily, slave, turks, united
 era 0                   sicily
 era 1                   sicily
@@ -1437,7 +1437,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 700, 125, 125, 1200, 1, 105
 armour_ug_levels        3, 5
-armour_ug_models        knights_of_anorien
+armour_ug_models        knights_of_anorien, knights_of_anorien
 ownership               sicily, slave, turks, united
 era 0                   sicily
 era 1                   sicily
@@ -1477,7 +1477,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1300, 800, 125, 125, 1300, 1, 110
 armour_ug_levels        3, 5
-armour_ug_models        pinnath_cavalry_upg
+armour_ug_models        pinnath_cavalry_upg, pinnath_cavalry_upg
 ownership               sicily, slave, turks, united
 era 0                   sicily
 era 1                   sicily
@@ -1517,7 +1517,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1150, 650, 125, 125, 1150, 1, 110
 armour_ug_levels        3, 5
-armour_ug_models        pinnath_cavalry_upg
+armour_ug_models        pinnath_cavalry_upg, pinnath_cavalry_upg
 ownership               sicily, slave, turks, united
 era 0                   sicily
 era 1                   sicily
@@ -1555,7 +1555,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 385, 175, 175, 1200, 1, 100
 armour_ug_levels        4, 5
-armour_ug_models        anfalas_bodyguard
+armour_ug_models        anfalas_bodyguard, anfalas_bodyguard
 ownership               sicily, slave, turks, united
 era 0                   sicily
 era 1                   sicily
@@ -1592,7 +1592,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 440, 175, 175, 1200, 1, 100
 armour_ug_levels        4, 5
-armour_ug_models        anfalas_bodyguard
+armour_ug_models        anfalas_bodyguard, anfalas_bodyguard
 ownership               sicily, slave, turks, united
 era 0                   sicily
 era 1                   sicily
@@ -1630,7 +1630,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1100, 550, 200, 200, 1100, 1, 140
 armour_ug_levels        4, 5
-armour_ug_models        fountain_guard
+armour_ug_models        fountain_guard, fountain_guard
 ownership               sicily, slave, turks, united, russia
 era 0                   sicily
 era 1                   sicily
@@ -1704,7 +1704,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1150, 385, 125, 125, 1150, 1, 108
 armour_ug_levels        4, 5
-armour_ug_models        lossarnach_ug2
+armour_ug_models        lossarnach_ug2, lossarnach_ug2
 ownership               sicily, slave, turks, united, russia
 era 0                   sicily
 era 1                   sicily
@@ -1741,7 +1741,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1150, 425, 125, 125, 1150, 1, 108
 armour_ug_levels        4, 5
-armour_ug_models        lossarnach_ug2
+armour_ug_models        lossarnach_ug2, lossarnach_ug2
 ownership               sicily, slave, turks, united, russia
 era 0                   sicily
 era 1                   sicily
@@ -1778,7 +1778,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 600, 200, 200, 1200, 1, 140
 armour_ug_levels        4, 5
-armour_ug_models        ithil_guardians
+armour_ug_models        ithil_guardians, ithil_guardians
 ownership               sicily, slave, turks, united, milan, byzantium, scotland
 era 0                   sicily
 era 1                   sicily
@@ -1817,7 +1817,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1300, 385, 125, 125, 1300, 1, 86
 armour_ug_levels        4, 5
-armour_ug_models        white_company
+armour_ug_models        white_company, white_company
 ownership               sicily, slave, turks, united
 era 0                   sicily
 era 1                   sicily
@@ -1856,7 +1856,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1300, 500, 125, 125, 1300, 1, 86
 armour_ug_levels        4, 5
-armour_ug_models        white_company
+armour_ug_models        white_company, white_company
 ownership               sicily, slave, turks, united
 era 0                   sicily
 era 1                   sicily
@@ -1895,7 +1895,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1100, 385, 125, 125, 1100, 1, 87
 armour_ug_levels        4, 5
-armour_ug_models        ringlovale_pike_bg
+armour_ug_models        ringlovale_pike_bg, ringlovale_pike_bg
 ownership               sicily, slave, turks, united
 era 0                   sicily
 era 1                   sicily
@@ -1934,7 +1934,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1100, 385, 125, 125, 1100, 1, 87
 armour_ug_levels        4, 5
-armour_ug_models        ringlovale_pike_bg
+armour_ug_models        ringlovale_pike_bg, ringlovale_pike_bg
 ownership               sicily, slave, turks, united
 era 0                   sicily
 era 1                   sicily
@@ -1971,7 +1971,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 450, 125, 125, 1200, 1, 105
 armour_ug_levels        4, 5
-armour_ug_models        boromir_company
+armour_ug_models        boromir_company, boromir_company
 ownership               sicily, slave, turks, united
 era 0                   sicily
 era 1                   sicily
@@ -2009,7 +2009,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 600, 200, 200, 1200, 2, 135
 armour_ug_levels        4, 5
-armour_ug_models        swan_infantry_ug1
+armour_ug_models        swan_infantry_ug1, swan_infantry_ug1
 ownership               sicily, slave, turks, united, russia
 era 0                   sicily
 era 1                   sicily
@@ -2047,7 +2047,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1000, 600, 125, 125, 925, 2, 105
 armour_ug_levels        3, 4, 5
-armour_ug_models        gondor_osgiliath_veterans_ug1, gondor_osgiliath_veterans_clean
+armour_ug_models        gondor_osgiliath_veterans_ug1, gondor_osgiliath_veterans_clean, gondor_osgiliath_veterans_clean
 ownership               sicily, slave, turks, united, russia
 era 0                   sicily
 era 1                   sicily
@@ -2086,7 +2086,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 2000, 500, 200, 200, 2000, 1, 100
 armour_ug_levels        4, 5
-armour_ug_models        royal_swan_guard_gaw
+armour_ug_models        royal_swan_guard_gaw, royal_swan_guard_gaw
 ownership               sicily, slave, turks, united
 era 1                   sicily
 era 2                   sicily
@@ -2124,7 +2124,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 2250, 875, 200, 200, 2250, 1, 172
 armour_ug_levels        4, 5
-armour_ug_models        silver_swan_guard_gaw
+armour_ug_models        silver_swan_guard_gaw, silver_swan_guard_gaw
 ownership               sicily, slave, turks, united, russia
 era 0                   sicily
 era 1                   sicily
@@ -2168,7 +2168,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1000, 350, 125, 125, 1000, 1, 100
 armour_ug_levels        3, 5
-armour_ug_models        troll_slayers, troll_slayers_upg, dunedain_bg_rk_upg
+armour_ug_models        troll_slayers, troll_slayers_upg
 ownership               turks, slave, united
 era 0                   turks
 era 1                   turks
@@ -2207,7 +2207,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost               3, 1000, 350, 125, 125, 1000, 1, 100
 armour_ug_levels        3, 5
-armour_ug_models        troll_slayers, troll_slayers_upg, dunedain_bg_rk_upg
+armour_ug_models        troll_slayers, troll_slayers_upg
 ownership               turks, slave, united, saxons, denmark
 era 0                   turks
 era 1                   turks
@@ -2244,7 +2244,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 400, 125, 125, 1200, 1, 100
 armour_ug_levels        3, 4, 5
-armour_ug_models        bree_mace_bodyguard, bree_mace_bodyguard_upg
+armour_ug_models        bree_mace_bodyguard, bree_mace_bodyguard_upg, bree_mace_bodyguard_upg
 ownership               turks, slave, united
 era 0                   turks, slave
 era 1                   turks, slave
@@ -2319,7 +2319,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 250, 100, 25, 50, 250, 4, 180
 armour_ug_levels        1, 5
-armour_ug_models        hobbit_spearmen
+armour_ug_models        hobbit_spearmen, hobbit_spearmen
 ownership               slave, sicily, turks, united
 era 0                   turks, slave
 era 1                   turks, slave
@@ -2358,7 +2358,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 250, 100, 125, 125, 250, 4, 50
 armour_ug_levels        1, 5
-armour_ug_models        farmhand_pikemen
+armour_ug_models        farmhand_pikemen, farmhand_pikemen
 ownership               slave, sicily, turks, united
 era 0                   turks, slave
 era 1                   turks, slave
@@ -2397,7 +2397,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 285, 120, 125, 125, 285, 4, 54
 armour_ug_levels        2, 3, 4, 5
-armour_ug_models        bandrobas_archers, bandrobas_archers_upg, bandrobas_archers_upg2
+armour_ug_models        bandrobas_archers, bandrobas_archers_upg, bandrobas_archers_upg2, bandrobas_archers_upg2
 ownership               slave, sicily, turks, united
 era 0                   slave, turks
 era 1                   slave, turks
@@ -2435,7 +2435,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 260, 110, 75, 75, 260, 4, 31
 armour_ug_levels        2, 5
-armour_ug_models        new_hobbit_shiriffs,
+armour_ug_models        new_hobbit_shiriffs, new_hobbit_shiriffs
 ownership               slave, sicily, turks
 era 0                   slave, turks
 era 1                   slave, turks
@@ -2473,7 +2473,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 315, 150, 25, 50, 315, 3, 180
 armour_ug_levels        1, 5
-armour_ug_models        hobbit_ranchers
+armour_ug_models        hobbit_ranchers, hobbit_ranchers
 ownership               slave, sicily, turks, united
 era 0                   turks, slave
 era 1                   turks, slave
@@ -2512,7 +2512,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 250, 100, 75, 75, 250, 4, 36
 armour_ug_levels        2, 3, 5
-armour_ug_models        num_spear2, num_spear2_upg
+armour_ug_models        num_spear2, num_spear2_upg, num_spear2_upg
 ownership               slave, sicily, turks, russia, united
 era 0                   turks, slave
 era 1                   turks, slave
@@ -2547,7 +2547,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 400, 160, 25, 25, 400, 4, 350
 armour_ug_levels        1, 5
-armour_ug_models        ruffians
+armour_ug_models        ruffians, ruffians
 ownership               turks, sicily, slave, united
 era 0                   turks, slave
 era 1                   turks, slave
@@ -2583,7 +2583,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 400, 160, 75, 75, 400, 4, 36
 armour_ug_levels        0, 1, 5
-armour_ug_models        lumbermen, lumbermen_upg
+armour_ug_models        lumbermen, lumbermen_upg, lumbermen_upg
 ownership               united, turks, sicily, slave, byzantium, russia
 era 0                   turks, byzantium
 era 1                   turks, byzantium
@@ -2621,7 +2621,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 430, 180, 75, 75, 430, 4, 31
 armour_ug_levels        2, 3, 5
-armour_ug_models        eriador_archers, eriador_archers_upg2
+armour_ug_models        eriador_archers, eriador_archers_upg2, eriador_archers_upg2
 ownership               slave, russia, sicily, turks, united
 era 0                   turks, slave
 era 1                   turks, slave
@@ -2659,7 +2659,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 950, 375, 125, 125, 950, 3, 72
 armour_ug_levels        2, 5
-armour_ug_models        greenway_guards
+armour_ug_models        greenway_guards, greenway_guards
 ownership               turks, slave, sicily, united
 era 0                   slave
 era 1                   slave
@@ -2697,7 +2697,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 700, 250, 125, 125, 700, 3, 63
 armour_ug_levels        2, 5
-armour_ug_models        merchant_militia
+armour_ug_models        merchant_militia, merchant_militia
 ownership               slave, russia, sicily, turks, united
 era 0                   turks, slave
 era 1                   turks, slave
@@ -2732,7 +2732,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 730, 270, 125, 125, 730, 4, 100
 armour_ug_levels        2, 3, 4, 5
-armour_ug_models        dunedain_garrison, dunedain_garrison_upg, dunedain_garrison_upg2
+armour_ug_models        dunedain_garrison, dunedain_garrison_upg, dunedain_garrison_upg2, dunedain_garrison_upg2
 ownership               turks, slave, sicily, united, russia
 era 0                   turks, slave
 era 1                   turks, slave
@@ -2771,7 +2771,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 700, 260, 125, 125, 700, 3, 88
 armour_ug_levels        2, 3, 4, 5
-armour_ug_models        Dunedain_Spearmen, Dunedain_Spearmen_upg, Dunedain_Spearmen_upg2
+armour_ug_models        Dunedain_Spearmen, Dunedain_Spearmen_upg, Dunedain_Spearmen_upg2, Dunedain_Spearmen_upg2
 ownership               turks, united, sicily, slave, saxons, russia
 era 0                   turks, saxons
 era 1                   turks, saxons
@@ -2809,7 +2809,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 600, 200, 125, 125, 600, 3, 375
 armour_ug_levels        1, 5
-armour_ug_models        bandit_black
+armour_ug_models        bandit_black, bandit_black
 ownership               slave, turks, sicily, united
 era 0                   turks, slave
 era 1                   turks, slave
@@ -2848,7 +2848,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 650, 220, 125, 125, 650, 3, 500
 armour_ug_levels        2, 3, 4, 5
-armour_ug_models        arthedain_spears, arthedain_spears_upg1, arthedain_spears_upg2
+armour_ug_models        arthedain_spears, arthedain_spears_upg1, arthedain_spears_upg2, arthedain_spears_upg2
 ownership               turks, slave, sicily, russia, united
 era 0                   turks
 era 1                   turks
@@ -2885,7 +2885,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 630, 240, 125, 125, 630, 3, 118
 armour_ug_levels        2, 3, 4, 5
-armour_ug_models        arnor_infantry, arnor_infantry_upg, arnor_knights_dis
+armour_ug_models        arnor_infantry, arnor_infantry_upg, arnor_knights_dis, arnor_knights_dis
 ownership               turks, slave, sicily, russia, united
 era 0                   turks
 era 1                   turks
@@ -2923,7 +2923,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 815, 225, 125, 125, 815, 3, 58
 armour_ug_levels        2, 3, 5
-armour_ug_models        watchmen_sword_upg, watchmen_sword_upg2
+armour_ug_models        watchmen_sword_upg, watchmen_sword_upg2, watchmen_sword_upg2
 ownership               turks, slave, sicily, russia, united
 era 0                   turks, slave
 era 1                   turks, slave
@@ -2961,7 +2961,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 820, 225, 125, 125, 820, 3, 63
 armour_ug_levels        2, 3, 5
-armour_ug_models        watchmen_axeguard_upg, watchmen_axeguard_upg2
+armour_ug_models        watchmen_axeguard_upg, watchmen_axeguard_upg2, watchmen_axeguard_upg2
 ownership               slave, turks, sicily, united, russia
 era 0                   turks, slave
 era 1                   turks, slave
@@ -2999,7 +2999,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 690, 310, 125, 125, 690, 3, 250
 armour_ug_levels        2, 3, 5
-armour_ug_models        cardolan_men_at_arms_unupg, cardolan_men_at_arms
+armour_ug_models        cardolan_men_at_arms_unupg, cardolan_men_at_arms, cardolan_men_at_arms
 ownership               slave, turks, sicily, united
 era 0                   turks, slave
 era 1                   turks, slave
@@ -3038,7 +3038,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 750, 290, 125, 125, 750, 3, 450
 armour_ug_levels        2, 3, 5
-armour_ug_models        tharbad_tollkeepers, tharbad_tollkeepers_upg
+armour_ug_models        tharbad_tollkeepers, tharbad_tollkeepers_upg, tharbad_tollkeepers_upg
 ownership               slave, turks, sicily, united, russia
 era 0                   turks, slave
 era 1                   turks, slave
@@ -3077,7 +3077,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 780, 300, 125, 125, 780, 3, 80
 armour_ug_levels        2, 3, 4, 5
-armour_ug_models        dunedain_rangers2, dunedain_rangers2_upg, dunedain_rangers2_upg2
+armour_ug_models        dunedain_rangers2, dunedain_rangers2_upg, dunedain_rangers2_upg2, dunedain_rangers2_upg2
 ownership               turks, united, sicily, slave, russia
 era 0                   turks
 era 1                   turks
@@ -3115,7 +3115,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 660, 240, 125, 125, 660, 3, 54
 armour_ug_levels        2, 3, 5
-armour_ug_models        watchmen_longbow_upg, watchmen_longbow_upg2
+armour_ug_models        watchmen_longbow_upg, watchmen_longbow_upg2, watchmen_longbow_upg2
 ownership               turks, slave, sicily, russia, united
 era 0                   turks, slave
 era 1                   turks, slave
@@ -3153,7 +3153,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 580, 260, 125, 125, 580, 3, 75
 armour_ug_levels        2, 3, 4, 5
-armour_ug_models        Sworn_Infantry, Sworn_Infantry_upg, arthedain_archers_upg2
+armour_ug_models        Sworn_Infantry, Sworn_Infantry_upg, arthedain_archers_upg2, arthedain_archers_upg2
 ownership               turks, slave, sicily, united
 era 0                   turks
 era 1                   turks
@@ -3191,7 +3191,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 580, 320, 125, 125, 580, 3, 75
 armour_ug_levels        2, 3, 5
-armour_ug_models        dorwin_maa101, dorwin_maa101_upg
+armour_ug_models        dorwin_maa101, dorwin_maa101_upg, dorwin_maa101_upg
 ownership               turks, united, sicily, slave
 era 0                   turks
 era 1                   turks
@@ -3231,7 +3231,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 890, 350, 125, 125, 890, 2, 80
 armour_ug_levels        2, 3, 4, 5
-armour_ug_models        mounted_dunedain_rangers, bowmasters,  bowmasters_upg
+armour_ug_models        mounted_dunedain_rangers, bowmasters, bowmasters_upg, bowmasters_upg
 ownership               turks, united, sicily, slave, saxons, russia
 era 0                   turks, saxons
 era 1                   turks, saxons
@@ -3269,7 +3269,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 800, 360, 125, 125, 800, 2, 95
 armour_ug_levels        2, 3, 4, 5
-armour_ug_models        Sworn_Horsemen, Sworn_Horsemen_upg, Sworn_Horsemen_upg2
+armour_ug_models        Sworn_Horsemen, Sworn_Horsemen_upg, Sworn_Horsemen_upg2, Sworn_Horsemen_upg2
 ownership               turks, united, sicily, slave, russia
 era 0                   turks
 era 1                   turks
@@ -3307,7 +3307,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 750, 330, 125, 125, 750, 2, 80
 armour_ug_levels        2, 3, 5
-armour_ug_models        dorwin_maa103, dorwin_maa103_upg
+armour_ug_models        dorwin_maa103, dorwin_maa103_upg, dorwin_maa103_upg
 ownership               turks, united, sicily, slave, russia
 era 0                   turks
 era 1                   turks
@@ -3346,7 +3346,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1100, 475, 125, 125, 1100, 2, 63
 armour_ug_levels        4, 5
-armour_ug_models        merchant_elite
+armour_ug_models        merchant_elite, merchant_elite
 ownership               slave, turks, sicily, united
 era 0                   turks, slave
 era 1                   turks, slave
@@ -3460,7 +3460,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1100, 420, 125, 125, 1100, 2, 97
 armour_ug_levels        3, 4, 5
-armour_ug_models        bree_guards, bree_guards_upg
+armour_ug_models        bree_guards, bree_guards_upg, bree_guards_upg
 ownership               turks, slave, sicily, russia, united
 era 0                   turks, slave
 era 1                   turks, slave
@@ -3537,7 +3537,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1000, 400, 125, 125, 1000, 2, 118
 armour_ug_levels        4, 5
-armour_ug_models        arnor_2handed
+armour_ug_models        arnor_2handed, arnor_2handed
 ownership               turks, slave, sicily, united
 era 0                   turks
 era 1                   turks
@@ -3615,7 +3615,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1075, 425, 125, 125, 1075, 2, 118
 armour_ug_levels        2, 3, 4, 5
-armour_ug_models        Eriador_sword_unupg, RK_swordsmen, RK_swordsmen_upg
+armour_ug_models        Eriador_sword_unupg, RK_swordsmen, RK_swordsmen_upg, RK_swordsmen_upg
 ownership               turks, united, sicily, slave
 era 0                   turks
 era 1                   turks
@@ -3651,7 +3651,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 440, 125, 125, 1200, 2, 111
 armour_ug_levels        1, 2, 5
-armour_ug_models        dunedain_slayers, dunedain_slayers_upg
+armour_ug_models        dunedain_slayers, dunedain_slayers_upg, dunedain_slayers_upg
 ownership               turks, united, saxons, sicily, denmark, slave
 era 0                   turks
 era 1                   turks
@@ -3690,7 +3690,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 900, 425, 125, 125, 900, 2, 400
 armour_ug_levels        2, 3, 5
-armour_ug_models        cardolan_sharpshooters_unupg, cardolan_sharpshooters
+armour_ug_models        cardolan_sharpshooters_unupg, cardolan_sharpshooters, cardolan_sharpshooters
 ownership               slave, turks, sicily, united, russia
 era 0                   turks, slave
 era 1                   turks, slave
@@ -3729,7 +3729,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 950, 440, 125, 125, 950, 2, 75
 armour_ug_levels        2, 3, 4, 5
-armour_ug_models        RK_marksmen_unupg, RK_marksmen, RK_marksmen_upg
+armour_ug_models        RK_marksmen_unupg, RK_marksmen, RK_marksmen_upg, RK_marksmen_upg
 ownership               turks, united, sicily, slave
 era 0                   turks
 era 1                   turks
@@ -3809,7 +3809,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1750, 825, 125, 125, 1750, 1, 800
 armour_ug_levels        1, 2, 5
-armour_ug_models        tharbad_cav, tharbad_cav2
+armour_ug_models        tharbad_cav, tharbad_cav2, tharbad_cav2
 ownership               turks, united, sicily, slave
 era 0                   turks
 era 1                   turks
@@ -3849,7 +3849,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1150, 700, 125, 125, 1150, 1, 1250
 armour_ug_levels        1, 2, 5
-armour_ug_models        tharbad_warhammer, tharbad_warhammer2
+armour_ug_models        tharbad_warhammer, tharbad_warhammer2, tharbad_warhammer2
 ownership               turks, united, sicily, slave, russia
 era 0                   turks
 era 1                   turks
@@ -3887,7 +3887,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 600, 125, 125, 1200, 1, 135
 armour_ug_levels        4, 5
-armour_ug_models        dunedain_infantry
+armour_ug_models        dunedain_infantry, dunedain_infantry
 ownership               turks, united, sicily, slave
 era 0                   turks
 era 1                   turks
@@ -3926,7 +3926,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 575, 125, 125, 1200, 1, 110
 armour_ug_levels        4, 5
-armour_ug_models        RK_halberd
+armour_ug_models        RK_halberd, RK_halberd
 ownership               turks, sicily, united, slave, russia
 era 0                   turks
 era 1                   turks
@@ -3966,7 +3966,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 565, 125, 125, 1200, 1, 120
 armour_ug_levels        1, 5
-armour_ug_models        gateguards
+armour_ug_models        gateguards, gateguards
 ownership               turks, sicily, united, slave
 era 0                   turks
 era 1                   turks
@@ -4044,7 +4044,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 2000, 900, 125, 125, 2000, 1, 150
 armour_ug_levels        4, 5
-armour_ug_models        dunedain_knights2
+armour_ug_models        dunedain_knights2, dunedain_knights2
 ownership               turks, sicily, united, slave
 era 0                   turks
 era 1                   turks
@@ -4087,7 +4087,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1000, 350, 200, 200, 1000, 1, 100
 armour_ug_levels        4, 5
-armour_ug_models        numenorean_lords
+armour_ug_models        numenorean_lords, numenorean_lords
 ownership               russia, slave
 era 0                   russia
 era 1                   russia
@@ -4127,7 +4127,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 210, 125, 75, 75, 210, 4, 31
 armour_ug_levels        2, 3, 5
-armour_ug_models        corsairs, corsairs_upg
+armour_ug_models        corsairs, corsairs_upg, corsairs_upg
 ownership               russia, slave, turks
 era 0                   russia
 era 1                   russia
@@ -4165,7 +4165,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 400, 175, 75, 75, 400, 4, 53
 armour_ug_levels        3, 4, 5
-armour_ug_models        belegaer_footmen, belegaer_footmen_upg
+armour_ug_models        belegaer_footmen, belegaer_footmen_upg, belegaer_footmen_upg
 ownership               russia, slave
 era 0                   russia
 era 1                   russia
@@ -4203,7 +4203,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 400, 180, 75, 75, 400, 4, 53
 armour_ug_levels        3, 4, 5
-armour_ug_models        belegaer_halberds, belegaer_halberds_upg
+armour_ug_models        belegaer_halberds, belegaer_halberds_upg, belegaer_halberds_upg
 ownership               russia, slave
 era 0                   russia
 era 1                   russia
@@ -4241,7 +4241,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 520, 240, 25, 50, 520, 4, 412
 armour_ug_levels        3, 5
-armour_ug_models        belegaer_swordmasters
+armour_ug_models        belegaer_swordmasters, belegaer_swordmasters
 ownership               russia, slave
 era 0                   russia
 era 1                   russia
@@ -4279,7 +4279,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 420, 190, 120, 120, 420, 4, 54
 armour_ug_levels        3, 4, 5
-armour_ug_models        belegaer_archers, belegaer_archers_upg
+armour_ug_models        belegaer_archers, belegaer_archers_upg, belegaer_archers_upg
 ownership               russia, slave
 era 0                   russia
 era 1                   russia
@@ -4318,7 +4318,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 220, 135, 75, 75, 220, 4, 36
 armour_ug_levels        2, 3, 5
-armour_ug_models        corsair_archers, corsair_archers_upg
+armour_ug_models        corsair_archers, corsair_archers_upg, corsair_archers_upg
 ownership               russia, slave, turks
 era 0                   russia
 era 1                   russia
@@ -4358,7 +4358,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 750, 425, 125, 125, 750, 3, 90
 armour_ug_levels        4, 5
-armour_ug_models        numenorean_pikemen
+armour_ug_models        numenorean_pikemen, numenorean_pikemen
 ownership               russia, slave
 era 0                   russia
 era 1                   russia
@@ -4396,7 +4396,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 775, 450, 125, 125, 775, 3, 90
 armour_ug_levels        4, 5
-armour_ug_models        numenorean_marines
+armour_ug_models        numenorean_marines, numenorean_marines
 ownership               russia, slave
 era 0                   russia
 era 1                   russia
@@ -4436,7 +4436,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 800, 445, 125, 125, 800, 3, 90
 armour_ug_levels        4, 5
-armour_ug_models        numenorean_archers
+armour_ug_models        numenorean_archers, numenorean_archers
 ownership               russia, slave
 era 0                   russia
 era 1                   russia
@@ -4476,7 +4476,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1100, 600, 200, 200, 1100, 2, 149
 armour_ug_levels        4, 5
-armour_ug_models        numenorean_sentries
+armour_ug_models        numenorean_sentries, numenorean_sentries
 ownership               russia, slave
 era 0                   russia
 era 1                   russia
@@ -4515,7 +4515,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 970, 500, 200, 200, 970, 2, 117
 armour_ug_levels        4, 5
-armour_ug_models        castamir
+armour_ug_models        castamir, castamir
 ownership               russia, slave
 era 0                   russia
 era 1                   russia
@@ -4553,7 +4553,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1000, 550, 200, 200, 1000, 2, 15000
 armour_ug_levels        4, 5
-armour_ug_models        umbar_pikes
+armour_ug_models        umbar_pikes, umbar_pikes
 ownership               russia, slave
 era 0                   russia
 era 1                   russia
@@ -4591,7 +4591,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1000, 550, 200, 200, 1000, 2, 96
 armour_ug_levels        4, 5
-armour_ug_models        numenorean_shipguard
+armour_ug_models        numenorean_shipguard, numenorean_shipguard
 ownership               russia, slave
 era 0                   russia
 era 1                   russia
@@ -4630,7 +4630,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1000, 500, 200, 200, 1000, 2, 1500
 armour_ug_levels        4, 5
-armour_ug_models        naru_royal_guard
+armour_ug_models        naru_royal_guard, naru_royal_guard
 ownership               russia, slave
 era 0                   russia
 era 1                   russia
@@ -4667,7 +4667,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1000, 500, 200, 200, 1000, 2, 100
 armour_ug_levels        3, 5
-armour_ug_models        Dark_Rangers2
+armour_ug_models        Dark_Rangers2, Dark_Rangers2
 ownership               russia
 era 0                   russia
 era 1                   russia
@@ -4709,7 +4709,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1600, 900, 200, 200, 1600, 1, 149
 armour_ug_levels        4, 5
-armour_ug_models        alcontaras_faithful
+armour_ug_models        alcontaras_faithful, alcontaras_faithful
 ownership               russia, slave
 era 0                   russia
 era 1                   russia
@@ -4750,7 +4750,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 950, 500, 125, 125, 950, 1, 120
 armour_ug_levels        4, 5
-armour_ug_models        dismounted_numenorians2
+armour_ug_models        dismounted_numenorians2, dismounted_numenorians2
 ownership               russia
 era 0                   russia
 era 1                   russia
@@ -4788,7 +4788,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1100, 800, 200, 200, 1100, 1, 140
 armour_ug_levels        4, 5
-armour_ug_models        numenorean_swordmasters
+armour_ug_models        numenorean_swordmasters, numenorean_swordmasters
 ownership               russia, slave
 era 0                   russia
 era 1                   russia
@@ -4826,7 +4826,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1100, 650, 200, 200, 1100, 1, 135
 armour_ug_levels        4, 5
-armour_ug_models        numenor_armenelos
+armour_ug_models        numenor_armenelos, numenor_armenelos
 ownership               russia, slave
 era 0                   russia
 era 1                   russia
@@ -4867,7 +4867,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1100, 600, 200, 200, 1100, 1, 120
 armour_ug_levels        4, 5
-armour_ug_models        dismounted_numenorian_archers2
+armour_ug_models        dismounted_numenorian_archers2, dismounted_numenorian_archers2
 ownership               russia
 era 0                   russia
 era 1                   russia
@@ -5141,7 +5141,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost               1, 725, 275, 125, 125, 720, 4, 72
 armour_ug_levels        2, 3
-armour_ug_models        lego_rider
+armour_ug_models        lego_rider, lego_rider
 ownership               milan, slave, turks, russia, aztecs
 era 0                   milan
 era 1                   milan
@@ -5258,7 +5258,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 725, 285, 125, 125, 725, 3, 63
 armour_ug_levels        3
-armour_ug_models        rohan_swordsmen, rohan_swordsmen_upg
+armour_ug_models        rohan_swordsmen
 ownership               milan, slave, russia, turks
 era 0                   milan
 era 1                   milan
@@ -5959,7 +5959,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1000, 275, 125, 125, 1000, 1, 100
 armour_ug_levels        3, 5, 6
-armour_ug_models        crag_bodyguards
+armour_ug_models        crag_bodyguards, crag_bodyguards, crag_bodyguards
 ownership               normans, slave
 era 0                   normans
 era 1                   normans
@@ -6000,7 +6000,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 140, 90, 75, 75, 140, 5, 25
 armour_ug_levels        1, 2, 5, 6
-armour_ug_models        crag_blunt, crag_blunt_upg
+armour_ug_models        crag_blunt, crag_blunt_upg, crag_blunt_upg, crag_blunt_upg
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -6040,7 +6040,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 150, 90, 75, 75, 150, 5, 25
 armour_ug_levels        1, 2, 5, 6
-armour_ug_models        crag_dual, crag_dual_upg
+armour_ug_models        crag_dual, crag_dual_upg, crag_dual_upg, crag_dual_upg
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -6080,7 +6080,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 160, 120, 75, 75, 160, 5, 25
 armour_ug_levels        1, 2, 5, 6
-armour_ug_models        crag_skirmishers, crag_skirmishers_upg
+armour_ug_models        crag_skirmishers, crag_skirmishers_upg, crag_skirmishers_upg, crag_skirmishers_upg
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -6121,7 +6121,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 160, 110, 75, 75, 160, 5, 25
 armour_ug_levels        1, 2, 5, 6
-armour_ug_models        crag_slingers, crag_slingers_upg
+armour_ug_models        crag_slingers, crag_slingers_upg, crag_slingers_upg, crag_slingers_upg
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -6162,7 +6162,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 240, 120, 125, 125, 240, 4, 62
 armour_ug_levels        1, 2, 5, 6
-armour_ug_models        crag_goblin_axes, crag_goblin_axes_upg
+armour_ug_models        crag_goblin_axes, crag_goblin_axes_upg, crag_goblin_axes_upg, crag_goblin_axes_upg
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -6202,7 +6202,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 240, 120, 75, 75, 240, 4, 25
 armour_ug_levels        1, 2, 5, 6
-armour_ug_models        crag_goblin_dual, crag_goblin_dual_upg
+armour_ug_models        crag_goblin_dual, crag_goblin_dual_upg, crag_goblin_dual_upg, crag_goblin_dual_upg
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -6242,7 +6242,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 240, 120, 125, 125, 240, 4, 62
 armour_ug_levels        1, 2, 5, 6
-armour_ug_models        crag_goblin_spears, crag_goblin_spears_upg
+armour_ug_models        crag_goblin_spears, crag_goblin_spears_upg, crag_goblin_spears_upg, crag_goblin_spears_upg
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -6283,7 +6283,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 260, 130, 75, 75, 260, 4, 25
 armour_ug_levels        1, 2, 5, 6
-armour_ug_models        crag_goblin_slingers, crag_goblin_slingers_upg
+armour_ug_models        crag_goblin_slingers, crag_goblin_slingers_upg, crag_goblin_slingers_upg, crag_goblin_slingers_upg
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -6360,7 +6360,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 440, 230, 125, 125, 440, 3, 78
 armour_ug_levels        2, 3, 5, 6
-armour_ug_models        crag_wargwarrior, crag_wargwarrior_upg
+armour_ug_models        crag_wargwarrior, crag_wargwarrior_upg, crag_wargwarrior_upg, crag_wargwarrior_upg
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -6399,8 +6399,8 @@ stat_charge_dist        6
 stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 490, 255, 125, 125, 490, 3, 0
-armour_ug_levels        1, 2, 3, 5, 6
-armour_ug_models        teraig_sword, teraig_sword_upg1, teraig_sword_upg2
+armour_ug_levels        1, 2, 3, 5
+armour_ug_models        teraig_sword, teraig_sword_upg1, teraig_sword_upg2, teraig_sword_upg2
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -6439,8 +6439,8 @@ stat_charge_dist        10
 stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 470, 250, 125, 125, 470, 3, 0
-armour_ug_levels        1, 2, 3, 5, 6
-armour_ug_models        teraig_halberd, teraig_halberd_upg1, teraig_halberd_upg2
+armour_ug_levels        1, 2, 3, 5
+armour_ug_models        teraig_halberd, teraig_halberd_upg1, teraig_halberd_upg2, teraig_halberd_upg2
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -6480,8 +6480,8 @@ stat_charge_dist        4
 stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 480, 260, 125, 125, 480, 3, 0
-armour_ug_levels        1, 2, 3, 5, 6
-armour_ug_models        teraig_slinger, teraig_slingers_upg1, teraig_slingers_upg2
+armour_ug_levels        1, 2, 3, 5
+armour_ug_models        teraig_slinger, teraig_slingers_upg1, teraig_slingers_upg2, teraig_slingers_upg2
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -6520,7 +6520,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 600, 375, 125, 125, 600, 2, 131
 armour_ug_levels        2, 3, 5, 6
-armour_ug_models        crag_warg_riders, crag_warg_riders_upg
+armour_ug_models        crag_warg_riders, crag_warg_riders_upg, crag_warg_riders_upg, crag_warg_riders_upg
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -6561,7 +6561,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			4, 975, 490, 125, 125, 975, 2, 89
 armour_ug_levels        2, 3, 5, 6
-armour_ug_models        belegost_warriors, belegost_warriors_upg
+armour_ug_models        belegost_warriors, belegost_warriors_upg, belegost_warriors_upg, belegost_warriors_upg
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -6601,7 +6601,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			4, 900, 450, 125, 125, 900, 2, 89
 armour_ug_levels        2, 3, 5, 6
-armour_ug_models        belegost_spears, belegost_spears_upg
+armour_ug_models        belegost_spears, belegost_spears_upg, belegost_spears_upg, belegost_spears_upg
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -6641,7 +6641,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 660, 330, 125, 125, 660, 2, 0
 armour_ug_levels        2, 3, 5, 6
-armour_ug_models        swords_rath, swords_rath_upg
+armour_ug_models        swords_rath, swords_rath_upg, swords_rath_upg, swords_rath_upg
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -6681,7 +6681,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 630, 310, 125, 125, 630, 2, 0
 armour_ug_levels        2, 3, 5, 6
-armour_ug_models        spears_rath, spears_rath_upg
+armour_ug_models        spears_rath, spears_rath_upg, spears_rath_upg, spears_rath_upg
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -6722,7 +6722,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 690, 350, 125, 125, 690, 2, 0
 armour_ug_levels        2, 3, 5, 6
-armour_ug_models        bows_rath, bows_rath_upg
+armour_ug_models        bows_rath, bows_rath_upg, bows_rath_upg, bows_rath_upg
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -6763,7 +6763,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			4, 1050, 530, 125, 125, 1050, 2, 97
 armour_ug_levels        2, 3, 5, 6
-armour_ug_models        belegost_crossbows, belegost_crossbows_upg
+armour_ug_models        belegost_crossbows, belegost_crossbows_upg, belegost_crossbows_upg, belegost_crossbows_upg
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -6841,7 +6841,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 760, 410, 125, 125, 760, 1, 78
 armour_ug_levels        3, 5, 6
-armour_ug_models        crag_orc_blunt_upg_dourhands
+armour_ug_models        crag_orc_blunt_upg_dourhands, crag_orc_blunt_upg_dourhands, crag_orc_blunt_upg_dourhands
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -6881,7 +6881,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 800, 430, 125, 125, 800, 1, 78
 armour_ug_levels        3, 5, 6
-armour_ug_models        crag_orc_berserkers_upg_dourhands
+armour_ug_models        crag_orc_berserkers_upg_dourhands, crag_orc_berserkers_upg_dourhands, crag_orc_berserkers_upg_dourhands
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -6921,7 +6921,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 840, 450, 125, 125, 840, 1, 78
 armour_ug_levels        3, 5, 6
-armour_ug_models        crag_orc_javs_upg_dourhands
+armour_ug_models        crag_orc_javs_upg_dourhands, crag_orc_javs_upg_dourhands, crag_orc_javs_upg_dourhands
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -6960,7 +6960,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1075, 520, 125, 125, 1075, 1, 89
 armour_ug_levels        3, 4, 5, 6
-armour_ug_models        belegost_halberdiers, belegost_halberdiers_upg
+armour_ug_models        belegost_halberdiers, belegost_halberdiers_upg, belegost_halberdiers_upg, belegost_halberdiers_upg
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -6998,7 +6998,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 600, 25, 25, 1200, 1, 1000
 armour_ug_levels        3, 4, 5, 6
-armour_ug_models        dourhand_flails, dourhand_flails_upg
+armour_ug_models        dourhand_flails, dourhand_flails_upg, dourhand_flails_upg, dourhand_flails_upg
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -7036,7 +7036,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost               3, 1200, 0, 25, 25, 1000, 1, 1000
 armour_ug_levels        3, 4, 5, 6
-armour_ug_models        dourhand_flails, dourhand_flails_upg
+armour_ug_models        dourhand_flails, dourhand_flails_upg, dourhand_flails_upg, dourhand_flails_upg
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -7075,7 +7075,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 2000, 1500, 25, 25, 2000, 1, 1000
 armour_ug_levels        3, 4, 5, 6
-armour_ug_models        dourhand_grenadiers, dourhand_grenadiers_upg
+armour_ug_models        dourhand_grenadiers, dourhand_grenadiers_upg, dourhand_grenadiers_upg, dourhand_grenadiers_upg
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -7114,7 +7114,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 2550, 1000, 25, 25, 2250, 1, 1200
 armour_ug_levels        3, 4, 5, 6
-armour_ug_models        ox_rider_spears, ox_rider_spears_upg
+armour_ug_models        ox_rider_spears, ox_rider_spears_upg, ox_rider_spears_upg, ox_rider_spears_upg
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -7152,7 +7152,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1250, 490, 175, 175, 1250, 1, 200
 armour_ug_levels        3, 4, 5, 6
-armour_ug_models        ox_crossbow_riders, ox_crossbow_riders_upg
+armour_ug_models        ox_crossbow_riders, ox_crossbow_riders_upg, ox_crossbow_riders_upg, ox_crossbow_riders_upg
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -13584,7 +13584,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 350, 200, 125, 125, 350, 3, 53
 armour_ug_levels        1
-armour_ug_models        khand_horde_ug0, khand_horde_ug1
+armour_ug_models        khand_horde_ug0
 ownership               khand, slave, spain, venice, england, russia, turks
 era 0                   khand
 era 1                   khand
@@ -15465,7 +15465,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1000, 450, 200, 200, 1000, 1, 100
 armour_ug_levels        4, 5, 6
-armour_ug_models        khazad_bg
+armour_ug_models        khazad_bg, khazad_bg, khazad_bg
 ownership               norway, slave
 era 0                   norway
 era 1                   norway
@@ -15503,7 +15503,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 275, 135, 125, 125, 275, 4, 50
 armour_ug_levels        1, 5, 6
-armour_ug_models        khazad_militia
+armour_ug_models        khazad_militia, khazad_militia, khazad_militia
 ownership               hungary, moors, norway, slave
 era 0                   hungary, moors, norway,
 era 1                   hungary, moors, norway,
@@ -15541,7 +15541,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 560, 175, 125, 125, 560, 4, 54
 armour_ug_levels        1, 2, 5, 6
-armour_ug_models        khazad_warriors, khazad_warriors_upg
+armour_ug_models        khazad_warriors, khazad_warriors_upg, khazad_warriors_upg, khazad_warriors_upg
 ownership               norway, hungary, slave
 era 0                   norway
 era 1                   norway
@@ -15579,7 +15579,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 575, 160, 125, 125, 575, 4, 55
 armour_ug_levels        1, 2, 5, 6
-armour_ug_models        khazad_pikes, khazad_pikes_upg
+armour_ug_models        khazad_pikes, khazad_pikes_upg, khazad_pikes_upg, khazad_pikes_upg
 ownership               norway, hungary, slave
 era 0                   norway
 era 1                   norway
@@ -15616,7 +15616,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 550, 180, 125, 125, 550, 4, 50
 armour_ug_levels        1, 5, 6
-armour_ug_models        dwarven_archers
+armour_ug_models        dwarven_archers, dwarven_archers, dwarven_archers
 ownership               hungary, moors, norway, slave, milan
 era 0                   norway
 era 1                   norway
@@ -15656,7 +15656,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 825, 315, 125, 125, 825, 3, 90
 armour_ug_levels        2, 3, 5, 6
-armour_ug_models        khazad_heavy_spears, khazad_heavy_spears_upg
+armour_ug_models        khazad_heavy_spears, khazad_heavy_spears_upg, khazad_heavy_spears_upg, khazad_heavy_spears_upg
 ownership               norway, hungary, slave
 era 0                   norway
 era 1                   norway
@@ -15693,7 +15693,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 800, 330, 125, 125, 800, 3, 88
 armour_ug_levels        2, 3, 5, 6
-armour_ug_models        dorwin_maa73, dorwin_maa73_upg
+armour_ug_models        dorwin_maa73, dorwin_maa73_upg, dorwin_maa73_upg, dorwin_maa73_upg
 ownership               norway, hungary, slave
 era 0                   norway
 era 1                   norway
@@ -15731,7 +15731,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 775, 345, 125, 125, 775, 3, 91
 armour_ug_levels        2, 3, 5, 6
-armour_ug_models        khazad_heavy_axe, khazad_heavy_axe_upg
+armour_ug_models        khazad_heavy_axe, khazad_heavy_axe_upg, khazad_heavy_axe_upg, khazad_heavy_axe_upg
 ownership               norway, hungary, slave
 era 0                   norway
 era 1                   norway
@@ -15769,7 +15769,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 630, 275, 125, 125, 630, 3, 80
 armour_ug_levels        2, 5, 6
-armour_ug_models        khazad_heavy_archers
+armour_ug_models        khazad_heavy_archers, khazad_heavy_archers, khazad_heavy_archers
 ownership               norway, slave, hungary
 era 0                   norway
 era 1                   norway
@@ -15808,7 +15808,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1000, 450, 175, 175, 1000, 2, 140
 armour_ug_levels        3, 5, 6
-armour_ug_models        khazad_elite
+armour_ug_models        khazad_elite, khazad_elite, khazad_elite
 ownership               norway, hungary, egypt, slave
 era 0                   norway
 era 1                   norway
@@ -15847,7 +15847,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 950, 395, 150, 150, 950, 2, 89
 armour_ug_levels        3, 4, 5, 6
-armour_ug_models        khazad_crossbow, khazad_crossbow_upg
+armour_ug_models        khazad_crossbow, khazad_crossbow_upg, khazad_crossbow_upg, khazad_crossbow_upg
 ownership               norway, hungary, slave
 era 0                   norway
 era 1                   norway
@@ -15885,7 +15885,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 600, 250, 250, 1200, 2, 110
 armour_ug_levels        3, 5, 6
-armour_ug_models        dorwin2_maa77
+armour_ug_models        dorwin2_maa77, dorwin2_maa77, dorwin2_maa77
 ownership               moors, slave, norway, khand, hungary
 era 0                   moors, norway
 era 1                   moors, norway
@@ -15924,7 +15924,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1950, 800, 350, 350, 1950, 1, 425
 armour_ug_levels        3, 4, 5, 6
-armour_ug_models        khazad_goat_spears, khazad_goat_spears_upg
+armour_ug_models        khazad_goat_spears, khazad_goat_spears_upg, khazad_goat_spears_upg, khazad_goat_spears_upg
 ownership               moors, hungary, norway
 era 0                   moors, norway
 era 1                   moors, norway
@@ -15963,7 +15963,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1250, 600, 200, 200, 1250, 1, 130
 armour_ug_levels        3, 4, 5, 6
-armour_ug_models        khazad_reclaimers, khazad_reclaimers_upg
+armour_ug_models        khazad_reclaimers, khazad_reclaimers_upg, khazad_reclaimers_upg, khazad_reclaimers_upg
 ownership               norway, slave, hungary
 era 0                   norway
 era 1                   norway
@@ -16000,7 +16000,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1300, 625, 250, 250, 1300, 1, 141
 armour_ug_levels        3, 5, 6
-armour_ug_models        dwarven_fallen
+armour_ug_models        dwarven_fallen, dwarven_fallen, dwarven_fallen
 ownership               moors, norway, hungary, slave
 era 0                   moors, norway, hungary, slave
 era 1                   moors, norway, hungary, slave
@@ -16037,7 +16037,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1250, 600, 250, 250, 1250, 1, 127
 armour_ug_levels        4, 5, 6
-armour_ug_models        khazad_guard
+armour_ug_models        khazad_guard, khazad_guard, khazad_guard
 ownership               moors, norway, hungary, slave
 era 0                   moors, norway, hungary
 era 1                   moors, norway, hungary
@@ -16075,7 +16075,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1550, 750, 325, 325, 1550, 1, 140
 armour_ug_levels        4, 5, 6
-armour_ug_models        dorwin_maa79_2
+armour_ug_models        dorwin_maa79_2, dorwin_maa79_2, dorwin_maa79_2
 ownership               norway, hungary, egypt, slave
 era 0                   norway
 era 1                   norway
@@ -16112,7 +16112,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1450, 700, 200, 200, 1450, 1, 57
 armour_ug_levels        4, 5, 6
-armour_ug_models        balin_guard
+armour_ug_models        balin_guard, balin_guard, balin_guard
 ownership               norway, hungary, slave
 era 0                   norway
 era 1                   norway
@@ -16154,7 +16154,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1000, 425, 25, 25, 1000, 1, 1400
 armour_ug_levels        4, 5, 6
-armour_ug_models        ered_luin_bg
+armour_ug_models        ered_luin_bg, ered_luin_bg, ered_luin_bg
 ownership               hungary, slave
 era 0                   hungary
 era 1                   hungary
@@ -16193,7 +16193,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 550, 165, 25, 25, 550, 4, 450
 armour_ug_levels        1, 2, 5, 6
-armour_ug_models        ered_low_axes, ered_low_axes_upg
+armour_ug_models        ered_low_axes, ered_low_axes_upg, ered_low_axes_upg, ered_low_axes_upg
 ownership               hungary, slave, norway
 era 0                   hungary
 era 1                   hungary
@@ -16233,7 +16233,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 600, 195, 25, 25, 600, 4, 300
 armour_ug_levels        1, 2, 5, 6
-armour_ug_models        ered_low_pikes, ered_low_pikes_upg
+armour_ug_models        ered_low_pikes, ered_low_pikes_upg, ered_low_pikes_upg, ered_low_pikes_upg
 ownership               hungary, slave, norway
 era 0                   hungary
 era 1                   hungary
@@ -16273,7 +16273,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 540, 175, 25, 25, 540, 4, 300
 armour_ug_levels        1, 2, 5, 6
-armour_ug_models        ered_low_spears, ered_low_spears_upg
+armour_ug_models        ered_low_spears, ered_low_spears_upg, ered_low_spears_upg, ered_low_spears_upg
 ownership               hungary, slave, norway
 era 0                   hungary
 era 1                   hungary
@@ -16312,7 +16312,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 550, 215, 25, 25, 550, 4, 800
 armour_ug_levels        1, 2, 5, 6
-armour_ug_models        ered_high_bow, ered_high_bow_upg
+armour_ug_models        ered_high_bow, ered_high_bow_upg, ered_high_bow_upg, ered_high_bow_upg
 ownership               hungary, slave
 era 0                   hungary
 era 1                   hungary
@@ -16351,7 +16351,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 650, 325, 125, 125, 650, 3, 100
 armour_ug_levels        1, 2, 5, 6
-armour_ug_models        merchants, merchants_upg
+armour_ug_models        merchants, merchants_upg, merchants_upg, merchants_upg
 ownership               slave, russia, turks, hungary
 era 0                   hungary
 era 1                   hungary
@@ -16392,7 +16392,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 850, 375, 25, 25, 850, 3, 750
 armour_ug_levels        2, 3, 5, 6
-armour_ug_models        ered_high_spear, ered_high_spear_upg
+armour_ug_models        ered_high_spear, ered_high_spear_upg, ered_high_spear_upg, ered_high_spear_upg
 ownership               hungary, slave
 era 0                   hungary
 era 1                   hungary
@@ -16432,7 +16432,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 825, 400, 25, 25, 825, 3, 300
 armour_ug_levels        2, 3, 5, 6
-armour_ug_models        nogrod_elite_hunters, nogrod_elite_hunters_upg
+armour_ug_models        nogrod_elite_hunters, nogrod_elite_hunters_upg, nogrod_elite_hunters_upg, nogrod_elite_hunters_upg
 ownership               hungary, slave
 era 0                   hungary
 era 1                   hungary
@@ -16471,7 +16471,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 700, 325, 125, 125, 700, 3, 81
 armour_ug_levels        2, 3, 5, 6
-armour_ug_models        ered_high_axe, ered_high_axe_upg
+armour_ug_models        ered_high_axe, ered_high_axe_upg, ered_high_axe_upg, ered_high_axe_upg
 ownership               hungary, slave
 era 0                   hungary
 era 1                   hungary
@@ -16511,7 +16511,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 800, 450, 200, 200, 800, 3, 100
 armour_ug_levels        2, 3, 5, 6
-armour_ug_models        ered_luin_marksmen, ered_luin_marksmen_upg
+armour_ug_models        ered_luin_marksmen, ered_luin_marksmen_upg, ered_luin_marksmen_upg, ered_luin_marksmen_upg
 ownership               hungary, slave
 era 0                   hungary
 era 1                   hungary
@@ -16550,7 +16550,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1150, 540, 125, 125, 1150, 2, 91
 armour_ug_levels        3, 4, 5, 6
-armour_ug_models        nogrod_elite_pikemen, nogrod_elite_pikemen_upg
+armour_ug_models        nogrod_elite_pikemen, nogrod_elite_pikemen_upg, nogrod_elite_pikemen_upg, nogrod_elite_pikemen_upg
 ownership               hungary, slave
 era 0                   hungary
 era 1                   hungary
@@ -16588,7 +16588,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1100, 500, 45, 100, 1100, 2, 610
 armour_ug_levels        3, 4, 5, 6
-armour_ug_models        nogrod_elite_axemen, nogrod_elite_axemen_upg
+armour_ug_models        nogrod_elite_axemen, nogrod_elite_axemen_upg, nogrod_elite_axemen_upg, nogrod_elite_axemen_upg
 ownership               hungary, slave
 era 0                   hungary
 era 1                   hungary
@@ -16627,7 +16627,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1100, 500, 45, 100, 1100, 2, 610
 armour_ug_levels        3, 4, 5, 6
-armour_ug_models        nogrod_elite_macemen, nogrod_elite_macemen_upg
+armour_ug_models        nogrod_elite_macemen, nogrod_elite_macemen_upg, nogrod_elite_macemen_upg, nogrod_elite_macemen_upg
 ownership               hungary, slave
 era 0                   hungary
 era 1                   hungary
@@ -16666,7 +16666,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1250, 550, 125, 125, 1250, 2, 91
 armour_ug_levels        3, 5, 6
-armour_ug_models        nogrod_wardens
+armour_ug_models        nogrod_wardens, nogrod_wardens, nogrod_wardens
 ownership               hungary, slave
 era 0                   hungary
 era 1                   hungary
@@ -16708,7 +16708,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1700, 775, 25, 50, 1700, 1, 1000
 armour_ug_levels        3, 4, 5, 6
-armour_ug_models        ered_boarider, ered_boarider_upg
+armour_ug_models        ered_boarider, ered_boarider_upg, ered_boarider_upg, ered_boarider_upg
 ownership               hungary, slave
 era 0                   hungary
 era 1                   hungary
@@ -16747,7 +16747,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1400, 600, 25, 25, 1400, 1, 1200
 armour_ug_levels        4, 5, 6
-armour_ug_models        Juggernauts
+armour_ug_models        Juggernauts, Juggernauts, Juggernauts
 ownership               hungary, slave
 era 0                   hungary
 era 1                   hungary
@@ -16786,7 +16786,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 600, 250, 250, 1200, 1, 120
 armour_ug_levels        4, 5, 6
-armour_ug_models        nogrod_bg
+armour_ug_models        nogrod_bg, nogrod_bg, nogrod_bg
 ownership               hungary, slave
 era 0                   hungary
 era 1                   hungary
@@ -16824,7 +16824,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1400, 600, 125, 125, 1400, 1, 91
 armour_ug_levels        4, 5, 6
-armour_ug_models        beleriand_guard
+armour_ug_models        beleriand_guard, beleriand_guard, beleriand_guard
 ownership               hungary, slave
 era 0                   hungary
 era 1                   hungary
@@ -16864,7 +16864,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1300, 445, 25, 25, 1300, 1, 1400
 armour_ug_levels        4, 5, 6
-armour_ug_models        firebeard_warborn
+armour_ug_models        firebeard_warborn, firebeard_warborn, firebeard_warborn
 ownership               hungary, slave
 era 0                   hungary
 era 1                   hungary
@@ -16904,7 +16904,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost               3, 1250, 0, 25, 25, 1400, 1, 1400
 armour_ug_levels        4, 5, 6
-armour_ug_models        firebeard_warborn
+armour_ug_models        firebeard_warborn, firebeard_warborn, firebeard_warborn
 ownership               hungary, slave
 era 0                   hungary
 era 1                   hungary
@@ -16946,7 +16946,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 2040, 875, 25, 50, 2040, 1, 1650
 armour_ug_levels        4, 5, 6
-armour_ug_models        ered_warboars_bg
+armour_ug_models        ered_warboars_bg, ered_warboars_bg, ered_warboars_bg
 ownership               hungary, slave
 era 0                   hungary
 era 1                   hungary
@@ -16986,7 +16986,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1000, 465, 200, 200, 1000, 1, 100
 armour_ug_levels        4, 5, 6
-armour_ug_models        bodyguard_upg
+armour_ug_models        bodyguard_upg, bodyguard_upg, bodyguard_upg
 ownership               moors, slave
 era 0                   moors
 era 1                   moors
@@ -17025,7 +17025,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 550, 165, 125, 125, 550, 4, 54
 armour_ug_levels        1, 2, 5, 6
-armour_ug_models        dwarven_warriors, dwarven_warriors_upg
+armour_ug_models        dwarven_warriors, dwarven_warriors_upg, dwarven_warriors_upg, dwarven_warriors_upg
 ownership               moors, slave, norway, hungary, scotland
 era 0                   moors
 era 1                   moors
@@ -17062,7 +17062,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 475, 180, 125, 125, 475, 4, 54
 armour_ug_levels        1, 2, 5, 6
-armour_ug_models        axethrowers, axethrowers_upg
+armour_ug_models        axethrowers, axethrowers_upg, axethrowers_upg, axethrowers_upg
 ownership               moors, norway, hungary, slave
 era 0                   moors
 era 1                   moors
@@ -17099,7 +17099,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 560, 165, 125, 125, 560, 4, 70
 armour_ug_levels        1, 5, 6
-armour_ug_models        heavy_mattocks_upg
+armour_ug_models        heavy_mattocks_upg, heavy_mattocks_upg, heavy_mattocks_upg
 ownership               moors, hungary, slave
 era 0                   moors
 era 1                   moors
@@ -17138,7 +17138,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 600, 250, 125, 125, 600, 4, 59
 armour_ug_levels        1, 5, 6
-armour_ug_models        dorwin_maa75
+armour_ug_models        dorwin_maa75, dorwin_maa75, dorwin_maa75
 ownership               moors, hungary, slave, khand
 era 0                   moors
 era 1                   moors
@@ -17177,7 +17177,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 540, 275, 125, 125, 540, 4, 57
 armour_ug_levels        1, 5, 6
-armour_ug_models        dorwin_maa78
+armour_ug_models        dorwin_maa78, dorwin_maa78, dorwin_maa78
 ownership               moors, hungary, slave, khand
 era 0                   moors
 era 1                   moors
@@ -17217,7 +17217,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 750, 365, 125, 125, 750, 3, 91
 armour_ug_levels        2, 3, 5, 6
-armour_ug_models        warriors, warriors_upg
+armour_ug_models        warriors, warriors_upg, warriors_upg, warriors_upg
 ownership               moors, hungary, norway, khand, slave
 era 0                   moors
 era 1                   moors
@@ -17256,7 +17256,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 725, 385, 125, 125, 725, 3, 90
 armour_ug_levels        2, 3, 5, 6
-armour_ug_models        hvy_axethrowers, hvy_axethrowers_upg
+armour_ug_models        hvy_axethrowers, hvy_axethrowers_upg, hvy_axethrowers_upg, hvy_axethrowers_upg
 ownership               moors, hungary, norway, slave
 era 0                   moors
 era 1                   moors
@@ -17295,7 +17295,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 730, 345, 125, 125, 730, 3, 89
 armour_ug_levels        2, 3, 5, 6
-armour_ug_models        dwarven_pikemen, dwarven_pikemen_ug1
+armour_ug_models        dwarven_pikemen, dwarven_pikemen_ug1, dwarven_pikemen_ug1, dwarven_pikemen_ug1
 ownership               moors, hungary, norway, scotland, khand, slave
 era 0                   moors
 era 1                   moors
@@ -17333,7 +17333,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1000, 455, 150, 150, 1000, 2, 126
 armour_ug_levels        3, 5, 6
-armour_ug_models        iron_guard_upg
+armour_ug_models        iron_guard_upg, iron_guard_upg, iron_guard_upg
 ownership               moors, hungary, norway, slave
 era 0                   moors
 era 1                   moors
@@ -17372,7 +17372,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 900, 475, 150, 150, 900, 2, 89
 armour_ug_levels        3, 5, 6
-armour_ug_models        dwarven_pikemen_ug2
+armour_ug_models        dwarven_pikemen_ug2, dwarven_pikemen_ug2, dwarven_pikemen_ug2
 ownership               moors, hungary, slave
 era 0                   moors
 era 1                   moors
@@ -17410,7 +17410,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 680, 200, 200, 1200, 2, 135
 armour_ug_levels        3, 5, 6
-armour_ug_models        dorwin_maa60
+armour_ug_models        dorwin_maa60, dorwin_maa60, dorwin_maa60
 ownership               moors, hungary, slave, norway, khand
 era 0                   moors
 era 1                   moors
@@ -17447,7 +17447,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1000, 575, 150, 150, 1000, 2, 127
 armour_ug_levels        3, 5, 6
-armour_ug_models        warriors2, warriors2_upg
+armour_ug_models        warriors2, warriors2_upg, warriors2_upg
 ownership               moors, hungary, norway, slave
 era 0                   moors
 era 1                   moors
@@ -17486,7 +17486,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1000, 495, 150, 150, 1000, 2, 89
 armour_ug_levels        3, 5, 6
-armour_ug_models        dwarven_crossbowmen_upg
+armour_ug_models        dwarven_crossbowmen_upg, dwarven_crossbowmen_upg, dwarven_crossbowmen_upg
 ownership               moors, hungary, slave
 era 0                   moors
 era 1                   moors
@@ -17524,7 +17524,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1750, 850, 225, 225, 1750, 1, 425
 armour_ug_levels        3, 5, 6
-armour_ug_models        Iron_Hammerguard
+armour_ug_models        Iron_Hammerguard, Iron_Hammerguard, Iron_Hammerguard
 ownership               moors, norway, hungary
 era 0                   moors, norway
 era 1                   moors, norway
@@ -17562,7 +17562,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1800, 900, 300, 275, 1800, 1, 150
 armour_ug_levels        3, 5, 6
-armour_ug_models        dwarven_crossbowmen_upg
+armour_ug_models        dwarven_crossbowmen_upg, dwarven_crossbowmen_upg, dwarven_crossbowmen_upg
 ownership               moors, hungary,
 era 0                   moors
 era 1                   moors
@@ -17600,7 +17600,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1750, 800, 225, 225, 1750, 1, 425
 armour_ug_levels        3, 5, 6
-armour_ug_models        wargoat_rider
+armour_ug_models        wargoat_rider, wargoat_rider, wargoat_rider
 ownership               hungary, moors
 era 0                   moors
 era 1                   moors
@@ -17638,7 +17638,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1300, 750, 200, 200, 1300, 1, 115
 armour_ug_levels        4, 5, 6
-armour_ug_models        gundabad_hammers
+armour_ug_models        gundabad_hammers, gundabad_hammers, gundabad_hammers
 ownership               moors, hungary, norway, slave
 era 0                   moors, hungary, norway
 era 1                   moors, hungary, norway
@@ -17676,7 +17676,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1500, 850, 200, 200, 1500, 1, 1380
 armour_ug_levels        4, 5, 6
-armour_ug_models        khazad_dum
+armour_ug_models        khazad_dum, khazad_dum, khazad_dum
 ownership               moors, norway, slave, hungary
 era 0                   moors, norway
 era 1                   moors, norway
@@ -17714,7 +17714,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1450, 585, 350, 350, 1450, 1, 127
 armour_ug_levels        4, 5, 6
-armour_ug_models        dwarves_elites
+armour_ug_models        dwarves_elites, dwarves_elites, dwarves_elites
 ownership               moors, hungary, khand, slave
 era 0                   moors
 era 1                   moors
@@ -17757,7 +17757,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1000, 500, 200, 200, 1000, 1, 100
 armour_ug_levels        4, 5
-armour_ug_models        mirkwood_bg
+armour_ug_models        mirkwood_bg, mirkwood_bg
 ownership               mongols, slave
 era 0                   mongols
 era 1                   mongols
@@ -17797,7 +17797,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 800, 270, 200, 200, 800, 4, 76
 armour_ug_levels        1, 2, 3, 5
-armour_ug_models        Silvan_Spear, mirkwood_fwardens_spear, gelion_spears
+armour_ug_models        Silvan_Spear, mirkwood_fwardens_spear, gelion_spears, gelion_spears
 ownership               mongols, slave, ireland
 era 0                   mongols
 era 1                   mongols
@@ -17836,7 +17836,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 800, 280, 200, 200, 800, 4, 76
 armour_ug_levels        1, 2, 3, 5
-armour_ug_models        woodland_warriors, mirkwood_fwardens_axe , gelion_axes
+armour_ug_models        woodland_warriors, mirkwood_fwardens_axe, gelion_axes, gelion_axes
 ownership               mongols, slave, ireland
 era 0                   mongols
 era 1                   mongols
@@ -17875,7 +17875,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 800, 280, 200, 200, 800, 4, 96
 armour_ug_levels        1, 2, 3, 5
-armour_ug_models        mirkwood_fwardens, mirkwood_fwardens_upg, gelion_javs
+armour_ug_models        mirkwood_fwardens, mirkwood_fwardens_upg, gelion_javs, gelion_javs
 ownership               mongols, ireland, slave, scotland
 era 0                   mongols
 era 1                   mongols
@@ -17915,7 +17915,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 850, 300, 200, 200, 850, 4, 74
 armour_ug_levels        1, 2, 5
-armour_ug_models        Silvan_Archer, Silvan_Archer_upg
+armour_ug_models        Silvan_Archer, Silvan_Archer_upg, Silvan_Archer_upg
 ownership               mongols, slave, ireland
 era 0                   mongols
 era 1                   mongols
@@ -17955,7 +17955,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 900, 500, 200, 200, 900, 3, 110
 armour_ug_levels        2, 3, 5
-armour_ug_models        silvan_axe, silvan_axe_upg
+armour_ug_models        silvan_axe, silvan_axe_upg, silvan_axe_upg
 ownership               mongols, ireland, slave
 era 0                   mongols
 era 1                   mongols
@@ -17994,7 +17994,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1000, 550, 200, 200, 1000, 3, 110
 armour_ug_levels        2, 5
-armour_ug_models        orop_chosen_upg2
+armour_ug_models        orop_chosen_upg2, orop_chosen_upg2
 ownership               mongols, ireland, slave
 era 0                   mongols
 era 1                   mongols
@@ -18034,7 +18034,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1000, 550, 200, 200, 1000, 3, 100
 armour_ug_levels        2, 3, 5
-armour_ug_models        Mirkwood_Marchwardens, Mirkwood_Marchwardens_upg
+armour_ug_models        Mirkwood_Marchwardens, Mirkwood_Marchwardens_upg, Mirkwood_Marchwardens_upg
 ownership               mongols, norway, slave, scotland
 era 0                   mongols
 era 1                   mongols
@@ -18074,7 +18074,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1050, 550, 25, 50, 1050, 2, 420
 armour_ug_levels        2, 3, 5
-armour_ug_models        silvan_mounted_archers, gelion_horse_archers
+armour_ug_models        silvan_mounted_archers, gelion_horse_archers, gelion_horse_archers
 ownership               mongols, ireland, slave
 era 0                   mongols
 era 1                   mongols
@@ -18114,7 +18114,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 625, 200, 200, 1200, 2, 130
 armour_ug_levels        3, 4, 5
-armour_ug_models        mirkwood_arior_axemen, mirkwood_arior_axemen_upg
+armour_ug_models        mirkwood_arior_axemen, mirkwood_arior_axemen_upg, mirkwood_arior_axemen_upg
 ownership               mongols, ireland, slave
 era 0                   mongols
 era 1                   mongols
@@ -18152,7 +18152,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost               3, 1125, 500, 200, 200, 1300, 2, 130
 armour_ug_levels        3, 4, 5
-armour_ug_models        mirk_sword_shield, mirk_sword_shield_upg
+armour_ug_models        mirk_sword_shield, mirk_sword_shield_upg, mirk_sword_shield_upg
 ownership               slave
 era 0                   slave
 era 1                   slave
@@ -18191,7 +18191,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1150, 650, 200, 200, 1150, 2, 130
 armour_ug_levels        3, 4, 5
-armour_ug_models        mirkwood_heavy_spearmen, mirkwood_heavy_spearmen_upg
+armour_ug_models        mirkwood_heavy_spearmen, mirkwood_heavy_spearmen_upg, mirkwood_heavy_spearmen_upg
 ownership               mongols, ireland, slave
 era 0                   mongols
 era 1                   mongols
@@ -18230,7 +18230,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost               3, 1200, 525, 200, 200, 1300, 2, 130
 armour_ug_levels        3, 4, 5
-armour_ug_models        mirkwood_arior_glaives, mirkwood_arior_glaives_upg
+armour_ug_models        mirkwood_arior_glaives, mirkwood_arior_glaives_upg, mirkwood_arior_glaives_upg
 ownership               mongols, ireland, slave
 era 0                   slave
 era 1                   slave
@@ -18268,7 +18268,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 625, 200, 200, 1200, 2, 130
 armour_ug_levels        3, 4, 5
-armour_ug_models        mirkwood_heavy_swordsmen, mirkwood_heavy_swordsmen_upg
+armour_ug_models        mirkwood_heavy_swordsmen, mirkwood_heavy_swordsmen_upg, mirkwood_heavy_swordsmen_upg
 ownership               mongols, ireland, slave
 era 0                   mongols
 era 1                   mongols
@@ -18308,7 +18308,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1250, 675, 200, 200, 1250, 2, 120
 armour_ug_levels        3, 4, 5
-armour_ug_models        mirkwood_arior_archers, mirkwood_heavy_archers_upg
+armour_ug_models        mirkwood_arior_archers, mirkwood_heavy_archers_upg, mirkwood_heavy_archers_upg
 ownership               mongols, ireland, slave
 era 0                   mongols
 era 1                   mongols
@@ -18348,7 +18348,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1350, 900, 200, 200, 1350, 1, 90
 armour_ug_levels        3, 4, 5
-armour_ug_models        stag_riders2, erphin_en_taur_riders
+armour_ug_models        stag_riders2, erphin_en_taur_riders, erphin_en_taur_riders
 ownership               mongols, ireland, slave
 era 0                   mongols
 era 1                   mongols
@@ -18387,7 +18387,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1400, 950, 200, 200, 1400, 1, 150
 armour_ug_levels        3, 4, 5
-armour_ug_models        palace_guard_upg, palace_guard_upg2
+armour_ug_models        palace_guard_upg, palace_guard_upg2, palace_guard_upg2
 ownership               mongols, ireland, slave
 era 0                   mongols
 era 1                   mongols
@@ -18427,7 +18427,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1550, 1050, 250, 250, 1550, 1, 150
 armour_ug_levels        3, 4, 5
-armour_ug_models        mirkwood_nobles, mirkwood_nobles_upg
+armour_ug_models        mirkwood_nobles, mirkwood_nobles_upg, mirkwood_nobles_upg
 ownership               mongols, ireland, slave
 era 0                   mongols
 era 1                   mongols
@@ -18465,7 +18465,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1600, 1100, 200, 200, 1600, 1, 115
 armour_ug_levels        3, 4, 5
-armour_ug_models        Silvan_Marchwardens, erphin_en_taur
+armour_ug_models        Silvan_Marchwardens, erphin_en_taur, erphin_en_taur
 ownership               mongols, ireland, slave
 era 0                   mongols
 era 1                   mongols
@@ -18505,7 +18505,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 2200, 1350, 200, 200, 2200, 1, 90
 armour_ug_levels        3, 4, 5
-armour_ug_models        stag_riders, stag_riders_upg
+armour_ug_models        stag_riders, stag_riders_upg, stag_riders_upg
 ownership               mongols, ireland, slave
 era 0                   mongols
 era 1                   mongols
@@ -18547,7 +18547,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1000, 500, 200, 200, 1000, 1, 100
 armour_ug_levels        3, 4, 5
-armour_ug_models        silver_guard, silver_guard_upg
+armour_ug_models        silver_guard, silver_guard_upg, silver_guard_upg
 ownership               ireland, slave
 era 0                   ireland
 era 1                   ireland
@@ -18587,7 +18587,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 800, 270, 200, 200, 800, 4, 76
 armour_ug_levels        1, 2, 3, 5
-armour_ug_models        lorien_spear, lorien_spear_upg, lorien_spear_upg2
+armour_ug_models        lorien_spear, lorien_spear_upg, lorien_spear_upg2, lorien_spear_upg2
 ownership               ireland, slave, mongols
 era 0                   ireland
 era 1                   ireland
@@ -18625,7 +18625,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 825, 280, 200, 200, 825, 4, 76
 armour_ug_levels        1, 2, 3, 5
-armour_ug_models        lorien_infantry, lorien_infantry_upg, lorien_infantry_upg2
+armour_ug_models        lorien_infantry, lorien_infantry_upg, lorien_infantry_upg2, lorien_infantry_upg2
 ownership               ireland, slave, mongols
 era 0                   ireland
 era 1                   ireland
@@ -18662,7 +18662,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 825, 315, 200, 200, 825, 4, 96
 armour_ug_levels        1, 2, 5
-armour_ug_models        lorien_wardens, lorien_wardens_upg
+armour_ug_models        lorien_wardens, lorien_wardens_upg, lorien_wardens_upg
 ownership               ireland, mongols, slave
 era 0                   ireland
 era 1                   ireland
@@ -18701,7 +18701,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 750, 300, 200, 200, 750, 4, 74
 armour_ug_levels        1, 2, 3, 5
-armour_ug_models        lorien_archer, lorien_archer_upg, lorien_archer_upg2
+armour_ug_models        lorien_archer, lorien_archer_upg, lorien_archer_upg2, lorien_archer_upg2
 ownership               ireland, slave, mongols
 era 0                   ireland
 era 1                   ireland
@@ -18740,7 +18740,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 900, 350, 200, 200, 900, 3, 84
 armour_ug_levels        1, 2, 3, 5
-armour_ug_models        lorien_horsearcher, lorien_horsearcher_upg, lorien_horsearcher_upg2
+armour_ug_models        lorien_horsearcher, lorien_horsearcher_upg, lorien_horsearcher_upg2, lorien_horsearcher_upg2
 ownership               ireland, mongols, slave
 era 0                   ireland
 era 1                   ireland
@@ -18779,7 +18779,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1000, 500, 200, 200, 1000, 3, 110
 armour_ug_levels        2, 3, 5
-armour_ug_models        cg_guardians, cg_guardians_upg
+armour_ug_models        cg_guardians, cg_guardians_upg, cg_guardians_upg
 ownership               ireland, mongols, slave
 era 0                   ireland
 era 1                   ireland
@@ -18818,7 +18818,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1000, 500, 200, 200, 1000, 3, 110
 armour_ug_levels        2, 3, 5
-armour_ug_models        lorien_glaives, lorien_glaives_upg
+armour_ug_models        lorien_glaives, lorien_glaives_upg, lorien_glaives_upg
 ownership               ireland, mongols, slave
 era 0                   ireland
 era 1                   ireland
@@ -18857,7 +18857,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1050, 525, 200, 200, 1050, 3, 100
 armour_ug_levels        2, 3, 5
-armour_ug_models        lothlorien_ranger, lothlorien_ranger_upg
+armour_ug_models        lothlorien_ranger, lothlorien_ranger_upg, lothlorien_ranger_upg
 ownership               ireland, mongols, slave
 era 0                   ireland
 era 1                   ireland
@@ -18896,7 +18896,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1125, 550, 200, 200, 1125, 2, 90
 armour_ug_levels        2, 5
-armour_ug_models        lorien_lancer_upg
+armour_ug_models        lorien_lancer_upg, lorien_lancer_upg
 ownership               ireland, mongols, slave
 era 0                   ireland
 era 1                   ireland
@@ -18935,7 +18935,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1125, 650, 200, 200, 1125, 2, 130
 armour_ug_levels        3, 4, 5
-armour_ug_models        galadhrim_halberd, galadhrim_halberd_upg
+armour_ug_models        galadhrim_halberd, galadhrim_halberd_upg, galadhrim_halberd_upg
 ownership               ireland, mongols, slave
 era 0                   ireland
 era 1                   ireland
@@ -18973,7 +18973,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1150, 600, 200, 200, 1150, 2, 130
 armour_ug_levels        3, 4, 5
-armour_ug_models        galadhrim_sword, galadhrim_sword_upg
+armour_ug_models        galadhrim_sword, galadhrim_sword_upg, galadhrim_sword_upg
 ownership               ireland, mongols, slave
 era 0                   ireland
 era 1                   ireland
@@ -19011,7 +19011,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 700, 200, 200, 1200, 2, 130
 armour_ug_levels        3, 4, 5
-armour_ug_models        galadhrim_axemen_upg, galadhrim_axemen
+armour_ug_models        galadhrim_axemen_upg, galadhrim_axemen, galadhrim_axemen
 ownership               ireland, mongols, slave
 era 0                   ireland
 era 1                   ireland
@@ -19050,7 +19050,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 700, 200, 200, 1200, 2, 130
 armour_ug_levels        3, 4, 5
-armour_ug_models        galadhrim_spears, galadhrim_spears_upg
+armour_ug_models        galadhrim_spears, galadhrim_spears_upg, galadhrim_spears_upg
 ownership               ireland, mongols, slave
 era 0                   ireland
 era 1                   ireland
@@ -19089,7 +19089,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1350, 800, 200, 200, 1350, 2, 1200
 armour_ug_levels        3, 4, 5
-armour_ug_models        galadhrim_archers, galadhrim_archers_upg
+armour_ug_models        galadhrim_archers, galadhrim_archers_upg, galadhrim_archers_upg
 ownership               ireland, mongols, slave
 era 0                   ireland
 era 1                   ireland
@@ -19130,7 +19130,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1700, 1000, 200, 200, 1700, 1, 170
 armour_ug_levels        3, 4, 5
-armour_ug_models        galadhrim_lancers, galadhrim_lancers_upg
+armour_ug_models        galadhrim_lancers, galadhrim_lancers_upg, galadhrim_lancers_upg
 ownership               ireland, mongols, slave
 era 0                   ireland
 era 1                   ireland
@@ -19169,7 +19169,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 2100, 1350, 200, 200, 2100, 1, 90
 armour_ug_levels        3, 4, 5
-armour_ug_models        galadhrim_horsearchers, galadhrim_horsearchers_upg
+armour_ug_models        galadhrim_horsearchers, galadhrim_horsearchers_upg, galadhrim_horsearchers_upg
 ownership               ireland, mongols, slave
 era 0                   ireland
 era 1                   ireland
@@ -19210,7 +19210,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1350, 900, 300, 300, 1350, 1, 130
 armour_ug_levels        3, 5
-armour_ug_models        galadhrim_pikes
+armour_ug_models        galadhrim_pikes, galadhrim_pikes
 ownership               ireland, mongols, slave
 era 0                   ireland
 era 1                   ireland
@@ -19249,7 +19249,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1500, 1100, 250, 250, 1500, 1, 150
 armour_ug_levels        4, 5
-armour_ug_models        galadhrim_marchwardens
+armour_ug_models        galadhrim_marchwardens, galadhrim_marchwardens
 ownership               ireland, mongols, slave
 era 0                   ireland
 era 1                   ireland
@@ -19286,7 +19286,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1450, 1050, 200, 200, 1450, 1, 100
 armour_ug_levels        3, 4, 5
-armour_ug_models        lorien_hunters, lorien_hunters_upg
+armour_ug_models        lorien_hunters, lorien_hunters_upg, lorien_hunters_upg
 ownership               ireland, mongols, slave
 era 0                   ireland
 era 1                   ireland
@@ -19328,7 +19328,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1000, 500, 250, 250, 1000, 1, 140
 armour_ug_levels        4, 5
-armour_ug_models        elf_elite_dsm
+armour_ug_models        elf_elite_dsm, elf_elite_dsm
 ownership               saxons, slave
 era 0                   saxons
 era 1                   saxons
@@ -19367,7 +19367,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1400, 500, 200, 200, 1400, 1, 140
 armour_ug_levels        4, 5
-armour_ug_models        eldarinwe_bg
+armour_ug_models        eldarinwe_bg, eldarinwe_bg
 ownership               saxons, denmark, slave
 era 0                   saxons
 era 1                   saxons
@@ -19407,7 +19407,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 825, 270, 200, 200, 825, 4, 76
 armour_ug_levels        1, 2, 3, 5
-armour_ug_models        quendi_spear, quendi_spear_upg, quendi_spear_upg2
+armour_ug_models        quendi_spear, quendi_spear_upg, quendi_spear_upg2, quendi_spear_upg2
 ownership               saxons, denmark, slave
 era 0                   saxons
 era 1                   saxons
@@ -19446,7 +19446,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 850, 280, 200, 200, 850, 4, 86
 armour_ug_levels        1, 2, 3, 5
-armour_ug_models        quendi_sword, quendi_sword_upg, quendi_sword_upg2
+armour_ug_models        quendi_sword, quendi_sword_upg, quendi_sword_upg2, quendi_sword_upg2
 ownership               saxons, denmark, slave
 era 0                   saxons
 era 1                   saxons
@@ -19486,7 +19486,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 875, 300, 200, 200, 875, 4, 86
 armour_ug_levels        1, 2, 3, 5
-armour_ug_models        quendi_bow, quendi_bow_upg, quendi_bow_upg2
+armour_ug_models        quendi_bow, quendi_bow_upg, quendi_bow_upg2, quendi_bow_upg2
 ownership               saxons, denmark, slave
 era 0                   saxons
 era 1                   saxons
@@ -19526,7 +19526,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 850, 400, 200, 200, 850, 3, 84
 armour_ug_levels        1, 2, 3, 5
-armour_ug_models        quendi_hrsword, quendi_hrsword_upg, quendi_hrsword_upg2
+armour_ug_models        quendi_hrsword, quendi_hrsword_upg, quendi_hrsword_upg2, quendi_hrsword_upg2
 ownership               saxons, denmark, slave
 era 0                   saxons
 era 1                   saxons
@@ -19566,7 +19566,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 975, 500, 200, 200, 975, 3, 102
 armour_ug_levels        2, 3, 5
-armour_ug_models        amanyar_swordmasters, amanyar_swordmasters_upg
+armour_ug_models        amanyar_swordmasters, amanyar_swordmasters_upg, amanyar_swordmasters_upg
 ownership               saxons, denmark, slave, turks
 era 0                   saxons
 era 1                   saxons
@@ -19605,7 +19605,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 900, 525, 250, 250, 900, 3, 160
 armour_ug_levels        2, 3, 5
-armour_ug_models        amanyar_pikes, amanyar_pikes_upg
+armour_ug_models        amanyar_pikes, amanyar_pikes_upg, amanyar_pikes_upg
 ownership               saxons, slave
 era 0                   saxons
 era 1                   saxons
@@ -19645,7 +19645,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 950, 525, 200, 200, 950, 3, 140
 armour_ug_levels        2, 3, 5
-armour_ug_models        amanyar_archers, amanyar_archers_upg
+armour_ug_models        amanyar_archers, amanyar_archers_upg, amanyar_archers_upg
 ownership               saxons, slave
 era 0                   saxons
 era 1                   saxons
@@ -19686,7 +19686,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1000, 650, 200, 200, 1000, 2, 130
 armour_ug_levels        2, 3, 5
-armour_ug_models        amanyar_riders, amanyar_riders_upg
+armour_ug_models        amanyar_riders, amanyar_riders_upg, amanyar_riders_upg
 ownership               saxons, denmark, slave
 era 0                   saxons
 era 1                   saxons
@@ -19725,7 +19725,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1000, 575, 200, 200, 1000, 2, 120
 armour_ug_levels        2, 3, 5
-armour_ug_models        amanyar_rangers, amanyar_rangers_upg
+armour_ug_models        amanyar_rangers, amanyar_rangers_upg, amanyar_rangers_upg
 ownership               saxons, denmark, slave
 era 0                   saxons
 era 1                   saxons
@@ -19765,7 +19765,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 700, 250, 250, 1200, 2, 140
 armour_ug_levels        3, 4, 5
-armour_ug_models        noldor_swords, noldor_swords_upg
+armour_ug_models        noldor_swords, noldor_swords_upg, noldor_swords_upg
 ownership               saxons, slave
 era 0                   saxons
 era 1                   saxons
@@ -19803,7 +19803,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 675, 250, 250, 1200, 2, 140
 armour_ug_levels        3, 4, 5
-armour_ug_models        noldor_defenders, noldor_defenders_upg
+armour_ug_models        noldor_defenders, noldor_defenders_upg, noldor_defenders_upg
 ownership               saxons, denmark, slave
 era 0                   saxons
 era 1                   saxons
@@ -19841,7 +19841,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1350, 675, 250, 250, 1350, 2, 140
 armour_ug_levels        3, 4, 5
-armour_ug_models        noldor_veterans, noldor_veterans_upg
+armour_ug_models        noldor_veterans, noldor_veterans_upg, noldor_veterans_upg
 ownership               saxons, denmark, slave
 era 0                   saxons
 era 1                   saxons
@@ -19880,7 +19880,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1350, 650, 200, 200, 1350, 2, 140
 armour_ug_levels        3, 4, 5
-armour_ug_models        noldor_archers, noldor_archers_upg
+armour_ug_models        noldor_archers, noldor_archers_upg, noldor_archers_upg
 ownership               saxons, denmark, slave
 era 0                   saxons
 era 1                   saxons
@@ -19919,7 +19919,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1600, 750, 250, 250, 1600, 1, 180
 armour_ug_levels        3, 5
-armour_ug_models        eldarinwe_lancers
+armour_ug_models        eldarinwe_lancers, eldarinwe_lancers
 ownership               saxons, denmark, slave
 era 0                   saxons
 era 1                   saxons
@@ -19958,7 +19958,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1600, 700, 250, 250, 1600, 1, 160
 armour_ug_levels        4, 5
-armour_ug_models        eldarinwe_pike
+armour_ug_models        eldarinwe_pike, eldarinwe_pike
 ownership               saxons, denmark, slave
 era 0                   saxons
 era 1                   saxons
@@ -19996,7 +19996,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 2000, 750, 200, 200, 2000, 1, 170
 armour_ug_levels        4, 5
-armour_ug_models        eregion_smiths
+armour_ug_models        eregion_smiths, eregion_smiths
 ownership               saxons, mongols, ireland, denmark, egypt,slave
 era 0                   saxons, mongols, ireland, denmark, egypt
 era 1                   saxons, mongols, ireland, denmark, egypt
@@ -20034,7 +20034,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 2200, 1000, 300, 300, 2200, 1, 170
 armour_ug_levels        4, 5
-armour_ug_models        eldarinwe_bg2
+armour_ug_models        eldarinwe_bg2, eldarinwe_bg2
 ownership               egypt, saxons, denmark, slave
 era 0                   saxons
 era 1                   saxons
@@ -20116,7 +20116,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1400, 500, 250, 250, 1400, 1, 170
 armour_ug_levels        3, 4, 5
-armour_ug_models        mithlond_nobles, mithlond_nobles_upg
+armour_ug_models        mithlond_nobles, mithlond_nobles_upg, mithlond_nobles_upg
 ownership               denmark, slave
 era 0                   denmark
 era 1                   denmark
@@ -20157,7 +20157,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 725, 280, 200, 200, 725, 4, 86
 armour_ug_levels        1, 2, 3, 5
-armour_ug_models        lindar_guards, lindar_guards_upg, nothrim_warriors
+armour_ug_models        lindar_guards, lindar_guards_upg, nothrim_warriors, nothrim_warriors
 ownership               saxons, denmark, slave
 era 0                   denmark
 era 1                   denmark
@@ -20197,7 +20197,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 725, 265, 200, 200, 725, 4, 120
 armour_ug_levels        1, 2, 5
-armour_ug_models        lindar_mariners, lindar_mariners_upg
+armour_ug_models        lindar_mariners, lindar_mariners_upg, lindar_mariners_upg
 ownership               saxons, denmark, slave, hungary
 era 0                   denmark
 era 1                   denmark
@@ -20237,7 +20237,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 700, 290, 200, 200, 700, 4, 97
 armour_ug_levels        1, 2, 3, 5
-armour_ug_models        lindon_longspears, lindon_longspears_upg, nothrim_longspears
+armour_ug_models        lindon_longspears, lindon_longspears_upg, nothrim_longspears, nothrim_longspears
 ownership               saxons, denmark, slave
 era 0                   denmark
 era 1                   denmark
@@ -20278,7 +20278,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 725, 275, 200, 200, 725, 4, 86
 armour_ug_levels        1, 2, 3, 5
-armour_ug_models        lindar_bowmen, lindar_bowmen_upg, nothrim_rangers
+armour_ug_models        lindar_bowmen, lindar_bowmen_upg, nothrim_rangers, nothrim_rangers
 ownership               saxons, denmark, slave
 era 0                   denmark
 era 1                   denmark
@@ -20319,7 +20319,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 975, 475, 200, 200, 975, 3, 120
 armour_ug_levels        2, 3, 5
-armour_ug_models        sindar_spearmen, sindar_spearmen_upg
+armour_ug_models        sindar_spearmen, sindar_spearmen_upg, sindar_spearmen_upg
 ownership               saxons, denmark, slave
 era 0                   denmark
 era 1                   denmark
@@ -20359,7 +20359,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1000, 500, 200, 200, 1000, 3, 120
 armour_ug_levels        2, 3, 5
-armour_ug_models        sindar_axemen, sindar_axemen_upg
+armour_ug_models        sindar_axemen, sindar_axemen_upg, sindar_axemen_upg
 ownership               saxons, denmark, slave
 era 0                   denmark
 era 1                   denmark
@@ -20400,7 +20400,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 950, 500, 200, 200, 950, 3, 120
 armour_ug_levels        2, 3, 5
-armour_ug_models        sindar_archers, sindar_archers_upg
+armour_ug_models        sindar_archers, sindar_archers_upg, sindar_archers_upg
 ownership               saxons, denmark, slave
 era 0                   denmark
 era 1                   denmark
@@ -20441,7 +20441,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1100, 625, 200, 200, 1100, 2, 84
 armour_ug_levels        2, 3, 5
-armour_ug_models        sindar_riders, sindar_riders_upg
+armour_ug_models        sindar_riders, sindar_riders_upg, sindar_riders_upg
 ownership               saxons, egypt, denmark, slave
 era 0                   denmark
 era 1                   denmark
@@ -20482,7 +20482,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1350, 725, 25, 25, 1350, 2, 450
 armour_ug_levels        3,  4, 5
-armour_ug_models        falathrim_heavyaxes, falathrim_heavyaxes_upg
+armour_ug_models        falathrim_heavyaxes, falathrim_heavyaxes_upg, falathrim_heavyaxes_upg
 ownership               denmark, saxons, egypt, slave
 era 0                   denmark
 era 1                   denmark
@@ -20521,7 +20521,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1375, 725, 25, 25, 1375, 2, 250
 armour_ug_levels        2, 3, 5
-armour_ug_models        falathrim_axes, falathrim_axes_upg
+armour_ug_models        falathrim_axes, falathrim_axes_upg, falathrim_axes_upg
 ownership               denmark, egypt
 era 0                   denmark
 era 1                   denmark
@@ -20561,7 +20561,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1450, 725, 25, 25, 1450, 2, 340
 armour_ug_levels        2, 3, 5
-armour_ug_models        falathrim_javelins, falathrim_javelins_upg
+armour_ug_models        falathrim_javelins, falathrim_javelins_upg, falathrim_javelins_upg
 ownership               denmark, saxons, egypt, slave
 era 0                   denmark
 era 1                   denmark
@@ -20600,7 +20600,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1400, 700, 25, 25, 1400, 2, 250
 armour_ug_levels        2, 3, 5
-armour_ug_models        falathrim_spears, falathrim_spears_upg
+armour_ug_models        falathrim_spears, falathrim_spears_upg, falathrim_spears_upg
 ownership               denmark, egypt
 era 0                   denmark
 era 1                   denmark
@@ -20640,7 +20640,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1450, 700, 25, 50, 1450, 2, 280
 armour_ug_levels        3, 4, 5
-armour_ug_models        falathrim_archers, falathrim_archers_upg
+armour_ug_models        falathrim_archers, falathrim_archers_upg, falathrim_archers_upg
 ownership               denmark, saxons, egypt, slave
 era 0                   denmark
 era 1                   denmark
@@ -20681,7 +20681,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1600, 725, 25, 25, 1600, 1, 350
 armour_ug_levels        3, 4, 5
-armour_ug_models        falathrim_skirmishers, falathrim_skirmishers_upg
+armour_ug_models        falathrim_skirmishers, falathrim_skirmishers_upg, falathrim_skirmishers_upg
 ownership               denmark, saxons, egypt, slave
 era 0                   denmark
 era 1                   denmark
@@ -20722,7 +20722,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1650, 800, 200, 200, 1650, 1, 160
 armour_ug_levels        4, 5
-armour_ug_models        lindon_halberds
+armour_ug_models        lindon_halberds, lindon_halberds
 ownership               saxons, denmark, slave
 era 0                   denmark
 era 1                   denmark
@@ -20760,7 +20760,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 2250, 850, 25, 25, 2250, 1, 1150
 armour_ug_levels        4, 5
-armour_ug_models        lindon_marines
+armour_ug_models        lindon_marines, lindon_marines
 ownership               denmark, saxons, slave
 era 0                   denmark
 era 1                   denmark
@@ -20805,7 +20805,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1000, 500, 250, 250, 1000, 1, 170
 armour_ug_levels        4, 5
-armour_ug_models        noldorin_bg_lindon
+armour_ug_models        noldorin_bg_lindon, noldorin_bg_lindon
 ownership               denmark, slave
 era 0                   slave
 era 1                   slave
@@ -20845,7 +20845,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1000, 500, 250, 250, 1000, 1, 140
 armour_ug_levels        4, 5
-armour_ug_models        noldorin_bg_imladris
+armour_ug_models        noldorin_bg_imladris, noldorin_bg_imladris
 ownership               saxons, slave
 era 0                   slave
 era 1                   slave
@@ -20886,7 +20886,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 800, 290, 200, 200, 800, 4, 86
 armour_ug_levels        1, 2, 3, 5
-armour_ug_models        eregion_lindar_guards, eregion_lindar_guards_upg, eregion_nothrim_warriors
+armour_ug_models        eregion_lindar_guards, eregion_lindar_guards_upg, eregion_nothrim_warriors, eregion_nothrim_warriors
 ownership               denmark, slave
 era 0                   slave
 era 1                   slave
@@ -20927,7 +20927,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 900, 525, 200, 200, 900, 3, 120
 armour_ug_levels        1, 2, 5
-armour_ug_models        eregion_lindar_mariners, eregion_lindar_mariners_upg
+armour_ug_models        eregion_lindar_mariners, eregion_lindar_mariners_upg, eregion_lindar_mariners_upg
 ownership               saxons, denmark, slave
 era 0                   slave
 era 1                   slave
@@ -20967,7 +20967,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 800, 290, 200, 200, 800, 4, 97
 armour_ug_levels        1, 2, 3, 5
-armour_ug_models        eregion_lindon_longspears, eregion_lindon_longspears_upg, eregion_nothrim_longspears
+armour_ug_models        eregion_lindon_longspears, eregion_lindon_longspears_upg, eregion_nothrim_longspears, eregion_nothrim_longspears
 ownership               denmark, slave
 era 0                   slave
 era 1                   slave
@@ -21007,7 +21007,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 825, 280, 200, 200, 825, 4, 76
 armour_ug_levels        1, 2, 3, 5
-armour_ug_models        eregion_quendi_spear, eregion_quendi_spear_upg, eregion_quendi_spear_upg2
+armour_ug_models        eregion_quendi_spear, eregion_quendi_spear_upg, eregion_quendi_spear_upg2, eregion_quendi_spear_upg2
 ownership               saxons, slave
 era 0                   slave
 era 1                   slave
@@ -21047,7 +21047,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 825, 280, 200, 200, 825, 4, 86
 armour_ug_levels        1, 2, 3, 5
-armour_ug_models        eregion_quendi_sword, eregion_quendi_sword_upg, eregion_quendi_sword_upg2
+armour_ug_models        eregion_quendi_sword, eregion_quendi_sword_upg, eregion_quendi_sword_upg2, eregion_quendi_sword_upg2
 ownership               saxons, slave
 era 0                   slave
 era 1                   slave
@@ -21087,7 +21087,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 850, 300, 200, 200, 850, 4, 86
 armour_ug_levels        1, 2, 3, 5
-armour_ug_models        eregion_quendi_bow, eregion_quendi_bow_upg, eregion_quendi_bow_upg2
+armour_ug_models        eregion_quendi_bow, eregion_quendi_bow_upg, eregion_quendi_bow_upg2, eregion_quendi_bow_upg2
 ownership               saxons, slave
 era 0                   slave
 era 1                   slave
@@ -21127,7 +21127,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 850, 300, 200, 200, 850, 4, 86
 armour_ug_levels        1, 2, 3, 5
-armour_ug_models        eregion_lindar_bowmen, eregion_lindar_bowmen_upg, eregion_nothrim_rangers
+armour_ug_models        eregion_lindar_bowmen, eregion_lindar_bowmen_upg, eregion_nothrim_rangers, eregion_nothrim_rangers
 ownership               denmark, slave
 era 0                   slave
 era 1                   slave
@@ -21168,7 +21168,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1000, 400, 200, 200, 1000, 3, 84
 armour_ug_levels        1, 2, 3, 5
-armour_ug_models        eregion_quendi_hrsword, eregion_quendi_hrsword_upg, eregion_quendi_hrsword_upg2
+armour_ug_models        eregion_quendi_hrsword, eregion_quendi_hrsword_upg, eregion_quendi_hrsword_upg2, eregion_quendi_hrsword_upg2
 ownership               saxons, denmark, slave
 era 0                   slave
 era 1                   slave
@@ -21209,7 +21209,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1050, 575, 250, 250, 1050, 3, 160
 armour_ug_levels        2, 3, 5
-armour_ug_models        eregion_amanyar_pikes, eregion_amanyar_pikes_upg
+armour_ug_models        eregion_amanyar_pikes, eregion_amanyar_pikes_upg, eregion_amanyar_pikes_upg
 ownership               saxons, denmark, slave
 era 0                   slave
 era 1                   slave
@@ -21249,7 +21249,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1000, 600, 60, 90, 1000, 3, 315
 armour_ug_levels        2, 3, 5
-armour_ug_models        eregion_mithrim_spears, eregion_mithrim_spears_upg
+armour_ug_models        eregion_mithrim_spears, eregion_mithrim_spears_upg, eregion_mithrim_spears_upg
 ownership               saxons, denmark, slave
 era 0                   slave
 era 1                   slave
@@ -21288,7 +21288,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1050, 600, 60, 90, 1050, 3, 325
 armour_ug_levels        2, 3, 5
-armour_ug_models        eregion_mithrim_swords, eregion_mithrim_swords_upg
+armour_ug_models        eregion_mithrim_swords, eregion_mithrim_swords_upg, eregion_mithrim_swords_upg
 ownership               saxons, denmark
 era 0                   slave
 era 1                   slave
@@ -21328,7 +21328,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1100, 550, 25, 50, 1100, 3, 280
 armour_ug_levels        2, 3, 5
-armour_ug_models        eregion_mithrim_archers, eregion_mithrim_archers_upg
+armour_ug_models        eregion_mithrim_archers, eregion_mithrim_archers_upg, eregion_mithrim_archers_upg
 ownership               denmark, saxons, egypt, slave
 era 0                   slave
 era 1                   slave
@@ -21369,7 +21369,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1300, 750, 200, 200, 1300, 2, 84
 armour_ug_levels        2, 3, 5
-armour_ug_models        eregion_mithrim_riders, eregion_mithrim_riders_upg
+armour_ug_models        eregion_mithrim_riders, eregion_mithrim_riders_upg, eregion_mithrim_riders_upg
 ownership               saxons, denmark, slave
 era 0                   slave
 era 1                   slave
@@ -21409,7 +21409,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1300, 825, 45, 90, 1300, 2, 465
 armour_ug_levels        3, 4, 5
-armour_ug_models        eregion_barad_bladesmen, eregion_barad_bladesmen_upg
+armour_ug_models        eregion_barad_bladesmen, eregion_barad_bladesmen_upg, eregion_barad_bladesmen_upg
 ownership               saxons, denmark
 era 0                   slave
 era 1                   slave
@@ -21449,7 +21449,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 750, 25, 25, 1200, 2, 450
 armour_ug_levels        3, 4, 5
-armour_ug_models        eregion_barad_greataxes,  eregion_barad_greataxes_upg
+armour_ug_models        eregion_barad_greataxes, eregion_barad_greataxes_upg, eregion_barad_greataxes_upg
 ownership               denmark, saxons, egypt, slave
 era 0                   slave
 era 1                   slave
@@ -21489,7 +21489,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1000, 700, 25, 25, 1000, 2, 340
 armour_ug_levels        3, 4, 5
-armour_ug_models        eregion_barad_javelins, eregion_barad_javelins_upg
+armour_ug_models        eregion_barad_javelins, eregion_barad_javelins_upg, eregion_barad_javelins_upg
 ownership               denmark, saxons, egypt, slave
 era 0                   slave
 era 1                   slave
@@ -21529,7 +21529,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1150, 775, 250, 250, 1150, 2, 160
 armour_ug_levels        3, 4, 5
-armour_ug_models        eregion_barad_pikes, eregion_barad_pikes_upg
+armour_ug_models        eregion_barad_pikes, eregion_barad_pikes_upg, eregion_barad_pikes_upg
 ownership               saxons, denmark, slave
 era 0                   slave
 era 1                   slave
@@ -21568,7 +21568,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1300, 850, 25, 25, 1300, 2, 250
 armour_ug_levels        3, 4, 5
-armour_ug_models        eregion_barad_spearmen, eregion_barad_spearmen_upg
+armour_ug_models        eregion_barad_spearmen, eregion_barad_spearmen_upg, eregion_barad_spearmen_upg
 ownership               denmark, saxons, slave
 era 0                   slave
 era 1                   slave
@@ -21608,7 +21608,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 800, 25, 50, 1200, 2, 280
 armour_ug_levels        3, 4, 5
-armour_ug_models        eregion_barad_archers, eregion_barad_archers_upg
+armour_ug_models        eregion_barad_archers, eregion_barad_archers_upg, eregion_barad_archers_upg
 ownership               denmark, saxons, egypt, slave
 era 0                   slave
 era 1                   slave
@@ -21649,7 +21649,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1500, 925, 250, 250, 1500, 1, 180
 armour_ug_levels        3, 4, 5
-armour_ug_models        eregion_barad_riders, eregion_barad_riders_upg
+armour_ug_models        eregion_barad_riders, eregion_barad_riders_upg, eregion_barad_riders_upg
 ownership               saxons, denmark, slave
 era 0                   slave
 era 1                   slave
@@ -21689,7 +21689,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1500, 925, 25, 25, 1500, 1, 350
 armour_ug_levels        3, 4, 5
-armour_ug_models        eregion_barad_skirmishers, eregion_barad_skirmishers_upg
+armour_ug_models        eregion_barad_skirmishers, eregion_barad_skirmishers_upg, eregion_barad_skirmishers_upg
 ownership               denmark, saxons, slave
 era 0                   slave
 era 1                   slave
@@ -21730,7 +21730,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1875, 900, 250, 250, 1875, 1, 140
 armour_ug_levels        3, 4, 5
-armour_ug_models        noldorin_cundo_swords, noldorin_cundo_swords_upg
+armour_ug_models        noldorin_cundo_swords, noldorin_cundo_swords_upg, noldorin_cundo_swords_upg
 ownership               saxons, denmark, slave
 era 0                   slave
 era 1                   slave
@@ -21770,7 +21770,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1825, 885, 250, 250, 1825, 1, 140
 armour_ug_levels        3, 4, 5
-armour_ug_models        noldorin_cundo_pikes, noldorin_cundo_pikes_upg
+armour_ug_models        noldorin_cundo_pikes, noldorin_cundo_pikes_upg, noldorin_cundo_pikes_upg
 ownership               saxons, denmark, slave
 era 0                   slave
 era 1                   slave
@@ -21810,7 +21810,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1825, 885, 250, 250, 1825, 1, 140
 armour_ug_levels        3, 4, 5
-armour_ug_models        noldorin_cundo_halberds, noldorin_cundo_halberds_upg
+armour_ug_models        noldorin_cundo_halberds, noldorin_cundo_halberds_upg, noldorin_cundo_halberds_upg
 ownership               saxons, denmark, slave
 era 0                   slave
 era 1                   slave
@@ -21849,7 +21849,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1750, 1000, 200, 200, 1750, 1, 170
 armour_ug_levels        4, 5
-armour_ug_models        moon_guard
+armour_ug_models        moon_guard, moon_guard
 ownership               denmark, saxons, slave
 era 0                   slave
 era 1                   slave
@@ -21889,7 +21889,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1750, 925, 60, 90, 1750, 1, 600
 armour_ug_levels        4, 5
-armour_ug_models        steel_gateguards
+armour_ug_models        steel_gateguards, steel_gateguards
 ownership               saxons, denmark, slave
 era 0                   slave
 era 1                   slave
@@ -21928,7 +21928,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1800, 1050, 200, 200, 1800, 1, 130
 armour_ug_levels        4, 5
-armour_ug_models        noldor_highborns
+armour_ug_models        noldor_highborns, noldor_highborns
 ownership               slave, saxons, denmark
 era 0                   slave
 era 1                   slave
@@ -21967,7 +21967,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1750, 1000, 300, 300, 1750, 1, 140
 armour_ug_levels        4, 5
-armour_ug_models        eregion_warriors
+armour_ug_models        eregion_warriors, eregion_warriors
 ownership               saxons, denmark, slave
 era 0                   saxons, denmark
 era 1                   saxons, denmark
@@ -22007,7 +22007,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 2200, 1000, 200, 200, 2200, 1, 170
 armour_ug_levels        4, 5
-armour_ug_models        royal_noldorin_guard
+armour_ug_models        royal_noldorin_guard, royal_noldorin_guard
 ownership               denmark, saxons, slave
 era 0                   slave
 era 1                   slave
@@ -22048,7 +22048,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1850, 950, 200, 200, 1850, 1, 140
 armour_ug_levels        3, 4, 5
-armour_ug_models        noldorin_cundo_archer, noldorin_cundo_archer_upg
+armour_ug_models        noldorin_cundo_archer, noldorin_cundo_archer_upg, noldorin_cundo_archer_upg
 ownership               saxons, denmark, slave
 era 0                   slave
 era 1                   slave
@@ -22087,7 +22087,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1750, 950, 60, 90, 1750, 1, 620
 armour_ug_levels        4, 5
-armour_ug_models        heavenly_arch
+armour_ug_models        heavenly_arch, heavenly_arch
 ownership               saxons, denmark, slave
 era 0                   slave
 era 1                   slave
@@ -22126,7 +22126,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1700, 1050, 300, 300, 1700, 1, 170
 armour_ug_levels        4, 5
-armour_ug_models        royal_archer_noldor
+armour_ug_models        royal_archer_noldor, royal_archer_noldor
 ownership               saxons, denmark, slave
 era 0                   slave
 era 1                   slave
@@ -22167,7 +22167,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1900, 1150, 200, 200, 1900, 1, 120
 armour_ug_levels        3, 4, 5
-armour_ug_models        noldorin_cundo_horsearcher, noldorin_cundo_horsearcher_upg
+armour_ug_models        noldorin_cundo_horsearcher, noldorin_cundo_horsearcher_upg, noldorin_cundo_horsearcher_upg
 ownership               saxons, denmark, slave
 era 0                   slave
 era 1                   slave
@@ -22204,7 +22204,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 2000, 1200, 25, 25, 2000, 1, 1150
 armour_ug_levels        3, 4, 5
-armour_ug_models        noldorin_cundo_chariot, noldorin_cundo_chariot_upg
+armour_ug_models        noldorin_cundo_chariot, noldorin_cundo_chariot_upg, noldorin_cundo_chariot_upg
 ownership               denmark, saxons, slave
 era 0                   slave
 era 1                   slave
@@ -22244,7 +22244,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 2200, 1300, 300, 300, 2200, 1, 170
 armour_ug_levels        3, 4, 5
-armour_ug_models        eregion_lance_upg
+armour_ug_models        eregion_lance_upg, eregion_lance_upg, eregion_lance_upg
 ownership               denmark, saxons, slave
 era 0                   slave
 era 1                   slave
@@ -22282,7 +22282,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 2100, 1200, 30, 45, 2100, 1, 5000
 armour_ug_levels        4, 5
-armour_ug_models        arqueni_findekano
+armour_ug_models        arqueni_findekano, arqueni_findekano
 ownership               slave
 era 0                   slave
 era 1                   slave
@@ -22320,7 +22320,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 2100, 1200, 200, 200, 2100, 1, 120
 armour_ug_levels        4, 5
-armour_ug_models        silver_noldor_guard
+armour_ug_models        silver_noldor_guard, silver_noldor_guard
 ownership               slave, denmark, saxons
 era 0                   slave
 era 1                   slave
@@ -22401,7 +22401,7 @@ stat_charge_dist        10
 stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 775, 300, 20, 30, 775, 4, 200
-armour_ug_levels        2, 3, 4, 5, 6
+armour_ug_levels        2, 3, 4, 5
 armour_ug_models        gwindor_swords_unupg, gwindor_swords_bronze, gwindor_swords_silver, gwindor_swords_gold
 ownership               egypt, slave
 era 0                   egypt
@@ -22441,7 +22441,7 @@ stat_charge_dist        10
 stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 775, 290, 20, 30, 775, 4, 200
-armour_ug_levels        2, 3, 4, 5, 6
+armour_ug_levels        2, 3, 4, 5
 armour_ug_models        gwindor_spears_unupg, gwindor_spears_bronze, gwindor_spears_silver, gwindor_spears_gold
 ownership               egypt, slave
 era 0                   egypt
@@ -22481,7 +22481,7 @@ stat_charge_dist        5
 stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 715, 280, 20, 30, 715, 4, 200
-armour_ug_levels        2, 3, 4, 5, 6
+armour_ug_levels        2, 3, 4, 5
 armour_ug_models        gwindor_archers_unupg, gwindor_archers_bronze, gwindor_archers_silver, gwindor_archers_gold
 ownership               egypt, slave
 era 0                   egypt
@@ -22521,7 +22521,7 @@ stat_charge_dist        20
 stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 825, 400, 200, 200, 825, 3, 84
-armour_ug_levels        2, 3, 4, 5, 6
+armour_ug_levels        2, 3, 4, 5
 armour_ug_models        gwindor_riders_unupg, gwindor_riders_bronze, gwindor_riders_silver, gwindor_riders_gold
 ownership               egypt, slave
 era 0                   egypt
@@ -22562,7 +22562,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1025, 550, 200, 200, 1025, 3, 102
 armour_ug_levels        2, 3, 5, 6
-armour_ug_models        e_himring_twohswordsmen, e_himring_twohswordsmen_upg
+armour_ug_models        e_himring_twohswordsmen, e_himring_twohswordsmen_upg, e_himring_twohswordsmen_upg, e_himring_twohswordsmen_upg
 ownership               egypt, slave
 era 0                   egypt
 era 1                   egypt
@@ -22600,7 +22600,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1100, 600, 40, 65, 1100, 3, 310
 armour_ug_levels        2, 3, 5, 6
-armour_ug_models        e_himring_swordsmen, e_himring_swordsmen_upg
+armour_ug_models        e_himring_swordsmen, e_himring_swordsmen_upg, e_himring_swordsmen_upg, e_himring_swordsmen_upg
 ownership               egypt, slave
 era 0                   egypt
 era 1                   egypt
@@ -22639,7 +22639,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1075, 575, 200, 200, 1075, 3, 160
 armour_ug_levels        2, 3, 5, 6
-armour_ug_models        e_himring_halberd, e_himring_halberd_upg
+armour_ug_models        e_himring_halberd, e_himring_halberd_upg, e_himring_halberd_upg, e_himring_halberd_upg
 ownership               egypt, slave
 era 0                   egypt
 era 1                   egypt
@@ -22679,7 +22679,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1100, 600, 40, 65, 1100, 3, 410
 armour_ug_levels        2, 3, 5, 6
-armour_ug_models        e_himring_archers, e_himring_archers_upg
+armour_ug_models        e_himring_archers, e_himring_archers_upg, e_himring_archers_upg, e_himring_archers_upg
 ownership               egypt, slave
 era 0                   egypt
 era 1                   egypt
@@ -22719,7 +22719,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1300, 700, 40, 65, 1300, 2, 610
 armour_ug_levels        2, 3, 5, 6
-armour_ug_models        himring_skirmishers, aglon_riders
+armour_ug_models        himring_skirmishers, aglon_riders, aglon_riders, aglon_riders
 ownership               egypt, slave
 era 0                   egypt, slave
 era 1                   egypt, slave
@@ -22758,7 +22758,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1350, 750, 40, 65, 1350, 2, 625
 armour_ug_levels        2, 3, 5, 6
-armour_ug_models        himring_lancers, aglon_lancers
+armour_ug_models        himring_lancers, aglon_lancers, aglon_lancers, aglon_lancers
 ownership               egypt, slave, norway
 era 0                   egypt, slave
 era 1                   egypt, slave
@@ -22797,8 +22797,8 @@ stat_charge_dist        6
 stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 700, 250, 250, 1200, 2, 140
-armour_ug_levels        2, 3, 4, 5, 6
-armour_ug_models        sentinels_feanor, sentinels_feanor_silver, sentinels_feanor_gold
+armour_ug_levels        2, 3, 4, 5
+armour_ug_models        sentinels_feanor, sentinels_feanor_silver, sentinels_feanor_gold, sentinels_feanor_gold
 ownership               egypt, slave
 era 0                   egypt
 era 1                   egypt
@@ -22836,8 +22836,8 @@ stat_charge_dist        8
 stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1275, 800, 200, 200, 1275, 2, 140
-armour_ug_levels        2, 3, 4, 5, 6
-armour_ug_models        ostinedhil_champions_bronze, ostinedhil_champions_silver, ostinedhil_champions_gold
+armour_ug_levels        2, 3, 4, 5
+armour_ug_models        ostinedhil_champions_bronze, ostinedhil_champions_silver, ostinedhil_champions_gold, ostinedhil_champions_gold
 ownership               egypt, slave
 era 0                   egypt
 era 1                   egypt
@@ -22875,8 +22875,8 @@ stat_charge_dist        6
 stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1325, 775, 200, 200, 1325, 2, 140
-armour_ug_levels        2, 3, 4, 5, 6
-armour_ug_models        guardians_of_eregion, guardians_of_eregion_upg1, guardians_of_eregion_upg2
+armour_ug_levels        2, 3, 4, 5
+armour_ug_models        guardians_of_eregion, guardians_of_eregion_upg1, guardians_of_eregion_upg2, guardians_of_eregion_upg2
 ownership               egypt, slave
 era 0                   egypt
 era 1                   egypt
@@ -22915,7 +22915,7 @@ stat_charge_dist        9
 stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 750, 200, 200, 1200, 2, 140
-armour_ug_levels        2, 3, 4, 5, 6
+armour_ug_levels        2, 3, 4, 5
 armour_ug_models        hirneryn_wardens, hirneryn_wardens_silver, hirneryn_wardens_gold, hirneryn_wardens_gold
 ownership               egypt, slave
 era 0                   egypt
@@ -22955,8 +22955,8 @@ stat_charge_dist        20
 stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1600, 1150, 30, 45, 1600, 1, 3000
-armour_ug_levels        2, 3, 4, 5, 6
-armour_ug_models        roqueni_magloro_bronze, roqueni_magloro_silver, roqueni_magloro_gold
+armour_ug_levels        2, 3, 4, 5
+armour_ug_models        roqueni_magloro_bronze, roqueni_magloro_silver, roqueni_magloro_gold, roqueni_magloro_gold
 ownership               egypt, slave
 era 0                   egypt
 era 1                   egypt
@@ -22996,7 +22996,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1400, 1000, 250, 250, 1400, 1, 170
 armour_ug_levels        3, 5, 6
-armour_ug_models        hirneryn_mountedarchers_gold
+armour_ug_models        hirneryn_mountedarchers_gold, hirneryn_mountedarchers_gold, hirneryn_mountedarchers_gold
 ownership               slave
 era 0                   slave
 era 1                   slave
@@ -23034,8 +23034,8 @@ stat_charge_dist        25
 stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1350, 975, 200, 200, 1350, 1, 120
-armour_ug_levels        2, 3, 4, 5, 6
-armour_ug_models        hirneryn_mountedarchers_bronze, hirneryn_mountedarchers_silver, hirneryn_mountedarchers_gold
+armour_ug_levels        2, 3, 4, 5
+armour_ug_models        hirneryn_mountedarchers_bronze, hirneryn_mountedarchers_silver, hirneryn_mountedarchers_gold, hirneryn_mountedarchers_gold
 ownership               egypt, slave
 era 0                   egypt
 era 1                   egypt
@@ -23073,8 +23073,8 @@ stat_charge_dist        55
 stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1500, 900, 200, 200, 1500, 1, 100
-armour_ug_levels        2, 3, 4, 5, 6
-armour_ug_models        feanorian_lancers, feanorian_lancers_silver, feanorian_lancers_gold
+armour_ug_levels        2, 3, 4, 5
+armour_ug_models        feanorian_lancers, feanorian_lancers_silver, feanorian_lancers_gold, feanorian_lancers_gold
 ownership               egypt, slave, norway
 era 0                   egypt
 era 1                   egypt
@@ -23114,7 +23114,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 725, 25, 20, 1200, 1, 500
 armour_ug_levels        3, 5, 6
-armour_ug_models        noldorinwe_spears
+armour_ug_models        noldorinwe_spears, noldorinwe_spears, noldorinwe_spears
 ownership               egypt, slave
 era 0                   egypt
 era 1                   egypt
@@ -23152,7 +23152,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1350, 700, 25, 20, 1350, 1, 950
 armour_ug_levels        3, 5, 6
-armour_ug_models        noldorinwe_guardians
+armour_ug_models        noldorinwe_guardians, noldorinwe_guardians, noldorinwe_guardians
 ownership               egypt, slave
 era 0                   egypt
 era 1                   egypt
@@ -23190,7 +23190,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1900, 950, 30, 90, 1900, 1, 500
 armour_ug_levels        4, 5, 6
-armour_ug_models        noldor_guard
+armour_ug_models        noldor_guard, noldor_guard, noldor_guard
 ownership               egypt, slave
 era 0                   egypt
 era 1                   egypt
@@ -23228,7 +23228,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1900, 950, 30, 45, 1900, 1, 1145
 armour_ug_levels        3, 4, 5, 6
-armour_ug_models        otorn_bg, otorn_bg_upg
+armour_ug_models        otorn_bg, otorn_bg_upg, otorn_bg_upg, otorn_bg_upg
 ownership               egypt, slave
 era 0                   egypt, slave
 era 1                   egypt, slave
@@ -23267,7 +23267,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1650, 850, 60, 65, 1650, 1, 310
 armour_ug_levels        3, 4, 5, 6
-armour_ug_models        himring_infantry_upg, helevorn_pikemen
+armour_ug_models        himring_infantry_upg, helevorn_pikemen, helevorn_pikemen, helevorn_pikemen
 ownership               egypt, slave
 era 0                   egypt
 era 1                   egypt
@@ -23305,7 +23305,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1900, 950, 30, 45, 1900, 1, 3000
 armour_ug_levels        4, 5, 6
-armour_ug_models        accursed_of_alqua
+armour_ug_models        accursed_of_alqua, accursed_of_alqua, accursed_of_alqua
 ownership               egypt, slave
 era 0                   egypt
 era 1                   egypt
@@ -23344,7 +23344,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1800, 900, 300, 300, 1800, 1, 140
 armour_ug_levels        4, 5, 6
-armour_ug_models        eregion_pikes
+armour_ug_models        eregion_pikes, eregion_pikes, eregion_pikes
 ownership               egypt
 era 0                   egypt
 era 1                   egypt
@@ -23383,7 +23383,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1800, 950, 300, 300, 1800, 1, 1400
 armour_ug_levels        4, 5, 6
-armour_ug_models        eregion_avengers
+armour_ug_models        eregion_avengers, eregion_avengers, eregion_avengers
 ownership               egypt
 era 0                   egypt
 era 1                   egypt
@@ -23422,7 +23422,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 2100, 900, 300, 300, 2100, 1, 140
 armour_ug_levels        4, 5, 6
-armour_ug_models        eregion_heavy_warriors
+armour_ug_models        eregion_heavy_warriors, eregion_heavy_warriors, eregion_heavy_warriors
 ownership               egypt, slave
 era 0                   egypt
 era 1                   egypt
@@ -23461,7 +23461,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1700, 900, 200, 200, 1700, 1, 170
 armour_ug_levels        4, 5, 6
-armour_ug_models        eregion_moon_guard
+armour_ug_models        eregion_moon_guard, eregion_moon_guard, eregion_moon_guard
 ownership               egypt, slave
 era 0                   egypt
 era 1                   egypt
@@ -23500,7 +23500,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 725, 25, 20, 1200, 1, 1000
 armour_ug_levels        3, 5, 6
-armour_ug_models        noldorinwe_bows
+armour_ug_models        noldorinwe_bows, noldorinwe_bows, noldorinwe_bows
 ownership               egypt, slave
 era 0                   egypt
 era 1                   egypt
@@ -23538,7 +23538,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1800, 900, 40, 25, 1800, 1, 500
 armour_ug_levels        3, 4, 5, 6
-armour_ug_models        carnil_sharpshooters, carnil_sharpshooters_upg
+armour_ug_models        carnil_sharpshooters, carnil_sharpshooters_upg, carnil_sharpshooters_upg, carnil_sharpshooters_upg
 ownership               egypt, slave
 era 0                   egypt
 era 1                   egypt
@@ -23578,7 +23578,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 2100, 1200, 25, 20, 2100, 1, 750
 armour_ug_levels        3, 4, 5, 6
-armour_ug_models        noldorinwe_spears
+armour_ug_models        noldorinwe_spears, noldorinwe_spears, noldorinwe_spears, noldorinwe_spears
 ownership               egypt, slave
 era 0                   egypt
 era 1                   egypt
@@ -23618,7 +23618,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 2300, 1400, 30, 45, 2300, 1, 1280
 armour_ug_levels        3, 4, 5, 6
-armour_ug_models        feanor_bg, feanor_bg_upg
+armour_ug_models        feanor_bg, feanor_bg_upg, feanor_bg_upg, feanor_bg_upg
 ownership               egypt, slave
 era 0                   egypt
 era 1                   egypt
@@ -24094,7 +24094,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 450, 200, 125, 125, 450, 3, 68
 armour_ug_levels        1, 2, 3
-armour_ug_models        ghash_overseer_upg0, ghash_overseer_upg1
+armour_ug_models        ghash_overseer_upg0, ghash_overseer_upg1, ghash_overseer_upg1
 ownership               england, poland, slave, gundabad
 era 0                   england
 era 1                   england
@@ -24289,7 +24289,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 675, 300, 125, 125, 675, 2, 120
 armour_ug_levels        1, 2, 3
-armour_ug_models        ghash_rider_upg0, ghash_rider_upg1
+armour_ug_models        ghash_rider_upg0, ghash_rider_upg1, ghash_rider_upg1
 ownership               england, poland, slave
 era 0                   england
 era 1                   england
@@ -27487,7 +27487,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1085, 510, 200, 200, 1085, 1, 110
 armour_ug_levels        4
-armour_ug_models        gundabad_pale_halberd_new, gundabad_pale_halberd_new
+armour_ug_models        gundabad_pale_halberd_new
 ownership               hre, poland, england, france, slave, gundabad
 era 0                   gundabad
 era 1                   gundabad
@@ -27685,7 +27685,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1200, 400, 125, 125, 1200, 1, 120
 armour_ug_levels        4, 5
-armour_ug_models        lurtz_guards
+armour_ug_models        lurtz_guards, lurtz_guards
 ownership               france, aztecs, slave
 era 0                   france
 era 1                   france
@@ -27725,7 +27725,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1500, 400, 125, 125, 1500, 1, 94
 armour_ug_levels        4, 5
-armour_ug_models        orthanc_crossbow
+armour_ug_models        orthanc_crossbow, orthanc_crossbow
 ownership               france, slave
 era 0                   france
 era 1                   france
@@ -27766,7 +27766,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 340, 150, 125, 125, 340, 4, 52
 armour_ug_levels        1, 2, 5
-armour_ug_models        Uruk_Scout_Sword, Uruk_Scout_Sword_upg
+armour_ug_models        Uruk_Scout_Sword, Uruk_Scout_Sword_upg, Uruk_Scout_Sword_upg
 ownership               france, aztecs, slave, gundabad
 era 0                   france
 era 1                   france
@@ -27806,7 +27806,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 355, 165, 125, 125, 355, 4, 42
 armour_ug_levels        1, 2, 5
-armour_ug_models        cleavers, cleavers_upg
+armour_ug_models        cleavers, cleavers_upg, cleavers_upg
 ownership               france, slave, gundabad
 era 0                   france
 era 1                   france
@@ -27847,7 +27847,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 360, 175, 125, 125, 360, 4, 52
 armour_ug_levels        1, 2, 5
-armour_ug_models        Scout_Uruk_Archers, Scout_Uruk_Archers_upg
+armour_ug_models        Scout_Uruk_Archers, Scout_Uruk_Archers_upg, Scout_Uruk_Archers_upg
 ownership               france, aztecs, slave, gundabad
 era 0                   france
 era 1                   france
@@ -27887,7 +27887,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 625, 200, 125, 125, 625, 3, 63
 armour_ug_levels        2, 3, 4, 5
-armour_ug_models        orcbane, orcbane_upg, orcbane_upg1
+armour_ug_models        orcbane, orcbane_upg, orcbane_upg1, orcbane_upg1
 ownership               france, slave
 era 0                   france
 era 1                   france
@@ -27926,7 +27926,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 600, 200, 125, 125, 600, 3, 63
 armour_ug_levels        2, 3, 4, 5
-armour_ug_models        orcbane_spear, orcbane_spear_upg, orcbane_spear_upg1
+armour_ug_models        orcbane_spear, orcbane_spear_upg, orcbane_spear_upg1, orcbane_spear_upg1
 ownership               france, slave
 era 0                   france
 era 1                   france
@@ -27965,7 +27965,7 @@ stat_charge_dist        20
 stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 900, 300, 125, 125, 900, 3, 130
-armour_ug_levels        1, 2, 3, 4, 5
+armour_ug_levels        1, 2, 3, 4
 armour_ug_models        Uruk_Berserkers, Uruk_Berserkers_upg, Uruk_Berserkers_upg1, Uruk_Berserkers_upg2
 ownership               france, aztecs, slave, gundabad
 era 0                   france
@@ -28007,7 +28007,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost               2, 795, 295, 150, 150, 825, 4, 82
 armour_ug_levels        2, 3, 5
-armour_ug_models        lego_uruk, lego_uruk_upg
+armour_ug_models        lego_uruk, lego_uruk_upg, lego_uruk_upg
 ownership               france, aztecs, slave
 era 0                   france
 era 1                   france
@@ -28047,7 +28047,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost               2, 900, 300, 125, 125, 1300, 3, 130
 armour_ug_levels        2, 3, 5
-armour_ug_models        lego_berserker
+armour_ug_models        lego_berserker, lego_berserker, lego_berserker
 ownership               france, aztecs, slave, gundabad
 era 0                   france
 era 1                   france
@@ -28088,7 +28088,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 775, 325, 125, 125, 775, 2, 82
 armour_ug_levels        2, 3, 4, 5
-armour_ug_models        Heavy_uruk_spears, Heavy_uruk_spears_upg, Heavy_uruk_spears_upg1
+armour_ug_models        Heavy_uruk_spears, Heavy_uruk_spears_upg, Heavy_uruk_spears_upg1, Heavy_uruk_spears_upg1
 ownership               france, slave
 era 0                   france
 era 1                   france
@@ -28128,7 +28128,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 795, 325, 150, 150, 795, 2, 82
 armour_ug_levels        2, 3, 4, 5
-armour_ug_models        heavy_uruk_sword, heavy_uruk_sword_upg, heavy_uruk_sword_upg1
+armour_ug_models        heavy_uruk_sword, heavy_uruk_sword_upg, heavy_uruk_sword_upg1, heavy_uruk_sword_upg1
 ownership               france, aztecs, slave
 era 0                   france
 era 1                   france
@@ -28168,7 +28168,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 765, 325, 125, 125, 765, 2, 88
 armour_ug_levels        2, 3, 4, 5
-armour_ug_models        Uruk_halberd, Uruk_halberd_upg, Uruk_halberd_upg1
+armour_ug_models        Uruk_halberd, Uruk_halberd_upg, Uruk_halberd_upg1, Uruk_halberd_upg1
 ownership               france, slave
 era 0                   france
 era 1                   france
@@ -28209,7 +28209,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 825, 375, 125, 125, 825, 2, 85
 armour_ug_levels        2, 3, 5
-armour_ug_models        Uruk_Crossbow, Uruk_Crossbow_upg
+armour_ug_models        Uruk_Crossbow, Uruk_Crossbow_upg, Uruk_Crossbow_upg
 ownership               france, aztecs, slave
 era 0                   france
 era 1                   france
@@ -28248,7 +28248,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 925, 430, 125, 125, 925, 1, 120
 armour_ug_levels        2, 3, 4, 5
-armour_ug_models        Heavy_uruk_warg, Heavy_uruk_warg1, Heavy_uruk_warg2
+armour_ug_models        Heavy_uruk_warg, Heavy_uruk_warg1, Heavy_uruk_warg2, Heavy_uruk_warg2
 ownership               france, slave
 era 0                   france
 era 1                   france
@@ -28289,7 +28289,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1100, 575, 125, 125, 1100, 1, 130
 armour_ug_levels        4, 5
-armour_ug_models        Uruk_Berserkers_upg3
+armour_ug_models        Uruk_Berserkers_upg3, Uruk_Berserkers_upg3
 ownership               france, aztecs, slave, gundabad
 era 0                   france
 era 1                   france
@@ -28327,7 +28327,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1250, 625, 125, 125, 1250, 1, 190
 armour_ug_levels        4, 5
-armour_ug_models        nazg_hai
+armour_ug_models        nazg_hai, nazg_hai
 ownership               france, slave
 era 0                   france
 era 1                   france
@@ -28445,7 +28445,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1850, 775, 125, 125, 1850, 1, 120
 armour_ug_levels        4, 5
-armour_ug_models        nazg_champion
+armour_ug_models        nazg_champion, nazg_champion
 ownership               france
 era 0                   france
 era 1                   france
@@ -29184,7 +29184,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			4, 1250, 620, 300, 300, 1250, 2, 170
 armour_ug_levels        1, 2, 3
-armour_ug_models        crag_battle_trolls_unupg
+armour_ug_models        crag_battle_trolls_unupg, crag_battle_trolls_unupg, crag_battle_trolls_unupg
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -29221,7 +29221,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			4, 1850, 850, 300, 300, 1850, 2, 170
 armour_ug_levels        1, 2, 3
-armour_ug_models        crag_battle_trolls_upg
+armour_ug_models        crag_battle_trolls_upg, crag_battle_trolls_upg, crag_battle_trolls_upg
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -29707,7 +29707,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost               2, 875, 310, 125, 125, 875, 4, 90
 armour_ug_levels        2, 3, 4, 5
-armour_ug_models        gondor_dol_amroth_squires, gondor_dol_amroth_squires_ug1, gondor_dol_amroth_squires_ug1
+armour_ug_models        gondor_dol_amroth_squires, gondor_dol_amroth_squires_ug1, gondor_dol_amroth_squires_ug1, gondor_dol_amroth_squires_ug1
 ownership               slave, sicily
 era 1                   slave
 era 2                   slave
@@ -30937,7 +30937,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1300, 320, 60, 140, 1300, 2, 130
 armour_ug_levels        1, 2
-armour_ug_models        isengard_ballista_crew_upg
+armour_ug_models        isengard_ballista_crew_upg, isengard_ballista_crew_upg
 ownership               france, slave
 era 0                   france
 era 1                   france
@@ -31690,7 +31690,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			4, 1250, 620, 300, 300, 1700, 2, 170
 armour_ug_levels        2, 3, 4
-armour_ug_models        crag_battle_trolls_unupg
+armour_ug_models        crag_battle_trolls_unupg, crag_battle_trolls_unupg, crag_battle_trolls_unupg
 ownership               normans, hre, slave, gundabad
 era 0                   normans
 era 1                   normans
@@ -32207,7 +32207,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1100, 0, 200, 200, 1350, 2, 135
 armour_ug_levels        5, 6
-armour_ug_models        numenor_armenelos
+armour_ug_models        numenor_armenelos, numenor_armenelos
 ownership               russia, slave
 era 0                   russia
 era 1                   russia
@@ -32246,7 +32246,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 500, 0, 125, 125, 1000, 5, 41
 armour_ug_levels        2, 3, 4
-armour_ug_models        gundabad_bow
+armour_ug_models        gundabad_bow, gundabad_bow, gundabad_bow
 ownership               gundabad, portugal, slave
 era 0                   gundabad
 era 1                   gundabad
@@ -32363,7 +32363,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 400, 0, 125, 125, 750, 4, 48
 armour_ug_levels        2, 3
-armour_ug_models        liadan_billmen
+armour_ug_models        liadan_billmen, liadan_billmen
 ownership               teutonic_order, slave, turks, russia
 era 0                   teutonic_order
 era 1                   teutonic_order
@@ -32639,7 +32639,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 750, 0, 25, 25, 650, 2, 300
 armour_ug_levels        3, 4, 5
-armour_ug_models        nogrod_elite_hunters, nogrod_elite_hunters_upg
+armour_ug_models        nogrod_elite_hunters, nogrod_elite_hunters_upg, nogrod_elite_hunters_upg
 ownership               hungary, slave
 era 0                   hungary
 era 1                   hungary
@@ -32678,7 +32678,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 800, 0, 200, 200, 1000, 1, 100
 armour_ug_levels        3, 4, 5
-armour_ug_models        ered_luin_marksmen, ered_luin_marksmen_upg
+armour_ug_models        ered_luin_marksmen, ered_luin_marksmen_upg, ered_luin_marksmen_upg
 ownership               hungary, slave
 era 0                   hungary
 era 1                   hungary
@@ -32716,7 +32716,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1100, 0, 45, 100, 1100, 3, 610
 armour_ug_levels        4, 5, 6, 7
-armour_ug_models        nogrod_elite_axemen, nogrod_elite_axemen_upg
+armour_ug_models        nogrod_elite_axemen, nogrod_elite_axemen_upg, nogrod_elite_axemen_upg, nogrod_elite_axemen_upg
 ownership               hungary, slave
 era 0                   hungary
 era 1                   hungary
@@ -32754,7 +32754,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 895, 0, 125, 125, 850, 4, 56
 armour_ug_levels        3, 4
-armour_ug_models        angmarim_warrior_upg2
+armour_ug_models        angmarim_warrior_upg2, angmarim_warrior_upg2
 ownership               portugal, slave, russia
 era 0                   portugal
 era 1                   portugal
@@ -32792,7 +32792,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1000, 0, 120, 120, 820, 4, 54
 armour_ug_levels        3, 4
-armour_ug_models        angmarim_archer_upg2
+armour_ug_models        angmarim_archer_upg2, angmarim_archer_upg2
 ownership               portugal, slave
 era 0                   portugal
 era 1                   portugal
@@ -33143,7 +33143,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 850, 0, 125, 125, 845, 4, 81
 armour_ug_levels        3, 4, 5
-armour_ug_models        regent_axeguard, regent_axeguard_upg
+armour_ug_models        regent_axeguard, regent_axeguard_upg, regent_axeguard_upg
 ownership               byzantium, slave, turks
 era 0                   byzantium
 era 1                   byzantium
@@ -33484,7 +33484,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1000, 0, 150, 150, 995, 3, 89
 armour_ug_levels        4, 5, 6
-armour_ug_models        dwarven_crossbowmen_upg
+armour_ug_models        dwarven_crossbowmen_upg, dwarven_crossbowmen_upg, dwarven_crossbowmen_upg
 ownership               moors, slave
 era 0                   moors
 era 1                   moors
@@ -33522,7 +33522,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1150, 0, 350, 350, 1275, 2, 127
 armour_ug_levels        3, 4, 5, 6
-armour_ug_models        dwarves_elites
+armour_ug_models        dwarves_elites, dwarves_elites, dwarves_elites, dwarves_elites
 ownership               moors, khand, slave
 era 0                   moors
 era 1                   moors
@@ -33675,7 +33675,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 1400, 0, 200, 200, 1500, 2, 150
 armour_ug_levels        3, 4
-armour_ug_models        palace_guard_upg, palace_guard_upg2, palace_guard_upg2
+armour_ug_models        palace_guard_upg, palace_guard_upg2
 ownership               mongols, ireland, slave
 era 0                   mongols
 era 1                   mongols
@@ -33748,7 +33748,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 825, 0, 125, 125, 1000, 4, 100
 armour_ug_levels        3
-armour_ug_models        dorwin_maa52, dorwin_maa52
+armour_ug_models        dorwin_maa52
 ownership               poland, venice, slave
 era 0                   poland, venice
 era 1                   poland, venice
@@ -34199,7 +34199,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 950, 0, 200, 200, 1300, 3, 140
 armour_ug_levels        3, 4
-armour_ug_models        rohan_royal_spearmen
+armour_ug_models        rohan_royal_spearmen, rohan_royal_spearmen
 ownership               milan, slave, turks
 era 0                   milan
 era 1                   milan
@@ -34319,7 +34319,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 775, 0, 125, 125, 825, 4, 82
 armour_ug_levels        3, 4
-armour_ug_models        Heavy_uruk_spears
+armour_ug_models        Heavy_uruk_spears, Heavy_uruk_spears
 ownership               france, slave
 era 0                   france
 era 1                   france
@@ -34357,7 +34357,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 800, 0, 125, 125, 1150, 2, 118
 armour_ug_levels        4, 5, 6
-armour_ug_models        Dunedain_axemen_upg, Dunedain_axemen_upg
+armour_ug_models        Dunedain_axemen_upg, Dunedain_axemen_upg, Dunedain_axemen_upg
 ownership               turks, slave, russia
 era 0                   turks
 era 1                   turks
@@ -34626,7 +34626,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 800, 0, 125, 125, 960, 3, 96
 armour_ug_levels        2, 3, 4
-armour_ug_models        khand_noble_warblades, khand_noble_warblades_upg
+armour_ug_models        khand_noble_warblades, khand_noble_warblades_upg, khand_noble_warblades_upg
 ownership               khand, slave, spain, venice, england
 era 0                   khand
 era 1                   khand
@@ -34665,7 +34665,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1100, 0, 125, 125, 900, 4, 90
 armour_ug_levels        4, 5, 6
-armour_ug_models        numenorean_archers
+armour_ug_models        numenorean_archers, numenorean_archers, numenorean_archers
 ownership               russia, slave
 era 0                   russia
 era 1                   russia
@@ -34702,7 +34702,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 1050, 0, 125, 125, 900, 4, 90
 armour_ug_levels        3, 4, 5
-armour_ug_models        numenorean_marines
+armour_ug_models        numenorean_marines, numenorean_marines, numenorean_marines
 ownership               russia, slave
 era 0                   russia
 era 1                   russia
@@ -34741,7 +34741,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 300, 0, 125, 125, 680, 4, 68
 armour_ug_levels        1, 2, 3
-armour_ug_models        southron_pikemen
+armour_ug_models        southron_pikemen, southron_pikemen, southron_pikemen
 ownership               spain, slave, russia, turks
 era 0                   spain
 era 1                   spain
@@ -34820,7 +34820,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			1, 320, 0, 125, 125, 630, 4, 63
 armour_ug_levels        1, 2, 3
-armour_ug_models        southron_archers
+armour_ug_models        southron_archers, southron_archers, southron_archers
 ownership               spain, slave, turks
 era 0                   spain
 era 1                   spain
@@ -35273,7 +35273,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 570, 0, 125, 125, 1000, 6, 37
 armour_ug_levels        2, 3, 4
-armour_ug_models        gundabad_axe
+armour_ug_models        gundabad_axe, gundabad_axe, gundabad_axe
 ownership               gundabad, portugal, slave
 era 0                   gundabad
 era 1                   gundabad
@@ -35430,7 +35430,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 900, 0, 125, 125, 1085, 4, 108
 armour_ug_levels        3, 4, 5
-armour_ug_models        lossarnach_ug0, lossarnach_ug1
+armour_ug_models        lossarnach_ug0, lossarnach_ug1, lossarnach_ug1
 ownership               sicily, united, slave, turks
 era 0                   sicily
 era 1                   sicily
@@ -35469,7 +35469,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			3, 875, 0, 125, 125, 1100, 2, 110
 armour_ug_levels        3, 4, 5
-armour_ug_models        osgiliath_pikemen, osgiliath_pikemen_upg1
+armour_ug_models        osgiliath_pikemen, osgiliath_pikemen_upg1, osgiliath_pikemen_upg1
 ownership               sicily, turks, slave
 era 0                   sicily
 era 1                   sicily
@@ -35626,7 +35626,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 635, 0, 150, 150, 855, 4, 85
 armour_ug_levels        2, 3, 4
-armour_ug_models        morgul_mauler
+armour_ug_models        morgul_mauler, morgul_mauler, morgul_mauler
 ownership               england, slave, gundabad
 era 0                   england
 era 1                   england
@@ -35666,7 +35666,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 645, 0, 150, 150, 855, 4, 85
 armour_ug_levels        2, 3, 4
-armour_ug_models        morannon_halberd
+armour_ug_models        morannon_halberd, morannon_halberd, morannon_halberd
 ownership               england, slave, gundabad
 era 0                   england
 era 1                   england
@@ -35705,7 +35705,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 450, 0, 125, 125, 680, 5, 68
 armour_ug_levels        2, 3, 4
-armour_ug_models        mordor_uruks
+armour_ug_models        mordor_uruks, mordor_uruks, mordor_uruks
 ownership               england, slave, gundabad
 era 0                   england
 era 1                   england
@@ -35744,7 +35744,7 @@ stat_fire_delay         0
 stat_food               60, 300
 stat_cost			2, 465, 0, 125, 125, 680, 5, 68
 armour_ug_levels        2, 3, 4
-armour_ug_models        mordor_uruk_halberd
+armour_ug_models        mordor_uruk_halberd, mordor_uruk_halberd, mordor_uruk_halberd
 ownership               england, slave, gundabad
 era 0                   england
 era 1                   england

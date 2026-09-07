@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "mod": {
+    "id": "divide-and-conquer-eur",
+    "title": "Divide and Conquer: Epic Unity Rework",
+    "version": "",
+    "defaultConfig": "TATW.cfg"
+  },
+  "links": {
+    "website": "https://github.com/eurChris0/EUR-v2-M2EX",
+    "discord": "https://discord.gg/Z8YVNNNugV"
+  }
+}

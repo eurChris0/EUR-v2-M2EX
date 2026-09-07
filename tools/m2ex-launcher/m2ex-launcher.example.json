@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "mod": {
+    "id": "your-mod-id",
+    "title": "Your Mod",
+    "version": "1.0",
+    "defaultConfig": "your-mod.cfg"
+  },
+  "assets": {
+    "logo": "launcher/logo.png",
+    "icon": "launcher/icon.ico",
+    "music": "launcher/music.flac"
+  },
+  "themes": [
+    {
+      "id": "custom",
+      "label": "Custom",
+      "path": "launcher/theme.json"
+    }
+  ],
+  "links": {
+    "website": "https://example.com",
+    "discord": "https://discord.gg/example",
+    "documentation": "https://example.com/docs"
+  },
+  "discord": {
+    "applicationId": "",
+    "imageKey": ""
+  }
+}

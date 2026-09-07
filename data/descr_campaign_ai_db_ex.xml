@@ -176,19 +176,20 @@
 	//////////////////////
 	-->
 
-	<trusted_ally_fs_threshold float="0.5"/>
-	<trusted_ally_target_fs_threshold float="0.5"/>
-	<trusted_ally_target_human_fs_threshold float="0.0"/>
-	<trusted_ally_gs_threshold float="-0.1"/>
-	<trusted_ally_target_gs_threshold float="-0.1"/>
+	<trusted_ally_fs_threshold float="0.6"/>
+	<trusted_ally_target_fs_threshold float="0.6"/>
+	<trusted_ally_target_human_fs_threshold float="0.6"/>
+	<trusted_ally_gs_threshold float="-1.0"/>
+	<trusted_ally_target_gs_threshold float="-1.0"/>
 	<trusted_ally_enemy_auto_war bool="false"/>
 	
 	<use_cheat_overrides bool="true"/>
-	<invade_priority_fs_modifier float="-400.0"/>
-	<invade_priority_gs_modifier float="-200.0f"/>
-	<invade_priority_assistance_offset int="200"/>
-	<invade_priority_min int="50"/>
-	<invade_priority_max int="1500"/>
+	<invade_priority_fs_modifier float="-200.0"/>
+	<invade_priority_gs_modifier float="0.0f"/>
+	<invade_priority_assistance_offset int="3200"/>
+	<invade_priority_min int="1"/>
+	<invade_priority_max int="15000"/>
+	<merge_fort_priority_offset int="-320"/>
 	
 	<!--
 	///////////////////////////////////////
@@ -199,6 +200,106 @@
 	<faction_ai_label name="default">
 	
 		<defend_decisions>
+		<!-- EUR_SQUIRREL_RNG_PROBE_BEGIN defend
+		     Encodes exact campaign-RNG threshold results for the post-XML Squirrel evaluator.
+		     The base is 13; the field is reset by LTGD before each assessment. -->
+		<decision_entry>
+			<max_entry rand="0"/>
+			<faction_attitude pts_defense="1" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<min_entry rand="0"/>
+			<faction_attitude pts_defense="13" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<max_entry rand="0.01"/>
+			<faction_attitude pts_defense="1" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<min_entry rand="0.01"/>
+			<faction_attitude pts_defense="13" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<max_entry rand="0.02"/>
+			<faction_attitude pts_defense="1" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<min_entry rand="0.02"/>
+			<faction_attitude pts_defense="13" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<max_entry rand="0.05"/>
+			<faction_attitude pts_defense="1" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<min_entry rand="0.05"/>
+			<faction_attitude pts_defense="13" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<max_entry rand="0.07"/>
+			<faction_attitude pts_defense="1" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<min_entry rand="0.07"/>
+			<faction_attitude pts_defense="13" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<max_entry rand="0.1"/>
+			<faction_attitude pts_defense="1" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<min_entry rand="0.1"/>
+			<faction_attitude pts_defense="13" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<max_entry rand="0.11"/>
+			<faction_attitude pts_defense="1" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<min_entry rand="0.11"/>
+			<faction_attitude pts_defense="13" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<max_entry rand="0.15"/>
+			<faction_attitude pts_defense="1" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<min_entry rand="0.15"/>
+			<faction_attitude pts_defense="13" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<max_entry rand="0.25"/>
+			<faction_attitude pts_defense="1" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<min_entry rand="0.25"/>
+			<faction_attitude pts_defense="13" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<max_entry rand="0.33"/>
+			<faction_attitude pts_defense="1" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<min_entry rand="0.33"/>
+			<faction_attitude pts_defense="13" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<max_entry rand="0.35"/>
+			<faction_attitude pts_defense="1" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<min_entry rand="0.35"/>
+			<faction_attitude pts_defense="13" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<max_entry rand="0.4"/>
+			<faction_attitude pts_defense="1" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<min_entry rand="0.4"/>
+			<faction_attitude pts_defense="13" continue="true"/>
+		</decision_entry>
+		<!-- EUR_SQUIRREL_RNG_PROBE_END -->
 		
 			<!--
 			<decision_entry>
@@ -367,6 +468,106 @@
 
 
 		<invasion_decisions>
+		<!-- EUR_SQUIRREL_RNG_PROBE_BEGIN invade
+		     Encodes exact campaign-RNG threshold results for the post-XML Squirrel evaluator.
+		     The base is 13; the field is reset by LTGD before each assessment. -->
+		<decision_entry>
+			<max_entry rand="0"/>
+			<faction_attitude pts_invasion="1" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<min_entry rand="0"/>
+			<faction_attitude pts_invasion="13" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<max_entry rand="0.01"/>
+			<faction_attitude pts_invasion="1" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<min_entry rand="0.01"/>
+			<faction_attitude pts_invasion="13" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<max_entry rand="0.02"/>
+			<faction_attitude pts_invasion="1" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<min_entry rand="0.02"/>
+			<faction_attitude pts_invasion="13" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<max_entry rand="0.05"/>
+			<faction_attitude pts_invasion="1" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<min_entry rand="0.05"/>
+			<faction_attitude pts_invasion="13" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<max_entry rand="0.07"/>
+			<faction_attitude pts_invasion="1" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<min_entry rand="0.07"/>
+			<faction_attitude pts_invasion="13" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<max_entry rand="0.1"/>
+			<faction_attitude pts_invasion="1" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<min_entry rand="0.1"/>
+			<faction_attitude pts_invasion="13" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<max_entry rand="0.11"/>
+			<faction_attitude pts_invasion="1" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<min_entry rand="0.11"/>
+			<faction_attitude pts_invasion="13" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<max_entry rand="0.15"/>
+			<faction_attitude pts_invasion="1" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<min_entry rand="0.15"/>
+			<faction_attitude pts_invasion="13" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<max_entry rand="0.25"/>
+			<faction_attitude pts_invasion="1" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<min_entry rand="0.25"/>
+			<faction_attitude pts_invasion="13" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<max_entry rand="0.33"/>
+			<faction_attitude pts_invasion="1" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<min_entry rand="0.33"/>
+			<faction_attitude pts_invasion="13" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<max_entry rand="0.35"/>
+			<faction_attitude pts_invasion="1" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<min_entry rand="0.35"/>
+			<faction_attitude pts_invasion="13" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<max_entry rand="0.4"/>
+			<faction_attitude pts_invasion="1" continue="true"/>
+		</decision_entry>
+		<decision_entry>
+			<min_entry rand="0.4"/>
+			<faction_attitude pts_invasion="13" continue="true"/>
+		</decision_entry>
+		<!-- EUR_SQUIRREL_RNG_PROBE_END -->
 
 			<!--
 			<decision_entry>

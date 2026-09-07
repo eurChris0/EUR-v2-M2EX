@@ -2114,14 +2114,14 @@ character	Angbor, named character, male, age 46, x 240, y 221, portrait Angbor, 
 traits		Angbor 1, CustomBG 1, Hero 1, DunedainRace 1, Gondorian 1, HeroAbilityCaptain 1, GoodCommander 2, Just 2, Loyal 1, LoyaltyStarter 1, PietyStarter 1, Brave 3
 ancillaries	lord_lamedon, gondor_sword, gondorian_armour
 army
-unit		Lamedon Champions			exp 2 armour 2 weapon_lvl 1
+unit		Lamedon Champions			exp 2 armour 1 weapon_lvl 1
 unit		Territorial Swordsmen				exp 0 armour 0 weapon_lvl 0
 
 character	Faramir, named character, male, age 18, x 333, y 232, portrait Faramir, battle_model faramir, hero_ability CAPTAIN, label faramir_1
 traits		Faramir 1, CustomBG 1, Hero 1, DunedainRace 1, Gondorian 1, HeroAbilityCaptain 1, Aesthetic 1, GoodAmbusher 3, GoodCommander 2, Intelligent 1, Just 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1, NaturalMilitarySkill 1
 ancillaries	gondor_horn, warden, ithilen_bow, ranger_ithilien
 army
-unit		Captain's Rangers				exp 2 armour 3 weapon_lvl 1
+unit		Captain's Rangers				exp 2 armour 2 weapon_lvl 1
 unit		Ithilien Rangers				exp 1 armour 0 weapon_lvl 0
 unit		Ithilien Rangers				exp 1 armour 0 weapon_lvl 0
 
@@ -2141,14 +2141,14 @@ unit		Ringlo Pikemen					exp 0 armour 0 weapon_lvl 0
 character	Dinenion, named character, male, age 30, x 176, y 200, portrait Dinenion, label dinenion_1
 traits		DunedainRace 1, Gondorian 1, GoodCommander 1, LoyaltyStarter 1, BattleChivalryGood 1, PietyStarter 1, TacticalSkill 2
 army
-unit		Gondor Bodyguard				exp 2 armour 2 weapon_lvl 1
+unit		Gondor Bodyguard				exp 2 armour 1 weapon_lvl 1
 unit		Territorial Swordsmen				exp 0 armour 0 weapon_lvl 0
 
 character	Duinhir, named character, male, age 46, x 256, y 207, portrait Duinhir, hero_ability CAPTAIN, label duinhir_1
 traits		Hero 1, DunedainRace 1, Gondorian 1, HeroAbilityCaptain 1, Brave 2, GoodAmbusher 1, GoodCommander 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1
 ancillaries	lord_morthond, human_miner
 army
-unit		Blackroot Vale Archers			exp 2 armour 2 weapon_lvl 1
+unit		Blackroot Vale Archers			exp 2 armour 1 weapon_lvl 1
 unit		Blackroot Vale Archers			exp 2 armour 0 weapon_lvl 0
 unit		Blackroot Vale Archers			exp 2 armour 0 weapon_lvl 0
 
@@ -2156,14 +2156,14 @@ character	Forlong, named character, male, age 36, x 320, y 205, portrait Forlong
 traits		Forlong 1, CustomBG 1, Hero 1, DunedainRace 1, Gondorian 1, HeroAbilityCaptain 1, BattleChivalryGood 3, GoodCommander 2, HaleAndHearty 1, LoyaltyStarter 1, PietyStarter 1
 ancillaries	lord_lossarnach, axe_lossarnach
 army
-unit		Lossarnach Household Guard			exp 2 armour 3 weapon_lvl 1
+unit		Lossarnach Household Guard			exp 2 armour 1 weapon_lvl 1
 unit		Territorial Swordsmen			exp 0 armour 0 weapon_lvl 0
 
 character	Golasgil, named character, male, age 35, x 216, y 202, portrait Golasgil, hero_ability SHIELD, label golasgil_1
 traits		Hero 1, DunedainRace 1, Gondorian 1, HeroAbilityShield 1, BattleChivalryGood 2, GoodCommander 2, Intelligent 1, LoyaltyStarter 1, PietyStarter 1
 ancillaries	lord_anfalas, human_overseer
 army
-unit		Anfalas Bodyguard				exp 2 armour 2 weapon_lvl 1
+unit		Anfalas Bodyguard				exp 2 armour 1 weapon_lvl 1
 unit		Anfalas Herdsmen				exp 0 armour 0 weapon_lvl 0
 
 character	Hanion, named character, male, age 36, x 291, y 182, portrait Hanion
@@ -2195,7 +2195,7 @@ character	Orodreth, named character, male, age 41, x 315, y 183, portrait Orodre
 traits		Orodreth 1, CustomBG 1, Hero 1, DunedainRace 1, Gondorian 1, HeroAbilityCaptain 1, GoodCommander 2, GoodDefender 2, GoodTrader 2, LoyaltyStarter 1, PietyStarter 1, StrategyChivalryGood 1
 ancillaries	lord_lebennin, human_trader
 army
-unit		Lebennin Marines			exp 1 armour 3 weapon_lvl 1
+unit		Lebennin Marines			exp 1 armour 2 weapon_lvl 1
 unit		Lebennin Marines			exp 1 armour 0 weapon_lvl 0
 unit		Territorial Swordsmen				exp 1 armour 0 weapon_lvl 0
 unit		Territorial Watchmen		exp 1 armour 0 weapon_lvl 1
@@ -2783,7 +2783,7 @@ character	Theoden, named character, male, leader, age 32, x 249, y 249, portrait
 traits		Theoden 1, CustomBG 1, Hero 1, GoodManRace 1, Rohirrim 1, FactionLeaderCustom 1, HeroAbilityRohan 1, TheodenDeceived 1, FathersLegacy 2, GoodCavalryGeneral 3, GoodCommander 3, Just 1, PietyStarter 1
 ancillaries	eorls_horn, herugrim, king_rohan, armour_rohan
 army
-unit		King's Horseguard						exp 2 armour 1 weapon_lvl 1
+unit		King's Horseguard						exp 2 armour 0 weapon_lvl 1
 unit		Rohirrim					    exp 2 armour 0 weapon_lvl 1
 unit		Rohirrim					    exp 2 armour 0 weapon_lvl 1
 
@@ -2791,8 +2791,8 @@ character	Theodred, named character, male, heir, age 16, x 239, y 268, portrait 
 traits		Hero 1, GoodManRace 1, Rohirrim 1, HeroAbilityCaptain 1, Brave 2, FactionHeir 1, GoodCavalryGeneral 1, GoodCommander 2, KindRuler 2, Loyal 2, Energetic 1, LoyaltyStarter 1, PietyStarter 1
 ancillaries	horse_trader, mount_rohirrim
 army
-unit		King's Horseguard						exp 2 armour 1 weapon_lvl 0
-unit		Eored Swordsmen				exp 1 armour 1 weapon_lvl 0
+unit		King's Horseguard						exp 2 armour 0 weapon_lvl 0
+unit		Eored Swordsmen				exp 1 armour 0 weapon_lvl 0
 unit		Eorling Archers				exp 1 armour 0 weapon_lvl 0
 unit		Rohirrim					    exp 2 armour 0 weapon_lvl 1
 
@@ -2800,7 +2800,7 @@ character	Grimbold, named character, male, age 35, x 264, y 266, portrait Grimbo
 traits		Hero 1, GoodManRace 1, Rohirrim 1, HeroAbilityCaptain 1, BattleChivalryGood 1, GoodAttacker 1, GoodCavalryGeneral 2, GoodCommander 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1, StrategyChivalryGood 1, NaturalMilitarySkill 1
 ancillaries	rider_rohan, light_lance
 army
-unit		Rohan Bodyguard				exp 2 armour 1 weapon_lvl 1
+unit		Rohan Bodyguard				exp 2 armour 0 weapon_lvl 1
 unit		Rohirrim Archers		   	exp 2 armour 0 weapon_lvl 0
 unit		Rohirrim Archers			exp 2 armour 0 weapon_lvl 0
 unit		Rohirrim					exp 2 armour 0 weapon_lvl 0
@@ -2826,14 +2826,14 @@ character	Eomer, named character, male, age 16, x 283, y 228, portrait Eomer, ba
 traits		Eomer 1, CustomBG 1, Hero 1, GoodManRace 1, Rohirrim 1, HeroAbilityRohan 1, BattleChivalryGood 1, GoodAttacker 1, EomerBanished 1, GoodCavalryGeneral 3, GoodCommander 1, Loyal 4, LoyaltyStarter 1, PietyStarter 1, StrategyChivalryGood 2, NaturalMilitarySkill 2
 ancillaries	rider_rohan, guthwine, shield_rohan
 army
-unit		The Red Shields of Erkenbrand					exp 2 armour 1 weapon_lvl 1
+unit		The Red Shields of Erkenbrand					exp 2 armour 0 weapon_lvl 1
 
 
 character	Erkenbrand, named character, male, age 36, x 230, y 260, portrait Erkenbrand, hero_ability CAPTAIN
 traits		Hero 1, GoodManRace 1, Rohirrim 1, HeroAbilityCaptain 1, RenownLegacy 1, GoodCommander 1, GoodDefender 1, LoyaltyStarter 1, PietyStarter 1, StrategyChivalryGood 1
 ancillaries	commander_eorl, armour_rohan
 army
-unit		The Red Shields of Erkenbrand				exp 2 armour 2 weapon_lvl 1
+unit		The Red Shields of Erkenbrand				exp 2 armour 0 weapon_lvl 1
 unit		Helmingas				exp 2 armour 1 weapon_lvl 0
 unit		Helmingas				exp 2 armour 1 weapon_lvl 0
 unit		Eorling Spearmen				exp 1 armour 1 weapon_lvl 0
@@ -2970,7 +2970,7 @@ character	Husklik, named character, male, age 18, x 87, y 329
 traits		OrcRace 1, LoyaltyStarter 1, GoodCommander 1, StrategyChivalryEvil 2, Berserker 3, Bloodthirsty 2, Overseer 1, GoodSiegeAttacker 1, NightBattleCapable 1
 ancillaries goblin
 army
-unit		Blue Crag Orc Javs			exp 2 armour 3 weapon_lvl 1
+unit		Blue Crag Orc Javs			exp 2 armour 2 weapon_lvl 1
 unit		Blue Crag Warg Warriors			exp 1 armour 1 weapon_lvl 0
 unit		Blue Crag Goblin Axes			exp 1 armour 1 weapon_lvl 0
 unit		Blue Crag Goblin Axes			exp 1 armour 1 weapon_lvl 0
@@ -2978,10 +2978,10 @@ unit		Blue Crag Goblin Slingers			exp 1 armour 0 weapon_lvl 0
 unit		Blue Crag Blunt 			exp 1 armour 0 weapon_lvl 0
 unit		Blue Crag Blunt 			exp 1 armour 0 weapon_lvl 0
 
-;character_record	Urd, female, age 33, alive, never_a_leader
+character_record	Urd, female, age 33, alive, never_a_leader
 ;character_record	Urd, female, age 36, alive, never_a_leader
 
-;relative		Gazrip, Kruklik, Husklik, Ogbur, end
+relative		Kruklik, Urd, end
 ;relative		Gazluna, Moggash, Zagug, end
 
 ;#############################
@@ -3625,7 +3625,7 @@ traits		GoodManRace 1, GoodAdministrator 1, Energetic 1, GoodCommander 1, Just 1
 ancillaries northman_spear 
 army
 unit		Royal Guardsmen					exp 2 armour 0 weapon_lvl 0
-unit		Northmen Militia				exp 1 armour 1 weapon_lvl 1
+unit		Northmen Militia				exp 1 armour 0 weapon_lvl 1
 
 character	Vidusith, named character, male, age 51, x 339, y 411, portrait Vidusith
 traits		GoodManRace 1, BattleChivalryGood 1, GoodAdministrator 1, GoodCommander 2, NaturalMilitarySkill 1, PietyStarter 1, LoyaltyStarter 1
@@ -3987,7 +3987,7 @@ character	Fastred, named character, male, age 38, x 303, y 380, portrait Fastred
 traits		Hero 1, GoodManRace 1, Woodman 1,  HeroAbilityCaptain 1, Brave 2, GoodCommander 2, Scout 2, KindRuler 1, GoodAmbusher 1, LoyaltyStarter 1, PietyStarter 1
 ancillaries	yew_bow, woodmen_spear, woodmen_cloak
 army
-unit		Silvan Marchwardens				exp 2 armour 1 weapon_lvl 1
+unit		Silvan Marchwardens				exp 2 armour 0 weapon_lvl 1
 unit		Woodman Warriors				exp 1 armour 1 weapon_lvl 0
 unit		Woodman Hunters				exp 1 armour 0 weapon_lvl 0
 
@@ -3996,15 +3996,15 @@ traits		Folcred 1, Hero 1, HobbitRace 1, HeroAbilityCaptain 1, GoodAmbusher 1, G
 ancillaries	honey_pie, yew_bow, hobbit_farmer
 army
 unit		Woodman Wardens			exp 2 armour 0 weapon_lvl 1
-unit		Vale Archers			exp 1 armour 1 weapon_lvl 1
-unit		Vale Archers			exp 1 armour 1 weapon_lvl 1
-unit		Vale Archers			exp 1 armour 1 weapon_lvl 1
+unit		Vale Archers			exp 1 armour 0 weapon_lvl 1
+unit		Vale Archers			exp 1 armour 0 weapon_lvl 1
+unit		Vale Archers			exp 1 armour 0 weapon_lvl 1
 
 character	Gleowine, named character, male, age 32, x 271, y 425, portrait Gleowine, battle_model gleowine, hero_ability SHIELD
 traits		Hero 1, GoodManRace 1, Eotheod 1, HeroAbilityShield 1, GoodCommander 1, RiskyDefender 1, KindRuler 1, LoyaltyStarter 1, PietyStarter 1, TacticalSkill 1
 ancillaries	anduin_armour, wildman_spear
 army
-unit		Eotheod Archers   	   exp 2 armour 1 weapon_lvl 1
+unit		Eotheod Archers   	   exp 2 armour 0 weapon_lvl 1
 unit		Woodman Warriors				exp 1 armour 0 weapon_lvl 0
 unit		Woodman Warriors					exp 1 armour 1 weapon_lvl 0 
 unit		Woodman Hunters				exp 1 armour 0 weapon_lvl 0
@@ -4180,7 +4180,7 @@ character	Hawin, named character, male, leader, age 39, x 442, y 338, portrait H
 traits		Hawin 1, Hero 1, GoodManRace 1, Dorwinrim 1, FactionLeader 1, HeroAbilityIronFist 1, DespisesEasterlings 1, GoodCommander 2, LeaderDiplomacy 1, GoodTrader 1, NightBattleCapable 1, PietyStarter 1
 ancillaries	dorwinion_king, avari_armor, vintner
 army
-unit		High Paladins		exp 2 armour 1 weapon_lvl 0
+unit		High Paladins		exp 2 armour 0 weapon_lvl 0
 unit		Thorn Crossbowmen			exp 2 armour 0 weapon_lvl 0
 
 character	Swain, named character, male, heir, age 18, x 408, y 327, portrait Swain, hero_ability SHIELD
@@ -4782,7 +4782,7 @@ character	Elrohir, named character, male, heir, age 17, x 251, y 382, portrait E
 traits		Elrohir 1, CustomBG 1, Hero 1, ElvenRace 1, Noldor 1, HouseElrond 1, FactionHeirCustom 1, HeroAbilityElf 1, Handsome 1, RenownLegacy 2, GoodAmbusher 1, GoodCommander 2, Loyal 1, LoyaltyStarter 1, PietyStarter 1, StrategyChivalryGood 1, RangerExperience 1, DespisesOrcs 1,
 ancillaries	elven_captain, noldor_sword
 army
-unit		Dunedain Bodyguard Twins				exp 2 armour 2 weapon_lvl 1
+unit		Dunedain Bodyguard Twins				exp 2 armour 1 weapon_lvl 1
 unit		Dunedain Wardens				exp 1 armour 1 weapon_lvl 0
 
 character	Gildor, named character, male, age 16, x 245, y 378, portrait Gildor, hero_ability Light_of_the_Faith, label gildor_1
@@ -4796,7 +4796,7 @@ character	Lairion, named character, male, age 16, x 236, y 362, portrait Lairion
 traits		Lairion 1, Hero 1, ElvenRace 1, Noldor 1, HouseElrond 1, HeroAbilityElf 1, Handsome 1, Brave 2, GoodCommander 2, Loyal 2, LoyaltyStarter 1, PietyStarter 1, StrategyChivalryGood 1
 ancillaries	noldor_sword
 army
-unit		Noldorin Bodyguards				exp 2 armour 2 weapon_lvl 1
+unit		Noldorin Bodyguards				exp 2 armour 1 weapon_lvl 1
 unit		Sword Quendi				exp 2 armour 2 weapon_lvl 0
 unit		Sword Quendi				exp 2 armour 1 weapon_lvl 0
 unit		Bow Quendi				exp 1 armour 1 weapon_lvl 0
@@ -5234,9 +5234,9 @@ traits		Tremac 1, Hero 1, MiddleManRace 1, EnedwaithClansman 1, EnedwaithMochain
 ancillaries	wildman_sword, mail_hauberk
 
 army
-unit		Tir Croicoill Cosantoiri		exp 2 armour 3 weapon_lvl 1
-unit		Dubhshith Elders		exp 1 armour 1 weapon_lvl 1
-unit		Dubhshith Foresters			exp 2 armour 2 weapon_lvl 0
+unit		Tir Croicoill Cosantoiri		exp 2 armour 0 weapon_lvl 1
+unit		Dubhshith Elders		exp 1 armour 0 weapon_lvl 1
+unit		Dubhshith Foresters			exp 2 armour 0 weapon_lvl 0
 unit		Mochaini Touta			exp 1 armour 0 weapon_lvl 0
 unit		Mochaini Touta			exp 1 armour 0 weapon_lvl 0
 unit		Mochaini Touta			exp 1 armour 0 weapon_lvl 0
@@ -5248,8 +5248,8 @@ traits		Hero 1, MiddleManRace 1, EnedwaithClansman 1, EnedwaithDubhshith 1, Fact
 ancillaries	hunter_elder, clan_elder
 
 army
-unit		Dubhshith Foresters			exp 2 armour 2 weapon_lvl 0
-unit		Dubhshith Elders					exp 1 armour 1 weapon_lvl 1
+unit		Dubhshith Foresters			exp 2 armour 0 weapon_lvl 0
+unit		Dubhshith Elders					exp 1 armour 0 weapon_lvl 1
 
 
 character_record	Varen, male, age 68, dead 66, never_a_leader
@@ -6318,7 +6318,7 @@ character	Yagthak, named character, male, leader, age 51, x 217, y 312, portrait
 traits		Yagthak 1, CustomBG 1, Hero 1, MiddleManRace 1, Dunlending 1, Brenin 2, FactionLeader 1, HeroAbilityShield 1, Berserker 3, GoodAdministrator 1, GoodCommander 3, NightBattleCapable 1, PietyStarter 1, TacticalSkill 1
 ancillaries	king_dunland, woodencrown, wildman_spear
 army
-unit		Orthanc Guard				exp 2 armour 1 weapon_lvl 1
+unit		Orthanc Guard				exp 2 armour 0 weapon_lvl 1
 unit		Dunlending Longspears			exp 1 armour 0 weapon_lvl 0
 unit		Dunlending Raiders			exp 1 armour 0 weapon_lvl 0
 unit		Clan Spearmen			exp 1 armour 0 weapon_lvl 0
@@ -6329,7 +6329,7 @@ traits		Hero 1, MiddleManRace 1, Dunlending 1, Frekkalingir 2, FactionHeir 1, He
 ancillaries	dunland_helmet, wulf_axe, freca_crest
 
 army
-unit		Frekkalingir Harriers			exp 1 armour 1 weapon_lvl 1
+unit		Frekkalingir Harriers			exp 1 armour 0 weapon_lvl 1
 unit		Dunlending Raiders			exp 1 armour 0 weapon_lvl 0
 unit		Dunlending Raiders			exp 1 armour 0 weapon_lvl 0
 unit		Clan Spearmen		exp 1 armour 0 weapon_lvl 0
@@ -6340,7 +6340,7 @@ traits		MiddleManRace 1, Dunlending 1, Dunhird 3, Scout 1, GoodAttacker 2, GoodC
 ancillaries	herbalist, fur_trapper
 
 army
-unit		Dunhird Slayers				exp 1 armour 1 weapon_lvl 0
+unit		Dunhird Slayers				exp 1 armour 0 weapon_lvl 0
 unit		Dunlending Raiders			exp 1 armour 0 weapon_lvl 0
 unit		Dunlending Raiders			exp 1 armour 0 weapon_lvl 0
 unit		Clan Spearmen			exp 1 armour 0 weapon_lvl 0
@@ -6531,7 +6531,7 @@ character	Lunug, named character, male, age 18, x 233, y 350
 traits		OrcRace 1, LoyaltyStarter 1, GoodCommander 1, StrategyChivalryEvil 2, Berserker 3, Bloodthirsty 2, Overseer 1, GoodSiegeAttacker 1, NightBattleCapable 1
 ancillaries goblin
 army
-unit		Black Pit Berserkers			exp 2 armour 3 weapon_lvl 1
+unit		Black Pit Berserkers			exp 2 armour 2 weapon_lvl 1
 unit		Goblin Band			exp 0 armour 0 weapon_lvl 0
 unit		Goblin Archers			exp 0 armour 0 weapon_lvl 0
 unit		Goblin Archers				exp 0 armour 0 weapon_lvl 0
@@ -6544,7 +6544,7 @@ character	Athrug, named character, male, age 17, x 231, y 339
 traits		OrcRace 1, LoyaltyStarter 1, GoodCommander 1, StrategyChivalryEvil 2, Berserker 3, Bloodthirsty 2, Slavedriver 1, GoodSiegeAttacker 1, NightBattleCapable 1
 ancillaries whip
 army
-unit		Goblin Bodyguards			exp 2 armour 3 weapon_lvl 1
+unit		Goblin Bodyguards			exp 2 armour 0 weapon_lvl 1
 unit		Goblin Band			exp 0 armour 0 weapon_lvl 0
 unit		Goblin Archers			exp 0 armour 0 weapon_lvl 0
 unit		Goblin Archers				exp 0 armour 0 weapon_lvl 0
@@ -7162,7 +7162,7 @@ character	Arkish, named character, male, leader, age 38, x 489, y 140, portrait 
 traits		Hero 1, BadManRace 1, VariagTribe 1, FactionLeader 1, HeroAbilityVenom 1, AridWarrior 1, GoodAttacker 2, GoodCommander 2, GoodCavalryGeneral 2, Just 2, NightBattleCapable 1, PietyStarter 1, StrategyChivalryEvil 1, NaturalMilitarySkill 1
 ancillaries	king_khand, khandish_armour, brotherhood_warrior
 army
-unit		Variag Nobles				exp 2 armour 1 weapon_lvl 1
+unit		Variag Nobles				exp 2 armour 0 weapon_lvl 1
 unit		Nomad Horsemen				exp 0 armour 0 weapon_lvl 0
 unit		Nomad Horsemen			exp 2 armour 0 weapon_lvl 0
 
@@ -7170,7 +7170,7 @@ character	Orash, named character, male, heir, age 17, x 489, y 198, hero_ability
 traits		Hero 1, BadManRace 1, VariagTribe 1, FactionHeir 1, HeroAbilityVenom 1, AridWarrior 1, FathersLegacy 1, GoodAttacker 1, GoodCommander 2, GoodCavalryGeneral 2, Just 1, LoyaltyStarter 1, PietyStarter 1, BattleChivalryEvil 1, Energetic 2, NaturalMilitarySkill 1
 ancillaries composite_bow, steppe_horse
 army
-unit		Windriders of Khand					exp 2 armour 1 weapon_lvl 1
+unit		Windriders of Khand					exp 2 armour 0 weapon_lvl 1
 unit		Nomad Horsemen				exp 2 armour 0 weapon_lvl 0
 
 character	Yiltig, named character, male, age 29, x 491, y 167, label yiltig_1
@@ -7301,7 +7301,7 @@ character	Gimilthon, named character, male, age 16, x 211, y 54, portrait Gimilt
 traits		NumenoreanRace 1, HeroAbilityNumenor 1, FathersLegacy 2, GoodCommander 1, NightBattleCapable 1, Noctophilia 1, Intelligent 1, LoyaltyStarter 1, PietyStarter 1, GoodAmbusher 1, Scout 1, Energetic 1
 ancillaries	apothecary
 army
-unit		Darkblades			exp 2 armour 2 weapon_lvl 1
+unit		Darkblades			exp 2 armour 0 weapon_lvl 1
 unit		Numenorean Cohort			exp 0 armour 0 weapon_lvl 0
 
 character	Sakalthor, admiral, male, age 34, x  207, y 59, label bn_army_4
@@ -10411,7 +10411,7 @@ unit		Snaga Ballista			exp 1 armour 0 weapon_lvl 0
 
 character	sub_faction venice, Kustig, general, male, age 29, x 462, y 266
 army
-unit		Loke Rim Bodyguard							exp 2 armour 1 weapon_lvl 1
+unit		Loke Rim Bodyguard							exp 2 armour 0 weapon_lvl 1
 unit		Rhunnic Spears				exp 1 armour 0 weapon_lvl 0
 unit		Rhunnic Spears				exp 1 armour 0 weapon_lvl 0
 unit		Rhunnic Warriors				exp 1 armour 0 weapon_lvl 0
@@ -10426,7 +10426,7 @@ character	sub_faction venice, Maltok, named character, male, age 29, x 378, y 25
 traits		BadManRace 1, VariagTribe 1, AridWarrior 1, GoodDefender 1, GoodCommander 3, Just 1, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1, GoodCavalryGeneral 1, Energetic 1
 ancillaries	steppe_horse
 army
-unit		Khamuls Shadowguard			exp 2 armour 1 weapon_lvl 1
+unit		Khamuls Shadowguard			exp 2 armour 0 weapon_lvl 1
 unit		Khamuls Shadowguard			exp 1 armour 0 weapon_lvl 0
 unit		Khamuls Shadowguard			exp 1 armour 0 weapon_lvl 0
 unit		Khamuls Shadow Rangers			exp 1 armour 0 weapon_lvl 0
@@ -10437,30 +10437,30 @@ character	sub_faction venice, Kutula, named character, male, age 29, x 378, y 25
 traits		BadManRace 1, VariagTribe 1, AridWarrior 1, GoodDefender 1, GoodCommander 4, Just 1, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1, GoodCavalryGeneral 1, Energetic 1
 ancillaries	steppe_horse
 army
-unit		Loke Rim Bodyguard			exp 2 armour 1 weapon_lvl 1
+unit		Loke Rim Bodyguard			exp 2 armour 0 weapon_lvl 1
 unit		Loke-Rim Pikemen			exp 2 armour 1 weapon_lvl 1
 unit		Loke-Rim Pikemen			exp 2 armour 1 weapon_lvl 1
 unit		Loke-Rim Pikemen			exp 2 armour 1 weapon_lvl 1
 unit		Loke-Rim Pikemen			exp 2 armour 1 weapon_lvl 1
-unit		Rhunnic Bowmen			exp 2 armour 3 weapon_lvl 0
-unit		Rhunnic Bowmen			exp 2 armour 3 weapon_lvl 0
-unit		Rhunnic Bowmen		exp 2 armour 3 weapon_lvl 0
-unit		Rhunnic Bowmen		exp 2 armour 3 weapon_lvl 0
+unit		Rhunnic Bowmen			exp 2 armour 1 weapon_lvl 0
+unit		Rhunnic Bowmen			exp 2 armour 1 weapon_lvl 0
+unit		Rhunnic Bowmen		exp 2 armour 1 weapon_lvl 0
+unit		Rhunnic Bowmen		exp 2 armour 1 weapon_lvl 0
 unit		Loke-Rim Swordsmen		exp 2 armour 0 weapon_lvl 0
 unit		Loke-Rim Swordsmen		exp 2 armour 0 weapon_lvl 0
 unit		Loke-Rim Macemen		exp 2 armour 0 weapon_lvl 0
 unit		Loke-Rim Macemen			exp 2 armour 0 weapon_lvl 0
 unit		Loke-Rim Cavalry			exp 2 armour 0 weapon_lvl 0
 unit		Loke-Rim Cavalry			exp 2 armour 0 weapon_lvl 0
-unit		Loke-Nar Rim			exp 2 armour 3 weapon_lvl 0
-unit		Loke-Nar Rim			exp 2 armour 3 weapon_lvl 0
+unit		Loke-Nar Rim			exp 2 armour 1 weapon_lvl 0
+unit		Loke-Nar Rim			exp 2 armour 1 weapon_lvl 0
 unit		Khand Elite Axemen			exp 2 armour 0 weapon_lvl 0
 unit		Khand Elite Axemen			exp 2 armour 0 weapon_lvl 0
 unit		Khand Elite Axemen			exp 2 armour 0 weapon_lvl 0
 
 character	sub_faction venice, Bori, general, male, age 24, x 479, y 324, portrait Easterling
 army
-unit		Loke Rim Bodyguard				exp 2 armour 2 weapon_lvl 1
+unit		Loke Rim Bodyguard				exp 2 armour 0 weapon_lvl 1
 unit		Claw-Guard					exp 1 armour 0 weapon_lvl 0
 unit		Claw-Guard					exp 1 armour 0 weapon_lvl 0
 unit		Rhunnic Spears					exp 1 armour 0 weapon_lvl 0
@@ -10473,7 +10473,7 @@ unit		Fang-Guard				exp 1 armour 0 weapon_lvl 0
 
 character	sub_faction khand, Khursh, general, male, age 41, x 436, y 263
 army
-unit		Loke Rim Bodyguard							exp 2 armour 1 weapon_lvl 1
+unit		Loke Rim Bodyguard							exp 2 armour 0 weapon_lvl 1
 unit		Rhunnic Spears				exp 1 armour 0 weapon_lvl 0
 unit		Rhunnic Spears				exp 1 armour 0 weapon_lvl 0
 unit		Rhunnic Warriors				exp 1 armour 0 weapon_lvl 0
@@ -10485,8 +10485,8 @@ unit		Khand Elite Assassins						exp 1 armour 0 weapon_lvl 0
 character	sub_faction venice, Abattarik, general, male, age 41, x 443, y 300
 army
 unit		Loke Rim Bodyguard							exp 0 armour 0 weapon_lvl 0
-unit		Fire-Guard		exp 2 armour 1 weapon_lvl 0
-unit		Fire-Guard		exp 2 armour 1 weapon_lvl 0                      
+unit		Fire-Guard		exp 2 armour 0 weapon_lvl 0
+unit		Fire-Guard		exp 2 armour 0 weapon_lvl 0
 unit		Loke-Rim Poleaxemen				exp 0 armour 0 weapon_lvl 0
 unit		Loke-Rim Poleaxemen					exp 1 armour 0 weapon_lvl 0
 unit		Rhunnic Warriors					exp 2 armour 0 weapon_lvl 0
@@ -10508,7 +10508,7 @@ unit		Rhudaur Spearmen			exp 0 armour 0 weapon_lvl 0
 
 character	sub_faction hre, Azgash, general, male, age 19, x 260, y 393
 army
-unit		Goblin Bodyguards		exp 2 armour 1 weapon_lvl 0
+unit		Goblin Bodyguards		exp 2 armour 0 weapon_lvl 0
 unit		Snaga Archers		exp 2 armour 1 weapon_lvl 0
 unit		Snaga Archers		exp 2 armour 1 weapon_lvl 0
 unit		Snaga Archers		exp 2 armour 1 weapon_lvl 0
@@ -10527,18 +10527,18 @@ unit		Warg Riders					exp 2 armour 0 weapon_lvl 0
 
 character	sub_faction timurids, Horn, general, male, age 19, x 282, y 426
 army
-unit		Sellswords			exp 2 armour 1 weapon_lvl 0
+unit		Sellswords			exp 2 armour 0 weapon_lvl 0
 unit		Bandits		exp 2 armour 0 weapon_lvl 0
-unit		Bandits		exp 2 armour 1 weapon_lvl 0
-unit		Bandits		exp 1 armour 1 weapon_lvl 0
-unit		Vale Archers	exp 1 armour 1 weapon_lvl 0
+unit		Bandits		exp 2 armour 0 weapon_lvl 0
+unit		Bandits		exp 1 armour 0 weapon_lvl 0
+unit		Vale Archers	exp 1 armour 0 weapon_lvl 0
 unit		Vale Archers				exp 0 armour 0 weapon_lvl 0
-unit		Woodman Wardens			exp 2 armour 1 weapon_lvl 0
-unit		Woodman Wardens		exp 1 armour 1 weapon_lvl 0
+unit		Woodman Wardens			exp 2 armour 0 weapon_lvl 0
+unit		Woodman Wardens		exp 1 armour 0 weapon_lvl 0
 
 character	sub_faction hre, Radthrak, general, male, age 19, x 285, y 439
 army
-unit		Goblin Bodyguards		exp 2 armour 1 weapon_lvl 0
+unit		Goblin Bodyguards		exp 2 armour 0 weapon_lvl 0
 unit		Snaga Archers		exp 2 armour 1 weapon_lvl 0
 unit		Snaga Archers		exp 2 armour 1 weapon_lvl 0
 unit		Snaga Archers		exp 2 armour 1 weapon_lvl 0
@@ -10557,7 +10557,7 @@ unit		Warg Riders					exp 2 armour 0 weapon_lvl 0
 
 character	sub_faction hre, Ufgaz, general, male, age 19, x 306, y 451
 army
-unit		Goblin Bodyguards		exp 2 armour 1 weapon_lvl 0
+unit		Goblin Bodyguards		exp 2 armour 0 weapon_lvl 0
 unit		Snaga Archers		exp 2 armour 1 weapon_lvl 0
 unit		Snaga Archers		exp 2 armour 1 weapon_lvl 0
 unit		Goblin Band			exp 2 armour 1 weapon_lvl 1
@@ -10619,7 +10619,7 @@ unit		Warg Skirmishers		exp 0 rmour 0 weapon_lvl 1
 
 character	sub_faction turks, Harry, general, male, age 24, x 105, y 377
 army
-unit		Sellswords				exp 1 armour 1 weapon_lvl 0
+unit		Sellswords				exp 1 armour 0 weapon_lvl 0
 unit		Bandobras Archers			exp 2 armour 0 weapon_lvl 1
 unit		Bandobras Archers				exp 1 armour 1 weapon_lvl 0
 unit		Watch Shirriffs				exp 1 armour 1 weapon_lvl 0
@@ -10630,12 +10630,12 @@ unit		Lumbermen				exp 1 armour 1 weapon_lvl 0
 
 character	sub_faction england, Balcmeg, general, male, age 28, x 324, y 266
 army
-unit		Loke-Rim Pikemen		exp 2 armour 2 weapon_lvl 1
-unit		Loke-Rim Spearmen		exp 2 armour 2 weapon_lvl 1
-unit		Black Uruks		exp 1 armour 1 weapon_lvl 0
-unit		Black Uruks		exp 1 armour 1 weapon_lvl 0
-unit		Black Uruk Archers		exp 1 armour 1 weapon_lvl 0
-unit		Black Uruk Archers		exp 1 armour 1 weapon_lvl 0
+unit		Loke-Rim Pikemen		exp 2 armour 1 weapon_lvl 1
+unit		Loke-Rim Spearmen		exp 2 armour 1 weapon_lvl 1
+unit		Black Uruks		exp 1 armour 0 weapon_lvl 0
+unit		Black Uruks		exp 1 armour 0 weapon_lvl 0
+unit		Black Uruk Archers		exp 1 armour 0 weapon_lvl 0
+unit		Black Uruk Archers		exp 1 armour 0 weapon_lvl 0
 
 
 character	sub_faction moors, Gura, general, male, age 24, x 328, y 438  ; Withibord
@@ -10647,18 +10647,18 @@ unit		Dwarven Labourers		exp 1 armour 1 weapon_lvl 0
 unit		Dwarven Labourers		exp 1 armour 1 weapon_lvl 0
 unit		Iron Hills Mattocks	exp 1 armour 1 weapon_lvl 0
 unit		Iron Hills Mattocks		exp 1 armour 1 weapon_lvl 0
-unit		Dwarven Catapult		exp 1 armour 1 weapon_lvl 0
+unit		Dwarven Catapult		exp 1 armour 0 weapon_lvl 0
 
 character	sub_faction khand, Borlad, general, male, age 27, x 347, y 87   ; An-Karagmir
 army
-unit		Black Snake Guard		            exp 1 armour 1 weapon_lvl 1
-unit		Muhad Beasttamers					exp 2 armour 1 weapon_lvl 1
+unit		Black Snake Guard		            exp 1 armour 0 weapon_lvl 1
+unit		Muhad Beasttamers					exp 2 armour 0 weapon_lvl 1
 unit		Troll-men Hunters		exp 2 armour 1 weapon_lvl 1
 unit		Troll-men Hunters		exp 2 armour 1 weapon_lvl 1
-unit		Southron Pikemen		        exp 2 armour 1 weapon_lvl 1
-unit		Southron Archers		        exp 2 armour 1 weapon_lvl 1
-unit		Southron Archers		        exp 2 armour 1 weapon_lvl 1
-unit		Mumakil		        exp 2 armour 1 weapon_lvl 1
+unit		Southron Pikemen		        exp 2 armour 0 weapon_lvl 1
+unit		Southron Archers		        exp 2 armour 0 weapon_lvl 1
+unit		Southron Archers		        exp 2 armour 0 weapon_lvl 1
+unit		Mumakil		        exp 2 armour 0 weapon_lvl 1
 
 character	sub_faction khand, Menggetu, general, male, age 27, x 346, y 151
 army
@@ -10667,28 +10667,28 @@ unit		Nomad Warriors					exp 1 armour 0 weapon_lvl 0
 unit		Nomad Warriors					exp 1 armour 0 weapon_lvl 0
 unit		Nomad Horsemen					exp 2 armour 0 weapon_lvl 0
 unit		Nomad Horsemen					exp 2 armour 0 weapon_lvl 0
-unit		Variag Horse Archers		            exp 1 armour 1 weapon_lvl 0
-unit		Variag Horse Archers		            exp 1 armour 1 weapon_lvl 0
+unit		Variag Horse Archers		            exp 1 armour 0 weapon_lvl 0
+unit		Variag Horse Archers		            exp 1 armour 0 weapon_lvl 0
 
 character	sub_faction khand, Arigboge, general, male, age 27, x 340, y 124
 army
-unit		Black Snake Guard		            exp 1 armour 1 weapon_lvl 1
+unit		Black Snake Guard		            exp 1 armour 0 weapon_lvl 1
 unit		Serpent Guard					exp 1 armour 0 weapon_lvl 0
 unit		Southron Warband					exp 1 armour 0 weapon_lvl 0
 unit		Southron Warband					exp 2 armour 0 weapon_lvl 0
-unit		Southron Pikemen		            exp 1 armour 1 weapon_lvl 0
-unit		Hasharii Shadows		            exp 1 armour 1 weapon_lvl 0
-unit		Hasharii Shadows		            exp 1 armour 1 weapon_lvl 0
+unit		Southron Pikemen		            exp 1 armour 0 weapon_lvl 0
+unit		Hasharii Shadows		            exp 1 armour 0 weapon_lvl 0
+unit		Hasharii Shadows		            exp 1 armour 0 weapon_lvl 0
 
 character	sub_faction milan, Guthbrand, general, male, age 25, x 215, y 256
 army
 unit		Eored Axemen		exp 2 armour 0 weapon_lvl 0
-unit		Eored Axemen		exp 1 armour 2 weapon_lvl 0
-unit		Eorling Spearmen		exp 1 armour 2 weapon_lvl 0
-unit		Eorling Spearmen		exp 1 armour 2 weapon_lvl 0
-unit		Eorling Spearmen		exp 1 armour 2 weapon_lvl 0
-unit		Eorling Archers		exp 1 armour 2 weapon_lvl 0
-unit		Eorling Archers		exp 1 armour 2 weapon_lvl 0
+unit		Eored Axemen		exp 1 armour 1 weapon_lvl 0
+unit		Eorling Spearmen		exp 1 armour 1 weapon_lvl 0
+unit		Eorling Spearmen		exp 1 armour 1 weapon_lvl 0
+unit		Eorling Spearmen		exp 1 armour 1 weapon_lvl 0
+unit		Eorling Archers		exp 1 armour 1 weapon_lvl 0
+unit		Eorling Archers		exp 1 armour 1 weapon_lvl 0
 
 character	sub_faction france, Girithak, general, male, age 25, x 239, y 282
 army
@@ -10705,7 +10705,7 @@ unit		Uruk-hai Archers				exp 2 armour 0 weapon_lvl 0
 character	sub_faction poland, Gazgash, general, male, age 25, x 268, y 305
 army
 unit		Goblin Striders				exp 2 armour 0 weapon_lvl 1
-unit		Dol Guldur Scouts					exp 2 armour 1 weapon_lvl 0
+unit		Dol Guldur Scouts					exp 2 armour 0 weapon_lvl 0
 
 character	sub_faction france, Gorul, general, male, age 25, x 264, y 292
 army
@@ -10718,8 +10718,8 @@ unit		Orc-men spearguard				exp 2 armour 0 weapon_lvl 0
 character	sub_faction portugal, Furish, general, male, age 37, x 152, y 428
 army
 unit		Rhudaur Warriors						exp 2 armour 1 weapon_lvl 1
-unit		Gram Trackers				exp 1 armour 1 weapon_lvl 0
-unit		Gram Trackers			exp 1 armour 1 weapon_lvl 0
+unit		Gram Trackers				exp 1 armour 0 weapon_lvl 0
+unit		Gram Trackers			exp 1 armour 0 weapon_lvl 0
 unit		Rhudaur Spearmen			exp 1 armour 1 weapon_lvl 0
 unit		Hillmen			exp 0 armour 0 weapon_lvl 0
 unit		Hillmen			exp 0 armour 0 weapon_lvl 0
@@ -10739,8 +10739,8 @@ unit		Hillmen			exp 0 armour 0 weapon_lvl 0
 character	sub_faction poland, Hakkdul, general, male, age 52, x 317, y 392
 army
 unit		Mirkwood Spears	exp 2 armour 0 weapon_lvl 1
-unit		Mirkwood Goblins		exp 1 armour 1 weapon_lvl 0
-unit		Mirkwood Goblins		exp 1 armour 1 weapon_lvl 0
+unit		Mirkwood Goblins		exp 1 armour 0 weapon_lvl 0
+unit		Mirkwood Goblins		exp 1 armour 0 weapon_lvl 0
 unit		Mirkwood Hunters		exp 0 armour 0 weapon_lvl 0
 unit		Mirkwood Hunters		exp 0 armour 0 weapon_lvl 0
 unit		Spider Hunters		exp 0 armour 0 weapon_lvl 0
@@ -10751,9 +10751,9 @@ unit		Dol Guldur Archers		exp 0 armour 0 weapon_lvl 0
 character	sub_faction poland, Husklik, general, male, age 52, x 328, y 377
 army
 unit		Mirkwood Bodyguard		exp 2 armour 0 weapon_lvl 0
-unit		Mirkwood Hunters		exp 1 armour 1 weapon_lvl 0
-unit		Mirkwood Hunters			exp 1 armour 1 weapon_lvl 0
-unit		Mirkwood Hunters	exp 1 armour 1 weapon_lvl 0
+unit		Mirkwood Hunters		exp 1 armour 0 weapon_lvl 0
+unit		Mirkwood Hunters			exp 1 armour 0 weapon_lvl 0
+unit		Mirkwood Hunters	exp 1 armour 0 weapon_lvl 0
 unit		Mirkwood Goblins		exp 0 armour 0 weapon_lvl 0
 unit		Mirkwood Swords		exp 2 armour 0 weapon_lvl 0
 unit		Mirkwood Swords		exp 2 armour 0 weapon_lvl 0
@@ -10761,12 +10761,12 @@ unit		Mirkwood Swords		exp 2 armour 0 weapon_lvl 0
 character	sub_faction turks, Borven, general, male, age 29, x 182, y 450
 army
 unit		Mountain-Orc Hunters				exp 2 armour 0 weapon_lvl 1
-unit		Raider Warband		exp 2 armour 1 weapon_lvl 0
+unit		Raider Warband		exp 2 armour 0 weapon_lvl 0
 unit		Raider Warband					exp 1 armour 0 weapon_lvl 0
 unit		Raider Skirmishers					exp 1 armour 0 weapon_lvl 0
 unit		Mountain-Orc Hunters				exp 2 armour 1 weapon_lvl 0
 unit		Goblin Archers				exp 2 armour 1 weapon_lvl 0
-unit		White Wolves				exp 2 armour 1 weapon_lvl 0
+unit		White Wolves				exp 2 armour 0 weapon_lvl 0
 
 character	sub_faction gundabad, Zunn, general, male, age 29, x 265, y 448
 army
@@ -10777,7 +10777,7 @@ unit		Goblin Archers	exp 2 armour 1 weapon_lvl 0
 unit		Snow-Orc Spearmen		exp 2 armour 1 weapon_lvl 0
 unit		Snow-Orc Spearmen		exp 2 armour 1 weapon_lvl 0
 unit		Snow-Orc Scouts			exp 2 armour 1 weapon_lvl 1
-unit		White Wolves			exp 2 armour 1 weapon_lvl 1
+unit		White Wolves			exp 2 armour 0 weapon_lvl 1
 
 character	sub_faction russia, Arnubalkan, general, male, age 18, x 155, y 192
 army
@@ -10859,10 +10859,10 @@ unit		Balaketh Axeguard		    exp 1 armour 1 weapon_lvl 0
 character	sub_faction sicily, Eradan, general, male, age 26, x 308, y 137
 army
 unit		Black Snake Guard		    exp 2 armour 0 weapon_lvl 0
-unit		Serpent Archers			exp 2 armour 1 weapon_lvl 0
-unit		Serpent Archers			exp 2 armour 1 weapon_lvl 0
-unit		Southron Warband		    exp 1 armour 1 weapon_lvl 0
-unit		Southron Warband		    exp 1 armour 1 weapon_lvl 0
+unit		Serpent Archers			exp 2 armour 0 weapon_lvl 0
+unit		Serpent Archers			exp 2 armour 0 weapon_lvl 0
+unit		Southron Warband		    exp 1 armour 0 weapon_lvl 0
+unit		Southron Warband		    exp 1 armour 0 weapon_lvl 0
 unit		Southron Warband		    exp 1 armour 0 weapon_lvl 0
 unit		Haradrim Archers		    exp 1 armour 0 weapon_lvl 0
 
@@ -10934,16 +10934,16 @@ unit		Woodman Wardens			exp 1 armour 0 weapon_lvl 0
 character	sub_faction teutonic_order, Gorsad, general, male, age 29, x 147, y 231
 army
 unit		Clan Heralds		exp 2 armour 0 weapon_lvl 0
-unit		Faolan Warriors		exp 2 armour 1 weapon_lvl 0
-unit		Dubhshith Elders	exp 2 armour 1 weapon_lvl 0
-unit		Sellswords			exp 2 armour 1 weapon_lvl 0
-unit		Mordag Fishermen			exp 2 armour 1 weapon_lvl 0
-unit		Mochaini Touta			exp 2 armour 1 weapon_lvl 0
-unit		Mochaini Touta			exp 2 armour 1 weapon_lvl 0
+unit		Faolan Warriors		exp 2 armour 0 weapon_lvl 0
+unit		Dubhshith Elders	exp 2 armour 0 weapon_lvl 0
+unit		Sellswords			exp 2 armour 0 weapon_lvl 0
+unit		Mordag Fishermen			exp 2 armour 0 weapon_lvl 0
+unit		Mochaini Touta			exp 2 armour 0 weapon_lvl 0
+unit		Mochaini Touta			exp 2 armour 0 weapon_lvl 0
 
 character	sub_faction venice, Ulwarth, general, male, age 41, x 420, y 278, portrait Balchoth
 army
-unit		Loke Rim Bodyguard			exp 2 armour 2 weapon_lvl 1
+unit		Loke Rim Bodyguard			exp 2 armour 0 weapon_lvl 1
 unit		Rhunnic Warriors			exp 1 armour 1 weapon_lvl 0
 unit		Rhunnic Warriors			exp 1 armour 1 weapon_lvl 0
 unit		Loke-Rim Pikemen					exp 1 armour 0 weapon_lvl 0
@@ -10966,8 +10966,8 @@ character	sub_faction venice, Navid, general, male, age 36, x 474, y 378 ;Scarn
 army
 unit		Loke Rim Bodyguard		exp 2 armour 0 weapon_lvl 0
 unit		Rhunnic Warriors			exp 2 armour 0 weapon_lvl 0
-unit		Rhunnic Warriors		exp 1 armour 2 weapon_lvl 0
-unit		Rhunnic Bowmen		exp 1 armour 2 weapon_lvl 0
+unit		Rhunnic Warriors		exp 1 armour 1 weapon_lvl 0
+unit		Rhunnic Bowmen		exp 1 armour 1 weapon_lvl 0
 unit		Rhunnic Bowmen			exp 1 armour 0 weapon_lvl 0
 
 character	sub_faction moors, Fulla, general, male, age 36, x 487, y 406 ;Zirak-baraz
@@ -11004,7 +11004,7 @@ unit		Rhunnic Warriors				exp 1 armour 0 weapon_lvl 0
 unit		Fang-Guard				exp 1 armour 0 weapon_lvl 0
 unit		Fang-Guard				exp 1 armour 0 weapon_lvl 0
 unit		Loke-Rim Archers			exp 2 armour 0 weapon_lvl 0
-unit		Loke-Rim Archers		exp 1 armour 2 weapon_lvl 0
+unit		Loke-Rim Archers		exp 1 armour 1 weapon_lvl 0
 
 
 character	sub_faction france, Gorhur, general, male, age 52, x 292, y 286 ;Tirith Anduin
@@ -11024,8 +11024,8 @@ unit		Sellswords				exp 2 armour 0 weapon_lvl 0
 unit		Dalian Billmen			exp 2 armour 0 weapon_lvl 0
 unit		Northmen Militia			exp 1 armour 0 weapon_lvl 0
 unit		Northmen Militia			exp 1 armour 0 weapon_lvl 0
-unit		Bandits		exp 1 armour 2 weapon_lvl 0
-unit		Bandits		exp 1 armour 2 weapon_lvl 0
+unit		Bandits		exp 1 armour 0 weapon_lvl 0
+unit		Bandits		exp 1 armour 0 weapon_lvl 0
 
 character	sub_faction venice, Ziebil, general, male, age 35, x 448, y 403 ;Miraeron
 army
@@ -11034,9 +11034,9 @@ unit		Loke-Rim Macemen			exp 2 armour 0 weapon_lvl 0
 unit		Rhunnic Warriors			exp 2 armour 0 weapon_lvl 0
 unit		Rhunnic Warriors			exp 1 armour 0 weapon_lvl 0
 unit		Rhunnic Bowmen			exp 1 armour 0 weapon_lvl 0
-unit		Rhunnic Bowmen		exp 1 armour 2 weapon_lvl 0
-unit		Rhunnic Spears		exp 1 armour 2 weapon_lvl 0
-unit		Rhunnic Spears		exp 1 armour 2 weapon_lvl 0
+unit		Rhunnic Bowmen		exp 1 armour 1 weapon_lvl 0
+unit		Rhunnic Spears		exp 1 armour 1 weapon_lvl 0
+unit		Rhunnic Spears		exp 1 armour 1 weapon_lvl 0
 
 character	sub_faction venice, Huz, general, male, age 37, x 459, y 341 ;north sea rhun
 army
@@ -11044,9 +11044,9 @@ unit		Loke Rim Bodyguard		exp 2 armour 0 weapon_lvl 0
 unit		Rhunnic Warriors				exp 2 armour 0 weapon_lvl 0
 unit		Rhunnic Warriors			exp 1 armour 0 weapon_lvl 0
 unit		Rhunnic Bowmen			exp 1 armour 0 weapon_lvl 0
-unit		Rhunnic Bowmen		exp 1 armour 2 weapon_lvl 0
-unit		Farrhun Mercenaries		exp 1 armour 2 weapon_lvl 0
-unit		Farrhun Mercenaries		exp 1 armour 2 weapon_lvl 0
+unit		Rhunnic Bowmen		exp 1 armour 1 weapon_lvl 0
+unit		Farrhun Mercenaries		exp 1 armour 0 weapon_lvl 0
+unit		Farrhun Mercenaries		exp 1 armour 0 weapon_lvl 0
 
 character	sub_faction hre, Radnag, general, male, age 18, x 127, y 301 ;minhiriath
 army
@@ -11054,7 +11054,7 @@ unit		Uruk Overseers						exp 2 armour 0 weapon_lvl 0
 unit		Goblin Archers			exp 1 armour 0 weapon_lvl 0
 unit		Goblin Archers			exp 1 armour 0 weapon_lvl 0
 unit		Black Pit Infantry			exp 1 armour 0 weapon_lvl 0
-unit		Trolls			exp 2 armour 1 weapon_lvl 0
+unit		Trolls			exp 2 armour 0 weapon_lvl 0
 unit		Black Pit Archers			exp 2 armour 1 weapon_lvl 0
 unit		Goblin Band				exp 2 armour 0 weapon_lvl 0
 unit		Goblin Band				exp 2 armour 0 weapon_lvl 0
@@ -11062,9 +11062,9 @@ unit		Goblin Band				exp 2 armour 0 weapon_lvl 0
 character	sub_faction hre, Kothug, named character, male, age 39, x 159, y 406, portrait wight, battle_model barrow_wight_king ;fornost
 traits		WraithRace 1, FearGeneral 1, BattleFear 1 
 army
-unit		Rebel Barrow Wights			exp 2 armour 1 weapon_lvl 0
-unit		Trolls						exp 2 armour 1 weapon_lvl 0
-unit		Trolls						exp 2 armour 1 weapon_lvl 0
+unit		Rebel Barrow Wights			exp 2 armour 0 weapon_lvl 0
+unit		Trolls						exp 2 armour 0 weapon_lvl 0
+unit		Trolls						exp 2 armour 0 weapon_lvl 0
 unit		Goblin Infantry				exp 2 armour 1 weapon_lvl 0
 unit		Goblin Infantry				exp 2 armour 1 weapon_lvl 0
 unit		Goblin Infantry			exp 1 armour 1 weapon_lvl 1
@@ -11083,24 +11083,24 @@ unit		Warg Pack				exp 1 armour 0 weapon_lvl 0
 
 character	sub_faction portugal, Gabhran, general, male, age 34, x 132, y 405 ;annuminas
 army
-unit		Witch-Realm Inquisitors				exp 2 armour 1 weapon_lvl 1
-unit		Morholt Chosen		exp 2 armour 1 weapon_lvl 0
-unit		Morholt Chosen		exp 2 armour 1 weapon_lvl 0
+unit		Witch-Realm Inquisitors				exp 2 armour 0 weapon_lvl 1
+unit		Morholt Chosen		exp 2 armour 0 weapon_lvl 0
+unit		Morholt Chosen		exp 2 armour 0 weapon_lvl 0
 unit		Angmarim Pikes		exp 2 armour 1 weapon_lvl 0
 unit		Angmarim Pikes		exp 2 armour 1 weapon_lvl 0
 unit		Angmarim Archers		exp 2 armour 2 weapon_lvl 1
 unit		Angmarim Archers		exp 2 armour 2 weapon_lvl 1
-unit		Hillmen		exp 2 armour 2 weapon_lvl 1
-unit		Hillmen		exp 2 armour 2 weapon_lvl 1
-unit		Hillmen		exp 2 armour 2 weapon_lvl 1
-unit		Black Trolls of Angmar		exp 2 armour 2 weapon_lvl 1
-unit		Black Trolls of Angmar		exp 2 armour 2 weapon_lvl 1
+unit		Hillmen		exp 2 armour 1 weapon_lvl 1
+unit		Hillmen		exp 2 armour 1 weapon_lvl 1
+unit		Hillmen		exp 2 armour 1 weapon_lvl 1
+unit		Black Trolls of Angmar		exp 2 armour 0 weapon_lvl 1
+unit		Black Trolls of Angmar		exp 2 armour 0 weapon_lvl 1
 
 character	sub_faction venice, Rifat, general, male, age 36, x 414, y 388 ;east celduin
 army
 unit		Rhunnic Warriors				exp 2 armour 0 weapon_lvl 1
 unit		Rhunnic Warriors			exp 1 armour 0 weapon_lvl 0
-unit		Rhunnic Warriors		exp 1 armour 2 weapon_lvl 1
+unit		Rhunnic Warriors		exp 1 armour 1 weapon_lvl 1
 unit		Rhunnic Bowmen					exp 0 armour 0 weapon_lvl 0
 unit		Loke-Rim Poleaxemen					exp 1 armour 0 weapon_lvl 0
 unit		Loke-Rim Poleaxemen					exp 0 armour 0 weapon_lvl 0
@@ -11109,7 +11109,7 @@ character	sub_faction scotland, Eric, general, male, age 36, x 152, y 263 ;Lond 
 army
 unit		Mochaini Touta				exp 2 armour 0 weapon_lvl 1
 unit		Mochaini Touta				exp 1 armour 0 weapon_lvl 0
-unit		Faolan Borderguard				exp 1 armour 2 weapon_lvl 0
+unit		Faolan Borderguard				exp 1 armour 0 weapon_lvl 0
 unit		Faolan Borderguard					exp 0 armour 0 weapon_lvl 0
 unit		Clan Heralds					exp 1 armour 0 weapon_lvl 0
 unit		Mordag Fishermen					exp 0 armour 0 weapon_lvl 0
@@ -11119,7 +11119,7 @@ army
 unit		Clan Heralds				exp 2 armour 0 weapon_lvl 1
 unit		Druedain Hunters		exp 1 armour 0 weapon_lvl 0
 unit		Druedain Hunters		exp 1 armour 0 weapon_lvl 0
-unit		Druedain Hunters		exp 1 armour 2 weapon_lvl 0
+unit		Druedain Hunters		exp 1 armour 0 weapon_lvl 0
 unit		Keefei Huntsmen					exp 0 armour 0 weapon_lvl 0
 unit		Keefei Huntsmen					exp 1 armour 0 weapon_lvl 0
 unit		Bandits					exp 0 armour 0 weapon_lvl 0
@@ -11137,7 +11137,7 @@ unit		Warg Pack						exp 0 armour 0 weapon_lvl 0
 character	sub_faction scotland, Euric, general, male, age 36, x 170, y 309 ;Barad Vin 
 army
 unit		Clan Heralds				exp 2 armour 0 weapon_lvl 1
-unit		Mochaini Touta				exp 1 armour 2 weapon_lvl 0
+unit		Mochaini Touta				exp 1 armour 0 weapon_lvl 0
 unit		Mochaini Touta				exp 2 armour 0 weapon_lvl 0
 unit		Mochaini Touta				exp 2 armour 0 weapon_lvl 0
 unit		Mordag Skirmishers					exp 0 armour 0 weapon_lvl 0
@@ -11188,8 +11188,8 @@ unit		Cardolan Sentinels					exp 1 armour 0 weapon_lvl 0
 unit		Sellswords					exp 0 armour 0 weapon_lvl 0
 unit		Sellswords					exp 0 armour 0 weapon_lvl 0
 unit		Bandits					exp 0 armour 0 weapon_lvl 0
-unit		Bandits				exp 1 armour 1 weapon_lvl 0
-unit		Bandits				exp 1 armour 1 weapon_lvl 0
+unit		Bandits				exp 1 armour 0 weapon_lvl 0
+unit		Bandits				exp 1 armour 0 weapon_lvl 0
 
 character	sub_faction turks, Maenon, general, male, age 51, x 140, y 357 ;Cor Wilishar
 army
@@ -11208,11 +11208,11 @@ unit		Mountain-Orc Hunters					exp 2 armour 1 weapon_lvl 1
 unit		Mountain-Orc Hunters					exp 0 armour 1 weapon_lvl 0
 unit		Goblin Archers					exp 0 armour 1 weapon_lvl 0
 unit		Goblin Archers		exp 1 armour 1 weapon_lvl 0
-unit		Warg Pack		exp 1 armour 1 weapon_lvl 0
+unit		Warg Pack		exp 1 armour 0 weapon_lvl 0
 
 character	sub_faction hre, Gorgum, general, male, age 33, x 88, y 356 ;Buzra-dum
 army
-unit		Goblin Bodyguards			exp 2 armour 1 weapon_lvl 0
+unit		Goblin Bodyguards			exp 2 armour 0 weapon_lvl 0
 unit		Trolls				exp 1 armour 1 weapon_lv
 unit		Black Pit Archers		exp 1 armour 1 weapon_lvl 0
 unit		Black Pit Archers		exp 1 armour 1 weapon_lvl 0
@@ -11222,7 +11222,7 @@ unit		Goblin Band		exp 2 armour 1 weapon_lvl 0
 
 character	sub_faction hre, Lugbag, general, male, age 42, x 214, y 331 ;Ost-in-Edhil
 army
-unit		Goblin Bodyguards				exp 2 armour 1 weapon_lvl 1
+unit		Goblin Bodyguards				exp 2 armour 0 weapon_lvl 1
 unit		Uruk Overseers		exp 1 armour 1 weapon_lvl 0
 unit		Goblin Band		exp 1 armour 1 weapon_lvl 0
 unit		Goblin Band		exp 1 armour 1 weapon_lvl 0
@@ -11254,9 +11254,9 @@ army
 unit		Goblin Striders				exp 2 armour 0 weapon_lvl 0
 unit		Goblin Striders			exp 2 armour 0 weapon_lvl 0
 unit		Dol Guldur Archers			exp 2 armour 0 weapon_lvl 0
-unit		Dol Guldur Archers		exp 1 armour 1 weapon_lvl 1
+unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
 unit		Dol Guldur Archers			exp 0 armour 0 weapon_lvl 0
-unit		Dol Guldur Host		exp 1 armour 1 weapon_lvl 1
+unit		Dol Guldur Host		exp 1 armour 0 weapon_lvl 1
 unit		Dol Guldur Host			exp 0 armour 0 weapon_lvl 0
 
 character	sub_faction scotland, Ratahis, general, male, age 24, x 392, y 333  ;carvarad
@@ -11272,11 +11272,11 @@ unit		Privateer Axemen		exp 2 armour 0 weapon_lvl 0
 character	sub_faction england, Dharg, general, male, age 24, x 385, y 310  ;carvarad
 army
 unit		Dol Guldur Archers		exp 2 armour 0 weapon_lvl 0
-unit		Dol Guldur Archers		exp 1 armour 1 weapon_lvl 0
+unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 0
 unit		Dol Guldur Archers			exp 0 armour 0 weapon_lvl 0
-unit		Dol Guldur Host		exp 1 armour 1 weapon_lvl 0
+unit		Dol Guldur Host		exp 1 armour 0 weapon_lvl 0
 unit		Dol Guldur Host			exp 0 armour 0 weapon_lvl 0
-unit		Dol Guldur Host		exp 1 armour 1 weapon_lvl 0
+unit		Dol Guldur Host		exp 1 armour 0 weapon_lvl 0
 unit		Orc Maulers			exp 0 armour 0 weapon_lvl 0
 unit		Orc Maulers			exp 0 armour 0 weapon_lvl 0
 unit		Orc Maulers			exp 0 armour 0 weapon_lvl 0
@@ -11299,19 +11299,19 @@ unit		Loke-Rim Archers		exp 1 armour 1 weapon_lvl 1
 
 character	sub_faction poland, Uflug, general, male, age 24, x 341, y 324  ;Burh Sauthis
 army
-unit		Mirkwood Hunters			exp 2 armour 2 weapon_lvl 0
-unit		Mirkwood Goblins				exp 2 armour 2 weapon_lvl 0
-unit		Mirkwood Goblins				exp 2 armour 2 weapon_lvl 0
-unit		Mirkwood Slayers			exp 2 armour 3 weapon_lvl 1
-unit		Mirkwood Slayers			exp 2 armour 3 weapon_lvl 1
+unit		Mirkwood Hunters			exp 2 armour 0 weapon_lvl 0
+unit		Mirkwood Goblins				exp 2 armour 0 weapon_lvl 0
+unit		Mirkwood Goblins				exp 2 armour 0 weapon_lvl 0
+unit		Mirkwood Slayers			exp 2 armour 0 weapon_lvl 1
+unit		Mirkwood Slayers			exp 2 armour 0 weapon_lvl 1
 
 character	sub_faction poland, Trushak, general, male, age 24, x 359, y 311  ;Dorthalu
 army
-unit		Dol Guldur Host			exp 2 armour 2 weapon_lvl 1
-unit		Dol Guldur Host					exp 2 armour 2 weapon_lvl 1
-unit		Goblin Stalkers				exp 2 armour 3 weapon_lvl 1
-unit		Goblin Headhunters			exp 2 armour 1 weapon_lvl 1
-unit		Goblin Headhunters			exp 2 armour 1 weapon_lvl 1
+unit		Dol Guldur Host			exp 2 armour 0 weapon_lvl 1
+unit		Dol Guldur Host					exp 2 armour 0 weapon_lvl 1
+unit		Goblin Stalkers				exp 2 armour 0 weapon_lvl 1
+unit		Goblin Headhunters			exp 2 armour 0 weapon_lvl 1
+unit		Goblin Headhunters			exp 2 armour 0 weapon_lvl 1
 
 character	sub_faction venice, Lorgan, general, male, age 24, x 357, y 283  ;Dorthalu
 army
@@ -11351,8 +11351,8 @@ character	sub_faction scotland, Odell, general, male, age 18, x 401, y 352  ;ila
 army
 unit		Privateer Axemen					exp 2 armour 0 weapon_lvl 0
 unit		Privateer Axemen				exp 1 armour 0 weapon_lvl 0
-unit		Privateer Cavalry			exp 1 armour 2 weapon_lvl 1
-unit		Northmen Militia			exp 1 armour 2 weapon_lvl 1
+unit		Privateer Cavalry			exp 1 armour 0 weapon_lvl 1
+unit		Northmen Militia			exp 1 armour 0 weapon_lvl 1
 unit		Woodland Hunters				exp 1 armour 0 weapon_lvl 0
 unit		Woodland Hunters				exp 1 armour 0 weapon_lvl 0
 
@@ -11361,16 +11361,16 @@ army
 unit		Angmarim Pikes			exp 1 armour 0 weapon_lvl 0
 unit		Gram Marauders			exp 2 armour 0 weapon_lvl 0
 unit		Gram Marauders			exp 1 armour 0 weapon_lvl 0
-unit		Gram Trackers			exp 1 armour 1 weapon_lvl 1
-unit		Gram Trackers			exp 1 armour 1 weapon_lvl 1
-unit		Raider Skirmishers			exp 1 armour 1 weapon_lvl 1
+unit		Gram Trackers			exp 1 armour 0 weapon_lvl 1
+unit		Gram Trackers			exp 1 armour 0 weapon_lvl 1
+unit		Raider Skirmishers			exp 1 armour 0 weapon_lvl 1
 
 character	sub_faction turks, Androhir, general, male, age 49, x 166, y 442
 army
 unit		Rhudaur Huscarles		exp 2 armour 0 weapon_lvl 0
 unit		Rhudaur Spearmen			exp 1 armour 0 weapon_lvl 0
-unit		Rhudaur Savages			exp 0 armour 1 weapon_lvl 0
-unit		Rhudaur Savages			exp 0 armour 1 weapon_lvl 0
+unit		Rhudaur Savages			exp 0 armour 0 weapon_lvl 0
+unit		Rhudaur Savages			exp 0 armour 0 weapon_lvl 0
 unit		Hillmen			exp 0 armour 1 weapon_lvl 0
 unit		Hillmen			exp 0 armour 1 weapon_lvl 0
 
@@ -11389,8 +11389,8 @@ unit		Sellswords				exp 2 armour 0 weapon_lvl 1
 unit		Rhudaur Savages					exp 1 armour 0 weapon_lvl 0
 unit		Rhudaur Savages					exp 1 armour 0 weapon_lvl 0
 unit		Rhudaur Huscarles					exp 1 armour 0 weapon_lvl 0
-unit		Gram Trackers					exp 2 armour 1 weapon_lvl 0
-unit		Gram Trackers					exp 2 armour 1 weapon_lvl 0
+unit		Gram Trackers					exp 2 armour 0 weapon_lvl 0
+unit		Gram Trackers					exp 2 armour 0 weapon_lvl 0
 unit		Hillmen		exp 2 armour 1 weapon_lvl 0
 unit		Hillmen		exp 2 armour 1 weapon_lvl 0
 unit		Hillmen		exp 2 armour 1 weapon_lvl 0
@@ -11398,8 +11398,8 @@ unit		Hillmen		exp 2 armour 1 weapon_lvl 0
 character	sub_faction portugal, Hundad, general, male, age 44, x 129, y 423 ;barketta
 army
 unit		Rebel Barrow Wights				exp 0 armour 0 weapon_lvl 0
-unit		Rebel Barrow Wights		exp 1 armour 1 weapon_lvl 0
-unit		Gram Trackers		exp 1 armour 1 weapon_lvl 0
+unit		Rebel Barrow Wights		exp 1 armour 0 weapon_lvl 0
+unit		Gram Trackers		exp 1 armour 0 weapon_lvl 0
 unit		Gram Trackers					exp 1 armour 0 weapon_lvl 0
 unit		Gram Marauders					exp 0 armour 0 weapon_lvl 0
 unit		Hillmen					exp 0 armour 0 weapon_lvl 0
@@ -11416,30 +11416,30 @@ unit		Snaga Archers					exp 0 armour 0 weapon_lvl 0
 character	sub_faction poland, Lugsech, general, male, age 37, x 336, y 353 ;Brown Boat
 army
 unit		Dol Guldur Host				exp 2 armour 0 weapon_lvl 1
-unit		Dol Guldur Archers		exp 1 armour 1 weapon_lvl 1
+unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
 unit		Dol Guldur Archers			exp 2 armour 0 weapon_lvl 0
 unit		Guldur Archers					exp 2 armour 1 weapon_lvl 0
-unit		Mirkwood Goblins					exp 1 armour 2 weapon_lvl 0
+unit		Mirkwood Goblins					exp 1 armour 0 weapon_lvl 0
 
 character	sub_faction scotland, Eodoric, general, male, age 37, x 352, y 373 ;Burh Alge
 army
-unit		Royal Guardsmen					exp 2 armour 2 weapon_lvl 1
-unit		Dalian Swordsmen			exp 2 armour 3 weapon_lvl 1
+unit		Royal Guardsmen					exp 2 armour 1 weapon_lvl 1
+unit		Dalian Swordsmen			exp 2 armour 2 weapon_lvl 1
 unit		Dalian Longbowmen			exp 2 armour 2 weapon_lvl 0
 unit		Dalian Longbowmen		exp 2 armour 1 weapon_lvl 1
-unit		Privateer Axemen		exp 2 armour 1 weapon_lvl 1
-unit		Privateer Axemen		exp 2 armour 1 weapon_lvl 1
+unit		Privateer Axemen		exp 2 armour 0 weapon_lvl 1
+unit		Privateer Axemen		exp 2 armour 0 weapon_lvl 1
 
 
 character	sub_faction portugal, Eoghann, general, male, age 34, x 107, y 455 ;forochel
 army
 unit		Gram Marauders				exp 2 armour 0 weapon_lvl 0
-unit		Gram Trackers		exp 1 armour 1 weapon_lvl 0
+unit		Gram Trackers		exp 1 armour 0 weapon_lvl 0
 unit		Gram Trackers					exp 1 armour 0 weapon_lvl 0
 unit		Gram Trackers					exp 1 armour 0 weapon_lvl 0
 unit		Gram Marauders					exp 1 armour 0 weapon_lvl 0
 unit		Gram Marauders		exp 1 armour 1 weapon_lvl 0
-unit		Warg Skirmishers		exp 1 armour 1 weapon_lvl 0
+unit		Warg Skirmishers		exp 1 armour 0 weapon_lvl 0
 
 character	sub_faction normans, Girishag, general, male, age 33, x 110, y 415 ;enerond
 army
@@ -11493,7 +11493,7 @@ unit		Rhunnic Spears					exp 0 armour 0 weapon_lvl 0
 character	sub_faction hre, Shagrath, named character, male, age 19, x 307, y 444 
 traits Locked 1
 army
-unit		Goblin Bodyguards		exp 2 armour 1 weapon_lvl 0
+unit		Goblin Bodyguards		exp 2 armour 0 weapon_lvl 0
 unit		Snaga Archers		exp 2 armour 1 weapon_lvl 0
 unit		Snaga Archers		exp 2 armour 1 weapon_lvl 0
 unit		Goblin Band			exp 2 armour 1 weapon_lvl 1
@@ -11640,8 +11640,8 @@ army
 unit		Rhudaur Huscarles		exp 2 armour 0 weapon_lvl 0
 unit		Sellswords				exp 1 armour 0 weapon_lvl 0
 unit		Rhudaur Spearmen	exp 1 armour 0 weapon_lvl 0
-unit		Rhudaur Savages		exp 0 armour 1 weapon_lvl 0
-unit		Rhudaur Savages		exp 0 armour 1 weapon_lvl 0
+unit		Rhudaur Savages		exp 0 armour 0 weapon_lvl 0
+unit		Rhudaur Savages		exp 0 armour 0 weapon_lvl 0
 unit		Hillmen				exp 1 armour 0 weapon_lvl 0
 unit		Hillmen				exp 1 armour 0 weapon_lvl 0
 
@@ -11753,13 +11753,13 @@ unit		Warg Riders				exp 0 armour 0 weapon_lvl 0
 
 character	sub_faction teutonic_order, Luag, general, male, age 23, x 170, y 259
 army
-unit		Sellswords				exp 1 armour 1 weapon_lvl 0
+unit		Sellswords				exp 1 armour 0 weapon_lvl 0
 unit		Bandits				exp 2 armour 0 weapon_lvl 0
 unit		Bandits				exp 2 armour 0 weapon_lvl 0
 
 character	sub_faction teutonic_order, Taog, general, male, age 23, x 206, y 254
 army
-unit		Sellswords				exp 2 armour 1 weapon_lvl 0
+unit		Sellswords				exp 2 armour 0 weapon_lvl 0
 unit		Bandits				exp 1 armour 0 weapon_lvl 0
 unit		Bandits				exp 1 armour 0 weapon_lvl 0
 
@@ -11771,7 +11771,7 @@ unit		Dunhird Slayers				exp 1 armour 0 weapon_lvl 0
 character	sub_faction teutonic_order, Onchu, general, male, age 23, x 154, y 220
 traits Locked 1
 army
-unit		Keefei Huntsmen				exp 2 armour 1 weapon_lvl 0
+unit		Keefei Huntsmen				exp 2 armour 0 weapon_lvl 0
 unit		Keefei Huntsmen				exp 1 armour 0 weapon_lvl 0
 unit		Lumbermen				exp 1 armour 0 weapon_lvl 0
 unit		Lumbermen				exp 2 armour 0 weapon_lvl 0
@@ -11806,8 +11806,8 @@ character	sub_faction spain, Sapthan, general, male, age 29, x 310, y 129
 traits Locked 1
 army
 unit		Nomad Warriors			exp 2 armour 0 weapon_lvl 0
-unit		Nomad Warriors			exp 1 armour 1 weapon_lvl 0
-unit		Nomad Axemen			exp 1 armour 1 weapon_lvl 0
+unit		Nomad Warriors			exp 1 armour 0 weapon_lvl 0
+unit		Nomad Axemen			exp 1 armour 0 weapon_lvl 0
 unit		Nomad Axemen			exp 1 armour 0 weapon_lvl 0
 
 ; character	sub_faction spain, Taalib, general, male, age 29, x 413, y 105
@@ -11824,23 +11824,23 @@ character	sub_faction poland, Nuful, general, male, age 63, x 334, y 282
 army
 unit		Trolls				exp 2 armour 0 weapon_lvl 0
 unit		Trolls				exp 2 armour 0 weapon_lvl 0
-unit		Mirkwood Bodyguard				exp 2 armour 3 weapon_lvl 1
-unit		Mirkwood Goblins				exp 2 armour 3 weapon_lvl 1
-unit		Mirkwood Goblins				exp 2 armour 3 weapon_lvl 1
-unit		Mirkwood Goblins				exp 2 armour 3 weapon_lvl 1
-unit		Mirkwood Hunters				exp 2 armour 3 weapon_lvl 1
-unit		Mirkwood Hunters				exp 2 armour 3 weapon_lvl 1
-unit		Mirkwood Hunters		exp 2 armour 3 weapon_lvl 1
-unit		Mordor Catapult		exp 2 armour 2 weapon_lvl 0
-unit		Mirkwood Swords		exp 2 armour 2 weapon_lvl 0
-unit		Mirkwood Swords		exp 2 armour 2 weapon_lvl 0
-unit		Mirkwood Swords		exp 2 armour 2 weapon_lvl 0
-unit		Guldur Spears		exp 2 armour 2 weapon_lvl 0
-unit		Guldur Spears		exp 2 armour 2 weapon_lvl 0
-unit		Guldur Spears		exp 2 armour 2 weapon_lvl 0
-unit		Guldur Archers		exp 2 armour 2 weapon_lvl 0
-unit		Guldur Archers		exp 2 armour 2 weapon_lvl 0
-unit		Guldur Archers		exp 2 armour 2 weapon_lvl 0
+unit		Mirkwood Bodyguard				exp 2 armour 0 weapon_lvl 1
+unit		Mirkwood Goblins				exp 2 armour 0 weapon_lvl 1
+unit		Mirkwood Goblins				exp 2 armour 0 weapon_lvl 1
+unit		Mirkwood Goblins				exp 2 armour 0 weapon_lvl 1
+unit		Mirkwood Hunters				exp 2 armour 0 weapon_lvl 1
+unit		Mirkwood Hunters				exp 2 armour 0 weapon_lvl 1
+unit		Mirkwood Hunters		exp 2 armour 0 weapon_lvl 1
+unit		Mordor Catapult		exp 2 armour 0 weapon_lvl 0
+unit		Mirkwood Swords		exp 2 armour 0 weapon_lvl 0
+unit		Mirkwood Swords		exp 2 armour 0 weapon_lvl 0
+unit		Mirkwood Swords		exp 2 armour 0 weapon_lvl 0
+unit		Guldur Spears		exp 2 armour 1 weapon_lvl 0
+unit		Guldur Spears		exp 2 armour 1 weapon_lvl 0
+unit		Guldur Spears		exp 2 armour 1 weapon_lvl 0
+unit		Guldur Archers		exp 2 armour 1 weapon_lvl 0
+unit		Guldur Archers		exp 2 armour 1 weapon_lvl 0
+unit		Guldur Archers		exp 2 armour 1 weapon_lvl 0
 unit		Mirkwood Slayers		exp 2 armour 0 weapon_lvl 0
 
 character	sub_faction scripts, Treebeard, named character, male, age 25, x 444, y 4, portrait Treebeard, battle_model ents, label ents_1
@@ -11902,13 +11902,13 @@ unit		Ent Catapult				exp 2 armour 0 weapon_lvl 0
 character	sub_faction poland, Hakkthrak, general, male, age 52, x 322, y 399
 army
 unit		Mirkwood Bodyguard			exp 2 armour 0 weapon_lvl 1
-unit		Dol Guldur Host			exp 1 armour 1 weapon_lvl 0
-unit		Dol Guldur Scouts			exp 1 armour 1 weapon_lvl 0
-unit		Dol Guldur Scouts		exp 1 armour 1 weapon_lvl 0
-unit		Goblin Headhunters			exp 2 armour 1 weapon_lvl 0
-unit		Goblin Headhunters			exp 2 armour 1 weapon_lvl 0
-unit		Mirkwood Goblins			exp 1 armour 1 weapon_lvl 0
-unit		Mirkwood Goblins			exp 1 armour 1 weapon_lvl 0
+unit		Dol Guldur Host			exp 1 armour 0 weapon_lvl 0
+unit		Dol Guldur Scouts			exp 1 armour 0 weapon_lvl 0
+unit		Dol Guldur Scouts		exp 1 armour 0 weapon_lvl 0
+unit		Goblin Headhunters			exp 2 armour 0 weapon_lvl 0
+unit		Goblin Headhunters			exp 2 armour 0 weapon_lvl 0
+unit		Mirkwood Goblins			exp 1 armour 0 weapon_lvl 0
+unit		Mirkwood Goblins			exp 1 armour 0 weapon_lvl 0
 
 character	Beechbone, general, male, age 30, x 260, y 431
 army

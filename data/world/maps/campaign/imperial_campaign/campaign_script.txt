@@ -2917,7 +2917,7 @@ end_monitor
                         faction spain
                         character	random_name, named character, age 23, x 317, y 149, family, direction W, label harad_attackers_2
                         traits		BadManRace 1, Haradrim 1, AIBoost 1, GoodAmbusher 2, GoodCommander 2, Just 1, LogisticalSkill 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1, TacticalSkill 1
-                        unit		Hasharii Shadows			exp 2 armour 1 weapon_lvl 0
+                        unit		Hasharii Shadows			exp 2 armour 0 weapon_lvl 0
                         unit		Southron Warband			exp 2 armour 0 weapon_lvl 0
                         unit		Haradrim Archers			exp 2 armour 0 weapon_lvl 0
                     end
@@ -2933,11 +2933,11 @@ end_monitor
                     faction khand
                     character	random_name, named character, age 31, x 473, y 105, family, direction S, label khand_attackers_3
                     traits		BadManRace 1, VariagTribe 1, AIBoost 1, BattleChivalryEvil 1, GoodAttacker 2, GoodCavalryGeneral 1, GoodCommander 2, HarshRuler 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1, Energetic 1
-                    unit		Variag Nobles						exp 5 armour 1 weapon_lvl 0
-                    unit		Nomad Horsemen			exp 1 armour 1 weapon_lvl 0
-                    unit		Nomad Horsemen			exp 1 armour 1 weapon_lvl 0
-                    unit		Nomad Horsemen					exp 1 armour 1 weapon_lvl 0
-                    unit		Nomad Horsemen					exp 1 armour 1 weapon_lvl 0				
+                    unit		Variag Nobles						exp 5 armour 0 weapon_lvl 0
+                    unit		Nomad Horsemen			exp 1 armour 0 weapon_lvl 0
+                    unit		Nomad Horsemen			exp 1 armour 0 weapon_lvl 0
+                    unit		Nomad Horsemen					exp 1 armour 0 weapon_lvl 0
+                    unit		Nomad Horsemen					exp 1 armour 0 weapon_lvl 0
                 end
                 set_event_counter garrison_skip 0
                 console_command auto_win attacker
@@ -2999,7 +2999,7 @@ end_monitor
                     character	random_name, named character, age 26, x 283, y 398, family, hero_ability SHIELD
                     traits		GoodManRace 1, Eotheod 1, HeroAbilityShield 1, GoodCommander 3, RiskyDefender 1, KindRuler 1, LoyaltyStarter 1, PietyStarter 1, TacticalSkill 1
                     unit		Skin-Changers					exp 7 armour 0 weapon_lvl 0
-                    unit		Bear Warriors			exp 4 armour 1 weapon_lvl 0
+                    unit		Bear Warriors			exp 4 armour 0 weapon_lvl 0
                     unit		Beorning Axemen			exp 3 armour 0 weapon_lvl 0
                     unit		Beorning Spearmen			exp 1 armour 0 weapon_lvl 0
                     unit		Beorning Spearmen			exp 1 armour 0 weapon_lvl 0
@@ -3013,7 +3013,7 @@ end_monitor
                     character	random_name, named character, age 26, x 300, y 348, family, hero_ability SHIELD
                     traits		GoodManRace 1, Eotheod 1, HeroAbilityShield 1, GoodCommander 3, RiskyDefender 1, KindRuler 1, LoyaltyStarter 1, PietyStarter 1, TacticalSkill 1
                     unit		Skin-Changers					exp 7 armour 0 weapon_lvl 0
-                    unit		Beorning Spearmen			exp 3 armour 1 weapon_lvl 0				
+                    unit		Beorning Spearmen			exp 3 armour 0 weapon_lvl 0
 					unit		Woodman Trackers	exp 2 armour 0 weapon_lvl 0
 					unit		Woodman Trackers	exp 2 armour 0 weapon_lvl 0				
 					unit		Eotheod Cavalry		exp 3 armour 0 weapon_lvl 0
@@ -3027,8 +3027,8 @@ end_monitor
                         character	random_name, named character, age 24, x 285, y 429, family, direction E, label beorn_attackers_1
                         traits		GoodManRace 1, Eotheod 1, HeroAbilityShield 1, GoodCommander 2, RiskyDefender 1, KindRuler 1, LoyaltyStarter 1, PietyStarter 1, TacticalSkill 1
                         unit		Skin-Changers					exp 7 armour 0 weapon_lvl 0
-                        unit		Beorning Axemen			exp 1 armour 1 weapon_lvl 0
-                        unit		Beorning Axemen			exp 1 armour 1 weapon_lvl 0
+                        unit		Beorning Axemen			exp 1 armour 0 weapon_lvl 0
+                        unit		Beorning Axemen			exp 1 armour 0 weapon_lvl 0
                         unit		Woodman Trackers			exp 0 armour 0 weapon_lvl 0
                     end	
                     set_event_counter garrison_skip 0
@@ -3132,8 +3132,8 @@ end_monitor
                     character	random_name, named character, age 26, x 283, y 398, family, hero_ability SHIELD
                     traits		GoodManRace 1, Eotheod 1, HeroAbilityShield 1, GoodCommander 2, RiskyDefender 1, KindRuler 1, LoyaltyStarter 1, PietyStarter 1, TacticalSkill 1
                     unit		Skin-Changers					exp 5 armour 0 weapon_lvl 0
-                    unit		Beorning Axemen			exp 1 armour 1 weapon_lvl 0
-                    unit		Beorning Axemen			exp 1 armour 1 weapon_lvl 0
+                    unit		Beorning Axemen			exp 1 armour 0 weapon_lvl 0
+                    unit		Beorning Axemen			exp 1 armour 0 weapon_lvl 0
                     unit		Beorning Axemen			exp 2 armour 0 weapon_lvl 0
                     unit		Woodman Hunters			exp 2 armour 0 weapon_lvl 0
                     unit		Woodman Hunters			exp 2 armour 0 weapon_lvl 0
@@ -3242,10 +3242,10 @@ end_monitor
                     character	Luag, named character, age 34, x 210, y 271, family, portrait Luag, battle_model dunland_general
                     traits		Luag 1, CustomBG 1, MiddleManRace 1, Dunlending 1, AIBoost 1, Drink 1, GoodAttacker 1, GoodCommander 2, LogisticalSkill 1, Loyal 1, LoyaltyStarter 1, PoliticsSkill 1, PietyStarter 1
                     unit		Brenin's Guard				exp 5 armour 0 weapon_lvl 0
-                    unit		Dunlending Longspears				exp 2 armour 2 weapon_lvl 0
-                    unit		Dunlending Longspears				exp 2 armour 2 weapon_lvl 0
-                    unit		Dunlending Longspears				exp 2 armour 2 weapon_lvl 0
-                    unit		Dunhird Slayers			exp 3 armour 1 weapon_lvl 0
+                    unit		Dunlending Longspears				exp 2 armour 0 weapon_lvl 0
+                    unit		Dunlending Longspears				exp 2 armour 0 weapon_lvl 0
+                    unit		Dunlending Longspears				exp 2 armour 0 weapon_lvl 0
+                    unit		Dunhird Slayers			exp 3 armour 0 weapon_lvl 0
                     unit		Frekkalingir Hill-Riders			exp 1 armour 1 weapon_lvl 1
                 end	
                 set_event_counter garrison_skip 0
@@ -3309,11 +3309,11 @@ end_monitor
                         faction poland
                         character	random_name, named character, age 24, x 327, y 377, family, direction E, label mirkwood_attackers_thran
                         traits		OrcRace 1, AIBoost 1, Brave 2, Disciplinarian 1, GoodCommander 3, GoodDefender 2, LogisticalSkill 2, Loyal 2, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1
-                        unit		Mirkwood Bodyguard				exp 7 armour 1 weapon_lvl 1
+                        unit		Mirkwood Bodyguard				exp 7 armour 0 weapon_lvl 1
                         unit		Dol Guldur Host				exp 3 armour 0 weapon_lvl 0
                         unit		Dol Guldur Host				exp 3 armour 0 weapon_lvl 0
-                        unit		Dol Guldur Archers			exp 2 armour 1 weapon_lvl 0
-                        unit		Dol Guldur Archers			exp 2 armour 1 weapon_lvl 0
+                        unit		Dol Guldur Archers			exp 2 armour 0 weapon_lvl 0
+                        unit		Dol Guldur Archers			exp 2 armour 0 weapon_lvl 0
                     end
                     set_event_counter garrison_skip 0
                     console_command auto_win attacker
@@ -3335,7 +3335,7 @@ end_monitor
                         faction gundabad
                         character	random_name, named character, age 27, x 321, y 438, family, direction E, label gund_attackers_5
                         traits		SnowRace 1, AIBoost 1, Disciplinarian 1, GoodAttacker 1, GoodCommander 3, LogisticalSkill 1, Loyal 2, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1
-                        unit		Mountain Guard			exp 9 armour 1 weapon_lvl 0
+                        unit		Mountain Guard			exp 9 armour 0 weapon_lvl 0
                         unit		Snow-Orc Raiders			exp 2 armour 0 weapon_lvl 0
                         unit		Snow-Orc Raiders			exp 2 armour 0 weapon_lvl 0					
                         unit		Snow-Orc Spearmen			exp 2 armour 0 weapon_lvl 0
@@ -3485,7 +3485,7 @@ end_monitor
                     character	random_name, named character, age 26, x 283, y 398, family, hero_ability SHIELD
                     traits		GoodManRace 1, Eotheod 1, HeroAbilityShield 1, GoodCommander 2, RiskyDefender 1, KindRuler 1, LoyaltyStarter 1, PietyStarter 1, TacticalSkill 1
                     unit		Skin-Changers					exp 5 armour 0 weapon_lvl 0
-                    unit		Beorning Axemen			exp 1 armour 1 weapon_lvl 0
+                    unit		Beorning Axemen			exp 1 armour 0 weapon_lvl 0
                     unit		Beorning Axemen			exp 2 armour 0 weapon_lvl 0
                     unit		Woodman Hunters			exp 2 armour 0 weapon_lvl 0
                     unit		Woodman Hunters			exp 2 armour 0 weapon_lvl 0
@@ -3649,8 +3649,8 @@ end_monitor
                         unit		Mirkwood Bodyguard				exp 7 armour 0 weapon_lvl 0
                         unit		Dol Guldur Host				exp 3 armour 0 weapon_lvl 0
                         unit		Dol Guldur Host				exp 3 armour 0 weapon_lvl 0
-                        unit		Dol Guldur Archers			exp 1 armour 1 weapon_lvl 0
-                        unit		Dol Guldur Archers			exp 1 armour 1 weapon_lvl 0
+                        unit		Dol Guldur Archers			exp 1 armour 0 weapon_lvl 0
+                        unit		Dol Guldur Archers			exp 1 armour 0 weapon_lvl 0
                     end
                     set_event_counter garrison_skip 0
                     console_command auto_win attacker
@@ -3722,31 +3722,14 @@ end_monitor
                     set_event_counter garrison_skip 1
                     spawn_army
                         faction khand
-                        character	random_name, named character, age 31, x 473, y 105, family, direction S, label khand_attackers_3
-                        traits		BadManRace 1, VariagTribe 1, AIBoost 1, BattleChivalryEvil 1, GoodAttacker 2, GoodCavalryGeneral 1, GoodCommander 2, HarshRuler 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1, Energetic 1
-                        unit		Variag Nobles						exp 5 armour 1 weapon_lvl 0
-                        unit		Nomad Horsemen			exp 1 armour 1 weapon_lvl 0
-                        unit		Nomad Horsemen			exp 1 armour 1 weapon_lvl 0
-                        unit		Nomad Horsemen			exp 1 armour 1 weapon_lvl 0				
-                        unit		Nomad Horsemen					exp 1 armour 1 weapon_lvl 0
-                        unit		Nomad Horsemen					exp 1 armour 1 weapon_lvl 0				
-                    end
-                    set_event_counter garrison_skip 0
-                    console_command auto_win attacker
-                    siege_settlement khand_attackers_3, Far_Desert, attack
-                end_if
-                if I_SettlementOwner Far_Desert = slave
-                    set_event_counter garrison_skip 1
-                    spawn_army
-                        faction khand
                         character	random_name, named character, age 31, x 332, y 176, family, direction S, label khand_attackers_G
                         traits		BadManRace 1, WainriderTribe 1, AIBoost 1, BattleChivalryEvil 1, GoodDefender 2, GoodCavalryGeneral 1, GoodCommander 2, HarshRuler 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1, Energetic 1
                         unit		Variag Nobles						exp 5 armour 0 weapon_lvl 0
-                        unit		Nomad Warriors				exp 1 armour 1 weapon_lvl 0
-                        unit		Nomad Warriors				exp 1 armour 1 weapon_lvl 0
-                        unit		Nomad Warriors				exp 1 armour 1 weapon_lvl 0				
-                        unit		Nomad Warriors					exp 1 armour 1 weapon_lvl 0
-                        unit		Nomad Warriors					exp 1 armour 1 weapon_lvl 0
+                        unit		Nomad Warriors				exp 1 armour 0 weapon_lvl 0
+                        unit		Nomad Warriors				exp 1 armour 0 weapon_lvl 0
+                        unit		Nomad Warriors				exp 1 armour 0 weapon_lvl 0
+                        unit		Nomad Warriors					exp 1 armour 0 weapon_lvl 0
+                        unit		Nomad Warriors					exp 1 armour 0 weapon_lvl 0
                     end
                     set_event_counter garrison_skip 0
                     console_command auto_win attacker
@@ -3775,7 +3758,7 @@ end_monitor
 				unit		Southron Archers		    	exp 2 armour 0 weapon_lvl 0
 				unit		Southron Archers		    	exp 2 armour 0 weapon_lvl 0
 				unit		Southron Warband			exp 2 armour 0 weapon_lvl 0
-				unit		Southron Warband			exp 1 armour 1 weapon_lvl 0
+				unit		Southron Warband			exp 1 armour 0 weapon_lvl 0
 			end			
 			set_event_counter garrison_skip 0
 			set_event_counter garrison_skip 1
@@ -3784,9 +3767,9 @@ end_monitor
 				character	Tahar, named character, age 24, x 310, y 128, family
 				traits		BadManRace 1, AIBoost 1, Brave 1, GoodCommander 2, GoodDefender 2, SiegeDefender 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1
 				unit		Black Snake Guard					exp 2 armour 0 weapon_lvl 0
-				unit		Southron Archers			exp 2 armour 1 weapon_lvl 0
-				unit		Southron Archers			exp 2 armour 1 weapon_lvl 0
-				unit		Southron Archers			exp 2 armour 1 weapon_lvl 0
+				unit		Southron Archers			exp 2 armour 0 weapon_lvl 0
+				unit		Southron Archers			exp 2 armour 0 weapon_lvl 0
+				unit		Southron Archers			exp 2 armour 0 weapon_lvl 0
 				unit		Southron Pikemen			exp 0 armour 0 weapon_lvl 0
 				unit		Southron Pikemen			exp 0 armour 0 weapon_lvl 0
 				unit		Southron Pikemen			exp 0 armour 0 weapon_lvl 0
@@ -3952,7 +3935,7 @@ end_monitor
                 faction england
                 character	random_name, named character, age 22, x 366, y 236, family
                 traits		OrcRace 1, AIBoost 1, Brave 2, GoodCommander 3, LogisticalSkill 1, Loyal 2, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1
-                unit		Uruk Bodyguard			exp 5 armour 1 weapon_lvl 0
+                unit		Uruk Bodyguard			exp 5 armour 0 weapon_lvl 0
 				unit		Orc Host			exp 3 armour 1 weapon_lvl 0
 				unit		Orc Archers			exp 2 armour 1 weapon_lvl 0
 				unit		Orc Host			exp 3 armour 1 weapon_lvl 0
@@ -3964,11 +3947,11 @@ end_monitor
                 faction england
                 character	random_name, named character, age 19, x 347, y 227, family
                 traits		OrcRace 1, AIBoost 1, GoodAttacker 1, GoodCommander 1, Loyal 1, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1, TacticalSkill 1
-                unit		Uruk Bodyguard			exp 5 armour 1 weapon_lvl 0				
-                unit		Morannon Guard			exp 3 armour 1 weapon_lvl 0
-				unit		Morannon Guard			exp 3 armour 1 weapon_lvl 0	
-                unit		Morannon Guard			exp 3 armour 1 weapon_lvl 0
-				unit		Morannon Guard			exp 3 armour 1 weapon_lvl 0					
+                unit		Uruk Bodyguard			exp 5 armour 0 weapon_lvl 0
+                unit		Morannon Guard			exp 3 armour 0 weapon_lvl 0
+				unit		Morannon Guard			exp 3 armour 0 weapon_lvl 0
+                unit		Morannon Guard			exp 3 armour 0 weapon_lvl 0
+				unit		Morannon Guard			exp 3 armour 0 weapon_lvl 0
             end			
             set_event_counter garrison_skip 0
 		end_if				
@@ -4018,7 +4001,7 @@ end_monitor
                 faction poland
                 character	random_name, named character, age 22, x 493, y 478, family
                 traits		OrcRace 1, AIBoost 1, Disciplinarian 1, GoodCommander 2, GoodDefender 1, LogisticalSkill 1, Loyal 2, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1, StrategicSkill 1, Locked 1
-                unit		Mirkwood Bodyguard					exp 3 armour 1 weapon_lvl 0	
+                unit		Mirkwood Bodyguard					exp 3 armour 0 weapon_lvl 0
 				unit		Dol Guldur Host			exp 0 armour 0 weapon_lvl 0
 				unit		Dol Guldur Host			exp 0 armour 0 weapon_lvl 0
                 unit		Dol Guldur Archers			exp 0 armour 0 weapon_lvl 0	
@@ -4029,7 +4012,7 @@ end_monitor
                 faction poland
                 character	random_name, named character, age 22, x 326, y 345, family
                 traits		OrcRace 1, AIBoost 1, Coward 1, Disciplinarian 1, GoodCommander 2, GoodDefender 1, LogisticalSkill 1, Loyal 2, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1, StrategicSkill 1
-                unit		Mirkwood Bodyguard					exp 3 armour 1 weapon_lvl 0
+                unit		Mirkwood Bodyguard					exp 3 armour 0 weapon_lvl 0
 				unit		Dol Guldur Host			exp 0 armour 0 weapon_lvl 0
 				unit		Dol Guldur Host			exp 0 armour 0 weapon_lvl 0
 				unit		Dol Guldur Archers			exp 0 armour 0 weapon_lvl 0	
@@ -4040,7 +4023,7 @@ end_monitor
                 faction poland
                 character	random_name, named character, age 19, x 296, y 331, family
                 traits		OrcRace 1, AIBoost 1, Bloodthirsty 1, GoodAttacker 2, GoodCommander 2, HarshRuler 2, LogisticalSkill 1, Loyal 1, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1
-                unit		Mirkwood Bodyguard					exp 3 armour 1 weapon_lvl 0
+                unit		Mirkwood Bodyguard					exp 3 armour 0 weapon_lvl 0
 				unit		Dol Guldur Host			exp 0 armour 0 weapon_lvl 0
 				unit		Dol Guldur Host			exp 0 armour 0 weapon_lvl 0
                 unit		Dol Guldur Archers			exp 0 armour 0 weapon_lvl 0	
@@ -4170,8 +4153,8 @@ end_monitor
                     faction england
                     character	random_name, named character, age 22, x 332, y 219, family, direction E, label mordor_attackers_2
                     traits		OrcRace 1, AIBoost 1, GoodAttacker 1, GoodCommander 2, GoodDefender 4, Loyal 1, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1, TacticalSkill 1
-					unit		Uruk Bodyguard			exp 4 armour 1 weapon_lvl 0	
-					unit		Morannon Guard			exp 3 armour 1 weapon_lvl 0
+					unit		Uruk Bodyguard			exp 4 armour 0 weapon_lvl 0
+					unit		Morannon Guard			exp 3 armour 0 weapon_lvl 0
                     unit		Morannon Guard			exp 3 armour 0 weapon_lvl 0				
                     unit		Orc Maulers			exp 0 armour 0 weapon_lvl 0	
                     unit		Orc Maulers			exp 0 armour 0 weapon_lvl 0						
@@ -4189,8 +4172,8 @@ end_monitor
                     faction england
                     character	random_name, named character, age 22, x 335, y 201, family, direction E, label mordor_attackers_3
                     traits		OrcRace 1, AIBoost 1, GoodAttacker 1, GoodCommander 2, GoodDefender 4, Loyal 1, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1, TacticalSkill 1
-					unit		Uruk Bodyguard			exp 4 armour 1 weapon_lvl 0	
-					unit		Morannon Guard			exp 3 armour 1 weapon_lvl 0
+					unit		Uruk Bodyguard			exp 4 armour 0 weapon_lvl 0
+					unit		Morannon Guard			exp 3 armour 0 weapon_lvl 0
                     unit		Morannon Guard			exp 3 armour 0 weapon_lvl 0				
                     unit		Orc Maulers			exp 0 armour 0 weapon_lvl 0	
                     unit		Orc Maulers			exp 0 armour 0 weapon_lvl 0						
@@ -4210,7 +4193,7 @@ end_monitor
                     faction byzantium
                     character	random_name, named character, age 32, x 421, y 303, family, direction E, label dor_attackers_1
                     traits		GoodManRace 1, Dorwinrim 1, AIBoost 1, Berserker 1, Bloodthirsty 1, GoodAttacker 1, GoodCommander 2, Loyal 2, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1, Unjust 1
-                    unit		High Paladins				        exp 3 armour 1 weapon_lvl 0
+                    unit		High Paladins				        exp 3 armour 0 weapon_lvl 0
                     unit		Thorn Bladesmen				exp 2 armour 0 weapon_lvl 0
                     unit		Thorn Guard 				exp 2 armour 0 weapon_lvl 0
 					unit		Thorn Crossbowmen				exp 0 armour 0 weapon_lvl 0
@@ -4225,7 +4208,7 @@ end_monitor
                     faction byzantium
                     character	random_name, named character, age 32, x 393, y 333, family, direction W, label dor_attackers_2
                     traits		GoodManRace 1, Dorwinrim 1, AIBoost 1, GoodAdministrator 2, StrategyChivalryGood 1, GoodAttacker 1, GoodCommander 2, Loyal 2, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1, Just 1
-                    unit		High Paladins				        exp 3 armour 1 weapon_lvl 0
+                    unit		High Paladins				        exp 3 armour 0 weapon_lvl 0
                     unit		Elvellyn Vineguard				exp 2 armour 0 weapon_lvl 0
 					unit		Thorn Riders					exp 0 armour 0 weapon_lvl 0
 					unit		Thorn Riders					exp 0 armour 0 weapon_lvl 0
@@ -4368,7 +4351,7 @@ end_monitor
                     faction hre
                     character	random_name, named character, age 26, x 211, y 353, family 
                     traits		OrcRace 1, AIBoost 1, Brave 2, Disciplinarian 1, GoodAttacker 2, GoodCommander 1, LogisticalSkill 2, Loyal 1, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1
-                    unit		Goblin Bodyguards     			exp 7 armour 1 weapon_lvl 0
+                    unit		Goblin Bodyguards     			exp 7 armour 0 weapon_lvl 0
                     unit		Goblin Archers			exp 1 armour 0 weapon_lvl 0
                     unit		Goblin Infantry			exp 1 armour 0 weapon_lvl 0
                     unit		Goblin Infantry			exp 1 armour 0 weapon_lvl 0
@@ -4384,7 +4367,7 @@ end_monitor
                     faction hre
                     character	random_name, named character, age 26, x 213, y 331, family, direction E, label Misty_attackers_1
                     traits		OrcRace 1, AIBoost 1, Brave 2, Disciplinarian 1, GoodAttacker 2, GoodCommander 1, LogisticalSkill 2, Loyal 1, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1
-                    unit		Goblin Bodyguards     			exp 2 armour 1 weapon_lvl 0
+                    unit		Goblin Bodyguards     			exp 2 armour 0 weapon_lvl 0
                     unit		Goblin Archers			exp 1 armour 0 weapon_lvl 0
                     unit		Goblin Archers			exp 1 armour 0 weapon_lvl 0					
                     unit		Goblin Infantry			exp 3 armour 0 weapon_lvl 0
@@ -4434,7 +4417,7 @@ end_monitor
                 set_event_counter garrison_skip 1
                 spawn_army
                     faction normans
-                    character	random_name, named character, age 26, x 109 y 321, family, direction E, label crag_attackers_5
+                    character	random_name, named character, age 26, x 109, y 321, family, direction E, label crag_attackers_5
                     traits		OrcRace 1, AIBoost 1, Brave 2, Disciplinarian 1, GoodAttacker 2, GoodCommander 1, LogisticalSkill 2, Loyal 1, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1
                     unit		Blue Crag Bodyguards     			exp 2 armour 1 weapon_lvl 0
 					unit		Blue Crag Goblin Slingers		exp 1 armour 1 weapon_lvl 0
@@ -4481,7 +4464,7 @@ end_monitor
             end_if
         end_if
         if I_IsFactionAIControlled saxons
-                if I_SettlementOwner eursett_16 = slave
+                if I_SettlementOwner Caras_Gelebren = slave
                     set_event_counter garrison_skip 1
                     spawn_army
                         faction saxons
@@ -4497,11 +4480,11 @@ end_monitor
                     end				
                     set_event_counter garrison_skip 0
                     console_command auto_win attacker
-                    siege_settlement imladris_attackers_3, eursett_16, attack	
+                    siege_settlement imladris_attackers_3, Caras_Gelebren, attack
                 end_if
         end_if
 		if not I_IsFactionAIControlled hre
-                if I_SettlementOwner eursett_16 = slave
+                if I_SettlementOwner Caras_Gelebren = slave
                     spawn_army
                         faction saxons
                         character	random_name, named character, age 50, x 240, y 395, family, direction E, label imladriss_attackers_7
@@ -4515,16 +4498,16 @@ end_monitor
                         unit		Amanyar Riders		exp 1 armour 0 weapon_lvl 0					
                     end				
                     console_command auto_win attacker
-                    siege_settlement imladriss_attackers_7, eursett_16, attack	
+                    siege_settlement imladriss_attackers_7, Caras_Gelebren, attack
                 end_if
         end_if
 		if not I_IsFactionAIControlled saxons
-                if I_SettlementOwner eursett_16 = slave
+                if I_SettlementOwner Caras_Gelebren = slave
                     spawn_army
                       faction hre
                       character	random_name, named character, age 24, x 240, y 395, family, direction E, label superhre_attackers_5
                       traits		OrcRace 1, AIBoost 1, Disciplinarian 1, GoodAttacker 1, GoodCommander 2, LogisticalSkill 1, Loyal 2, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1
-                      unit		Goblin Bodyguards			exp 2 armour 1 weapon_lvl 0
+                      unit		Goblin Bodyguards			exp 2 armour 0 weapon_lvl 0
                       unit		Goblin Infantry			exp 2 armour 0 weapon_lvl 0
                       unit		Goblin Infantry			exp 2 armour 0 weapon_lvl 0
                       unit		Goblin Infantry			exp 2 armour 0 weapon_lvl 0
@@ -4536,11 +4519,11 @@ end_monitor
                       unit		Snaga Stalkers		exp 1 armour 1 weapon_lvl 1			
                     end				
                     console_command auto_win attacker
-                    siege_settlement superhre_attackers_5, eursett_16, attack	
+                    siege_settlement superhre_attackers_5, Caras_Gelebren, attack
                 end_if
         end_if	  
 	    if I_IsFactionAIControlled denmark
-                if I_SettlementOwner eursett_9 = slave
+                if I_SettlementOwner Luinond = slave
                     set_event_counter garrison_skip 1
                     spawn_army
                         faction denmark
@@ -4552,11 +4535,11 @@ end_monitor
                     end				
                     set_event_counter garrison_skip 0
                     console_command auto_win attacker
-                    siege_settlement lindon_attackers_5, eursett_9, attack	
+                    siege_settlement lindon_attackers_5, Luinond, attack
                 end_if
         end_if
 		if not I_IsFactionAIControlled denmark
-                if I_SettlementOwner eursett_9 = slave
+                if I_SettlementOwner Luinond = slave
                     set_event_counter garrison_skip 1
                     spawn_army
                         faction slave
@@ -4570,7 +4553,7 @@ end_monitor
                     end		
                     set_event_counter garrison_skip 0
                     console_command auto_win attacker
-                    siege_settlement lindon_attackers_6, eursett_9, attack						
+                    siege_settlement lindon_attackers_6, Luinond, attack
                 end_if
         end_if	
         if I_IsFactionAIControlled gundabad		
@@ -4579,7 +4562,7 @@ end_monitor
                     faction gundabad
                     character	random_name, named character, age 22, x 255, y 439, family
                     traits		SnowRace 1, AIBoost 1, Brave 2, Disciplinarian 1, GoodAttacker 2, GoodCommander 1, LogisticalSkill 2, Loyal 1, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1
-                    unit		Mountain Guard	     			exp 2 armour 1 weapon_lvl 0
+                    unit		Mountain Guard	     			exp 2 armour 0 weapon_lvl 0
                     unit		Snow-Orc Spearmen			exp 1 armour 0 weapon_lvl 0
                     unit		Snow-Orc Raiders			exp 1 armour 0 weapon_lvl 0
                     unit		Snow-Orc Scouts			exp 1 armour 0 weapon_lvl 0
@@ -4597,7 +4580,7 @@ end_monitor
                     faction gundabad
                     character	random_name, named character, age 23, x 285, y 438, family, direction N, label gund_attackers_1
                     traits		SnowRace 1, AIBoost 1, Brave 2, Disciplinarian 1, GoodAttacker 2, GoodCommander 1, LogisticalSkill 2, Loyal 1, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1
-                    unit		Mountain Guard	     			exp 3 armour 1 weapon_lvl 0
+                    unit		Mountain Guard	     			exp 3 armour 0 weapon_lvl 0
                     unit		Snow-Orc Spearmen			exp 2 armour 0 weapon_lvl 0
                     unit		Snow-Orc Raiders			exp 1 armour 0 weapon_lvl 0
 					unit		Snow-Orc Raiders			exp 1 armour 0 weapon_lvl 0
@@ -4614,7 +4597,7 @@ end_monitor
                         faction gundabad
                         character	random_name, named character, age 26, x 305, y 451, family, direction E, label gund_attackers_4
                         traits		SnowRace 1, AIBoost 1, Disciplinarian 1, GoodAttacker 1, GoodCommander 2, LogisticalSkill 1, Loyal 2, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1
-                        unit		Mountain Guard			exp 9 armour 1 weapon_lvl 0
+                        unit		Mountain Guard			exp 9 armour 0 weapon_lvl 0
                         unit		Bolgs Champions			exp 3 armour 0 weapon_lvl 0					
                         unit		Snow-Orc Spearmen			exp 2 armour 0 weapon_lvl 0
                         unit		Snow-Orc Spearmen			exp 2 armour 0 weapon_lvl 0
@@ -4631,7 +4614,7 @@ end_monitor
                     faction gundabad
                     character	random_name, named character, age 24, x 285, y 429, family, direction E, label gund_attackers_2
                     traits		SnowRace 1, AIBoost 1, Brave 2, Disciplinarian 1, GoodAttacker 2, GoodCommander 1, LogisticalSkill 2, Loyal 1, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1
-                    unit		Mountain Guard	     			exp 3 armour 1 weapon_lvl 0
+                    unit		Mountain Guard	     			exp 3 armour 0 weapon_lvl 0
                     unit		Snow-Orc Spearmen			exp 2 armour 0 weapon_lvl 0
                     unit		Snow-Orc Raiders			exp 1 armour 0 weapon_lvl 0
 					unit		Snow-Orc Raiders			exp 1 armour 0 weapon_lvl 0
@@ -4648,7 +4631,7 @@ end_monitor
                     faction gundabad
                     character	random_name, named character, age 25, x 264, y 448, family, direction E, label gund_attackers_3
                     traits		SnowRace 1, AIBoost 1, Brave 2, Disciplinarian 1, GoodAttacker 2, GoodCommander 1, LogisticalSkill 2, Loyal 1, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1
-                    unit		Mountain Guard	     			exp 2 armour 1 weapon_lvl 0
+                    unit		Mountain Guard	     			exp 2 armour 0 weapon_lvl 0
                     unit		Snow-Orc Spearmen			exp 1 armour 0 weapon_lvl 0
                     unit		Snow-Orc Spearmen			exp 1 armour 0 weapon_lvl 0					
                     unit		Snow-Orc Raiders			exp 1 armour 0 weapon_lvl 0
@@ -4664,7 +4647,7 @@ end_monitor
                     faction gundabad
                     character	random_name, named character, age 30, x 313, y 438, family, direction E, label gund_attackers_4
                     traits		SnowRace 1, AIBoost 1, Brave 2, Disciplinarian 1, GoodAttacker 2, GoodCommander 1, LogisticalSkill 2, Loyal 1, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1
-                    unit		Mountain Guard	     			exp 2 armour 1 weapon_lvl 0
+                    unit		Mountain Guard	     			exp 2 armour 0 weapon_lvl 0
                     unit		Snow-Orc Spearmen			exp 1 armour 0 weapon_lvl 0
                     unit		Snow-Orc Spearmen			exp 1 armour 0 weapon_lvl 0					
                     unit		Snow-Orc Raiders			exp 1 armour 0 weapon_lvl 0
@@ -4683,7 +4666,7 @@ end_monitor
                     faction hre
                     character	random_name, named character, age 24, x 259, y 393, family, direction E, label ootmm_attackers_2
                     traits		OrcRace 1, AIBoost 1, Disciplinarian 1, GoodAttacker 1, GoodCommander 2, LogisticalSkill 1, Loyal 2, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1
-                    unit		Goblin Bodyguards			exp 2 armour 1 weapon_lvl 0
+                    unit		Goblin Bodyguards			exp 2 armour 0 weapon_lvl 0
                     unit		Goblin Infantry			exp 2 armour 0 weapon_lvl 0
                     unit		Goblin Infantry			exp 2 armour 0 weapon_lvl 0
                     unit		Goblin Infantry			exp 2 armour 0 weapon_lvl 0
@@ -4733,9 +4716,9 @@ end_monitor
                 faction khand
                 character	random_name, named character, age 31, x 340, y 157, family, direction S, label khand_attackers_2
                 traits		BadManRace 1, WainriderTribe 1, AIBoost 1, BattleChivalryEvil 1, GoodAttacker 1, GoodCavalryGeneral 1, GoodCommander 2, HarshRuler 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1
-                unit		Variag Nobles					exp 2 armour 1 weapon_lvl 0
-                unit		Nomad Horsemen			exp 1 armour 1 weapon_lvl 0
-                unit		Nomad Horsemen			exp 1 armour 1 weapon_lvl 0
+                unit		Variag Nobles					exp 2 armour 0 weapon_lvl 0
+                unit		Nomad Horsemen			exp 1 armour 0 weapon_lvl 0
+                unit		Nomad Horsemen			exp 1 armour 0 weapon_lvl 0
             end
             set_event_counter garrison_skip 0
             console_command auto_win attacker
@@ -4750,7 +4733,7 @@ end_monitor
                 faction milan
                 character	random_name, named character, age 24, x 265, y 292, family, direction W, label rohan_attackers_1
                 traits		GoodManRace 1, Rohirrim 1, AIBoost 1, GoodAttacker 1, GoodCommander 2, LogisticalSkill 1, Loyal 1, LoyaltyStarter 1, PoliticsSkill 1, PietyStarter 1
-                unit		Rohan Bodyguard				exp 2 armour 1 weapon_lvl 0
+                unit		Rohan Bodyguard				exp 2 armour 0 weapon_lvl 0
                 unit		Rohirrim			exp 1 armour 0 weapon_lvl 0		
                 unit		Rohirrim			exp 1 armour 0 weapon_lvl 0				
             end
@@ -4844,10 +4827,10 @@ end_monitor
 					faction poland
 					character	random_name, named character, age 50, x 315, y 252, family, direction E, label poland_eru_1
 					traits		OrcRace 1, AIBoost 1, Brave 2, Disciplinarian 1, GoodCommander 1, GoodDefender 2, LogisticalSkill 2, Loyal 2, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1
-					unit		Mirkwood Bodyguard			exp 5 armour 1 weapon_lvl 0				
-					unit		Dol Guldur Host			exp 3 armour 1 weapon_lvl 0
-					unit		Dol Guldur Host			exp 3 armour 1 weapon_lvl 0
-					unit		Dol Guldur Archers			exp 3 armour 1 weapon_lvl 0	
+					unit		Mirkwood Bodyguard			exp 5 armour 0 weapon_lvl 0
+					unit		Dol Guldur Host			exp 3 armour 0 weapon_lvl 0
+					unit		Dol Guldur Host			exp 3 armour 0 weapon_lvl 0
+					unit		Dol Guldur Archers			exp 3 armour 0 weapon_lvl 0
                 end
             set_event_counter garrison_skip 0
                 console_command auto_win attacker
@@ -4860,7 +4843,7 @@ end_monitor
                     character	random_name, named character, age 22, x 328, y 335, family, direction E, label mirkwood_attackers_1
                     traits		OrcRace 1, AIBoost 1, Disciplinarian 1, GoodAttacker 3, GoodCommander 2, LogisticalSkill 2, Loyal 1, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1, TacticalSkill 2
                     unit		Mirkwood Bodyguard			exp 3 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears		exp 2 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears		exp 2 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers			exp 1 armour 0 weapon_lvl 0
                 end
                 set_event_counter garrison_skip 0
@@ -4876,8 +4859,8 @@ end_monitor
                     unit		Mirkwood Bodyguard				exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Host				exp 2 armour 0 weapon_lvl 0
                     unit		Dol Guldur Host				exp 1 armour 0 weapon_lvl 0
-                    unit		Dol Guldur Archers			exp 1 armour 1 weapon_lvl 0
-                    unit		Dol Guldur Archers			exp 0 armour 1 weapon_lvl 0
+                    unit		Dol Guldur Archers			exp 1 armour 0 weapon_lvl 0
+                    unit		Dol Guldur Archers			exp 0 armour 0 weapon_lvl 0
                 end
                 set_event_counter garrison_skip 0
                 console_command auto_win attacker
@@ -4890,7 +4873,7 @@ end_monitor
                     character	random_name, named character, age 28, x 315, y 357, family, direction N, label mirkwood_attackers_3
                     traits		OrcRace 1, AIBoost 1, Coward 1, GoodAmbusher 2, GoodCommander 1, LogisticalSkill 2, Loyal 1, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1, Unjust 1
                     unit		Mirkwood Bodyguard				exp 1 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears		exp 2 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears		exp 2 armour 0 weapon_lvl 0
                     unit		Dol Guldur Host				exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers			exp 0 armour 0 weapon_lvl 0	
                 end
@@ -4922,7 +4905,7 @@ end_monitor
                     character	random_name, named character, age 28, x 314, y 402, family, direction W, label mirkwood_attackers_5
                     traits		OrcRace 1, AIBoost 1, Coward 1, GoodAmbusher 2, GoodCommander 1, LogisticalSkill 2, Loyal 1, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1, Unjust 1
                     unit		Mirkwood Bodyguard					exp 1 armour 0 weapon_lvl 0
-                    unit		Dol Guldur Scouts					exp 2 armour 1 weapon_lvl 0
+                    unit		Dol Guldur Scouts					exp 2 armour 0 weapon_lvl 0
                     unit		Dol Guldur Scouts					exp 1 armour 0 weapon_lvl 0
                     unit		Warg Marauders						exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Host				exp 1 armour 0 weapon_lvl 0
@@ -5062,8 +5045,8 @@ end_monitor
                     faction spain
                     character	random_name, named character, age 26, x 412, y 132, family, direction W, label harad_attackers_1
                     traits		BadManRace 1, Haradrim 1, AIBoost 1, GoodAdministrator 1, GoodAttacker 1, GoodCommander 2, Just 1, LogisticalSkill 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1
-                    unit		Hasharii Blades			exp 2 armour 1 weapon_lvl 0
-                    unit		Southron Warband		exp 1 armour 1 weapon_lvl 0
+                    unit		Hasharii Blades			exp 2 armour 0 weapon_lvl 0
+                    unit		Southron Warband		exp 1 armour 0 weapon_lvl 0
                 end
                 set_event_counter garrison_skip 0
                 console_command auto_win attacker
@@ -5075,7 +5058,7 @@ end_monitor
                     faction spain
                     character	random_name, named character, age 23, x 420, y 102, family, direction W, label harad_attackers_3
                     traits		BadManRace 1, Haradrim 1, AIBoost 1, GoodAmbusher 2, GoodCommander 2, Just 1, LogisticalSkill 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1, TacticalSkill 1
-                    unit		Black Snake Guard			exp 2 armour 1 weapon_lvl 0
+                    unit		Black Snake Guard			exp 2 armour 0 weapon_lvl 0
                     unit		Southron Warband			exp 2 armour 0 weapon_lvl 0
                     unit		Haradrim Archers			exp 2 armour 0 weapon_lvl 0
                 end
@@ -5089,7 +5072,7 @@ end_monitor
                     faction spain
                     character	random_name, named character, age 26, x 307, y 102, family, direction N, label harad_attackers_4
                     traits		BadManRace 1, Haradrim 1, AIBoost 1, GoodAdministrator 1, GoodAttacker 1, GoodCommander 2, Just 1, LogisticalSkill 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1
-                    unit		Black Snake Guard			exp 2 armour 1 weapon_lvl 0
+                    unit		Black Snake Guard			exp 2 armour 0 weapon_lvl 0
                     unit		Southron Warband			exp 2 armour 0 weapon_lvl 0
                     unit		Haradrim Archers			exp 2 armour 0 weapon_lvl 0
                 end
@@ -5103,8 +5086,8 @@ end_monitor
                     faction spain
                     character	random_name, named character, age 23, x 362, y 125, family, direction W, label harad_attackers_6
                     traits		BadManRace 1, Haradrim 1, AIBoost 1, GoodAmbusher 2, GoodCommander 2, Just 1, LogisticalSkill 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1, TacticalSkill 1
-                    unit		Sellswords			exp 2 armour 1 weapon_lvl 0
-                    unit		Sellswords			exp 2 armour 1 weapon_lvl 0					
+                    unit		Sellswords			exp 2 armour 0 weapon_lvl 0
+                    unit		Sellswords			exp 2 armour 0 weapon_lvl 0
                     unit		Southron Pikemen			exp 2 armour 0 weapon_lvl 0
                     unit		Southron Pikemen			exp 2 armour 0 weapon_lvl 0
                     unit		Southron Warband			exp 2 armour 0 weapon_lvl 0
@@ -5189,7 +5172,7 @@ end_monitor
                     faction venice
                     character	random_name, named character, age 26, x 463, y 266, family, direction W, label rhun_attackers_1
                     traits		BadManRace 1, AruladClan 1, AIBoost 1, GoodAdministrator 1, GoodAttacker 1, GoodCommander 2, Just 1, LogisticalSkill 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1
-                    unit		Loke Rim Bodyguard			exp 2 armour 1 weapon_lvl 0
+                    unit		Loke Rim Bodyguard			exp 2 armour 0 weapon_lvl 0
                     unit		Fang-Guard		exp 1 armour 0 weapon_lvl 0
                     unit		Loke-Rim Poleaxemen			exp 2 armour 0 weapon_lvl 0
                     unit		Rhunnic Warriors			exp 2 armour 0 weapon_lvl 0		
@@ -5204,7 +5187,7 @@ end_monitor
                     faction venice
                     character	random_name, named character, age 23, x 437, y 263, family, direction W, label rhun_attackers_2
                     traits		BadManRace 1, AruladClan 1, AIBoost 1, GoodAmbusher 2, GoodCommander 2, Just 1, LogisticalSkill 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1, TacticalSkill 1
-                    unit		Loke Rim Bodyguard			exp 2 armour 1 weapon_lvl 0
+                    unit		Loke Rim Bodyguard			exp 2 armour 0 weapon_lvl 0
                     unit		Fang-Guard		exp 1 armour 0 weapon_lvl 0
                     unit		Loke-Rim Poleaxemen			exp 2 armour 0 weapon_lvl 0
                     unit		Rhunnic Warriors			exp 2 armour 0 weapon_lvl 0		
@@ -5219,7 +5202,7 @@ end_monitor
                     faction venice
                     character	random_name, named character, age 23, x 480, y 324, family, direction W, label rhun_attackers_4
                     traits		BadManRace 1, BalchothClan 1, AIBoost 1, GoodAmbusher 2, GoodCommander 2, Just 1, LogisticalSkill 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1, TacticalSkill 1
-                    unit		Loke Rim Bodyguard			exp 2 armour 1 weapon_lvl 0
+                    unit		Loke Rim Bodyguard			exp 2 armour 0 weapon_lvl 0
                     unit		Fang-Guard		exp 1 armour 0 weapon_lvl 0
                     unit		Claw-Guard			exp 2 armour 0 weapon_lvl 0
                     unit		Claw-Guard			exp 2 armour 0 weapon_lvl 0
@@ -5236,7 +5219,7 @@ end_monitor
                     faction venice
                     character	random_name, named character, age 23, x 379, y 255, family, direction W, label rhun_attackers_5
                     traits		BadManRace 1, DaritaiClan 1, AIBoost 1, GoodAmbusher 2, GoodCommander 2, Just 1, LogisticalSkill 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1, TacticalSkill 1
-                    unit		Loke Rim Bodyguard			exp 2 armour 1 weapon_lvl 0
+                    unit		Loke Rim Bodyguard			exp 2 armour 0 weapon_lvl 0
                     unit		Fang-Guard		exp 1 armour 0 weapon_lvl 0
                     unit		Fang-Guard		exp 1 armour 0 weapon_lvl 0
                     unit		Fang-Guard		exp 1 armour 0 weapon_lvl 0					
@@ -5253,7 +5236,7 @@ end_monitor
                     faction venice
                     character	random_name, named character, age 23, x 476, y 344, family, direction N, label rhun_attackers_6
                     traits		BadManRace 1, DaritaiClan 1, AIBoost 1, GoodAmbusher 2, GoodCommander 2, Just 1, LogisticalSkill 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1, TacticalSkill 1
-                    unit		Loke Rim Bodyguard			exp 2 armour 1 weapon_lvl 0
+                    unit		Loke Rim Bodyguard			exp 2 armour 0 weapon_lvl 0
                     unit		Rhunnic Bowmen		exp 1 armour 0 weapon_lvl 0
                     unit		Rhunnic Bowmen		exp 1 armour 0 weapon_lvl 0					
                     unit		Rhunnic Warriors			exp 2 armour 0 weapon_lvl 0
@@ -5270,7 +5253,7 @@ end_monitor
                     faction venice
                     character	random_name, named character, age 24, x 419, y 278, family, direction E, label rhun_attackers_7
                     traits		BadManRace 1, DaritaiClan 1, AIBoost 1, GoodAmbusher 2, GoodCommander 2, Just 1, LogisticalSkill 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1, TacticalSkill 1
-                    unit		Loke Rim Bodyguard			exp 2 armour 1 weapon_lvl 0
+                    unit		Loke Rim Bodyguard			exp 2 armour 0 weapon_lvl 0
                     unit		Rhunnic Bowmen		exp 1 armour 0 weapon_lvl 0
                     unit		Rhunnic Bowmen		exp 1 armour 0 weapon_lvl 0					
                     unit		Rhunnic Warriors			exp 2 armour 0 weapon_lvl 0
@@ -5287,7 +5270,7 @@ end_monitor
                         faction venice
                         character	random_name, named character, age 38, x 444, y 300, family, direction W, label rhun_attackers_8
                         traits		BadManRace 1, DaritaiClan 1, AIBoost 1, GoodAmbusher 2, GoodCommander 2, Just 1, LogisticalSkill 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1, TacticalSkill 1
-                        unit		Loke Rim Bodyguard			exp 2 armour 1 weapon_lvl 0
+                        unit		Loke Rim Bodyguard			exp 2 armour 0 weapon_lvl 0
                         unit		Rhunnic Bowmen		exp 1 armour 0 weapon_lvl 0
                         unit		Rhunnic Bowmen		exp 1 armour 0 weapon_lvl 0					
                         unit		Rhunnic Warriors			exp 2 armour 0 weapon_lvl 0
@@ -5629,7 +5612,7 @@ end_monitor
                 faction hre
                 character	Bane, named character, age 16, x 300, y 484, direction W, portrait Balrog, battle_model elephant_crew3, hero_ability BALROG, label balrog_hre1
                 traits	    Bane_Moria 1, CustomBG 1, Hero 1, MaiaRace 1, FearGeneral 1, HeroAbilityBalrog 1, BattleFear 6, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1, GoodCommander 3
-                unit		Moria Balrog		soldiers 1	exp 9 armour 3 weapon_lvl 2
+                unit		Moria Balrog		soldiers 1	exp 9 armour 0 weapon_lvl 2
             end
 			set_event_counter garrison_skip 0
 
@@ -5642,7 +5625,7 @@ end_monitor
 				faction normans
 				character	Balrog, named character, age 16, x 279, y 482, direction E, portrait Balrog, battle_model elephant_crew3, hero_ability BALROG, label balroga_bc1 
 				traits		Balrog_Crags 1, CustomBG 1, Hero 1, MaiaRace 1, FearGeneral 1, HeroAbilityBalrog 1, BattleFear 6, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1, GoodCommander 3
-				unit		Armored Balrog		soldiers 1	exp 9 armour 3 weapon_lvl 2
+				unit		Armored Balrog		soldiers 1	exp 9 armour 0 weapon_lvl 2
 			end
 			set_event_counter garrison_skip 0
 			
@@ -5651,7 +5634,7 @@ end_monitor
                 faction normans
                 character	Banec, named character, age 16, x 282, y 481, direction W, portrait Balrog, battle_model elephant_crew3, hero_ability BALROG, label balrog_bc1
                 traits	    Bane_Crags 1, CustomBG 1, Hero 1, MaiaRace 1, FearGeneral 1, HeroAbilityBalrog 1, BattleFear 6, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1, GoodCommander 3
-                unit		Moria Balrog		soldiers 1	exp 9 armour 3 weapon_lvl 2
+                unit		Moria Balrog		soldiers 1	exp 9 armour 0 weapon_lvl 2
             end
 		    set_event_counter garrison_skip 0
 
@@ -5668,11 +5651,11 @@ end_monitor
                 unit		Dourhand Spears			     exp 2 armour 1 weapon_lvl 1
                 unit		Dourhand Spears			     exp 2 armour 1 weapon_lvl 1
                 unit		Dourhand Spears			     exp 2 armour 1 weapon_lvl 1
-                unit		Dourhand Catapult			     exp 2 armour 1 weapon_lvl 1
+                unit		Dourhand Catapult			     exp 2 armour 0 weapon_lvl 1
                 unit		Dourhand Axemen			     exp 2 armour 1 weapon_lvl 1
                 unit		Dourhand Axemen  			 exp 2 armour 1 weapon_lvl 1
-                unit		Dourhand Barrel Thrower  			 exp 2 armour 2 weapon_lvl 1
-                unit		Dourhand Catapult 			 exp 2 armour 1 weapon_lvl 1
+                unit		Dourhand Barrel Thrower  			 exp 2 armour 0 weapon_lvl 1
+                unit		Dourhand Catapult 			 exp 2 armour 0 weapon_lvl 1
                 unit		Dourhand Crossbows  		 exp 2 armour 1 weapon_lvl 1
                 unit		Dourhand Crossbows  		 exp 2 armour 2 weapon_lvl 1
 			end
@@ -5683,7 +5666,7 @@ end_monitor
 			    faction slave
 			    character	Balroga, named character, age 16, x 425, y 483, direction W, portrait Balrog, battle_model elephant_crew3, hero_ability BALROG, label balroga_slave1
 			    traits		Balrog_Slave 1, AIBoost 1, Hero 1, MaiaRace 1, FearGeneral 1, HeroAbilityBalrog 1, BattleFear 6, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1, GoodCommander 3
-			    unit		Armored Balrog		soldiers 1	exp 9 armour 3 weapon_lvl 2
+			    unit		Armored Balrog		soldiers 1	exp 9 armour 0 weapon_lvl 2
                 unit		Blue Crag Berserkers		 exp 6 armour 1 weapon_lvl 1
                 unit		Blue Crag Berserkers		 exp 6 armour 1 weapon_lvl 1
                 unit		Blue Crag Berserkers		 exp 6 armour 1 weapon_lvl 1
@@ -5699,8 +5682,8 @@ end_monitor
                 unit		Crag Trolls  			     exp 6 armour 1 weapon_lvl 1
                 unit		Crag Trolls  			     exp 6 armour 1 weapon_lvl 1
                 unit		Crag Trolls  			     exp 6 armour 1 weapon_lvl 1
-                unit		Blue Crag Catapult  		 exp 3 armour 1 weapon_lvl 1
-                unit		Blue Crag Catapult  		 exp 3 armour 1 weapon_lvl 1
+                unit		Blue Crag Catapult  		 exp 3 armour 0 weapon_lvl 1
+                unit		Blue Crag Catapult  		 exp 3 armour 0 weapon_lvl 1
 			end
 			set_event_counter garrison_skip 0
 			
@@ -5709,7 +5692,7 @@ end_monitor
                 faction slave
                 character	Baneb, named character, age 16, x 422, y 484, direction W, portrait Balrog, battle_model elephant_crew3, hero_ability BALROG, label balrog_slave1
                 traits	    Bane_Slave 1, CustomBG 1, Hero 1, MaiaRace 1, FearGeneral 1, HeroAbilityBalrog 1, BattleFear 6, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1, GoodCommander 3
-                unit		Moria Balrog		soldiers 1	exp 9 armour 3 weapon_lvl 2
+                unit		Moria Balrog		soldiers 1	exp 9 armour 0 weapon_lvl 2
 				unit		Mountain Uruks		         exp 6 armour 1 weapon_lvl 1
                 unit		Mountain Uruks		         exp 6 armour 1 weapon_lvl 1
                 unit		Mountain-Orc Hunters		 exp 6 armour 1 weapon_lvl 1
@@ -5724,7 +5707,7 @@ end_monitor
                 unit		Goblin Archers			     exp 3 armour 1 weapon_lvl 1
                 unit		Goblin Archers			     exp 3 armour 1 weapon_lvl 1
                 unit		Goblin Archers  			 exp 3 armour 1 weapon_lvl 1
-                unit		Trolls 			             exp 6 armour 1 weapon_lvl 1
+                unit		Trolls 			             exp 6 armour 0 weapon_lvl 1
 				unit 		Snaga Catapult			     exp 1 armour 0 weapon_lvl 0
             end
 			set_event_counter garrison_skip 0
@@ -6312,10 +6295,10 @@ set_event_counter garrison_skip 0
                 unit		Elvenkings Bowguard			exp 3 armour 1 weapon_lvl 0
                 unit		Elvenkings Axeguard			exp 2 armour 1 weapon_lvl 1
                 unit		Elder Council				exp 2 armour 1 weapon_lvl 1
-                unit		Elder Council				exp 2 armour 2 weapon_lvl 0
+                unit		Elder Council				exp 2 armour 1 weapon_lvl 0
                 unit		Maethyr i-Thewair			exp 2 armour 2 weapon_lvl 0
                 unit		Maethyr i-Thewair			exp 2 armour 2 weapon_lvl 0
-                unit		Elven Catapult				exp 3 armour 1 weapon_lvl 0
+                unit		Elven Catapult				exp 3 armour 0 weapon_lvl 0
             end
 			set_event_counter garrison_skip 0
 			siege_settlement alliesbcc_1, East_Moria, attack
@@ -6349,7 +6332,7 @@ set_event_counter garrison_skip 0
 				unit		Kings Warriors				exp 2 armour 2 weapon_lvl 0
 				unit		Iron Pikemen				exp 2 armour 2 weapon_lvl 0
                 unit		Iron Pikemen				exp 1 armour 2 weapon_lvl 0
-                unit		Dwarven Catapult			exp 1 armour 2 weapon_lvl 0	
+                unit		Dwarven Catapult			exp 1 armour 0 weapon_lvl 0
                 unit		Kings Warriors				exp 2 armour 2 weapon_lvl 1
                 unit		Kings Warriors				exp 2 armour 2 weapon_lvl 1
             end
@@ -6390,7 +6373,7 @@ set_event_counter garrison_skip 0
 	        historic_event shire_holiday
 			snap_strat_camera 133, 380
 		    console_command add_money 3000
-			console_command create_unit Bree "shire fireworks" 1 1 1 0	
+			console_command create_unit Bree "shire fireworks" 1 1 0 0
 	        terminate_monitor
 		end_if
 	end_monitor
@@ -6424,7 +6407,7 @@ set_event_counter garrison_skip 0
 	        historic_event shire_holiday_A
 			snap_strat_camera 133, 380
 		    console_command add_money 6000
-			console_command create_unit Bree "shire fireworks" 1 1 1 0	
+			console_command create_unit Bree "shire fireworks" 1 1 0 0
 	        terminate_monitor
 		end_if
 	end_monitor
@@ -6458,7 +6441,7 @@ set_event_counter garrison_skip 0
 	        historic_event shire_holiday_B
 			snap_strat_camera 133, 380
 		    console_command add_money 9000
-			console_command create_unit Bree "shire fireworks" 1 1 1 0	
+			console_command create_unit Bree "shire fireworks" 1 1 0 0
 	        terminate_monitor
 		end_if
 	end_monitor
@@ -6492,7 +6475,7 @@ set_event_counter garrison_skip 0
 	        historic_event shire_holiday_C
 			snap_strat_camera 133, 380
 		    console_command add_money 12000
-			console_command create_unit Bree "shire fireworks" 1 1 1 0	
+			console_command create_unit Bree "shire fireworks" 1 1 0 0
 	        terminate_monitor
 		end_if
 	end_monitor
@@ -6526,7 +6509,7 @@ set_event_counter garrison_skip 0
 	        historic_event shire_holiday_D
 			snap_strat_camera 133, 380
 		    console_command add_money 15000
-			console_command create_unit Bree "shire fireworks" 1 1 1 0	
+			console_command create_unit Bree "shire fireworks" 1 1 0 0
 	        terminate_monitor
 		end_if
 	end_monitor
@@ -6560,7 +6543,7 @@ set_event_counter garrison_skip 0
 	        historic_event shire_holiday_E
 			snap_strat_camera 133, 380
 		    console_command add_money 20000
-			console_command create_unit Bree "shire fireworks" 1 1 1 0	
+			console_command create_unit Bree "shire fireworks" 1 1 0 0
 	        terminate_monitor
 		end_if
 	end_monitor
@@ -6594,7 +6577,7 @@ set_event_counter garrison_skip 0
 	        historic_event shire_holiday_F
 			snap_strat_camera 133, 380
 		    console_command add_money 25000
-			console_command create_unit Bree "shire fireworks" 1 1 1 0	
+			console_command create_unit Bree "shire fireworks" 1 1 0 0
 	        terminate_monitor
 		end_if
 	end_monitor
@@ -6628,7 +6611,7 @@ set_event_counter garrison_skip 0
 	        historic_event shire_holiday_G
 			snap_strat_camera 133, 380
 		    console_command add_money 30000
-			console_command create_unit Bree "shire fireworks" 1 1 1 0	
+			console_command create_unit Bree "shire fireworks" 1 1 0 0
 	        terminate_monitor
 		end_if
 	end_monitor
@@ -6662,7 +6645,7 @@ set_event_counter garrison_skip 0
 	        historic_event shire_holiday_H
 			snap_strat_camera 133, 380
 		    console_command add_money 35000
-			console_command create_unit Bree "shire fireworks" 1 1 1 0	
+			console_command create_unit Bree "shire fireworks" 1 1 0 0
 	        terminate_monitor
 		end_if
 	end_monitor
@@ -6696,7 +6679,7 @@ set_event_counter garrison_skip 0
 	        historic_event shire_holiday_I
 			snap_strat_camera 133, 380
 		    console_command add_money 40000
-			console_command create_unit Bree "shire fireworks" 1 1 1 0	
+			console_command create_unit Bree "shire fireworks" 1 1 0 0
 	        terminate_monitor
 		end_if
 	end_monitor
@@ -6811,7 +6794,7 @@ set_event_counter garrison_skip 0
                     faction hre
                     character random_name, named character, age 26, x 240, y 341, family, direction W, label durin_khw_1
                     traits OrcRace 1, AIBoost 1, Brave 2, Disciplinarian 1, GoodAttacker 2, GoodCommander 1, LogisticalSkill 2, Loyal 1, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1
-                    unit		Goblin Bodyguards     			exp 2 armour 1 weapon_lvl 0
+                    unit		Goblin Bodyguards     			exp 2 armour 0 weapon_lvl 0
                     unit		Goblin Archers			exp 1 armour 0 weapon_lvl 0
                     unit		Goblin Archers			exp 1 armour 0 weapon_lvl 0
                     unit		Goblin Archers			exp 1 armour 0 weapon_lvl 0
@@ -6851,7 +6834,7 @@ set_event_counter garrison_skip 0
                     faction slave
                     character random_name, named character, age 26, x 240, y 341, family, direction W, label durin_khw_1
                     traits OrcRace 1, AIBoost 1, Brave 2, Disciplinarian 1, GoodAttacker 2, GoodCommander 1, LogisticalSkill 2, Loyal 1, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1
-                    unit		Goblin Bodyguards     			exp 2 armour 1 weapon_lvl 0
+                    unit		Goblin Bodyguards     			exp 2 armour 0 weapon_lvl 0
                     unit		Goblin Archers			exp 1 armour 0 weapon_lvl 0
                     unit		Goblin Archers			exp 1 armour 0 weapon_lvl 0
                     unit		Goblin Archers			exp 1 armour 0 weapon_lvl 0
@@ -7159,7 +7142,7 @@ set_event_counter garrison_skip 0
              faction turks
              character	Faramir, named character, age 28, x 324, y 220, family, portrait Faramir, battle_model faramir, hero_ability CAPTAIN, label faramir_rk
              traits		FaramirRk 1, CustomBG 1, Hero 1, DunedainRace 1, Gondorian 1, HeroAbilityCaptain 1, Aesthetic 1, GoodAmbusher 3, GoodCommander 2, Intelligent 1, Just 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1, NaturalMilitarySkill 1
-             unit		The White Company				exp 5 armour 3 weapon_lvl 1
+             unit		The White Company				exp 5 armour 1 weapon_lvl 1
              end
 			 set_event_counter garrison_skip 0
 			 historic_event return_faramir_rk
@@ -7184,7 +7167,7 @@ set_event_counter garrison_skip 0
                     faction turks
                     character	Angbor, named character, age 56, x 240, y 221, portrait Angbor, battle_model angbor, hero_ability CAPTAIN, label angbor_rk
                     traits		AngborRk 1, Hero 1, DunedainRace 1, Gondorian 1, HeroAbilityCaptain 1, GoodCommander 2, Just 2, Loyal 1, LoyaltyStarter 1, PietyStarter 1, Brave 3, UpgradedND 1
-                    unit		Lamedon Champions			exp 3 armour 2 weapon_lvl 1
+                    unit		Lamedon Champions			exp 3 armour 1 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
             end_if
@@ -7239,7 +7222,7 @@ set_event_counter garrison_skip 0
                     faction turks
                     character	Dinenion, named character, age 40, x 176, y 200, portrait Dinenion
                     traits		DunedainRace 1, Gondorian 1, GoodCommander 1, LoyaltyStarter 1, BattleChivalryGood 1, PietyStarter 1, TacticalSkill 2, UpgradedND 1
-                    unit		Gondor Bodyguard				exp 2 armour 2 weapon_lvl 1
+                    unit		Gondor Bodyguard				exp 2 armour 1 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
             end_if
@@ -7250,7 +7233,7 @@ set_event_counter garrison_skip 0
                     faction turks
                     character	Duinhir, named character, age 56, x 242, y 234, portrait Duinhir, hero_ability CAPTAIN, label duinhir_rk
                     traits		Hero 1, DunedainRace 1, Gondorian 1, HeroAbilityCaptain 1, Brave 2, GoodAmbusher 1, GoodCommander 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1, UpgradedND 1
-                    unit		The White Company			exp 2 armour 2 weapon_lvl 1
+                    unit		The White Company			exp 2 armour 1 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
             end_if
@@ -7261,7 +7244,7 @@ set_event_counter garrison_skip 0
                     faction turks
                     character	Forlong, named character, age 46, x 320, y 205, portrait Forlong, hero_ability CAPTAIN, label forlong_rk
                     traits		ForlongRk 1, CustomBG 1, Hero 1, DunedainRace 1, Gondorian 1, HeroAbilityCaptain 1, BattleChivalryGood 3, GoodCommander 2, HaleAndHearty 1, LoyaltyStarter 1, PietyStarter 1, UpgradedND 1
-                    unit		Lossarnach Household Guard			exp 2 armour 3 weapon_lvl 1
+                    unit		Lossarnach Household Guard			exp 2 armour 1 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
             end_if
@@ -7272,7 +7255,7 @@ set_event_counter garrison_skip 0
                     faction turks
                     character	Golasgil, named character, age 45, x 216, y 202, portrait Golasgil, hero_ability SHIELD, label golasgil_rk
                     traits		Hero 1, DunedainRace 1, Gondorian 1, HeroAbilityShield 1, BattleChivalryGood 2, GoodCommander 2, Intelligent 1, LoyaltyStarter 1, PietyStarter 1, UpgradedND 1
-                    unit		Anfalas Bodyguard				exp 2 armour 2 weapon_lvl 1
+                    unit		Anfalas Bodyguard				exp 2 armour 1 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
             end_if
@@ -7316,7 +7299,7 @@ set_event_counter garrison_skip 0
                     faction turks
                     character	Orodreth, named character, age 51, x 315, y 186, portrait Orodreth, hero_ability CAPTAIN, label orodreth_rk
                     traits		OrodrethRk 1, Hero 1, DunedainRace 1, Gondorian 1, HeroAbilityCaptain 1, GoodCommander 2, GoodDefender 2, GoodTrader 2, LoyaltyStarter 1, PietyStarter 1, StrategyChivalryGood 1, UpgradedND 1
-                    unit		Lebennin Marines			exp 1 armour 3 weapon_lvl 1
+                    unit		Lebennin Marines			exp 1 armour 2 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
             end_if
@@ -7529,7 +7512,7 @@ set_event_counter garrison_skip 0
              faction turks
              character	Faramir, named character, age 28, x 324, y 220, family, portrait Faramir, battle_model faramir, hero_ability CAPTAIN, label faramir_rk
              traits		FaramirRk 1, CustomBG 1, Hero 1, DunedainRace 1, Gondorian 1, HeroAbilityCaptain 1, Aesthetic 1, GoodAmbusher 3, GoodCommander 2, Intelligent 1, Just 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1, NaturalMilitarySkill 1
-             unit		The White Company				exp 5 armour 3 weapon_lvl 1
+             unit		The White Company				exp 5 armour 1 weapon_lvl 1
              end
 			 set_event_counter garrison_skip 0
 			 historic_event return_faramir_rk
@@ -7554,7 +7537,7 @@ set_event_counter garrison_skip 0
                     faction turks
                     character	Angbor, named character, age 56, x 240, y 221, portrait Angbor, battle_model angbor, hero_ability CAPTAIN, label angbor_rk
                     traits		AngborRk 1, Hero 1, DunedainRace 1, Gondorian 1, HeroAbilityCaptain 1, GoodCommander 2, Just 2, Loyal 1, LoyaltyStarter 1, PietyStarter 1, Brave 3, UpgradedND 1
-                    unit		Lamedon Champions			exp 3 armour 2 weapon_lvl 1
+                    unit		Lamedon Champions			exp 3 armour 1 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
             end_if
@@ -7641,7 +7624,7 @@ set_event_counter garrison_skip 0
                     faction turks
                     character	Dinenion, named character, age 40, x 176, y 200, portrait Dinenion
                     traits		DunedainRace 1, Gondorian 1, GoodCommander 1, LoyaltyStarter 1, BattleChivalryGood 1, PietyStarter 1, TacticalSkill 2, UpgradedND 1
-                    unit		Gondor Bodyguard				exp 2 armour 2 weapon_lvl 1
+                    unit		Gondor Bodyguard				exp 2 armour 1 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
             end_if
@@ -7652,7 +7635,7 @@ set_event_counter garrison_skip 0
                     faction turks
                     character	Duinhir, named character, age 56, x 242, y 234, portrait Duinhir, hero_ability CAPTAIN, label duinhir_rk
                     traits		Hero 1, DunedainRace 1, Gondorian 1, HeroAbilityCaptain 1, Brave 2, GoodAmbusher 1, GoodCommander 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1, UpgradedND 1
-                    unit		The White Company			exp 2 armour 2 weapon_lvl 1
+                    unit		The White Company			exp 2 armour 1 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
             end_if
@@ -7663,7 +7646,7 @@ set_event_counter garrison_skip 0
                     faction turks
                     character	Forlong, named character, age 46, x 320, y 205, portrait Forlong, hero_ability CAPTAIN, label forlong_rk
                     traits		ForlongRk 1, CustomBG 1, Hero 1, DunedainRace 1, Gondorian 1, HeroAbilityCaptain 1, BattleChivalryGood 3, GoodCommander 2, HaleAndHearty 1, LoyaltyStarter 1, PietyStarter 1, UpgradedND 1
-                    unit		Lossarnach Household Guard			exp 2 armour 3 weapon_lvl 1
+                    unit		Lossarnach Household Guard			exp 2 armour 1 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
             end_if
@@ -7674,7 +7657,7 @@ set_event_counter garrison_skip 0
                     faction turks
                     character	Golasgil, named character, age 45, x 216, y 202, portrait Golasgil, hero_ability SHIELD, label golasgil_rk
                     traits		Hero 1, DunedainRace 1, Gondorian 1, HeroAbilityShield 1, BattleChivalryGood 2, GoodCommander 2, Intelligent 1, LoyaltyStarter 1, PietyStarter 1, UpgradedND 1
-                    unit		Anfalas Bodyguard				exp 2 armour 2 weapon_lvl 1
+                    unit		Anfalas Bodyguard				exp 2 armour 1 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
             end_if
@@ -7718,7 +7701,7 @@ set_event_counter garrison_skip 0
                     faction turks
                     character	Orodreth, named character, age 51, x 315, y 186, portrait Orodreth, hero_ability CAPTAIN, label orodreth_rk
                     traits		OrodrethRk 1, Hero 1, DunedainRace 1, Gondorian 1, HeroAbilityCaptain 1, GoodCommander 2, GoodDefender 2, GoodTrader 2, LoyaltyStarter 1, PietyStarter 1, StrategyChivalryGood 1, UpgradedND 1
-                    unit		Lebennin Marines			exp 1 armour 3 weapon_lvl 1
+                    unit		Lebennin Marines			exp 1 armour 2 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
             end_if
@@ -8036,10 +8019,10 @@ set_event_counter garrison_skip 0
                 unit		Elvenkings Bowguard			exp 3 armour 1 weapon_lvl 0
                 unit		Elvenkings Axeguard			exp 2 armour 1 weapon_lvl 1
                 unit		Elder Council				exp 2 armour 1 weapon_lvl 1
-                unit		Elder Council				exp 2 armour 2 weapon_lvl 0
+                unit		Elder Council				exp 2 armour 1 weapon_lvl 0
                 unit		Maethyr i-Thewair			exp 2 armour 2 weapon_lvl 0
                 unit		Maethyr i-Thewair			exp 2 armour 2 weapon_lvl 0
-                unit		Elven Catapult				exp 3 armour 1 weapon_lvl 0
+                unit		Elven Catapult				exp 3 armour 0 weapon_lvl 0
             end
             set_event_counter garrison_skip 0
 			siege_settlement allies_1, East_Moria, attack
@@ -8103,7 +8086,7 @@ set_event_counter garrison_skip 0
 				unit		Kings Warriors				exp 2 armour 2 weapon_lvl 0
 				unit		Iron Pikemen				exp 2 armour 2 weapon_lvl 0
                 unit		Iron Pikemen				exp 1 armour 2 weapon_lvl 0
-                unit		Dwarven Catapult			exp 1 armour 2 weapon_lvl 0	
+                unit		Dwarven Catapult			exp 1 armour 0 weapon_lvl 0
                 unit		Kings Warriors				exp 2 armour 2 weapon_lvl 1
                 unit		Kings Warriors				exp 2 armour 2 weapon_lvl 1
             end
@@ -8134,7 +8117,7 @@ set_event_counter garrison_skip 0
 				unit		Kings Warriors				exp 2 armour 2 weapon_lvl 0
 				unit		Iron Pikemen				exp 2 armour 2 weapon_lvl 0
                 unit		Iron Pikemen				exp 1 armour 2 weapon_lvl 0
-                unit		Dwarven Catapult			exp 1 armour 2 weapon_lvl 0	
+                unit		Dwarven Catapult			exp 1 armour 0 weapon_lvl 0
 				unit		Kings Warriors				exp 2 armour 2 weapon_lvl 0
             end
             set_event_counter garrison_skip 0
@@ -8500,7 +8483,7 @@ set_event_counter garrison_skip 0
 						character	Lurtz, named character, age 42, x 230, y 261, portrait Lurtz, battle_model lurtz, hero_ability URUK_HAI, label isengard_attackers_3, family
 						traits		Lurtz 1, CustomBG 1, Hero 1, UrukHaiRace 1, FactionHeirCustom 1, HeroAbilityUrukHai 1, BattleChivalryEvil 2, Bloodthirsty 2, GoodAttacker 1, GoodCommander 2, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1
 						unit		Lurtz's Hunting Pack				exp 5 armour 1 weapon_lvl 1
-						unit		Orthanc Guard		exp 4 armour 1 weapon_lvl 1				
+						unit		Orthanc Guard		exp 4 armour 0 weapon_lvl 1
 						unit		Uruk-hai Pikemen		exp 3 armour 0 weapon_lvl 0
 						unit		Uruk-hai Pikemen		exp 3 armour 0 weapon_lvl 0
 						unit		Uruk-hai Infantry		exp 3 armour 1 weapon_lvl 1
@@ -8517,8 +8500,8 @@ set_event_counter garrison_skip 0
 						unit		Warg Marauders					exp 2 armour 1 weapon_lvl 1	
 						unit		Frekkalingir Hill-Riders			exp 2 armour 1 weapon_lvl 1
 						unit		Frekkalingir Hill-Riders			exp 2 armour 1 weapon_lvl 1				
-						unit		Clan Spearmen					exp 2 armour 2 weapon_lvl 1
-						unit		Clan Spearmen					exp 2 armour 2 weapon_lvl 1
+						unit		Clan Spearmen					exp 2 armour 1 weapon_lvl 1
+						unit		Clan Spearmen					exp 2 armour 1 weapon_lvl 1
 					end
 					set_event_counter garrison_skip 0
 					if not I_HotseatEnabled
@@ -8533,7 +8516,7 @@ set_event_counter garrison_skip 0
 						character	Lurtz, named character, age 42, x 230, y 261, portrait Lurtz, battle_model lurtz, hero_ability URUK_HAI, label isengard_attackers_3, family
 						traits		Lurtz 1, CustomBG 1, Hero 1, UrukHaiRace 1, FactionHeirCustom 1, HeroAbilityUrukHai 1, BattleChivalryEvil 2, Bloodthirsty 2, GoodAttacker 1, GoodCommander 2, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1
 						unit		Lurtz's Hunting Pack				exp 5 armour 1 weapon_lvl 1
-						unit		Orthanc Guard		exp 4 armour 1 weapon_lvl 1				
+						unit		Orthanc Guard		exp 4 armour 0 weapon_lvl 1
 						unit		Uruk-hai Pikemen		exp 3 armour 0 weapon_lvl 0
 						unit		Uruk-hai Pikemen		exp 3 armour 0 weapon_lvl 0
 						unit		Uruk-hai Infantry		exp 3 armour 1 weapon_lvl 1
@@ -8550,7 +8533,7 @@ set_event_counter garrison_skip 0
 						unit		Warg Marauders					exp 2 armour 1 weapon_lvl 1	
 						unit		Frekkalingir Hill-Riders			exp 2 armour 1 weapon_lvl 1
 						unit		Frekkalingir Hill-Riders			exp 2 armour 1 weapon_lvl 1				
-						unit		Clan Spearmen					exp 2 armour 2 weapon_lvl 1
+						unit		Clan Spearmen					exp 2 armour 1 weapon_lvl 1
 						unit 		Snaga Catapult			exp 1 armour 0 weapon_lvl 0 	
 					end
 					set_event_counter garrison_skip 0
@@ -8834,7 +8817,7 @@ set_event_counter garrison_skip 0
 						character	Lurtz, named character, age 42, x 230, y 261, portrait Lurtz, battle_model lurtz, hero_ability URUK_HAI, label isengard_attackers_3, family
 						traits		Lurtz 1, CustomBG 1, Hero 1, UrukHaiRace 1, FactionHeirCustom 1, HeroAbilityUrukHai 1, BattleChivalryEvil 2, Bloodthirsty 2, GoodAttacker 1, GoodCommander 2, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1
 						unit		Lurtz's Hunting Pack				exp 5 armour 1 weapon_lvl 1
-						unit		Orthanc Guard		exp 4 armour 1 weapon_lvl 1				
+						unit		Orthanc Guard		exp 4 armour 0 weapon_lvl 1
 						unit		Uruk-hai Pikemen		exp 3 armour 0 weapon_lvl 0
 						unit		Uruk-hai Pikemen		exp 3 armour 0 weapon_lvl 0
 						unit		Uruk-hai Infantry		exp 3 armour 1 weapon_lvl 1
@@ -8851,8 +8834,8 @@ set_event_counter garrison_skip 0
 						unit		Warg Marauders					exp 2 armour 1 weapon_lvl 1	
 						unit		Frekkalingir Hill-Riders			exp 2 armour 1 weapon_lvl 1
 						unit		Frekkalingir Hill-Riders			exp 2 armour 1 weapon_lvl 1				
-						unit		Clan Spearmen					exp 2 armour 2 weapon_lvl 1
-						unit		Clan Spearmen					exp 2 armour 2 weapon_lvl 1
+						unit		Clan Spearmen					exp 2 armour 1 weapon_lvl 1
+						unit		Clan Spearmen					exp 2 armour 1 weapon_lvl 1
 					end
 					set_event_counter garrison_skip 0
 					if not I_HotseatEnabled
@@ -8867,7 +8850,7 @@ set_event_counter garrison_skip 0
 						character	Lurtz, named character, age 42, x 230, y 261, portrait Lurtz, battle_model lurtz, hero_ability URUK_HAI, label isengard_attackers_3, family
 						traits		Lurtz 1, CustomBG 1, Hero 1, UrukHaiRace 1, FactionHeirCustom 1, HeroAbilityUrukHai 1, BattleChivalryEvil 2, Bloodthirsty 2, GoodAttacker 1, GoodCommander 2, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1
 						unit		Lurtz's Hunting Pack			exp 5 armour 1 weapon_lvl 1
-						unit		Orthanc Guard		exp 4 armour 1 weapon_lvl 1				
+						unit		Orthanc Guard		exp 4 armour 0 weapon_lvl 1
 						unit		Uruk-hai Pikemen		exp 3 armour 0 weapon_lvl 0
 						unit		Uruk-hai Pikemen		exp 3 armour 0 weapon_lvl 0
 						unit		Uruk-hai Infantry		exp 3 armour 1 weapon_lvl 1
@@ -8884,7 +8867,7 @@ set_event_counter garrison_skip 0
 						unit		Warg Marauders					exp 2 armour 1 weapon_lvl 1	
 						unit		Frekkalingir Hill-Riders			exp 2 armour 1 weapon_lvl 1
 						unit		Frekkalingir Hill-Riders			exp 2 armour 1 weapon_lvl 1				
-						unit		Clan Spearmen					exp 2 armour 2 weapon_lvl 1
+						unit		Clan Spearmen					exp 2 armour 1 weapon_lvl 1
 						unit 		Snaga Catapult			exp 1 armour 0 weapon_lvl 0 	
 					end
 					set_event_counter garrison_skip 0
@@ -9200,7 +9183,7 @@ set_event_counter garrison_skip 0
             faction teutonic_order
             character	Erunestian, named character, age 19, x 150, y 296, portrait Erunestian, direction S
             traits		MiddleManRace 1, EnedwaithClansman 1, EnedwaithLiadan 1, BattleChivalryGood 1, GoodAmbusher 2, GoodCommander 1, PietyStarter 1, LoyaltyStarter 1
-            unit		Liadan Spearmen			exp 6 armour 1 weapon_lvl 1
+            unit		Liadan Spearmen			exp 6 armour 0 weapon_lvl 1
         end
         set_event_counter garrison_skip 0
         set_event_counter liadan_reclaimed 1
@@ -9220,7 +9203,7 @@ set_event_counter garrison_skip 0
             faction teutonic_order
             character	Melmidoc, named character, age 36, x 184, y 297, portrait Melmidoc, hero_ability IRON_FIST, direction S
             traits		Hero 1, MiddleManRace 1, EnedwaithClansman 1, EnedwaithFaolan 1, HeroAbilityIronFist 1, Scout 3, BattleChivalryGood 1, GoodAmbusher 2, GoodCommander 2, NightBattleCapable 1, PietyStarter 1, LoyaltyStarter 1
-            unit		Faolan Warriors			exp 6 armour 1 weapon_lvl 1
+            unit		Faolan Warriors			exp 6 armour 0 weapon_lvl 1
         end
         set_event_counter garrison_skip 0
         terminate_monitor
@@ -9239,7 +9222,7 @@ set_event_counter garrison_skip 0
             faction teutonic_order
             character	Ruscion, admiral, age 21, x 146, y 248, direction S
             traits		Hero 1, MiddleManRace 1, EnedwaithClansman 1, EnedwaithAdmiral 1, Sailor 7
-            unit		Enedwaith Boat			exp 6 armour 1 weapon_lvl 1
+            unit		Enedwaith Boat			exp 6 armour 0 weapon_lvl 1
         end
         set_event_counter garrison_skip 0
         terminate_monitor
@@ -9269,7 +9252,7 @@ set_event_counter garrison_skip 0
             faction teutonic_order
             character	Fionghan, named character, age 45, x 168, y 316, portrait Fionghan, hero_ability IRON_FIST, direction S
             traits		Hero 1, MiddleManRace 1, EnedwaithClansman 1, EnedwaithMordag 1, HeroAbilityIronFist 1, Scout 3, BattleChivalryGood 1, GoodAmbusher 2, GoodCommander 3, NightBattleCapable 1, PietyStarter 1, LoyaltyStarter 1
-            unit		Mordag Skirmishers			exp 6 armour 1 weapon_lvl 1
+            unit		Mordag Skirmishers			exp 6 armour 0 weapon_lvl 1
         end
         set_event_counter garrison_skip 0
         terminate_monitor
@@ -9288,7 +9271,7 @@ set_event_counter garrison_skip 0
             faction teutonic_order
             character	Ghan, named character, age 26, x 180, y 255, direction S, portrait Ghan, battle_model ghanburighan
             traits		Hero 1, MiddleManRace 1, EnedwaithDruedain 1, Scout 3, BattleChivalryGood 1, GoodAmbusher 4, GoodCommander 4, NightBattleCapable 1, PietyStarter 1, LoyaltyStarter 1
-            unit		Druedain Hunters	exp 6 armour 1 weapon_lvl 1
+            unit		Druedain Hunters	exp 6 armour 0 weapon_lvl 1
         end
         set_event_counter garrison_skip 0
         terminate_monitor
@@ -9307,7 +9290,7 @@ set_event_counter garrison_skip 0
             faction teutonic_order
             character	Coruion, named character, age 35, x 162, y 325, portrait Coruion, hero_ability IRON_FIST, direction S
             traits		Hero 1, MiddleManRace 1, EnedwaithClansman 1, EnedwaithFylani 1, HeroAbilityIronFist 1, Scout 3, BattleChivalryGood 1, GoodAmbusher 2, GoodCommander 2, NightBattleCapable 1, PietyStarter 1, LoyaltyStarter 1, GoodCavalryGeneral 2
-            unit		Fylani War Wagons			exp 6 armour 1 weapon_lvl 1
+            unit		Fylani War Wagons			exp 6 armour 0 weapon_lvl 1
         end
         set_event_counter garrison_skip 0
         terminate_monitor
@@ -9329,7 +9312,7 @@ set_event_counter garrison_skip 0
             faction teutonic_order
             character	Seitheach, named character, age 17, x 184, y 333, portrait Seitheach, hero_ability IRON_FIST, direction S
             traits		Hero 1, MiddleManRace 1, EnedwaithClansman 1, EnedwaithMordag 1, HeroAbilityIronFist 1, GoodCommander 1, BattleChivalryGood 1, PietyStarter 1, LoyaltyStarter 1
-            unit		Tir Croicoill Cosantoiri			exp 6 armour 1 weapon_lvl 1
+            unit		Tir Croicoill Cosantoiri			exp 6 armour 0 weapon_lvl 1
         end
         set_event_counter garrison_skip 0
         terminate_monitor
@@ -9507,7 +9490,7 @@ set_event_counter garrison_skip 0
             faction saxons
             character	Dornornoston, named character, age 22, x 214, y 335, direction S, portrait Galdor, battle_model dorn, hero_ability Light_of_the_Faith, label dornornoston_1
             traits		Dornornoston 1, CustomBG 1, Hero 1, ElvenRace 1, Noldor 1, HouseFinarfin 1, HeroAbilityElf 1, BattleChivalryGood 2, Brave 2, Handsome 1, GoodAttacker 1, GoodCommander 2, Just 1, Loyal 3, LoyaltyStarter 1, NaturalMilitarySkill 1, PietyStarter 1
-            unit		Eregion Smiths			exp 2 armour 10 weapon_lvl 0
+            unit		Eregion Smiths			exp 2 armour 1 weapon_lvl 0
         end
         set_event_counter garrison_skip 0
         set_event_counter dornornoston_spawned 1
@@ -9527,7 +9510,7 @@ set_event_counter garrison_skip 0
             faction denmark
             character	Dornornoston, named character, age 22, x 214, y 335, direction S, portrait Galdor, battle_model dorn, hero_ability Light_of_the_Faith, label dornornoston_1
             traits		Dornornoston 1, CustomBG 1, Hero 1, ElvenRace 1, Noldor 1, HouseFinarfin 1, HeroAbilityElf 1, BattleChivalryGood 2, Brave 2, Handsome 1, GoodAttacker 1, GoodCommander 2, Just 1, Loyal 3, LoyaltyStarter 1, NaturalMilitarySkill 1, PietyStarter 1
-            unit		Eregion Smiths			exp 2 armour 10 weapon_lvl 0
+            unit		Eregion Smiths			exp 2 armour 1 weapon_lvl 0
         end
         set_event_counter garrison_skip 0
         set_event_counter dornornoston_spawned 1
@@ -9547,7 +9530,7 @@ set_event_counter garrison_skip 0
             faction ireland
             character	Dornornoston, named character, age 22, x 214, y 335, direction S, portrait Galdor, battle_model dorn, hero_ability Light_of_the_Faith, label dornornoston_1
             traits		Dornornoston 1, CustomBG 1, Hero 1, ElvenRace 1, Noldor 1, HouseFinarfin 1, HeroAbilityElf 1, BattleChivalryGood 2, Brave 2, Handsome 1, GoodAttacker 1, GoodCommander 2, Just 1, Loyal 3, LoyaltyStarter 1, NaturalMilitarySkill 1, PietyStarter 1
-            unit		Eregion Smiths			exp 2 armour 10 weapon_lvl 0
+            unit		Eregion Smiths			exp 2 armour 1 weapon_lvl 0
         end
         set_event_counter garrison_skip 0
         set_event_counter dornornoston_spawned 1
@@ -9567,7 +9550,7 @@ set_event_counter garrison_skip 0
             faction mongols
             character	Dornornoston, named character, age 22, x 214, y 335, direction S, portrait Galdor, battle_model dorn, hero_ability Light_of_the_Faith, label dornornoston_1
             traits		Dornornoston 1, CustomBG 1, Hero 1, ElvenRace 1, Noldor 1, HouseFinarfin 1, HeroAbilityElf 1, BattleChivalryGood 2, Brave 2, Handsome 1, GoodAttacker 1, GoodCommander 2, Just 1, Loyal 3, LoyaltyStarter 1, NaturalMilitarySkill 1, PietyStarter 1
-            unit		Eregion Smiths			exp 2 armour 10 weapon_lvl 0
+            unit		Eregion Smiths			exp 2 armour 1 weapon_lvl 0
         end
         set_event_counter garrison_skip 1
         set_event_counter dornornoston_spawned 1
@@ -9587,7 +9570,7 @@ set_event_counter garrison_skip 0
             faction egypt
             character	Dornornoston, named character, age 22, x 214, y 335, direction S, portrait Galdor, battle_model dorn, hero_ability Light_of_the_Faith, label dornornoston_1
             traits		Dornornoston 1, CustomBG 1, Hero 1, ElvenRace 1, Noldor 1, HouseFinarfin 1, HeroAbilityElf 1, BattleChivalryGood 2, Brave 2, Handsome 1, GoodAttacker 1, GoodCommander 2, Just 1, Loyal 3, LoyaltyStarter 1, NaturalMilitarySkill 1, PietyStarter 1
-            unit		Eregion Smiths			exp 2 armour 10 weapon_lvl 0
+            unit		Eregion Smiths			exp 2 armour 1 weapon_lvl 0
         end
         set_event_counter garrison_skip 0
         set_event_counter dornornoston_spawned 1
@@ -9629,7 +9612,7 @@ set_event_counter garrison_skip 0
             spawn_army
                 faction saxons
                 character	Elrohir, named character, age 17, x 186, y 393, portrait Elrohir, battle_model twins_elrohir, hero_ability Light_of_the_Faith, label elrohir_1
-                unit		Dunedain Bodyguard 		    	exp 6 armour 2 weapon_lvl 0
+                unit		Dunedain Bodyguard 		    	exp 6 armour 1 weapon_lvl 0
                 unit		Dunedain Wardens 			    exp 3 armour 1 weapon_lvl 0
             end	
             set_event_counter garrison_skip 0
@@ -11290,7 +11273,7 @@ end_monitor
                     faction turks
                     character	Faramir, named character, age 28, x 324, y 220, family, portrait Faramir, battle_model faramir, hero_ability CAPTAIN, label faramir_rk
                     traits		FaramirRk 1, CustomBG 1, Hero 1, DunedainRace 1, Gondorian 1, HeroAbilityCaptain 1, Aesthetic 1, GoodAmbusher 3, GoodCommander 2, Intelligent 1, Just 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1, NaturalMilitarySkill 1
-                    unit		The White Company				exp 5 armour 3 weapon_lvl 1
+                    unit		The White Company				exp 5 armour 1 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
             end_if
@@ -11300,7 +11283,7 @@ end_monitor
                     faction turks
                     character	Faramir, named character, age 28, x 324, y 220, family, portrait Faramir, battle_model faramir, hero_ability CAPTAIN, label faramir_rk
                     traits		FaramirRk 1, CustomBG 1, Hero 1, DunedainRace 1, Gondorian 1, HeroAbilityCaptain 1, Aesthetic 1, GoodAmbusher 3, GoodCommander 2, Intelligent 1, Just 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1, NaturalMilitarySkill 1
-                    unit		The White Company				exp 5 armour 3 weapon_lvl 1
+                    unit		The White Company				exp 5 armour 1 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
             end_if
@@ -11343,7 +11326,7 @@ end_monitor
                     faction turks
                     character	Angbor, named character, age 56, x 240, y 221, portrait Angbor, battle_model angbor, hero_ability CAPTAIN, label angbor_rk
                     traits		AngborRk 1, Hero 1, DunedainRace 1, Gondorian 1, HeroAbilityCaptain 1, GoodCommander 2, Just 2, Loyal 1, LoyaltyStarter 1, PietyStarter 1, Brave 3, UpgradedND 1
-                    unit		Lamedon Champions			exp 3 armour 2 weapon_lvl 1
+                    unit		Lamedon Champions			exp 3 armour 1 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
             end_if
@@ -11409,7 +11392,7 @@ end_monitor
                     faction turks
                     character	Dinenion, named character, age 40, x 176, y 200, portrait Dinenion
                     traits		DunedainRace 1, Gondorian 1, GoodCommander 1, LoyaltyStarter 1, BattleChivalryGood 1, PietyStarter 1, TacticalSkill 2, UpgradedND 1
-                    unit		Gondor Bodyguard				exp 2 armour 2 weapon_lvl 1
+                    unit		Gondor Bodyguard				exp 2 armour 1 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
             end_if
@@ -11420,7 +11403,7 @@ end_monitor
                     faction turks
                     character	Duinhir, named character, age 56, x 242, y 234, portrait Duinhir, hero_ability CAPTAIN, label duinhir_rk
                     traits		Hero 1, DunedainRace 1, Gondorian 1, HeroAbilityCaptain 1, Brave 2, GoodAmbusher 1, GoodCommander 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1, UpgradedND 1
-                    unit		The White Company			exp 2 armour 2 weapon_lvl 1
+                    unit		The White Company			exp 2 armour 1 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
             end_if
@@ -11431,7 +11414,7 @@ end_monitor
                     faction turks
                     character	Forlong, named character, age 46, x 320, y 205, portrait Forlong, hero_ability CAPTAIN, label forlong_rk
                     traits		ForlongRk 1, CustomBG 1, Hero 1, DunedainRace 1, Gondorian 1, HeroAbilityCaptain 1, BattleChivalryGood 3, GoodCommander 2, HaleAndHearty 1, LoyaltyStarter 1, PietyStarter 1, UpgradedND 1
-                    unit		Lossarnach Household Guard			exp 2 armour 3 weapon_lvl 1
+                    unit		Lossarnach Household Guard			exp 2 armour 1 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
             end_if
@@ -11442,7 +11425,7 @@ end_monitor
                     faction turks
                     character	Golasgil, named character, age 45, x 216, y 202, portrait Golasgil, hero_ability SHIELD, label golasgil_rk
                     traits		Hero 1, DunedainRace 1, Gondorian 1, HeroAbilityShield 1, BattleChivalryGood 2, GoodCommander 2, Intelligent 1, LoyaltyStarter 1, PietyStarter 1, UpgradedND 1
-                    unit		Anfalas Bodyguard				exp 2 armour 2 weapon_lvl 1
+                    unit		Anfalas Bodyguard				exp 2 armour 1 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
             end_if
@@ -11486,7 +11469,7 @@ end_monitor
                     faction turks
                     character	Orodreth, named character, age 51, x 315, y 186, portrait Orodreth, hero_ability CAPTAIN, label orodreth_rk
                     traits		OrodrethRk 1, Hero 1, DunedainRace 1, Gondorian 1, HeroAbilityCaptain 1, GoodCommander 2, GoodDefender 2, GoodTrader 2, LoyaltyStarter 1, PietyStarter 1, StrategyChivalryGood 1, UpgradedND 1
-                    unit		Lebennin Marines			exp 1 armour 3 weapon_lvl 1
+                    unit		Lebennin Marines			exp 1 armour 2 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
             end_if
@@ -11755,7 +11738,7 @@ end_monitor
                     faction russia
                     character	random_name, named character, age 56, x 240, y 221, family, direction S,
                     traits		NumenoreanRace 1, Gondorian 1, HeroAbilityCaptain 1, GoodCommander 2, Just 2, Loyal 1, LoyaltyStarter 1, PietyStarter 1, Brave 3, UpgradedND 1
-                    unit		Lamedon Champions			exp 3 armour 2 weapon_lvl 1
+                    unit		Lamedon Champions			exp 3 armour 1 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
             end_if
@@ -11810,7 +11793,7 @@ end_monitor
                     faction russia
                     character	random_name, named character, age 40, x 176, y 200, family, direction S,
                     traits		NumenoreanRace 1, GoodCommander 1, LoyaltyStarter 1, BattleChivalryGood 1, PietyStarter 1, TacticalSkill 2, UpgradedND 1
-                    unit		Gondor Bodyguard				exp 2 armour 2 weapon_lvl 1
+                    unit		Gondor Bodyguard				exp 2 armour 1 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
             end_if
@@ -11821,7 +11804,7 @@ end_monitor
                     faction russia
                     character	random_name, named character, age 56, x 242, y 234, family, direction S,
                     traits		NumenoreanRace 1 Brave 2, GoodAmbusher 1, GoodCommander 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1, UpgradedND 1
-                    unit		The White Company			exp 2 armour 2 weapon_lvl 1
+                    unit		The White Company			exp 2 armour 1 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
             end_if
@@ -11832,7 +11815,7 @@ end_monitor
                     faction russia
                     character	random_name, named character, age 46, x 320, y 205, family, direction S,
                     traits		NumenoreanRace 1, BattleChivalryGood 3, GoodCommander 2, HaleAndHearty 1, LoyaltyStarter 1, PietyStarter 1, UpgradedND 1
-                    unit		Lossarnach Household Guard			exp 2 armour 3 weapon_lvl 1
+                    unit		Lossarnach Household Guard			exp 2 armour 1 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
             end_if
@@ -11843,7 +11826,7 @@ end_monitor
                     faction russia
                     character	random_name, named character, age 45, x 216, y 202, family, direction S,
                     traits		NumenoreanRace 1, BattleChivalryGood 2, GoodCommander 2, Intelligent 1, LoyaltyStarter 1, PietyStarter 1, UpgradedND 1
-                    unit		Anfalas Bodyguard				exp 2 armour 2 weapon_lvl 1
+                    unit		Anfalas Bodyguard				exp 2 armour 1 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
             end_if
@@ -11887,7 +11870,7 @@ end_monitor
                     faction russia
                     character	random_name, named character, age 51, x 315, y 186, family, direction S,
                     traits		NumenoreanRace 1, GoodCommander 2, GoodDefender 2, GoodTrader 2, LoyaltyStarter 1, PietyStarter 1, StrategyChivalryGood 1, UpgradedND 1
-                    unit		Lebennin Marines			exp 1 armour 3 weapon_lvl 1
+                    unit		Lebennin Marines			exp 1 armour 2 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
             end_if
@@ -13040,7 +13023,7 @@ end_monitor
                 	faction byzantium
                	    character	Avlyn, named character, age 27, x 438, y 339, family, direction E, portrait Dornornoston, battle_model avari_general
              	    traits		Avlyn 1, CustomBG 1, ElvenRace 1, Avari 1, HouseAvlyn 1, WarCouncillor 1, Handsome 1, GoodCommander 1, GoodDefender 3, SiegeDefender 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1
-             	    unit		Moriquendi Stalkers			exp 5 armour 3 weapon_lvl 1
+             	    unit		Moriquendi Stalkers			exp 5 armour 0 weapon_lvl 1
            	    end
 			  	set_event_counter garrison_skip 0
                 historic_event dorwinion_choose_elves_AI
@@ -13070,7 +13053,7 @@ end_monitor
                 	faction byzantium
                	    character	Avlyn, named character, age 27, x 438, y 339, direction E, portrait Dornornoston, battle_model avari_general
              	    traits		Avlyn 1, CustomBG 1, ElvenRace 1, Avari 1, HouseAvlyn 1, WarCouncillor 1, Handsome 1, GoodCommander 1, GoodDefender 3, SiegeDefender 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1
-             	    unit		Moriquendi Stalkers			exp 5 armour 3 weapon_lvl 1
+             	    unit		Moriquendi Stalkers			exp 5 armour 0 weapon_lvl 1
            	    end
                 set_event_counter garrison_skip 0
                 historic_event dorwinion_choose_elves factions { byzantium, }
@@ -13103,12 +13086,12 @@ end_monitor
                 	faction byzantium
                	    character	Avlyn, named character, age 27, x 438, y 339, direction E, portrait Dornornoston, battle_model avari_general
              	    traits		Avlyn 1, CustomBG 1, ElvenRace 1, Avari 1, HouseAvlyn 1, WarCouncillor 1, Handsome 1, GoodCommander 1, GoodDefender 3, SiegeDefender 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1
-             	    unit		Moriquendi Stalkers			exp 5 armour 3 weapon_lvl 1
-             	    unit		Avari Shadows			exp 1 armour 1 weapon_lvl 1
-             	    unit		Moriquendi Protectors			exp 1 armour 1 weapon_lvl 1
-             	    unit		Moriquendi Sentinels 			exp 1 armour 1 weapon_lvl 1
-             	    unit		Avari Shadows			exp 1 armour 1 weapon_lvl 1
-             	    unit		Avari Shadows			exp 1 armour 1 weapon_lvl 1
+             	    unit		Moriquendi Stalkers			exp 5 armour 0 weapon_lvl 1
+             	    unit		Avari Shadows			exp 1 armour 0 weapon_lvl 1
+             	    unit		Moriquendi Protectors			exp 1 armour 0 weapon_lvl 1
+             	    unit		Moriquendi Sentinels 			exp 1 armour 0 weapon_lvl 1
+             	    unit		Avari Shadows			exp 1 armour 0 weapon_lvl 1
+             	    unit		Avari Shadows			exp 1 armour 0 weapon_lvl 1
            	    end
                 set_event_counter garrison_skip 0
                 historic_event dorwinion_elven_support factions { byzantium, }
@@ -13174,7 +13157,7 @@ end_monitor
                 faction venice
 				character	random_name, named character, age 22, x 467, y 297, direction N
                 traits		BadManRace 1, VariagTribe 1, Brave 1, GoodCommander 2, GoodDefender 2, SiegeDefender 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1
-                unit		Variag Nobles						exp 5 armour 1 weapon_lvl 1
+                unit		Variag Nobles						exp 5 armour 0 weapon_lvl 1
 				unit		Khandish Raiders			exp 0 armour 0 weapon_lvl 0
 				unit		Khandish Hunters					exp 0 armour 0 weapon_lvl 0
 				unit		Khandish Hunters					exp 0 armour 0 weapon_lvl 0
@@ -13192,7 +13175,7 @@ end_monitor
                 faction venice
 				character	Kavatha, named character, age 28, x 469, y 300, direction W, portrait Rhungeneral1, battle_model rhun_kavatha
                 traits		Kavatha 1, BadManRace 1, Brave 1, GoodCommander 2, GoodDefender 2, SiegeDefender 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1, CustomBG 1
-                unit		Dragon-Wrath Swiftblades		exp 0 armour 3 weapon_lvl 1
+                unit		Dragon-Wrath Swiftblades		exp 0 armour 1 weapon_lvl 1
             end	
 			set_event_counter garrison_skip 0
 		end_if
@@ -13206,7 +13189,7 @@ end_monitor
                 faction venice
 				character	Rudaz, named character, age 34, x 463, y 301, direction E, portrait Rhungeneral2, battle_model rhun_rudaz
                 traits		Rudaz 1, BadManRace 1, Brave 1, GoodCommander 2, GoodDefender 2, SiegeDefender 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1, CustomBG 1
-                unit		Dragon-Wrath Shields			exp 0 armour 3 weapon_lvl 1
+                unit		Dragon-Wrath Shields			exp 0 armour 1 weapon_lvl 1
             end	
 			set_event_counter garrison_skip 0
 		end_if
@@ -13229,7 +13212,7 @@ end_monitor
 				faction venice
 				character	Karon, named character, age 30, x 469, y 300, direction W, portrait Rhungeneral3, battle_model rhun_karon
                 traits		Karon 1, CustomBG 1, BadManRace 1, UdegeClan 1, Brave 1, GoodCommander 2, GoodDefender 2, SiegeDefender 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1
-                unit		Dragons Wrath Guardians			exp 0 armour 3 weapon_lvl 1
+                unit		Dragons Wrath Guardians			exp 0 armour 1 weapon_lvl 1
             end				
 			set_event_counter garrison_skip 0
 		end_if
@@ -13336,7 +13319,7 @@ end_monitor
                 faction spain
 				character	Ubaadah, named character, age 42, x 322, y 117, portrait Beastmaster, direction S
                 traits		BadManRace 1, Haradrim 1, Brave 1, Energetic 1, GoodCommander 3, GoodDefender 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1, StrategicSkill 1
-                unit		Troll-men Champions				exp 2 armour 1 weapon_lvl 1
+                unit		Troll-men Champions				exp 2 armour 0 weapon_lvl 1
 				unit		Troll-men Hunters	exp 0 armour 0 weapon_lvl 0
 				unit		Troll-men Hunters	exp 0 armour 0 weapon_lvl 0
             end	
@@ -13351,7 +13334,7 @@ end_monitor
                 faction spain
 				character	Khaldoon, named character, age 27, x 323, y 117, portrait Balchoth, direction S
                 traits		BadManRace 1, Haradrim 1, Brave 1, Energetic 1, GoodCommander 3, GoodDefender 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1, StrategicSkill 1
-                unit		Hasharii Blades		exp 2 armour 1 weapon_lvl 0
+                unit		Hasharii Blades		exp 2 armour 0 weapon_lvl 0
 				unit		Hasharii Shadows			exp 0 armour 0 weapon_lvl 0
 				unit		Hasharii Blades				exp 0 armour 0 weapon_lvl 0
             end	
@@ -13944,13 +13927,13 @@ set_event_counter garrison_skip 0
 					unit		Variag Nobles							exp 5 armour 0 weapon_lvl 0
 					unit		Variag Horse Archers						exp 2 armour 0 weapon_lvl 0
 					unit		Variag Horse Archers						exp 2 armour 0 weapon_lvl 0
-					unit		Nomad Horsemen						exp 0 armour 1 weapon_lvl 0
-					unit		Nomad Warriors					exp 0 armour 1 weapon_lvl 0
-					unit		Nomad Warriors					exp 0 armour 1 weapon_lvl 0
+					unit		Nomad Horsemen						exp 0 armour 0 weapon_lvl 0
+					unit		Nomad Warriors					exp 0 armour 0 weapon_lvl 0
+					unit		Nomad Warriors					exp 0 armour 0 weapon_lvl 0
 					unit		Hasharii Blades							exp 2 armour 0 weapon_lvl 0
-					unit		Southron Warband					exp 1 armour 2 weapon_lvl 0
-					unit		Haradrim Archers					exp 1 armour 1 weapon_lvl 0
-					unit		Haradrim Archers					exp 1 armour 1 weapon_lvl 0
+					unit		Southron Warband					exp 1 armour 0 weapon_lvl 0
+					unit		Haradrim Archers					exp 1 armour 0 weapon_lvl 0
+					unit		Haradrim Archers					exp 1 armour 0 weapon_lvl 0
 					unit		Orc Host					exp 0 armour 0 weapon_lvl 0
 					unit		Orc Host					exp 0 armour 0 weapon_lvl 0
 					unit		Orc Archers					exp 0 armour 0 weapon_lvl 0
@@ -13974,11 +13957,11 @@ set_event_counter garrison_skip 0
 					unit		Variag Nobles							exp 5 armour 0 weapon_lvl 0
 					unit		Variag Horse Archers						exp 2 armour 0 weapon_lvl 0
 					unit		Variag Horse Archers						exp 2 armour 0 weapon_lvl 0
-					unit		Nomad Horsemen						exp 0 armour 1 weapon_lvl 0
-					unit		Nomad Axemen						exp 0 armour 1 weapon_lvl 0
-					unit		Nomad Axemen						exp 0 armour 1 weapon_lvl 0
+					unit		Nomad Horsemen						exp 0 armour 0 weapon_lvl 0
+					unit		Nomad Axemen						exp 0 armour 0 weapon_lvl 0
+					unit		Nomad Axemen						exp 0 armour 0 weapon_lvl 0
 					unit		Variag Swordsmen						exp 2 armour 0 weapon_lvl 0
-					unit		Variag Swordsmen					exp 1 armour 2 weapon_lvl 0
+					unit		Variag Swordsmen					exp 1 armour 1 weapon_lvl 0
 					unit		Orc Host					exp 1 armour 1 weapon_lvl 0
 					unit		Orc Host					exp 1 armour 1 weapon_lvl 0
 					unit		Orc Archers					exp 0 armour 0 weapon_lvl 0
@@ -14069,10 +14052,10 @@ set_event_counter garrison_skip 0
 					unit		Variag Horse Archers						exp 2 armour 0 weapon_lvl 0
 					unit		Claw-Guard					exp 2 armour 1 weapon_lvl 0
 					unit		Khand Elite Lancers						exp 2 armour 0 weapon_lvl 0
-					unit		Nomad Axemen						exp 0 armour 1 weapon_lvl 0
-					unit		Nomad Axemen						exp 0 armour 1 weapon_lvl 0
+					unit		Nomad Axemen						exp 0 armour 0 weapon_lvl 0
+					unit		Nomad Axemen						exp 0 armour 0 weapon_lvl 0
 					unit		Variag Swordsmen						exp 2 armour 0 weapon_lvl 0
-					unit		Variag Bowmen					exp 1 armour 2 weapon_lvl 0
+					unit		Variag Bowmen					exp 1 armour 1 weapon_lvl 0
 					unit		Variag Bowmen						exp 2 armour 0 weapon_lvl 0
 					unit		Orc Archers					exp 1 armour 1 weapon_lvl 0
 					unit		Black Uruks					exp 0 armour 0 weapon_lvl 0
@@ -14101,16 +14084,16 @@ set_event_counter garrison_skip 0
 					unit		Warlords Kataphract Archers			exp 2 armour 0 weapon_lvl 0
 					unit		Variag Horse Archers						exp 2 armour 0 weapon_lvl 0
 					unit		Warlords Kataphracts						exp 2 armour 0 weapon_lvl 0
-					unit		Nomad Horsemen						exp 0 armour 1 weapon_lvl 0
+					unit		Nomad Horsemen						exp 0 armour 0 weapon_lvl 0
 					unit		Khand Elite Axemen						exp 2 armour 0 weapon_lvl 0
-					unit		Nomad Axemen						exp 0 armour 1 weapon_lvl 0
-					unit		Nomad Axemen						exp 0 armour 1 weapon_lvl 0
-					unit		Nomad Warriors					exp 0 armour 1 weapon_lvl 0
-					unit		Nomad Warriors					exp 0 armour 1 weapon_lvl 0
+					unit		Nomad Axemen						exp 0 armour 0 weapon_lvl 0
+					unit		Nomad Axemen						exp 0 armour 0 weapon_lvl 0
+					unit		Nomad Warriors					exp 0 armour 0 weapon_lvl 0
+					unit		Nomad Warriors					exp 0 armour 0 weapon_lvl 0
 					unit		Variag Swordsmen						exp 2 armour 0 weapon_lvl 0
 					unit		Variag Swordsmen						exp 2 armour 0 weapon_lvl 0
-					unit		Variag Swordsmen					exp 1 armour 2 weapon_lvl 0
-					unit		Variag Swordsmen					exp 1 armour 2 weapon_lvl 0
+					unit		Variag Swordsmen					exp 1 armour 1 weapon_lvl 0
+					unit		Variag Swordsmen					exp 1 armour 1 weapon_lvl 0
 					unit		Variag Swordsmen					exp 1 armour 1 weapon_lvl 0
 					unit		Variag Swordsmen					exp 1 armour 1 weapon_lvl 0
 				end
@@ -14873,12 +14856,12 @@ monitor_event PreFactionTurnStart FactionType khand
 			unit		Temple Marksmen			exp 5 armour 0 weapon_lvl 0
 			unit		Temple Marksmen			exp 5 armour 0 weapon_lvl 0
 			unit		Great Beasts							exp 2 armour 0 weapon_lvl 0
-			unit		Nomad Horsemen						exp 2 armour 1 weapon_lvl 0
-			unit		Nomad Horsemen						exp 2 armour 1 weapon_lvl 0
-			unit		Nomad Axemen						exp 2 armour 1 weapon_lvl 0
-			unit		Nomad Axemen						exp 2 armour 1 weapon_lvl 0
-			unit		Nomad Warriors					exp 2 armour 1 weapon_lvl 0
-			unit		Nomad Warriors					exp 2 armour 1 weapon_lvl 0
+			unit		Nomad Horsemen						exp 2 armour 0 weapon_lvl 0
+			unit		Nomad Horsemen						exp 2 armour 0 weapon_lvl 0
+			unit		Nomad Axemen						exp 2 armour 0 weapon_lvl 0
+			unit		Nomad Axemen						exp 2 armour 0 weapon_lvl 0
+			unit		Nomad Warriors					exp 2 armour 0 weapon_lvl 0
+			unit		Nomad Warriors					exp 2 armour 0 weapon_lvl 0
 			unit		Khand Elite Axemen						exp 2 armour 0 weapon_lvl 0
 			unit		Khand Elite Axemen						exp 2 armour 0 weapon_lvl 0
 			unit		Variag Horse Archers						exp 2 armour 0 weapon_lvl 0
@@ -15728,7 +15711,7 @@ monitor_event PreFactionTurnStart FactionType khand
                         faction scripts
                         character	ElvenAllianceInvader, named character, age 32, x 325, y 22, label alliance_invaders_1
                         traits	OrcRace 1, LoyaltyStarter 1, PietyStarter 1, AIBoost 1, GoodCommander 2, GoodAttacker 2, GoodAmbusher 2, NightBattleCapable 1, Loyal 2
-                        unit		Uruk Bodyguard			exp 8 armour 1 weapon_lvl 1
+                        unit		Uruk Bodyguard			exp 8 armour 0 weapon_lvl 1
                         unit		Trolls				exp 1 armour 0 weapon_lvl 1
                     end
                     set_event_counter garrison_skip 0
@@ -15746,7 +15729,7 @@ monitor_event PreFactionTurnStart FactionType khand
                         faction scripts
                         character	ElvenAllianceInvader, named character, age 32, x 325, y 22, label alliance_invaders_1
                         traits	OrcRace 1, LoyaltyStarter 1, PietyStarter 1, AIBoost 1, GoodCommander 2, GoodAttacker 2, GoodAmbusher 2, NightBattleCapable 1, Loyal 2
-                        unit		Uruk Bodyguard			exp 5 armour 1 weapon_lvl 1
+                        unit		Uruk Bodyguard			exp 5 armour 0 weapon_lvl 1
                         unit		Trolls				exp 1 armour 0 weapon_lvl 1
                     end
                     set_event_counter garrison_skip 0
@@ -17154,7 +17137,7 @@ monitor_event PreFactionTurnStart FactionType khand
                                 faction hre
                                 character	random_name, named character, age 33, x 241, y 342, label moria_goblin_army_1
                                 traits		OrcRace 1, AIBoost 1, Locked 1, BattleChivalryEvil 2, BattleScarred 2, GoodAmbusher 2, GoodCommander 3, LoyaltyStarter 1, NightBattleCapable 1, Berserker 1
-                                unit		Goblin Bodyguards		exp 7 armour 1 weapon_lvl 1
+                                unit		Goblin Bodyguards		exp 7 armour 0 weapon_lvl 1
                                 unit		Mountain Uruks	exp 5 armour 1 weapon_lvl 0
                                 unit		Black Pit Halberd	exp 2 armour 0 weapon_lvl 0
                                 unit		Goblin Infantry	exp 3 armour 0 weapon_lvl 0
@@ -17259,7 +17242,7 @@ monitor_event PreFactionTurnStart FactionType khand
                                     faction poland
                                     character	random_name, named character, age 33, x 288, y 388, direction SE, label moria_reclaiming_sieger_1
                                     traits		OrcRace 1, AIBoost 1, Locked 1, BattleChivalryEvil 2, BattleScarred 1, Brave 2, GoodAttacker 1, GoodCommander 1, Loyal 2, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1
-                                    unit		Mirkwood Bodyguard		exp 2 armour 1 weapon_lvl 1
+                                    unit		Mirkwood Bodyguard		exp 2 armour 0 weapon_lvl 1
                                     unit		Snaga Stalkers		exp 1 armour 0 weapon_lvl 0
                                     unit		Snaga Stalkers		exp 1 armour 0 weapon_lvl 0
                                     unit		Snaga Stalkers		exp 1 armour 0 weapon_lvl 0
@@ -17370,7 +17353,7 @@ monitor_event PreFactionTurnStart FactionType khand
                                 faction hre
                                 character	random_name, named character, age 33, x 241, y 342, label moria_goblin_army_2
                                 traits		OrcRace 1, AIBoost 1, Locked 1, BattleChivalryEvil 2, BattleScarred 2, GoodAmbusher 2, GoodCommander 3, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1
-                                unit		Goblin Bodyguards		exp 7 armour 1 weapon_lvl 1
+                                unit		Goblin Bodyguards		exp 7 armour 0 weapon_lvl 1
                                 unit		Mountain Uruks	exp 5 armour 1 weapon_lvl 0
                                 unit		Black Pit Halberd	exp 2 armour 0 weapon_lvl 0
                                 unit		Goblin Infantry	exp 3 armour 0 weapon_lvl 0
@@ -17426,11 +17409,11 @@ monitor_event PreFactionTurnStart FactionType khand
                                     faction poland
                                     character	random_name, named character, age 33, x 288, y 388, direction SE, label moria_reclaiming_sieger_1
                                     traits		OrcRace 1, AIBoost 1, Locked 1, BattleChivalryEvil 2, BattleScarred 1, Brave 2, GoodAttacker 1, GoodCommander 1, Loyal 2, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1
-                                    unit		Mirkwood Bodyguard		exp 2 armour 1 weapon_lvl 1
-									unit		Dol Guldur Host			exp 2 armour 1 weapon_lvl 0
-                                    unit		Dol Guldur Host			exp 2 armour 1 weapon_lvl 0
-                                    unit		Dol Guldur Host			exp 2 armour 1 weapon_lvl 0
-                                    unit		Dol Guldur Host			exp 2 armour 1 weapon_lvl 0
+                                    unit		Mirkwood Bodyguard		exp 2 armour 0 weapon_lvl 1
+									unit		Dol Guldur Host			exp 2 armour 0 weapon_lvl 0
+                                    unit		Dol Guldur Host			exp 2 armour 0 weapon_lvl 0
+                                    unit		Dol Guldur Host			exp 2 armour 0 weapon_lvl 0
+                                    unit		Dol Guldur Host			exp 2 armour 0 weapon_lvl 0
                                     unit		Snaga Stalkers		exp 1 armour 0 weapon_lvl 0
                                     unit		Snaga Stalkers		exp 1 armour 0 weapon_lvl 0
                                     unit		Snaga Stalkers		exp 1 armour 0 weapon_lvl 0
@@ -17490,13 +17473,13 @@ monitor_event PreFactionTurnStart FactionType khand
                                     faction poland
                                     character	random_name, named character, age 27, x 318, y 391, direction NW, label moria_reclaiming_sieger_2
                                     traits		OrcRace 1, AIBoost 1, Locked 1, BattleChivalryEvil 1, BattleScarred 1, Brave 3, GoodAttacker 3, GoodCommander 3, Loyal 1, LoyaltyStarter 1, NightBattleCapable 1, Berserker 1
-                                    unit		Mirkwood Bodyguard			exp 4 armour 1 weapon_lvl 1
+                                    unit		Mirkwood Bodyguard			exp 4 armour 0 weapon_lvl 1
 								    unit		Mirkwood Spears	exp 2 armour 0 weapon_lvl 0
                                     unit		Mirkwood Spears	exp 2 armour 0 weapon_lvl 0
-                                    unit		Dol Guldur Host			exp 2 armour 1 weapon_lvl 0
-                                    unit		Dol Guldur Host			exp 2 armour 1 weapon_lvl 0
-                                    unit		Dol Guldur Host			exp 2 armour 1 weapon_lvl 0
-                                    unit		Dol Guldur Host			exp 2 armour 1 weapon_lvl 0
+                                    unit		Dol Guldur Host			exp 2 armour 0 weapon_lvl 0
+                                    unit		Dol Guldur Host			exp 2 armour 0 weapon_lvl 0
+                                    unit		Dol Guldur Host			exp 2 armour 0 weapon_lvl 0
+                                    unit		Dol Guldur Host			exp 2 armour 0 weapon_lvl 0
                                     unit		Mirkwood Slayers		exp 2 armour 0 weapon_lvl 0
                                     unit		Mirkwood Slayers		exp 2 armour 0 weapon_lvl 0
                                     unit		Mirkwood Slayers		exp 2 armour 0 weapon_lvl 0
@@ -17515,13 +17498,13 @@ monitor_event PreFactionTurnStart FactionType khand
                                     faction poland
                                     character	random_name, named character, age 27, x 318, y 391, direction NW, label moria_reclaiming_sieger_2
                                     traits		OrcRace 1, AIBoost 1, Locked 1, BattleChivalryEvil 1, BattleScarred 1, Brave 3, GoodAttacker 3, GoodCommander 3, Loyal 1, LoyaltyStarter 1, NightBattleCapable 1, Berserker 1
-                                    unit		Mirkwood Bodyguard			exp 4 armour 1 weapon_lvl 1
+                                    unit		Mirkwood Bodyguard			exp 4 armour 0 weapon_lvl 1
 								    unit		Mirkwood Spears	exp 2 armour 0 weapon_lvl 0
                                     unit		Mirkwood Spears	exp 2 armour 0 weapon_lvl 0
-                                    unit		Dol Guldur Host			exp 2 armour 1 weapon_lvl 0
-                                    unit		Dol Guldur Host			exp 2 armour 1 weapon_lvl 0
-                                    unit		Dol Guldur Host			exp 2 armour 1 weapon_lvl 0
-                                    unit		Dol Guldur Host			exp 2 armour 1 weapon_lvl 0
+                                    unit		Dol Guldur Host			exp 2 armour 0 weapon_lvl 0
+                                    unit		Dol Guldur Host			exp 2 armour 0 weapon_lvl 0
+                                    unit		Dol Guldur Host			exp 2 armour 0 weapon_lvl 0
+                                    unit		Dol Guldur Host			exp 2 armour 0 weapon_lvl 0
                                     unit		Mirkwood Slayers		exp 2 armour 0 weapon_lvl 0
                                     unit		Mirkwood Slayers		exp 2 armour 0 weapon_lvl 0
                                     unit		Mirkwood Slayers		exp 2 armour 0 weapon_lvl 0
@@ -17561,14 +17544,14 @@ monitor_event PreFactionTurnStart FactionType khand
                                     faction poland
                                     character	random_name, named character, age 30, x 326, y 391, label moria_reclaiming_spiders_2
                                     traits		OrcRace 1, AIBoost 1, Locked 1, BattleChivalryEvil 1, BattleScarred 1, Berserker 1, GoodAttacker 1, GoodCommander 1, Loyal 1, LoyaltyStarter 1, NightBattleCapable 1
-                                    unit		Mirkwood Bodyguard				exp 5 armour 1 weapon_lvl 1
-								    unit		Mirkwood Spears	exp 2 armour 1 weapon_lvl 0
-                                    unit		Mirkwood Spears	exp 2 armour 1 weapon_lvl 0
-                                    unit		Mirkwood Spears	exp 2 armour 1 weapon_lvl 0
-                                    unit		Dol Guldur Host			exp 2 armour 1 weapon_lvl 0
-                                    unit		Dol Guldur Host			exp 2 armour 1 weapon_lvl 0
-                                    unit		Dol Guldur Host			exp 2 armour 1 weapon_lvl 0
-                                    unit		Dol Guldur Host			exp 2 armour 1 weapon_lvl 0
+                                    unit		Mirkwood Bodyguard				exp 5 armour 0 weapon_lvl 1
+								    unit		Mirkwood Spears	exp 2 armour 0 weapon_lvl 0
+                                    unit		Mirkwood Spears	exp 2 armour 0 weapon_lvl 0
+                                    unit		Mirkwood Spears	exp 2 armour 0 weapon_lvl 0
+                                    unit		Dol Guldur Host			exp 2 armour 0 weapon_lvl 0
+                                    unit		Dol Guldur Host			exp 2 armour 0 weapon_lvl 0
+                                    unit		Dol Guldur Host			exp 2 armour 0 weapon_lvl 0
+                                    unit		Dol Guldur Host			exp 2 armour 0 weapon_lvl 0
                                     unit		Dol Guldur Archers		exp 2 armour 0 weapon_lvl 2
                                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                                     unit		Dol Guldur Archers		exp 0 armour 0 weapon_lvl 0
@@ -17586,14 +17569,14 @@ monitor_event PreFactionTurnStart FactionType khand
                                     faction poland
                                     character	random_name, named character, age 35, x 326, y 391, label moria_reclaiming_spiders_2
                                     traits		OrcRace 1, AIBoost 1, Locked 1, BattleChivalryEvil 3, Brave 3, GoodAttacker 1, GoodCommander 1, LoyaltyStarter 1, NightBattleCapable 1
-                                    unit		Mirkwood Bodyguard				exp 5 armour 1 weapon_lvl 1
-								    unit		Mirkwood Spears	exp 2 armour 1 weapon_lvl 0
-                                    unit		Mirkwood Spears	exp 2 armour 1 weapon_lvl 0
-                                    unit		Mirkwood Spears	exp 2 armour 1 weapon_lvl 0
-                                    unit		Dol Guldur Host			exp 2 armour 1 weapon_lvl 0
-                                    unit		Dol Guldur Host			exp 2 armour 1 weapon_lvl 0
-                                    unit		Dol Guldur Host			exp 2 armour 1 weapon_lvl 0
-                                    unit		Dol Guldur Host			exp 2 armour 1 weapon_lvl 0
+                                    unit		Mirkwood Bodyguard				exp 5 armour 0 weapon_lvl 1
+								    unit		Mirkwood Spears	exp 2 armour 0 weapon_lvl 0
+                                    unit		Mirkwood Spears	exp 2 armour 0 weapon_lvl 0
+                                    unit		Mirkwood Spears	exp 2 armour 0 weapon_lvl 0
+                                    unit		Dol Guldur Host			exp 2 armour 0 weapon_lvl 0
+                                    unit		Dol Guldur Host			exp 2 armour 0 weapon_lvl 0
+                                    unit		Dol Guldur Host			exp 2 armour 0 weapon_lvl 0
+                                    unit		Dol Guldur Host			exp 2 armour 0 weapon_lvl 0
                                     unit		Dol Guldur Archers		exp 2 armour 0 weapon_lvl 2
                                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                                     unit		Dol Guldur Archers		exp 0 armour 0 weapon_lvl 0
@@ -17621,9 +17604,9 @@ monitor_event PreFactionTurnStart FactionType khand
                                     faction poland
                                     character	random_name, named character, age 22, x 337, y 399, label moria_reclaiming_spiders_1
                                     traits		OrcRace 1, AIBoost 1, Locked 1, BattleChivalryEvil 2, Brave 1, GoodAttacker 1
-                                    unit		Goblin Headhunters			exp 3 armour 1 weapon_lvl 1
-                                    unit		Dol Guldur Archers			exp 2 armour 1 weapon_lvl 0
-                                    unit		Dol Guldur Archers			exp 2 armour 1 weapon_lvl 0
+                                    unit		Goblin Headhunters			exp 3 armour 0 weapon_lvl 1
+                                    unit		Dol Guldur Archers			exp 2 armour 0 weapon_lvl 0
+                                    unit		Dol Guldur Archers			exp 2 armour 0 weapon_lvl 0
                                 end
                                 set_event_counter garrison_skip 0
                                 campaign_wait 0.1
@@ -17637,9 +17620,9 @@ monitor_event PreFactionTurnStart FactionType khand
                                     faction poland
                                     character	random_name, named character, age 22, x 337, y 399, label moria_reclaiming_spiders_1
                                     traits		OrcRace 1, AIBoost 1, Locked 1, Berserker 1, Brave 2, GoodAttacker 1
-                                    unit		Goblin Headhunters			exp 3 armour 1 weapon_lvl 1
-                                    unit		Dol Guldur Archers			exp 2 armour 1 weapon_lvl 0
-                                    unit		Dol Guldur Archers			exp 2 armour 1 weapon_lvl 0
+                                    unit		Goblin Headhunters			exp 3 armour 0 weapon_lvl 1
+                                    unit		Dol Guldur Archers			exp 2 armour 0 weapon_lvl 0
+                                    unit		Dol Guldur Archers			exp 2 armour 0 weapon_lvl 0
                                 end
                                 set_event_counter garrison_skip 0
                                 campaign_wait 0.1
@@ -17747,7 +17730,7 @@ monitor_event PreFactionTurnStart FactionType khand
                         if not I_SettlementUnderSiege Lower_Anduin_Vale										;***Anduin Seige Broken Conditions***
                             unfreeze_faction_ai poland
                             unfreeze_faction_ai timurids
-                            console_command create_unit balin_1 "Beorning Axemen" 2 2 1 1
+                            console_command create_unit balin_1 "Beorning Axemen" 2 2 0 1
                             historic_event moria_reclaiming_dwarves_helped_beornings
                             set_counter moria_reclaiming_dwarves_siege_timeout 4
                         end_if
@@ -18092,7 +18075,7 @@ monitor_event FactionTurnStart FactionIsLocal
 				faction hre
 				character	random_name, named character, age 34, x 250, y 336, direction W, label balrog_0
                 traits		OrcRace 1, AIBoost 1, Loyal 1, LoyaltyStarter 1, PietyStarter 1, GoodAttacker 2, GoodCommander 2, LogisticalSkill 1, NightBattleCapable 1
-				unit		Goblin Bodyguards		exp 4 armour 1 weapon_lvl 1
+				unit		Goblin Bodyguards		exp 4 armour 0 weapon_lvl 1
 				unit		Mountain Uruks	exp 5 armour 1 weapon_lvl 0
 				unit		Mountain Uruks	exp 4 armour 1 weapon_lvl 0						
 				unit		Mountain-Orc Hunters	exp 4 armour 1 weapon_lvl 0
@@ -22392,10 +22375,10 @@ end_if
                     character	Nazgulmarch, named character, age 16, x 206, y 453, direction E, portrait nazgul1, battle_model witchking, hero_ability Terror_of_the_Witch_King, label nazgula_p2
 					traits	Nazgul 1, Hero 1, NazgulRace 1, HeroAbilityWitchKing 1, FearGeneral 1, BattleFear 3, GoodCommander 4, GoodAttacker 1, NightBattleCapable 1, NazgulEpithet 1
 					unit		Barad-dur Wardens		exp 4 armour 0 weapon_lvl 1
-                    unit		Temple Wards			exp 2 armour 1 weapon_lvl 0	
-					unit		Temple Wards			exp 2 armour 1 weapon_lvl 0						
-                    unit		Temple Marksmen			exp 2 armour 1 weapon_lvl 0
-					unit		Temple Marksmen			exp 2 armour 1 weapon_lvl 0			
+                    unit		Temple Wards			exp 2 armour 0 weapon_lvl 0
+					unit		Temple Wards			exp 2 armour 0 weapon_lvl 0
+                    unit		Temple Marksmen			exp 2 armour 0 weapon_lvl 0
+					unit		Temple Marksmen			exp 2 armour 0 weapon_lvl 0
                     unit		Melkor's Chosen			exp 2 armour 0 weapon_lvl 0
                     unit		Temple Knights			exp 2 armour 0 weapon_lvl 0
 					unit		Saurons Will			exp 2 armour 0 weapon_lvl 0
@@ -22425,10 +22408,10 @@ end_if
                     character	Nazgulmarch, named character, age 16, x 235, y 430, direction E, portrait nazgul1, battle_model witchking, hero_ability Terror_of_the_Witch_King, label nazgula_p2
 					traits	Nazgul 1, Hero 1, NazgulRace 1, HeroAbilityWitchKing 1, FearGeneral 1, BattleFear 3, GoodCommander 4, GoodAttacker 1, NightBattleCapable 1, NazgulEpithet 1
 					unit		Barad-dur Wardens		exp 4 armour 0 weapon_lvl 1
-                    unit		Temple Wards			exp 2 armour 1 weapon_lvl 0	
-					unit		Temple Wards			exp 2 armour 1 weapon_lvl 0						
-                    unit		Temple Marksmen			exp 2 armour 1 weapon_lvl 0
-					unit		Temple Marksmen			exp 2 armour 1 weapon_lvl 0			
+                    unit		Temple Wards			exp 2 armour 0 weapon_lvl 0
+					unit		Temple Wards			exp 2 armour 0 weapon_lvl 0
+                    unit		Temple Marksmen			exp 2 armour 0 weapon_lvl 0
+					unit		Temple Marksmen			exp 2 armour 0 weapon_lvl 0
                     unit		Melkor's Chosen			exp 2 armour 0 weapon_lvl 0
                     unit		Temple Knights			exp 2 armour 0 weapon_lvl 0
 					unit		Saurons Will			exp 2 armour 0 weapon_lvl 0
@@ -22593,10 +22576,10 @@ end_if
                     character	Nazgulmarch, named character, age 16, x 254, y 439, direction W, portrait nazgul1, battle_model witchking, hero_ability Terror_of_the_Witch_King, label nazgula_p2
 					traits	Nazgul 1, Hero 1, NazgulRace 1, HeroAbilityWitchKing 1, FearGeneral 1, BattleFear 3, GoodCommander 4, GoodAttacker 1, NightBattleCapable 1, NazgulEpithet 1
 					unit		Barad-dur Wardens		exp 4 armour 0 weapon_lvl 1
-                    unit		Temple Wards			exp 2 armour 1 weapon_lvl 0	
-					unit		Temple Wards			exp 2 armour 1 weapon_lvl 0						
-                    unit		Temple Marksmen			exp 2 armour 1 weapon_lvl 0
-					unit		Temple Marksmen			exp 2 armour 1 weapon_lvl 0			
+                    unit		Temple Wards			exp 2 armour 0 weapon_lvl 0
+					unit		Temple Wards			exp 2 armour 0 weapon_lvl 0
+                    unit		Temple Marksmen			exp 2 armour 0 weapon_lvl 0
+					unit		Temple Marksmen			exp 2 armour 0 weapon_lvl 0
                     unit		Melkor's Chosen			exp 2 armour 0 weapon_lvl 0
                     unit		Temple Knights			exp 2 armour 0 weapon_lvl 0
 					unit		Saurons Will			exp 2 armour 0 weapon_lvl 0
@@ -22626,10 +22609,10 @@ end_if
                     character	Nazgulmarch, named character, age 16, x 259, y 443, direction W, portrait nazgul1, battle_model witchking, hero_ability Terror_of_the_Witch_King, label nazgula_p2
 					traits	Nazgul 1, Hero 1, NazgulRace 1, HeroAbilityWitchKing 1, FearGeneral 1, BattleFear 3, GoodCommander 4, GoodAttacker 1, NightBattleCapable 1, NazgulEpithet 1
 					unit		Barad-dur Wardens		exp 4 armour 0 weapon_lvl 1
-                    unit		Temple Wards			exp 2 armour 1 weapon_lvl 0	
-					unit		Temple Wards			exp 2 armour 1 weapon_lvl 0						
-                    unit		Temple Marksmen			exp 2 armour 1 weapon_lvl 0
-					unit		Temple Marksmen			exp 2 armour 1 weapon_lvl 0			
+                    unit		Temple Wards			exp 2 armour 0 weapon_lvl 0
+					unit		Temple Wards			exp 2 armour 0 weapon_lvl 0
+                    unit		Temple Marksmen			exp 2 armour 0 weapon_lvl 0
+					unit		Temple Marksmen			exp 2 armour 0 weapon_lvl 0
                     unit		Melkor's Chosen			exp 2 armour 0 weapon_lvl 0
                     unit		Temple Knights			exp 2 armour 0 weapon_lvl 0
 					unit		Saurons Will			exp 2 armour 0 weapon_lvl 0
@@ -22806,10 +22789,10 @@ end_if
 					character	Ulfang, named character, age 32, x 465, y 301, family, portrait Ulfang, battle_model ulfang, direction E, hero_ability ANCANTAR, label ulfang_2
 					traits		UlfangMordor 1, CustomBG 1, HeroAbilityAncantar 1, NumenoreanRace 1, Brave 1, BattleChivalryEvil 2, Energetic 1, GoodCommander 3, GoodDefender 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1, StrategicSkill 1
 					unit		Barad-dur Wardens		exp 4 armour 0 weapon_lvl 1
-                    unit		Temple Wards			exp 2 armour 1 weapon_lvl 0	
-					unit		Temple Wards			exp 2 armour 1 weapon_lvl 0						
-                    unit		Temple Marksmen			exp 2 armour 1 weapon_lvl 0
-					unit		Temple Marksmen			exp 2 armour 1 weapon_lvl 0			
+                    unit		Temple Wards			exp 2 armour 0 weapon_lvl 0
+					unit		Temple Wards			exp 2 armour 0 weapon_lvl 0
+                    unit		Temple Marksmen			exp 2 armour 0 weapon_lvl 0
+					unit		Temple Marksmen			exp 2 armour 0 weapon_lvl 0
                     unit		Melkor's Chosen			exp 2 armour 0 weapon_lvl 0
                     unit		Temple Knights			exp 2 armour 0 weapon_lvl 0
 					unit		Saurons Will			exp 2 armour 0 weapon_lvl 0
@@ -22838,10 +22821,10 @@ end_if
 					character	Ulfang, named character, age 32, x 465, y 301, family, portrait Ulfang, battle_model ulfang, direction E, hero_ability ANCANTAR, label ulfang_2
 					traits		UlfangMordor 1, CustomBG 1, HeroAbilityAncantar 1, NumenoreanRace 1, Brave 1, BattleChivalryEvil 2, Energetic 1, GoodCommander 3, GoodDefender 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1, StrategicSkill 1
 					unit		Barad-dur Wardens		exp 4 armour 0 weapon_lvl 1
-                    unit		Temple Wards			exp 2 armour 1 weapon_lvl 0	
-					unit		Temple Wards			exp 2 armour 1 weapon_lvl 0						
-                    unit		Temple Marksmen			exp 2 armour 1 weapon_lvl 0
-					unit		Temple Marksmen			exp 2 armour 1 weapon_lvl 0			
+                    unit		Temple Wards			exp 2 armour 0 weapon_lvl 0
+					unit		Temple Wards			exp 2 armour 0 weapon_lvl 0
+                    unit		Temple Marksmen			exp 2 armour 0 weapon_lvl 0
+					unit		Temple Marksmen			exp 2 armour 0 weapon_lvl 0
                     unit		Melkor's Chosen			exp 2 armour 0 weapon_lvl 0
                     unit		Temple Knights			exp 2 armour 0 weapon_lvl 0
 					unit		Saurons Will			exp 2 armour 0 weapon_lvl 0
@@ -23005,10 +22988,10 @@ end_if
                     character	random_name, named character, age 22, x 215, y 332, family, direction W, label enedwaith_attackers_2
                     traits		OrcRace 1, AIBoost 1, GoodAttacker 1, GoodCommander 2, NightBattleCapable 1
 					unit		Barad-dur Wardens		exp 4 armour 0 weapon_lvl 1
-                    unit		Temple Wards			exp 2 armour 1 weapon_lvl 0	
-					unit		Temple Wards			exp 2 armour 1 weapon_lvl 0						
-                    unit		Temple Marksmen			exp 2 armour 1 weapon_lvl 0
-					unit		Temple Marksmen			exp 2 armour 1 weapon_lvl 0			
+                    unit		Temple Wards			exp 2 armour 0 weapon_lvl 0
+					unit		Temple Wards			exp 2 armour 0 weapon_lvl 0
+                    unit		Temple Marksmen			exp 2 armour 0 weapon_lvl 0
+					unit		Temple Marksmen			exp 2 armour 0 weapon_lvl 0
                     unit		Melkor's Chosen			exp 2 armour 0 weapon_lvl 0
                     unit		Temple Knights			exp 2 armour 0 weapon_lvl 0
 					unit		Saurons Will			exp 2 armour 0 weapon_lvl 0
@@ -23035,10 +23018,10 @@ end_if
                     character	Nazgulmarch, named character, age 16, x 215, y 331, family, direction W, portrait nazgul1, battle_model witchking, hero_ability Terror_of_the_Witch_King, label nazgula_p2
 					traits	Nazgul 1, Hero 1, NazgulRace 1, HeroAbilityWitchKing 1, FearGeneral 1, BattleFear 3, GoodCommander 4, GoodAttacker 1, NightBattleCapable 1, NazgulEpithet 1
 					unit		Barad-dur Wardens		exp 4 armour 0 weapon_lvl 1
-                    unit		Temple Wards			exp 2 armour 1 weapon_lvl 0	
-					unit		Temple Wards			exp 2 armour 1 weapon_lvl 0						
-                    unit		Temple Marksmen			exp 2 armour 1 weapon_lvl 0
-					unit		Temple Marksmen			exp 2 armour 1 weapon_lvl 0			
+                    unit		Temple Wards			exp 2 armour 0 weapon_lvl 0
+					unit		Temple Wards			exp 2 armour 0 weapon_lvl 0
+                    unit		Temple Marksmen			exp 2 armour 0 weapon_lvl 0
+					unit		Temple Marksmen			exp 2 armour 0 weapon_lvl 0
                     unit		Melkor's Chosen			exp 2 armour 0 weapon_lvl 0
                     unit		Temple Knights			exp 2 armour 0 weapon_lvl 0
 					unit		Saurons Will			exp 2 armour 0 weapon_lvl 0
@@ -23069,10 +23052,10 @@ end_if
                     character	Nazgulmarch, named character, age 16, x 95, y 313, direction W, portrait nazgul1, battle_model witchking, hero_ability Terror_of_the_Witch_King, label nazgula_p2
 					traits	Nazgul 1, Hero 1, NazgulRace 1, HeroAbilityWitchKing 1, FearGeneral 1, BattleFear 3, GoodCommander 4, GoodAttacker 1, NightBattleCapable 1, NazgulEpithet 1
 					unit		Barad-dur Wardens		exp 4 armour 0 weapon_lvl 1
-                    unit		Temple Wards			exp 2 armour 1 weapon_lvl 0	
-					unit		Temple Wards			exp 2 armour 1 weapon_lvl 0						
-                    unit		Temple Marksmen			exp 2 armour 1 weapon_lvl 0
-					unit		Temple Marksmen			exp 2 armour 1 weapon_lvl 0			
+                    unit		Temple Wards			exp 2 armour 0 weapon_lvl 0
+					unit		Temple Wards			exp 2 armour 0 weapon_lvl 0
+                    unit		Temple Marksmen			exp 2 armour 0 weapon_lvl 0
+					unit		Temple Marksmen			exp 2 armour 0 weapon_lvl 0
                     unit		Melkor's Chosen			exp 2 armour 0 weapon_lvl 0
                     unit		Temple Knights			exp 2 armour 0 weapon_lvl 0
 					unit		Saurons Will			exp 2 armour 0 weapon_lvl 0
@@ -23102,10 +23085,10 @@ end_if
                     character	random_name, named character, age 22, x 95, y 314, family, direction W, label eregion_attackers_1
                     traits		OrcRace 1, AIBoost 1, GoodAttacker 1, GoodCommander 2, NightBattleCapable 1
 					unit		Barad-dur Wardens		exp 4 armour 0 weapon_lvl 1
-                    unit		Temple Wards			exp 2 armour 1 weapon_lvl 0	
-					unit		Temple Wards			exp 2 armour 1 weapon_lvl 0						
-                    unit		Temple Marksmen			exp 2 armour 1 weapon_lvl 0
-					unit		Temple Marksmen			exp 2 armour 1 weapon_lvl 0			
+                    unit		Temple Wards			exp 2 armour 0 weapon_lvl 0
+					unit		Temple Wards			exp 2 armour 0 weapon_lvl 0
+                    unit		Temple Marksmen			exp 2 armour 0 weapon_lvl 0
+					unit		Temple Marksmen			exp 2 armour 0 weapon_lvl 0
                     unit		Melkor's Chosen			exp 2 armour 0 weapon_lvl 0
                     unit		Temple Knights			exp 2 armour 0 weapon_lvl 0
 					unit		Saurons Will			exp 2 armour 0 weapon_lvl 0
@@ -33401,7 +33384,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r50
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33419,7 +33402,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r49
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33436,7 +33419,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r48
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33453,7 +33436,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r47
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33470,7 +33453,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r46
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33487,7 +33470,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r45
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33504,7 +33487,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r44
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33521,7 +33504,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r43
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33538,7 +33521,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r42
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33555,7 +33538,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r41
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33572,7 +33555,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r40
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33589,7 +33572,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r39
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33606,7 +33589,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r38
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33623,7 +33606,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r37
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33640,7 +33623,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r36
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33657,7 +33640,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r35
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33674,7 +33657,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r34
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33691,7 +33674,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r33
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33708,7 +33691,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r32
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33725,7 +33708,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r31
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33742,7 +33725,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r30
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33759,7 +33742,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r29
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33776,7 +33759,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r28
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33793,7 +33776,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r27
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33810,7 +33793,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r26
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33827,7 +33810,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r25
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33844,7 +33827,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r24
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33861,7 +33844,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r23
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33878,7 +33861,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r22
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33895,7 +33878,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r21
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33912,7 +33895,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r20
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33929,7 +33912,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r19
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33946,7 +33929,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r18
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33963,7 +33946,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r17
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33980,7 +33963,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r16
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -33997,7 +33980,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r15
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -34014,7 +33997,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r14
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -34031,7 +34014,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r13
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -34048,7 +34031,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r12
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -34065,7 +34048,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r11
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -34082,7 +34065,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r10
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -34099,7 +34082,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r9
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -34116,7 +34099,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r8
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -34133,7 +34116,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r7
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -34150,7 +34133,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r6
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -34167,7 +34150,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r5
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -34184,7 +34167,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r4
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -34201,7 +34184,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r3
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -34218,7 +34201,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r2
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0
@@ -34235,7 +34218,7 @@ end_monitor
                     character	Nazguld, named character, age 16, x 299, y 327, direction SW, portrait nazgul4, battle_model khamul, hero_ability Terror_of_the_Nazgul, label nazguld_r1
                     traits	Nazgul 4, Hero 1, NazgulRace 1, HeroAbilityNazgul 1, GoodCommander 4, GoodAttacker 2, NightBattleCapable 1, FearGeneral 1, BattleFear 2, NazgulEpithet 4
                     unit		Khamuls Shadowknights		exp 4 armour 0 weapon_lvl 0
-                    unit		Mirkwood Spears	exp 1 armour 1 weapon_lvl 0
+                    unit		Mirkwood Spears	exp 1 armour 0 weapon_lvl 0
                     unit		Dol Guldur Archers		exp 1 armour 0 weapon_lvl 1
                 end
                 set_event_counter garrison_skip 0

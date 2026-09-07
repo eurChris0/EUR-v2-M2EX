@@ -43,8 +43,6 @@ local MODULES = [
     "helper.eurSaveLoadOptions",
     "helper.eurSaveLoadDefaults",
     "helper.eurUpgradeSave",
-    // last: it names every window instance, so they all have to exist first
-    "helper.eurRecalibrate",
 
     "eur.dev.chrisDev",
     // parked - the layout/UI editor debug window is off for now
@@ -132,8 +130,8 @@ local MODULES = [
     "helper.eurCounterTriggers",
     "helper.eurOtherTriggers",
 
-    "eur_ai.strategy.nut",
-    "eur_ai.snapshot.nut",
+    // Historical EUR campaign-AI rule program. The module registers its LTGD hook.
+    "eur_ai.main",
 ]
 
 // Plugin-script binding-form requires (eurHelmsBrick = require(...), eurMerge = ..., etc.) that
