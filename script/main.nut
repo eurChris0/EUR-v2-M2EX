@@ -43,6 +43,8 @@ local MODULES = [
     "helper.eurSaveLoadOptions",
     "helper.eurSaveLoadDefaults",
     "helper.eurUpgradeSave",
+    // last: it names every window instance, so they all have to exist first
+    "helper.eurRecalibrate",
 
     "eur.dev.chrisDev",
     // parked - the layout/UI editor debug window is off for now

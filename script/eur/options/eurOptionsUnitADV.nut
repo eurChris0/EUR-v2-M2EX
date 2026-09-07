@@ -254,10 +254,10 @@ class eurOptionsUnitADV {
         this.refreshFreeList()
         this.refreshBindings()
         if (!("canvas" in ::EUR.unit_adv_section)) return
-        local rect = ::UI.widgetRectGet(::EUR.unit_adv_section.canvas)
+        local rect = ::authored.rect(::UI.widgetRectGet(::EUR.unit_adv_section.canvas))
         if (rect == null) return
 
-        ::UI.pushFont(::fonts.game.verdanaSml, false, this.layout.bodyFontSize)
+        ::UI.pushFont(::fonts.body, false, this.layout.bodyFontSize)
         this.drawList(rect[0], rect[1])
         ::UI.popFont()
     }
@@ -265,10 +265,10 @@ class eurOptionsUnitADV {
     function drawTitle() {
         if (!::EUR.in_campaign_map || ::EUR.eur_player_faction == null) return
         if (!("canvas" in ::EUR.unit_adv_title)) return
-        local rect = ::UI.widgetRectGet(::EUR.unit_adv_title.canvas)
+        local rect = ::authored.rect(::UI.widgetRectGet(::EUR.unit_adv_title.canvas))
         if (rect == null) return
 
-        ::UI.pushFont(::fonts.game.verdanaSml, false, this.layout.bodyFontSize)
+        ::UI.pushFont(::fonts.body, false, this.layout.bodyFontSize)
         local unitType = (::EUR.unit_adv_edu != "") ? ::units.get(::EUR.unit_adv_edu) : null
         if (unitType != null) {
             this.line(rect[0], rect[1], "Editing " + unitType.displayName, this.layout.textColour)
@@ -281,10 +281,10 @@ class eurOptionsUnitADV {
     function drawEdit() {
         if (!::EUR.in_campaign_map || ::EUR.eur_player_faction == null) return
         if (!("canvas" in ::EUR.unit_adv_edit)) return
-        local rect = ::UI.widgetRectGet(::EUR.unit_adv_edit.canvas)
+        local rect = ::authored.rect(::UI.widgetRectGet(::EUR.unit_adv_edit.canvas))
         if (rect == null) return
 
-        ::UI.pushFont(::fonts.game.verdanaSml, false, this.layout.bodyFontSize)
+        ::UI.pushFont(::fonts.body, false, this.layout.bodyFontSize)
         this.drawEditPane(rect[0], rect[1])
         ::UI.popFont()
     }
@@ -295,7 +295,7 @@ class eurOptionsUnitADV {
     function drawTempCard(section, eduType) {
         if (!::EUR.in_campaign_map || ::EUR.eur_player_faction == null) return
         if (eduType == null || !("canvas" in section)) return
-        local rect = ::UI.widgetRectGet(section.canvas)
+        local rect = ::authored.rect(::UI.widgetRectGet(section.canvas))
         if (rect == null) return
         local texture = this.card(eduType)
         if (texture == null || texture.img == 0) return

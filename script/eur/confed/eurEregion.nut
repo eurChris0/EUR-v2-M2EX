@@ -270,7 +270,6 @@ class eurEregion {
 
     function ensure() {
         if (this.built) return
-        this.built = true
         local self = this
         ::UI.pushStyle(::EUR.eurStyles.basic_4)
         this.koeScroll = ::EUR.scroll.create(800, 740, 112, 14, function() { ::EUR.show_eregion_choice = false })
@@ -283,6 +282,7 @@ class eurEregion {
         ::UI.setParent(0)
         ::UI.widgetVisible(this.koeScroll.window, false)
         ::UI.widgetVisible(this.konScroll.window, false)
+        this.built = true   // LAST: a throw above leaves this false and the next frame retries
     }
 
     function render() {
@@ -293,7 +293,7 @@ class eurEregion {
     }
 
     function area(scr) {
-        local rect = ::UI.widgetRectGet(scr.window)
+        local rect = ::authored.rect(::UI.widgetRectGet(scr.window))
         if (rect == null) return null
         local m = ::EUR.scroll.setMargins("scroll")
         if (m == null) return null

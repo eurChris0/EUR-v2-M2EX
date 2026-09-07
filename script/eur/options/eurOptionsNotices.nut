@@ -27,7 +27,7 @@ class eurOptionsNotices {
         if (this.legScroll != null) return
         local self = this
 
-        ::UI.pushFont(::fonts.game.verdanaSml, false, this.layout.bodyFontSize)
+        ::UI.pushFont(::fonts.body, false, this.layout.bodyFontSize)
         ::UI.pushStyle(::EUR.eurStyles.basic_4)
 
         this.legScroll = ::EUR.scroll.create(this.layout.noticeW, this.layout.noticeH, 0, 0)
@@ -75,7 +75,7 @@ class eurOptionsNotices {
     }
 
     function noticeArea(window) {
-        local rect = ::UI.widgetRectGet(window)
+        local rect = ::authored.rect(::UI.widgetRectGet(window))
         if (rect == null) return null
         local margins = ::EUR.scroll.setMargins("scroll")
         if (margins == null) return null
@@ -105,8 +105,8 @@ class eurOptionsNotices {
         local panelW = area.width - this.layout.panelInsetX * 2 + this.layout.panelWidthDelta
         local panelY = area.y + this.layout.panelInsetY + this.layout.panelOffsetY
         local panelH = area.height - this.layout.panelInsetY * 2 + this.layout.panelHeightDelta
-        ::EUR.scroll.drawSet("panel", panelX / ::virtualScale.x, panelY / ::virtualScale.y,
-                             panelW / ::virtualScale.x, panelH / ::virtualScale.y)
+        ::EUR.scroll.drawSet("panel", panelX, panelY,
+                             panelW, panelH)
         return { x = panelX, y = panelY, width = panelW, height = panelH,
                  buttonY = area.y + area.height - this.layout.buttonBottomInset }
     }
@@ -114,7 +114,7 @@ class eurOptionsNotices {
     // Heading face, WRAPPED rather than elided. blockExtraH lets a notice that also draws something
     // under the text centre the WHOLE block; returns the y the text ended at.
     function noticeText(panel, message, blockExtraH) {
-        ::UI.pushFont(::fonts.game.verdana, false, this.layout.headingFontSize)
+        ::UI.pushFont(::fonts.body, false, this.layout.headingFontSize)
         local wrapW = panel.width - this.layout.textPadX * 2
         ::UI.pushStyle({ [::UI.Colour.text] = this.layout.textColour,
                          [::UI.Metric.alignX] = 1, [::UI.Metric.elideWidth] = wrapW })
@@ -153,8 +153,8 @@ class eurOptionsNotices {
     }
 
     function placeNotice(scroll, buttons) {
-        local screen = ::UI.screenSize()
-        ::UI.widgetRect(scroll.window, (screen[0] - this.layout.noticeW) / 2,
+        local screen = ::authored.screen()
+        ::EUR.scroll.place(scroll.window, (screen[0] - this.layout.noticeW) / 2,
                         (screen[1] - this.layout.noticeH) / 2, this.layout.noticeW, this.layout.noticeH)
 
         local area = this.noticeArea(scroll.window)

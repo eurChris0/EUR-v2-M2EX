@@ -115,10 +115,10 @@ class eurOptionsGeneralADV {
     function drawPreview() {
         if (!::EUR.in_campaign_map || ::EUR.eur_player_faction == null) return
         if (!("canvas" in ::EUR.gen_adv_preview)) return
-        local rect = ::UI.widgetRectGet(::EUR.gen_adv_preview.canvas)
+        local rect = ::authored.rect(::UI.widgetRectGet(::EUR.gen_adv_preview.canvas))
         if (rect == null) return
 
-        ::UI.pushFont(::fonts.game.verdanaSml, false, this.layout.bodyFontSize)
+        ::UI.pushFont(::fonts.body, false, this.layout.bodyFontSize)
         this.previewBody(rect[0], rect[1])
         ::UI.popFont()
     }
@@ -175,10 +175,10 @@ class eurOptionsGeneralADV {
         if (!::EUR.in_campaign_map || ::EUR.eur_player_faction == null) return
         this.refreshPicker()
         if (!("canvas" in ::EUR.gen_adv_section)) return
-        local rect = ::UI.widgetRectGet(::EUR.gen_adv_section.canvas)
+        local rect = ::authored.rect(::UI.widgetRectGet(::EUR.gen_adv_section.canvas))
         if (rect == null) return
 
-        ::UI.pushFont(::fonts.game.verdanaSml, false, this.layout.bodyFontSize)
+        ::UI.pushFont(::fonts.body, false, this.layout.bodyFontSize)
         local originX = rect[0]
         local y = rect[1]
 

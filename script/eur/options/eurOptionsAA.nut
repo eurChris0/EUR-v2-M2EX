@@ -100,9 +100,9 @@ local aaTab = {
 }
 
 aaTab.draw <- function() {
-    local r = ::UI.widgetRectGet(aaTab.canvas)
+    local r = ::authored.rect(::UI.widgetRectGet(aaTab.canvas))
     if (r == null || r[2] < 64 || r[3] < 64) {
-        local screen = ::UI.screenSize()
+        local screen = ::authored.screen()
         r = [20, 60, screen[0] - 40, screen[1] - 80]
     }
 

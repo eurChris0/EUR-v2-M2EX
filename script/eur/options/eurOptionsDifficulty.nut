@@ -2,7 +2,7 @@
     draw = function() {
         if (!::EUR.in_campaign_map) return
         if (!("canvas" in ::EUR.diff_readout_section)) return
-        local rect = ::UI.widgetRectGet(::EUR.diff_readout_section.canvas)
+        local rect = ::authored.rect(::UI.widgetRectGet(::EUR.diff_readout_section.canvas))
         if (rect == null) return
 
         local camp = ::EUR.options_legendary ? 4 : ::EUR.game_options.campaigndiff

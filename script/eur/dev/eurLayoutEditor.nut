@@ -45,7 +45,6 @@ class eurLayoutEditor {
 
     function ensure() {
         if (this.built) return
-        this.built = true
         this.layoutRows = []
         this.styleRows = []
         local self = this
@@ -96,6 +95,7 @@ class eurLayoutEditor {
 
         ::UI.widgetVisible(this.window, false)
         this.buildPreview()
+        this.built = true   // LAST: a throw above leaves this false and the next frame retries
     }
 
     function buildPreview() {
@@ -144,10 +144,10 @@ class eurLayoutEditor {
 
     function drawPreviewFrame() {
         if (!("scroll" in ::EUR) || ::EUR.scroll == null) return
-        local r = ::UI.widgetRectGet(this.preview)
+        local r = ::authored.rect(::UI.widgetRectGet(this.preview))
         if (r == null) return
-        ::EUR.scroll.drawSet("panel", r[0] / ::virtualScale.x, r[1] / ::virtualScale.y,
-                                      r[2] / ::virtualScale.x, r[3] / ::virtualScale.y)
+        ::EUR.scroll.drawSet("panel", r[0], r[1],
+                                      r[2], r[3])
     }
 
     function tokenNames() {

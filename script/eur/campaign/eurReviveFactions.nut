@@ -453,7 +453,6 @@ class eurReviveUI {
 
     function ensure() {
         if (this.built) return
-        this.built = true
         local self = this
         ::UI.pushStyle(::EUR.eurStyles.basic_4)
 
@@ -478,6 +477,8 @@ class eurReviveUI {
         ::UI.setParent(0)
         this.buttonCanvas = ::UI.canvas(this.layout.buttonSize, this.layout.buttonSize,
                                         this.layout.buttonX, this.layout.buttonY)
+        ::UI.setWidgetStyle(this.buttonCanvas, ::UI.Cap.autoScaleDraw, 1)   // built outside the sheet push
+        ::UI.setWidgetStyle(this.buttonCanvas, ::UI.Cap.autoScalePos, 1)
         ::UI.canvasDraw(this.buttonCanvas, function() { self.drawButton() })
 
         ::UI.popStyle()
@@ -485,6 +486,7 @@ class eurReviveUI {
         ::UI.widgetVisible(this.choiceScroll.window, false)
         ::UI.widgetVisible(this.yesButton, false)
         ::UI.widgetVisible(this.noButton, false)
+        this.built = true   // LAST: a throw above must leave this false so the next frame retries,
     }
 
     function render() {
@@ -499,7 +501,7 @@ class eurReviveUI {
         ::UI.widgetVisible(this.noButton, visible)
         if (!visible) return
 
-        local rect = ::UI.widgetRectGet(this.choiceScroll.window)
+        local rect = ::authored.rect(::UI.widgetRectGet(this.choiceScroll.window))
         if (rect == null) return
         local margins = ::EUR.scroll.setMargins("scroll")
         local areaX = rect[0] + margins[0]
@@ -526,8 +528,11 @@ class eurReviveUI {
         local icon = canAfford ? ::EUR.revive_yes : ::EUR.revive_no
         if (icon == null) return
 
-        if (::UI.imageButton(icon.img, this.layout.buttonSize, this.layout.buttonSize,
-                             this.layout.buttonX, this.layout.buttonY).clicked && canAfford && !::EUR.show_revive_choice) {
+        // Sits ON the game HUD, so it takes the game's factor rather than our layout's.
+        local bx = ::authored.hudX(this.layout.buttonX)
+        local by = ::authored.hudY(this.layout.buttonY)
+        local bs = ::authored.hudX(this.layout.buttonSize)
+        if (::UI.imageButton(icon.img, bs, bs, bx, by).clicked && canAfford && !::EUR.show_revive_choice) {
             ::EUR.show_revive_choice = true
             ::EUR.revive_sett = sett
             ::EUR.revive_faction = ::EUR.eur_campaign.factionByName(reviveName)
@@ -537,7 +542,7 @@ class eurReviveUI {
 
     function drawChoiceContent() {
         if (!::EUR.show_revive_choice || ::EUR.revive_faction == null || ::EUR.revive_sett == null) return
-        local rect = ::UI.widgetRectGet(this.choiceScroll.window)
+        local rect = ::authored.rect(::UI.widgetRectGet(this.choiceScroll.window))
         if (rect == null) return
         local margins = ::EUR.scroll.setMargins("scroll")
         local areaX = rect[0] + margins[0]

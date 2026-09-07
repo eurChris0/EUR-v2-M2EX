@@ -671,6 +671,8 @@ class eurGlobalRecruitment {
         ::UI.setParent(0)
         this.buttonCanvas = ::UI.canvas(this.layout.toggleButtonW, this.layout.toggleButtonH,
                                         this.layout.toggleButtonX, this.layout.toggleButtonY)
+        ::UI.setWidgetStyle(this.buttonCanvas, ::UI.Cap.autoScaleDraw, 1)   // built outside the sheet push
+        ::UI.setWidgetStyle(this.buttonCanvas, ::UI.Cap.autoScalePos, 1)
         ::UI.canvasDraw(this.buttonCanvas, function() { self.drawButton() })
         ::UI.popStyle()
         ::UI.widgetVisible(this.scroll.window, false)
@@ -684,7 +686,7 @@ class eurGlobalRecruitment {
     }
 
     function contentArea() {
-        local rect = ::UI.widgetRectGet(this.scroll.window)
+        local rect = ::authored.gameRect(::UI.widgetRectGet(this.scroll.window))
         if (rect == null) {
             return null
         }
@@ -725,14 +727,14 @@ class eurGlobalRecruitment {
             this.pendingRefresh = false
             this.recruitCheckGlobal()
         }
-        ::UI.widgetRect(this.scroll.window, this.layout.windowX, this.layout.windowY,
+        ::EUR.scroll.placeGame(this.scroll.window, this.layout.windowX, this.layout.windowY,
                         this.layout.windowW, this.layout.windowH)
         if (!this.raised) {
             ::UI.raise(this.scroll.window)
         }
         this.raised = true
 
-        local win = ::UI.widgetRectGet(this.scroll.window)
+        local win = ::authored.gameRect(::UI.widgetRectGet(this.scroll.window))
         if (win != null) {
             local sortX = win[0] + this.layout.optionsX
             local sortY = win[1] + this.layout.optionsY
@@ -776,18 +778,20 @@ class eurGlobalRecruitment {
         if (!::EUR.in_campaign_map || ::EUR.icon_unit == null) { return }
         if (::ui.settlementScroll() == null) { return }
 
+        // Sits ON the game HUD, so it takes the game's factor rather than our layout's.
+        local bx = ::authored.hudX(this.layout.toggleButtonX)
+        local by = ::authored.hudY(this.layout.toggleButtonY)
+        local bw = ::authored.hudX(this.layout.toggleButtonW)
+        local bh = ::authored.hudY(this.layout.toggleButtonH)
+
         local icon = (::EUR.notif_count > 0 && ::EUR.icon_unit2 != null) ? ::EUR.icon_unit2 : ::EUR.icon_unit
-        local hit = ::UI.imageButton(icon.img, this.layout.toggleButtonW, this.layout.toggleButtonH,
-                                     this.layout.toggleButtonX, this.layout.toggleButtonY)
-        ::UI.tooltipAt(this.layout.toggleButtonX, this.layout.toggleButtonY,
-                       this.layout.toggleButtonW, this.layout.toggleButtonH)
+        local hit = ::UI.imageButton(icon.img, bw, bh, bx, by)
+        ::UI.tooltipAt(bx, by, bw, bh)
         ::UI.tooltip(0, (::EUR.notif_count > 0) ? "Show Global Recruitment - Units available"
                                                 : "Show Global Recruitment")
         if (this.layout.toggleButtonLift > 0) {
             ::UI.pushBlend(1)
-            ::UI.image(icon.img, this.layout.toggleButtonW, this.layout.toggleButtonH,
-                       this.layout.toggleButtonX, this.layout.toggleButtonY,
-                       255, 255, 255, this.layout.toggleButtonLift)
+            ::UI.image(icon.img, bw, bh, bx, by, 255, 255, 255, this.layout.toggleButtonLift)
             ::UI.popBlend()
         }
         if (!hit.clicked) { return }
@@ -805,6 +809,15 @@ class eurGlobalRecruitment {
     }
 
     function drawWindow() {
+        // GAME SPACE: this panel sits in the game's own scroll slot, so its content stretches on x
+        // exactly as the frame does. Composes with Cap.autoScaleDraw's uniform scale to give the
+        // engine's W/1920; 1.0 on 16:9, so nothing moves there. Scoped form - closes on every path.
+        return ::UI.pushTransform(0, 0, ::authored.hudStretch(), 0, 1.0, function() {
+            this.drawWindowBody()
+        }.bindenv(this))
+    }
+
+    function drawWindowBody() {
         if (!::EUR.window_states.show_globalrecruit_window || !::EUR.in_campaign_map || !::EUR.game_options.global_recruitment) {
             return
         }
@@ -814,21 +827,21 @@ class eurGlobalRecruitment {
         }
 
         ::EUR.scroll.drawSet("panel",
-                             (area.x + this.layout.bgInsetX + this.layout.bgOffsetX) / ::virtualScale.x,
-                             (area.y + this.layout.bgInsetY + this.layout.bgOffsetY) / ::virtualScale.y,
-                             (area.width - this.layout.bgInsetX * 2 + this.layout.bgWidthDelta) / ::virtualScale.x,
-                             (area.height - this.layout.bgInsetY * 2 + this.layout.bgHeightDelta) / ::virtualScale.y)
+                             (area.x + this.layout.bgInsetX + this.layout.bgOffsetX),
+                             (area.y + this.layout.bgInsetY + this.layout.bgOffsetY),
+                             (area.width - this.layout.bgInsetX * 2 + this.layout.bgWidthDelta),
+                             (area.height - this.layout.bgInsetY * 2 + this.layout.bgHeightDelta))
 
         ::UI.pushStyle({ [::UI.Colour.text] = [0, 0, 0, 255] })
 
         ::UI.layoutAt(area.x, area.y + this.layout.headingOffsetY)
-        ::UI.pushFont(::fonts.game.verdana, false, this.layout.headingFontSize)
+        ::UI.pushFont(::fonts.body, false, this.layout.headingFontSize)
         ::UI.pushStyle({ [::UI.Metric.alignX] = 1, [::UI.Metric.elideWidth] = area.width })
         ::UI.text("Global Recruitment")
         ::UI.popStyle()
         ::UI.popFont()
 
-        ::UI.pushFont(::fonts.game.verdanaSml, false, this.layout.bodyFontSize)
+        ::UI.pushFont(::fonts.body, false, this.layout.bodyFontSize)
         this.styleCheckFont()
 
         ::EUR.global_recruit_current = this.queueCount()

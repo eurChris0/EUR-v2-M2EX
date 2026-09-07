@@ -160,7 +160,7 @@ class eurDebugHud {
     function render() {
         this.ensure()
 
-        local screen = ::UI.screenSize()
+        local screen = ::authored.screen()
         if (screen[0] != this.placedW) {
             this.placedW = screen[0]
             ::UI.widgetRect(this.window, screen[0] - 470, 10, 460, 320)

@@ -164,6 +164,8 @@ class generalBGSwap {
 
         ::UI.setParent(0)
         this.cardCanvas = ::UI.canvas(this.layout.hudCardSize, this.layout.hudCardSize, this.layout.hudCardX, this.layout.hudCardY)
+        ::UI.setWidgetStyle(this.cardCanvas, ::UI.Cap.autoScaleDraw, 1)   // built outside the sheet push
+        ::UI.setWidgetStyle(this.cardCanvas, ::UI.Cap.autoScalePos, 1)
         ::UI.canvasDraw(this.cardCanvas, function() { self.checkcard() })
 
         ::UI.setParent(0)
@@ -178,7 +180,7 @@ class generalBGSwap {
     }
 
     function swapArea() {
-        local rect = ::UI.widgetRectGet(this.swapScroll.window)
+        local rect = ::authored.gameRect(::UI.widgetRectGet(this.swapScroll.window))
         if (rect == null) { return null }
         local margins = ::EUR.scroll.setMargins("scroll")
         if (margins == null) { return null }
@@ -187,7 +189,7 @@ class generalBGSwap {
     }
 
     function acceptArea() {
-        local rect = ::UI.widgetRectGet(this.acceptScroll.window)
+        local rect = ::authored.rect(::UI.widgetRectGet(this.acceptScroll.window))
         if (rect == null) { return null }
         local margins = ::EUR.scroll.setMargins("scroll")
         if (margins == null) { return null }
@@ -285,7 +287,10 @@ class generalBGSwap {
 
         local faction = ::EUR.eur_player_faction.name
         local inGarrison = army.inFort() || army.inSettlement()
-        local cardX = this.layout.hudCardX, cardY = this.layout.hudCardY, size = this.layout.hudCardSize
+        // Sits ON the game HUD, so it takes the game's factor rather than our layout's.
+        local cardX = ::authored.hudX(this.layout.hudCardX)
+        local cardY = ::authored.hudY(this.layout.hudCardY)
+        local size = ::authored.hudX(this.layout.hudCardSize)
 
         if (::EUR.can_bg_swap) {
             local rec = ::EUR.temp_fort_char.record
@@ -381,6 +386,15 @@ class generalBGSwap {
     }
 
     function swapBGWindow() {
+        // GAME SPACE: this panel sits in the game's own scroll slot, so its content stretches on x
+        // exactly as the frame does. Composes with Cap.autoScaleDraw's uniform scale to give the
+        // engine's W/1920; 1.0 on 16:9, so nothing moves there. Scoped form - closes on every path.
+        return ::UI.pushTransform(0, 0, ::authored.hudStretch(), 0, 1.0, function() {
+            this.swapBGWindowBody()
+        }.bindenv(this))
+    }
+
+    function swapBGWindowBody() {
         if (!::EUR.in_campaign_map) { return }
         if (!::EUR.options_gen_upgrades) { return }
         local cm = ::ui.cardManager()
@@ -410,20 +424,20 @@ class generalBGSwap {
         if (area == null) { return }
 
         ::EUR.scroll.drawSet("panel",
-                             (area.x + this.layout.panelInsetX + this.layout.panelOffsetX) / ::virtualScale.x,
-                             (area.y + this.layout.panelInsetY + this.layout.panelOffsetY) / ::virtualScale.y,
-                             (area.width - this.layout.panelInsetX * 2 + this.layout.panelWidthDelta) / ::virtualScale.x,
-                             (area.height - this.layout.panelInsetY * 2 + this.layout.panelHeightDelta) / ::virtualScale.y)
+                             (area.x + this.layout.panelInsetX + this.layout.panelOffsetX),
+                             (area.y + this.layout.panelInsetY + this.layout.panelOffsetY),
+                             (area.width - this.layout.panelInsetX * 2 + this.layout.panelWidthDelta),
+                             (area.height - this.layout.panelInsetY * 2 + this.layout.panelHeightDelta))
 
         ::UI.layoutAt(area.x, area.y + this.layout.headingY)
-        ::UI.pushFont(::fonts.game.verdana, false, this.layout.headingFontSize)
+        ::UI.pushFont(::fonts.body, false, this.layout.headingFontSize)
         ::UI.pushStyle({ [::UI.Metric.alignX] = 1,
                          [::UI.Metric.elideWidth] = area.width, [::UI.Colour.text] = this.layout.textColour })
         ::UI.text("General Upgrades")
         ::UI.popStyle()
         ::UI.popFont()
 
-        ::UI.pushFont(::fonts.game.verdanaSml, false, this.layout.bodyFontSize)
+        ::UI.pushFont(::fonts.body, false, this.layout.bodyFontSize)
         this.styleAliasFont()
         ::UI.pushStyle({ [::UI.Colour.text] = this.layout.textColour })
 
@@ -610,8 +624,8 @@ class generalBGSwap {
         local panelW = area.width - this.layout.acceptPanelInsetX * 2 + this.layout.acceptPanelWidthDelta
         local panelY = area.y + this.layout.acceptPanelInsetY + this.layout.acceptPanelOffsetY
         local panelH = area.height - this.layout.acceptPanelInsetY * 2 + this.layout.acceptPanelHeightDelta
-        ::EUR.scroll.drawSet("panel", panelX / ::virtualScale.x, panelY / ::virtualScale.y,
-                             panelW / ::virtualScale.x, panelH / ::virtualScale.y)
+        ::EUR.scroll.drawSet("panel", panelX, panelY,
+                             panelW, panelH)
 
         this.acceptText(panelX, panelY, panelW,
                         area.y + area.height - this.layout.acceptButtonBottomGap,
@@ -622,7 +636,7 @@ class generalBGSwap {
     // buttons instead of pinned near the top. textSize measures inside the pushed font scope, and
     // with a wrap width it answers the wrapped height, so a two-line message still centres.
     function acceptText(panelX, panelY, panelW, buttonY, message) {
-        ::UI.pushFont(::fonts.game.verdana, false, this.layout.headingFontSize)
+        ::UI.pushFont(::fonts.body, false, this.layout.headingFontSize)
         local wrapW = panelW - this.layout.acceptTextPadX * 2
         ::UI.pushStyle({ [::UI.Colour.text] = this.layout.textColour,
                          [::UI.Metric.alignX] = 1, [::UI.Metric.elideWidth] = wrapW })
@@ -645,8 +659,8 @@ class generalBGSwap {
         ::UI.widgetVisible(this.aliasInput, showSwap)
         ::UI.widgetVisible(this.updateButton, showSwap)
         if (showSwap) {
-            local screen = ::UI.screenSize()
-            ::UI.widgetRect(this.swapScroll.window, this.layout.windowX, this.layout.windowY, this.layout.windowW, this.layout.windowH)
+            local screen = ::authored.screen()
+            ::EUR.scroll.placeGame(this.swapScroll.window, this.layout.windowX, this.layout.windowY, this.layout.windowW, this.layout.windowH)
             if (!this.swapRaised) { ::UI.raise(this.swapScroll.window) }
         }
         this.swapRaised = showSwap
@@ -654,8 +668,8 @@ class generalBGSwap {
         local showAccept = ::EUR.show_bg_accept && ::EUR.in_campaign_map
         ::UI.widgetVisible(this.acceptScroll.window, showAccept)
         if (showAccept) {
-            local screen = ::UI.screenSize()
-            ::UI.widgetRect(this.acceptScroll.window, (screen[0] - this.layout.acceptW) / 2, (screen[1] - this.layout.acceptH) / 2, this.layout.acceptW, this.layout.acceptH)
+            local screen = ::authored.screen()
+            ::EUR.scroll.place(this.acceptScroll.window, (screen[0] - this.layout.acceptW) / 2, (screen[1] - this.layout.acceptH) / 2, this.layout.acceptW, this.layout.acceptH)
             if (!this.acceptRaised) { ::UI.raise(this.acceptScroll.window) }
         }
         this.acceptRaised = showAccept

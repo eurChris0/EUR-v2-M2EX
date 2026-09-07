@@ -217,6 +217,15 @@ class unitUpgrades {
     }
 
     function upgradeWindow() {
+        // GAME SPACE: this panel sits in the game's own scroll slot, so its content stretches on x
+        // exactly as the frame does. Composes with Cap.autoScaleDraw's uniform scale to give the
+        // engine's W/1920; 1.0 on 16:9, so nothing moves there. Scoped form - closes on every path.
+        return ::UI.pushTransform(0, 0, ::authored.hudStretch(), 0, 1.0, function() {
+            this.upgradeWindowBody()
+        }.bindenv(this))
+    }
+
+    function upgradeWindowBody() {
         if (!::EUR.in_campaign_map) { return }
         ::EUR.unit_cost = 0
         local faction_id = ::game.localFactionId()
@@ -241,7 +250,7 @@ class unitUpgrades {
         if (unit.type == null) { return }
         if (!(unit.type.name in ::EUR.UNIT_UPGRADES) || !::EUR.UNIT_UPGRADES[unit.type.name]) { return }
 
-        local rect = ::UI.widgetRectGet(this.upgradeScroll.window)
+        local rect = ::authored.gameRect(::UI.widgetRectGet(this.upgradeScroll.window))
         if (rect == null) { return }
         local margins = ::EUR.scroll.setMargins("scroll")
         if (margins == null) { return }
@@ -249,21 +258,21 @@ class unitUpgrades {
                        width = rect[2] - margins[0] - margins[2], height = rect[3] - margins[1] - margins[3] }
 
         ::EUR.scroll.drawSet("panel",
-                             (area.x + this.layout.bgInsetX + this.layout.bgOffsetX) / ::virtualScale.x,
-                             (area.y + this.layout.bgInsetY + this.layout.bgOffsetY) / ::virtualScale.y,
-                             (area.width - this.layout.bgInsetX * 2 + this.layout.bgWidthDelta) / ::virtualScale.x,
-                             (area.height - this.layout.bgInsetY * 2 + this.layout.bgHeightDelta) / ::virtualScale.y)
+                             (area.x + this.layout.bgInsetX + this.layout.bgOffsetX),
+                             (area.y + this.layout.bgInsetY + this.layout.bgOffsetY),
+                             (area.width - this.layout.bgInsetX * 2 + this.layout.bgWidthDelta),
+                             (area.height - this.layout.bgInsetY * 2 + this.layout.bgHeightDelta))
 
         ::UI.pushStyle({ [::UI.Colour.text] = this.layout.textColour })
 
         ::UI.layoutAt(area.x, area.y + this.layout.headingOffsetY)
-        ::UI.pushFont(::fonts.game.verdana, false, this.layout.headingFontSize)
+        ::UI.pushFont(::fonts.body, false, this.layout.headingFontSize)
         ::UI.pushStyle({ [::UI.Metric.alignX] = 1, [::UI.Metric.elideWidth] = area.width })
         ::UI.text("Unit Upgrades")
         ::UI.popStyle()
         ::UI.popFont()
 
-        ::UI.pushFont(::fonts.game.verdanaSml, false, this.layout.bodyFontSize)
+        ::UI.pushFont(::fonts.body, false, this.layout.bodyFontSize)
         this.styleAliasFont()
 
         local contentX = area.x + this.layout.contentInsetX
@@ -475,7 +484,7 @@ class unitUpgrades {
     }
 
     function acceptArea() {
-        local rect = ::UI.widgetRectGet(this.acceptScroll.window)
+        local rect = ::authored.rect(::UI.widgetRectGet(this.acceptScroll.window))
         if (rect == null) { return null }
         local margins = ::EUR.scroll.setMargins("scroll")
         if (margins == null) { return null }
@@ -497,8 +506,8 @@ class unitUpgrades {
         local panelW = area.width - this.layout.acceptBgInsetX * 2 + this.layout.acceptBgWidthDelta
         local panelY = area.y + this.layout.acceptBgInsetY + this.layout.acceptBgOffsetY
         local panelH = area.height - this.layout.acceptBgInsetY * 2 + this.layout.acceptBgHeightDelta
-        ::EUR.scroll.drawSet("panel", panelX / ::virtualScale.x, panelY / ::virtualScale.y,
-                             panelW / ::virtualScale.x, panelH / ::virtualScale.y)
+        ::EUR.scroll.drawSet("panel", panelX, panelY,
+                             panelW, panelH)
 
         this.acceptText(panelX, panelY, panelW,
                         area.y + area.height - this.layout.acceptButtonBottomInset,
@@ -509,7 +518,7 @@ class unitUpgrades {
     // buttons instead of pinned near the top. textSize measures inside the pushed font scope, and
     // with a wrap width it answers the wrapped height, so a two-line message still centres.
     function acceptText(panelX, panelY, panelW, buttonY, message) {
-        ::UI.pushFont(::fonts.game.verdana, false, this.layout.headingFontSize)
+        ::UI.pushFont(::fonts.body, false, this.layout.headingFontSize)
         local wrapW = panelW - this.layout.acceptTextPadX * 2
         ::UI.pushStyle({ [::UI.Colour.text] = this.layout.textColour,
                          [::UI.Metric.alignX] = 1, [::UI.Metric.elideWidth] = wrapW })
@@ -639,7 +648,7 @@ class unitUpgrades {
         ::UI.widgetVisible(this.aliasInput, showUpgrade)
         ::UI.widgetVisible(this.updateButton, showUpgrade)
         if (showUpgrade) {
-            ::UI.widgetRect(this.upgradeScroll.window, this.layout.windowX, this.layout.windowY, this.layout.windowW, this.layout.windowH)
+            ::EUR.scroll.placeGame(this.upgradeScroll.window, this.layout.windowX, this.layout.windowY, this.layout.windowW, this.layout.windowH)
             if (!this.upgradeRaised) { ::UI.raise(this.upgradeScroll.window) }
         }
         this.upgradeRaised = showUpgrade
@@ -647,8 +656,8 @@ class unitUpgrades {
         local showAccept = ::EUR.show_ug_accept && ::EUR.in_campaign_map && !::EUR.diplo_open
         ::UI.widgetVisible(this.acceptScroll.window, showAccept)
         if (showAccept) {
-            local screen = ::UI.screenSize()
-            ::UI.widgetRect(this.acceptScroll.window, (screen[0] - this.layout.acceptW) / 2, (screen[1] - this.layout.acceptH) / 2, this.layout.acceptW, this.layout.acceptH)
+            local screen = ::authored.screen()
+            ::EUR.scroll.place(this.acceptScroll.window, (screen[0] - this.layout.acceptW) / 2, (screen[1] - this.layout.acceptH) / 2, this.layout.acceptW, this.layout.acceptH)
             if (!this.acceptRaised) { ::UI.raise(this.acceptScroll.window) }
         }
         this.acceptRaised = showAccept

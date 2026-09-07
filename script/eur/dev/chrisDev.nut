@@ -448,7 +448,7 @@ class chrisDev {
 
     // the panel body: tile readout and the settlement-spawn controls
     function devWindow() {
-        local rect = ::UI.widgetRectGet(this.windowScroll.window)
+        local rect = ::authored.rect(::UI.widgetRectGet(this.windowScroll.window))
         if (rect == null) { return }
         local margins = ::EUR.scroll.setMargins("scroll")
         if (margins == null) { return }
@@ -499,7 +499,7 @@ class chrisDev {
         local player = thisBattle.playerArmy(0)
         if (player == null) { return }
 
-        local screen = ::UI.screenSize()
+        local screen = ::authored.screen()
         local targetW = screen[0] - 400
         local targetH = screen[1] - 100
         local scale = ::EUR.math.min(targetW.tofloat() / thisBattle.mapWidth, targetH.tofloat() / thisBattle.mapHeight)
@@ -525,7 +525,7 @@ class chrisDev {
         if (!::EUR.chris_stuff) { return }
         this.ensure()
 
-        local screen = ::UI.screenSize()
+        local screen = ::authored.screen()
         local bx = 10
         local by = screen[1] - 190
         ::UI.widgetRect(this.buttons.console, bx, by, 80, 80)
@@ -542,7 +542,7 @@ class chrisDev {
             this.shown = ::EUR.extra_window
         }
         if (::EUR.extra_window) {
-            ::UI.widgetRect(this.windowScroll.window, (screen[0] - 700) / 2, (screen[1] - 500) / 2, 700, 500)
+            ::EUR.scroll.place(this.windowScroll.window, (screen[0] - 700) / 2, (screen[1] - 500) / 2, 700, 500)
             ::UI.raise(this.windowScroll.window)
         }
     }
