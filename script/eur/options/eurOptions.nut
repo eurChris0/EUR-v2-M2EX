@@ -55,7 +55,7 @@ class eurOptions {
         this.controls = ::EUR.eurStyles[this.controlStyles]
     }
 
-    function ensure() {
+    function buildOnce() {
         if (this.scroll != null) return
         local self = this
         this.pages = []
@@ -426,7 +426,7 @@ class eurOptions {
     }
 
     function render() {
-        this.ensure()
+        this.buildOnce()
 
         local showAccept = ::EUR.show_options_accept && ::EUR.in_campaign_map
         ::UI.widgetVisible(this.acceptScroll.window, showAccept)
