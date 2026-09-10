@@ -43,7 +43,7 @@ class eurLayoutEditor {
     layoutAt    = -1
     styleAt     = -1
 
-    function ensure() {
+    function buildOnce() {
         if (this.built) return
         this.layoutRows = []
         this.styleRows = []
@@ -329,7 +329,7 @@ class eurLayoutEditor {
     }
 
     function toggle() {
-        this.ensure()
+        this.buildOnce()
         this.shown = !this.shown
         ::UI.widgetVisible(this.window, this.shown)
         if (!this.shown) { this.raised = false; return }
