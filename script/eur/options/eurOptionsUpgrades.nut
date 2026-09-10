@@ -64,8 +64,6 @@
                   onClick = function() { ::EUR.eurOptionsUnitADV.startOrAddUnit() } },
                 { group = [ ::EUR.unit_adv_section ] },
 
-                // The two right panes are mutually exclusive - Add unit raises the first, a card on
-                // the left raises the second, and until one of those happens the column is empty.
                 { sameLine = true, w = 240, showFn = function() { return ::EUR.unit_adv_mode == "new" }, group = [
                     ::EUR.unit_new_heading,
                     ::EUR.unit_new_base_picker,

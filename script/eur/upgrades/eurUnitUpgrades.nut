@@ -61,7 +61,7 @@ class unitUpgrades {
     shownLast     = false
     acceptRaised  = false
 
-    function ensure() {
+    function buildOnce() {
         if (this.upgradeScroll != null) return
         local self = this
         this.cardCache = {}
@@ -214,12 +214,12 @@ class unitUpgrades {
         }
         if (id != 0) { ::UI.setWidgetStyle(this.aliasInput, ::UI.Font.body, id) }
         ::UI.setWidgetStyle(this.aliasInput, ::UI.Metric.fontSize, this.layout.bodyFontSize)
+
+        if (id != 0) { ::UI.setWidgetStyle(this.updateButton, ::UI.Font.body, id) }
+        ::UI.setWidgetStyle(this.updateButton, ::UI.Metric.fontSize, this.layout.bodyFontSize)
     }
 
     function upgradeWindow() {
-        // GAME SPACE: this panel sits in the game's own scroll slot, so its content stretches on x
-        // exactly as the frame does. Composes with Cap.autoScaleDraw's uniform scale to give the
-        // engine's W/1920; 1.0 on 16:9, so nothing moves there. Scoped form - closes on every path.
         return ::UI.pushTransform(0, 0, ::authored.hudStretch(), 0, 1.0, function() {
             this.upgradeWindowBody()
         }.bindenv(this))
@@ -391,10 +391,6 @@ class unitUpgrades {
             }
         }
         ::EUR.temp_upgrade_unit = unit
-
-        // Locked to the left column rather than carrying its own absolute y: the heading sits on the
-        // "Experience:" row and its cards on the unit card below it, so the two columns stay level if
-        // either row height changes. The two offsets are nudges on top of that, not the base.
         local previewX = area.x + this.layout.previewOffsetX
         local previewY = area.y + this.layout.contentTopY + this.layout.aliasRowH + this.layout.previewOffsetY
 
@@ -405,8 +401,6 @@ class unitUpgrades {
                         if (unit.army != null) {
                             if (unit.army.faction.money >= ::EUR.unit_cost) {
                                 if (!(unit.army.inSettlement() || unit.army.inFort())) {
-                                    // Bottom of the window, same slot as the general-upgrades messages -
-                                    // previewY put it over the current unit card near the top.
                                     this.statusMessage(area, area.y + this.layout.messageOffsetY,
                                                        "Cannot change as not garrisoned in a fort or settlement.")
                                 } else {
@@ -446,8 +440,6 @@ class unitUpgrades {
                                                     }
                                                 }
 
-                                                // Centred on the content area, coin at the card's left edge - the same
-                                                // three lines eurGeneralBGSwap places its confirm card with.
                                                 local costY = area.y + this.layout.costOffsetY
                                                 local targetX = area.x + (area.width - this.layout.cardW) / 2
                                                 if (::EUR.coins != null && ::EUR.coins.img != 0) { ::UI.image(::EUR.coins.img, this.layout.coinIconW, this.layout.coinIconH, targetX, costY) }
@@ -499,9 +491,6 @@ class unitUpgrades {
         if (::EUR.temp_upgrade_unit.type == null) { return }
         if (!(::EUR.temp_upgrade_unit.type.name in ::EUR.UNIT_UPGRADES)) { return }
 
-        // Both insets are measured from the content AREA (the window minus the scroll set's
-        // 9-slice margins), so an equal value on each axis puts the panel edge the same
-        // distance inside on both. Negative grows it back out over the frame.
         local panelX = area.x + this.layout.acceptBgInsetX + this.layout.acceptBgOffsetX
         local panelW = area.width - this.layout.acceptBgInsetX * 2 + this.layout.acceptBgWidthDelta
         local panelY = area.y + this.layout.acceptBgInsetY + this.layout.acceptBgOffsetY
@@ -514,9 +503,6 @@ class unitUpgrades {
                         "Upgrade to " + ::EUR.UNIT_UPGRADES[::EUR.temp_upgrade_unit.type.name].unit[::EUR.temp_unit_choice])
     }
 
-    // Heading face, WRAPPED rather than elided, sat at the midpoint between the panel top and the
-    // buttons instead of pinned near the top. textSize measures inside the pushed font scope, and
-    // with a wrap width it answers the wrapped height, so a two-line message still centres.
     function acceptText(panelX, panelY, panelW, buttonY, message) {
         ::UI.pushFont(::fonts.body, false, this.layout.headingFontSize)
         local wrapW = panelW - this.layout.acceptTextPadX * 2
@@ -637,7 +623,7 @@ class unitUpgrades {
     }
 
     function render() {
-        this.ensure()
+        this.buildOnce()
         ::EUR.syncLeftWindows()
 
         local showUpgrade = ::EUR.window_states.show_upgrade_window && ::EUR.in_campaign_map

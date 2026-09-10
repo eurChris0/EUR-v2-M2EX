@@ -268,7 +268,7 @@ class eurEregion {
         }
     }
 
-    function ensure() {
+    function buildOnce() {
         if (this.built) return
         local self = this
         ::UI.pushStyle(::EUR.eurStyles.basic_4)
@@ -286,7 +286,7 @@ class eurEregion {
     }
 
     function render() {
-        this.ensure()
+        this.buildOnce()
         local onMap = ::EUR.in_campaign_map
         ::UI.widgetVisible(this.koeScroll.window, ::EUR.show_eregion_choice && onMap)
         ::UI.widgetVisible(this.konScroll.window, ::EUR.show_kon_choice && onMap)

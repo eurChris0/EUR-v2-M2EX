@@ -34,11 +34,6 @@ class eurReplenishment {
         }
     }
 
-    // Everything about one army's replenishment that does not depend on the unit: the divisors
-    // replenUnit folds in, and the same numbers as percentages for the UI. Null when the army does
-    // not replenish at all - besieged, or in the field with replen_always off. ONE computation for
-    // both callers; the Lua's UI copy disagreed with the real one and counted the global bonus
-    // twice, as points and again as a multiplier.
     function armyPlan(army, faction) {
         if (army == null || faction == null) return null
 

@@ -99,7 +99,7 @@ class generalBGSwap {
     shownLast     = false
     acceptRaised  = false
 
-    function ensure() {
+    function buildOnce() {
         if (this.swapScroll != null) return
         local self = this
         this.cardCache = {}
@@ -216,9 +216,6 @@ class generalBGSwap {
         return hit.clicked
     }
 
-    // The price tag IS the button: coins + the cost inside a drawn box, with the word after it. A
-    // drawn control rather than a ::UI.button because this row is laid out inside the canvas pass,
-    // and a retained widget here would need its own rect + visibility bookkeeping every frame.
     function guardAddButton(x, y, rec) {
         local w = this.layout.guardBoxW
         local h = this.layout.guardBoxH
@@ -226,8 +223,6 @@ class generalBGSwap {
         local fill = hit.held ? this.layout.guardFillHeld : (hit.hovered ? this.layout.guardFillHover : this.layout.guardFill)
         ::UI.drawRect(x, y, w, h, fill[0], fill[1], fill[2], fill[3])
 
-        // Four edges, not a bigger rect behind: a translucent fill over a solid backing rect takes
-        // the backing colour across the whole interior instead of leaving a border.
         local edge = this.layout.guardBorder
         ::UI.drawRect(x, y, w, 1, edge[0], edge[1], edge[2], edge[3])
         ::UI.drawRect(x, y + h - 1, w, 1, edge[0], edge[1], edge[2], edge[3])
@@ -253,8 +248,6 @@ class generalBGSwap {
         }
     }
 
-    // The red status line. Centred on the window and WRAPPED: it used to be drawn at a fixed x with
-    // no wrap, so the longest reason ("...not garrisoned in a fort or settlement.") ran off the panel.
     function statusMessage(area, y, message) {
         local wrapW = area.width - this.layout.messagePadX * 2
         ::UI.pushStyle({ [::UI.Colour.text] = this.layout.messageColour,
@@ -386,9 +379,6 @@ class generalBGSwap {
     }
 
     function swapBGWindow() {
-        // GAME SPACE: this panel sits in the game's own scroll slot, so its content stretches on x
-        // exactly as the frame does. Composes with Cap.autoScaleDraw's uniform scale to give the
-        // engine's W/1920; 1.0 on 16:9, so nothing moves there. Scoped form - closes on every path.
         return ::UI.pushTransform(0, 0, ::authored.hudStretch(), 0, 1.0, function() {
             this.swapBGWindowBody()
         }.bindenv(this))
@@ -617,9 +607,6 @@ class generalBGSwap {
         local area = this.acceptArea()
         if (area == null) { return }
 
-        // Both insets are measured from the content AREA (the window minus the scroll set's
-        // 9-slice margins), so an equal value on each axis puts the panel edge the same
-        // distance inside on both. Negative grows it back out over the frame.
         local panelX = area.x + this.layout.acceptPanelInsetX + this.layout.acceptPanelOffsetX
         local panelW = area.width - this.layout.acceptPanelInsetX * 2 + this.layout.acceptPanelWidthDelta
         local panelY = area.y + this.layout.acceptPanelInsetY + this.layout.acceptPanelOffsetY
@@ -632,9 +619,6 @@ class generalBGSwap {
                         "Swap bodyguard to " + ::EUR.bg_target_edu + "?")
     }
 
-    // Heading face, WRAPPED rather than elided, sat at the midpoint between the panel top and the
-    // buttons instead of pinned near the top. textSize measures inside the pushed font scope, and
-    // with a wrap width it answers the wrapped height, so a two-line message still centres.
     function acceptText(panelX, panelY, panelW, buttonY, message) {
         ::UI.pushFont(::fonts.body, false, this.layout.headingFontSize)
         local wrapW = panelW - this.layout.acceptTextPadX * 2
@@ -648,7 +632,7 @@ class generalBGSwap {
     }
 
     function render() {
-        this.ensure()
+        this.buildOnce()
         ::EUR.syncLeftWindows()
 
         local showSwap = ::EUR.window_states.swap_bg_window && ::EUR.in_campaign_map

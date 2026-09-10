@@ -9,23 +9,13 @@ class eurStatusIcons {
     tipRows = null
     built   = false
 
-    function ensure() {
+    function buildOnce() {
         if (this.built) return
         local self = this
 
-        // Built ONCE and re-aimed every frame: a tooltip body is a widget subtree, and handles are
-        // never recycled, so building it in the draw would leak one per row per frame. The rows are
-        // a fixed pool - hidden ones fall out of the layout, so the line count varies and the
-        // handle count does not.
-        // A label draws in Font.body; the plain-string tooltip draws in Font.small. Match it, or the
-        // coloured tooltips come out in a different face and size from every other EUR tooltip. The
-        // box itself is drawn by the tooltip pass, so the body carries no chrome and no row gap.
         this.tipRows = []
         this.tipBody = ::UI.beginTooltip(0)
         ::UI.setWidgetStyle(this.tipBody, ::UI.Metric.gap, 0)
-        // A font TOKEN reads 0 when the theme leaves it unset, and the plain tooltip's face comes
-        // from a C++ fallback no token exposes - so pushing Font.small's value pushes 0, which means
-        // "unset". The id has to come from UI.fonts() by name, the way eurOptions does it.
         local smallId = 0
         local faces = ::UI.fonts()
         if (faces != null) {
@@ -34,8 +24,6 @@ class eurStatusIcons {
         for (local i = 0; i < this.layout.tipRows; i += 1) {
             local row = ::UI.labelColoured("", 255, 255, 255, 255)
             if (smallId != 0) { ::UI.setWidgetStyle(row, ::UI.Font.body, smallId) }
-            // A label's own padding is added to its natural height, so the default 4 puts 8px
-            // between lines on top of the flow gap - the plain tooltip steps by the line height flat.
             ::UI.setWidgetStyle(row, ::UI.Metric.padX, 0)
             ::UI.setWidgetStyle(row, ::UI.Metric.padY, 0)
             this.tipRows.append(row)
@@ -53,7 +41,7 @@ class eurStatusIcons {
     }
 
     function render() {
-        this.ensure()
+        this.buildOnce()
     }
 
     function drawIcons() {

@@ -1,6 +1,4 @@
-// Ar-Adunaim alternate start. Ported from eurHistoricEventText.lua (the AA half, lines 1140-1421);
-// the historic-event text half of that file is a separate port.
-// Choice is 0-based here: 0 = Umbar, the descr_strat start, which repositions nothing.
+
 
 ::EUR.alt_startAA <- [
     {

@@ -386,7 +386,7 @@ class chrisDev {
     buttons = null
     shown = false
 
-    function ensure() {
+    function buildOnce() {
         if (this.windowScroll != null) return
         local self = this
 
@@ -523,7 +523,7 @@ class chrisDev {
 
     function render() {
         if (!::EUR.chris_stuff) { return }
-        this.ensure()
+        this.buildOnce()
 
         local screen = ::authored.screen()
         local bx = 10

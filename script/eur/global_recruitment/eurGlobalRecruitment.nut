@@ -618,7 +618,7 @@ class eurGlobalRecruitment {
         return stats
     }
 
-    function ensure() {
+    function buildOnce() {
         if (this.scroll != null) {
             return
         }
@@ -783,7 +783,7 @@ class eurGlobalRecruitment {
     }
 
     function render() {
-        this.ensure()
+        this.buildOnce()
         local show = ::EUR.window_states.show_globalrecruit_window && ::EUR.in_campaign_map && ::EUR.game_options.global_recruitment
         show = ::EUR.panelFollow(this.scroll.window, ::EUR.window_states, "show_globalrecruit_window",
                                  show, this.shownLast)

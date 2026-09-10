@@ -1,9 +1,5 @@
-// Adds watchtowers around a faction's road-connected settlements (ported from chrisAddSetts).
-// One tower per cardinal offset, skipping tiles already covered by a nearby tower.
 ::EUR.towers_already <- {}
 
-// Places a watchtower at (tx, ty) unless the tile is occupied or already within
-// range of an existing tower in the region.
 ::EUR.tryAddTower <- function(faction, settlement, tx, ty) {
     if (!::EUR.checkTileEmpty(tx, ty)) { return }
 

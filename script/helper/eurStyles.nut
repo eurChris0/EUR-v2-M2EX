@@ -1,12 +1,4 @@
-// ---------------------------------------------------------------------------------------------
-// The widget palette. With no player faction - the main menu, or a faction missing from
-// fact_inner_colour (united / slave / scripts are) - these are the literal greys the mod shipped
-// with. With one, every role is a shade of that faction's inner colour, so the whole widget set
-// reads as the player's livery. ::UI.shade is native: it clamps and rounds, so a lighten can never
-// clip past 255 nor a darken below 0.
-//
-// fact_inner_colour stores FLOATS 0..1; widget colours are ints 0..255. Round, don't truncate -
-// 0.82 * 255 is 209.1, and passing the bare float through would paint the widget black.
+
 local function facCol(name) {
     if (name == null || !(name in ::EUR.fact_inner_colour)) { return null }
     local f = ::EUR.fact_inner_colour[name]
@@ -14,8 +6,6 @@ local function facCol(name) {
             (f.b * 255.0 + 0.5).tointeger(), 255]
 }
 
-// The marks go DARKER than a luma match would suggest: the tinted fills sit well below the old
-// white-over-parchment wash, so a mid-grey tick on them would fall to about 2.5:1.
 local function palette(facName) {
     local b = facCol(facName)
     if (b == null) {
@@ -32,9 +22,6 @@ local function palette(facName) {
              sep = dark(b, 0.75, 160), accent = [b[0], b[1], b[2], 0] }
 }
 
-// Every palette-driven token in the two LIVE sheets, by role. Same shape as TOOLTIP_TOKENS below.
-// checkboxBox stays in the FILL family on purpose: it is the box background, shared with
-// progressTrack / sunken / scrollbar, and darkening it alone would bury the tick drawn on it.
 local PALETTE_TOKENS = [
     [::UI.Surface, "frameBg",          "fill"],
     [::UI.Surface, "checkboxBox",      "fill"],
@@ -381,10 +368,6 @@ foreach (row in TOOLTIP_TOKENS) {
 
 ::EUR.applyTooltipTheme()
 
-// Rebuilt once per campaign, from campaignBoot, as soon as the player faction is known - and once
-// with null at load so the shipped literals and the builder can never disagree. No window may be
-// built before this runs: pushStyle is snapshotted into each widget at creation, so a widget made
-// under the grey palette keeps it.
 ::EUR.buildStyles <- function(facName) {
     local p = palette(facName)
     foreach (sheetName in LIVE_SHEETS) {
@@ -398,21 +381,18 @@ foreach (row in TOOLTIP_TOKENS) {
 
 ::EUR.buildStyles(null)
 
-// Token ids resolved once. Same rows as PALETTE_TOKENS, minus any this build does not carry.
+
 local PALETTE_IDS = []
 foreach (row in PALETTE_TOKENS) {
     if (row[1] in row[0]) { PALETTE_IDS.append(row[0][row[1]]) }
 }
 
-// Roots whose subtrees carry the palette, registered by each window as it builds. A repaint walks
-// THESE rather than the whole forest, because the dev windows and the SqUI console have their own
-// themes and must not be tinted.
 ::EUR.styledRoots <- []
 
 ::EUR.registerStyled <- function(root, sheetName, after = null) {
     if (root == null || root == 0) { return }
     foreach (entry in ::EUR.styledRoots) {
-        if (entry.root == root) {          // re-registering claims a different sheet, e.g. options_1
+        if (entry.root == root) {
             entry.sheet = sheetName
             entry.after = after
             return
@@ -421,10 +401,6 @@ foreach (row in PALETTE_TOKENS) {
     ::EUR.styledRoots.append({ root = root, sheet = sheetName, after = after })
 }
 
-// Re-applies the palette to widgets that ALREADY EXIST. pushStyle is snapshotted into a widget at
-// creation, so every window built before the faction was known keeps the grey palette; setWidgetStyle
-// is the only way back in. Palette tokens only - applying a whole sheet would also stamp over the
-// per-widget overrides a window sets deliberately, which is what `after` exists to re-assert.
 ::EUR.repaintStyles <- function() {
     foreach (entry in ::EUR.styledRoots) {
         if (!(entry.sheet in ::EUR.eurStyles)) { continue }

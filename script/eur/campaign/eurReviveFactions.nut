@@ -451,7 +451,7 @@ class eurReviveUI {
     noButton = 0
     built = false
 
-    function ensure() {
+    function buildOnce() {
         if (this.built) return
         local self = this
         ::UI.pushStyle(::EUR.eurStyles.basic_4)
@@ -490,7 +490,7 @@ class eurReviveUI {
     }
 
     function render() {
-        this.ensure()
+        this.buildOnce()
         ::UI.widgetVisible(this.choiceScroll.window, ::EUR.show_revive_choice && ::EUR.in_campaign_map)
         this.positionButtons()
     }

@@ -1,6 +1,4 @@
-// eurEventsVars - event data (from eurEventsVars.lua): active_event_factions and EUR_EVENTS
-// (per-faction event definitions). Referenced by eurGlobalVars, eurImgLoad and eurEventsFunc.
-// The event UI itself (eurEvents / eurEventImGiuWindows) stays as .lua reference - unfinished.
+
 
 local eldar_desc = @"Placeholder
 Desc"
