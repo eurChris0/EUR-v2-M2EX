@@ -1,10 +1,5 @@
-// Faction display names that evolve with empire size. Each faction's `names`
-// list is [tier1, tier2, tier3, tier4, tier5]; tiers are chosen by settlement
-// count in checkEvolvingFaction. checkEvoCounters swaps whole name lists when a
-// story event counter fires.
-
 ::EUR.FACTION_EVO <- {
-    milan          = { capital = "Edoras",           names = ["Rohirrim", "Riders of the Mark", "The Riddermark", "Kingdom of Rohan", "Realm of the Eorlingas"] },                                  // Rohan
+    milan          = { capital = "Edoras",           names = ["Rohirrim", "Broken Horse-lords", "The Riddermark", "Kingdom of Rohan", "Realm of the Eorlingas"] },                                  // Rohan
     sicily         = { capital = "Minas Tirith",      names = ["Broken Remnants of Gondor", "Remnants of Gondor", "Fiefdoms of Gondor", "Great Fiefdoms of Gondor", "Kingdom of Gondor"] },          // Gondor
     turks          = { capital = "Fornost",           names = ["Rangers of the North", "Wandering Dúnedain", "Wardens of Eriador", "Dúnedain of the North Kingdom", "Reunited Arnorian Realms"] },   // Dunedain
     russia         = { capital = "Armenelos",         names = ["King's Men Remnants", "Ar-Adûnâim", "Dominion of the King’s Men", "True Sons of Númenor", "Númenor Reborn"] },                       // Ar-adunaim
@@ -30,6 +25,7 @@
     france         = { capital = "Isengard",          names = ["Tower of Orthanc", "Sharkey's Band", "Host of Isengard", "Dominion of the White Hand", "Dominion of Saruman the Wise"] },            // Isengard
     saxons         = { capital = "Imladris",          names = ["Last Homely House", "Hidden Valley of Imladris", "Household of Elrond", "Lordship of Imladris", "Realm of Imladris"] },               // Imladris
     egypt          = { capital = "Ost-in-Edhil",      names = ["Oathsworn of Maernil", "Remnants of Eregion", "Principality of Eregion", "Kingdom of Eregion", "High Kingdom of the Fëanorians"] },   // Eregion
+    normans        = { capital = "Rath Teraig",       names = ["Blue Crags Tribe", "The Shattered Crag", "Blue Crag Orcs", "Shadow of the Gray Havens", "Despoilers of Numeriador"] },   // Blue Crag
 }
 
 ::EUR.checkEvolvingFaction <- function(faction) {
@@ -96,5 +92,13 @@
 
     if (::EUR.checkCounter("keep_ring_rhukar")) {
         ::EUR.FACTION_EVO.venice.names = ["Dragon Empire of Rhûn", "Exiled Easterlings", "Dragon Empire of Rhûn", "Dragon Empire of Rhûn", "Dragon Empire of Rhûn"]
+    }
+
+    if (::EUR.checkCounter("bc_choose_dh")) {
+        ::EUR.FACTION_EVO.normans.names = ["Forgeholds of the Dourhands", "Foul Petty Dwarves", "Forgeholds of the Dourhands", "Forgeholds of the Dourhands", "Forgeholds of the Dourhands"]
+    }
+
+    if (::EUR.checkCounter("bc_choose_orc")) {
+        ::EUR.FACTION_EVO.normans.names = ["Eriadors Shadow", "Scattered Vermin", "Eriadors Shadow", "Eriadors Shadow", "Eriadors Shadow",]
     }
 }

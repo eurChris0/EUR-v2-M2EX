@@ -1,5 +1,5 @@
 class eurBuildFort {
-    layout = {
+   /* layout = {
         boxX = 595, boxY = 400, boxW = 130, boxH = 86,
         boxPad = 6, boxBorder = 2, textGap = 20,
         headingSize = 20, bodySize = 14,
@@ -29,7 +29,7 @@ class eurBuildFort {
     show_fortaccept = false
     fortcost        = 7500
 
-    function ensure() {
+    function buildOnce() {
         if (this.built) return
         local self = this
         ::UI.pushFont(::fonts.body, false, 12)
@@ -69,7 +69,7 @@ class eurBuildFort {
     }
 
     function render() {
-        this.ensure()
+        this.buildOnce()
         if (!this.built) return
 
         local open = this.show_fortaccept && ::EUR.build_forts && ::EUR.in_campaign_map
@@ -237,7 +237,13 @@ class eurBuildFort {
         // price on screen - so the script only takes the rest.
         ::game.runConsoleCommand("add_money", "-" + (this.fortcost - this.extraCost))
     }
+*/
+
+    function sync() {
+
+    }
+
 }
 
 ::EUR.eurBuildFort <- eurBuildFort()
-::UI.onFrame(function() { ::EUR.eurBuildFort.render() })
+//::UI.onFrame(function() { ::EUR.eurBuildFort.render() })
