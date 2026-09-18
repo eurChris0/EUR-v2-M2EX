@@ -24,7 +24,7 @@ class unitUpgrades {
         bgInsetX = -55, bgInsetY = 25,
         bgOffsetX = 0, bgOffsetY = -10,
         bgWidthDelta = 0, bgHeightDelta = 64,
-        headingOffsetY = -40, headingFontSize = 0, bodyFontSize = 12,
+        headingOffsetY = -40, headingFontSize = 18, bodyFontSize = 12,
         nameY = 0, nameFontSize = 16,
         contentInsetX = -25, contentTopY = 40,
         aliasInputW = 200, aliasInputH = 20,
@@ -54,6 +54,7 @@ class unitUpgrades {
     aliasInput    = 0
     updateButton  = 0
     headingLabel  = 0
+    nameLabel     = 0
     ugYesBtn      = 0
     ugNoBtn       = 0
     cardCache     = null
@@ -80,12 +81,21 @@ class unitUpgrades {
 
         this.headingLabel = ::UI.label("Unit Upgrades")
         ::UI.placeAbsolute(this.headingLabel)
-        ::UI.setWidgetStyle(this.headingLabel, { [::UI.Font.body] = ::fonts.body,
+        ::UI.setWidgetStyle(this.headingLabel, { [::UI.Font.body] = ::fonts.game.verdana,
                                                  [::UI.Metric.fontSize] = this.layout.headingFontSize,
                                                  [::UI.Metric.alignX] = 1,
                                                  [::UI.Metric.padY] = 0,
                                                  [::UI.Colour.text] = this.layout.textColour })
         ::UI.addChild(this.upgradeScroll.window, this.headingLabel)
+
+        this.nameLabel = ::UI.label("###unitUpgradeName")
+        ::UI.placeAbsolute(this.nameLabel)
+        ::UI.setWidgetStyle(this.nameLabel, { [::UI.Font.body] = ::fonts.body,
+                                              [::UI.Metric.fontSize] = this.layout.nameFontSize,
+                                              [::UI.Metric.alignX] = 1,
+                                              [::UI.Metric.padY] = 0,
+                                              [::UI.Colour.text] = this.layout.textColour })
+        ::UI.addChild(this.upgradeScroll.window, this.nameLabel)
 
         this.aliasInput = ::UI.input("###unitUpgradeAlias")
         ::UI.setWidgetStyle(this.aliasInput, ::EUR.eurStyles.basic_types.input)
@@ -189,8 +199,6 @@ class unitUpgrades {
         ::EUR.registerLeftWindow("show_upgrade_window", this.upgradeScroll.window)
     }
 
-    // The frame is placed with the game HUD stretch (placeGame), so everything inside it - both
-    // axes, so pictures keep their shape - carries the same one.
     function scaled(v) {
         local k = ::authored.hudStretch()
         return (v * k + (v < 0 ? -0.5 : 0.5)).tointeger()
@@ -271,11 +279,7 @@ class unitUpgrades {
         local contentX = area.x + this.scaled(this.layout.contentInsetX)
         local y = area.y + this.layout.contentTopY
 
-        ::UI.layoutAt(area.x, area.y + this.layout.nameY)
-        ::UI.pushStyle({ [::UI.Metric.fontSize] = this.layout.nameFontSize, [::UI.Metric.alignX] = 1,
-                         [::UI.Metric.elideWidth] = area.width })
-        ::UI.text(unit.type.displayName)
-        ::UI.popStyle()
+        ::UI.textSet(this.nameLabel, unit.type.displayName)
 
         if (!::EUR.alias_text_set) {
             ::EUR.alias_text = unit.name
@@ -633,6 +637,7 @@ class unitUpgrades {
         ::UI.widgetVisible(this.aliasInput, showUpgrade)
         ::UI.widgetVisible(this.updateButton, showUpgrade)
         ::UI.widgetVisible(this.headingLabel, showUpgrade)
+        ::UI.widgetVisible(this.nameLabel, showUpgrade)
         if (showUpgrade) {
             ::EUR.scroll.placeGame(this.upgradeScroll, this.layout.windowX, this.layout.windowY, this.layout.windowW, this.layout.windowH)
             local bgBody = ::UI.contentRect(this.upgradeScroll.window, true, true)
@@ -644,6 +649,8 @@ class unitUpgrades {
                                 bgBody[3] - this.layout.bgInsetY * 2 + this.layout.bgHeightDelta)
                 ::UI.widgetRect(this.headingLabel, bgBody[0],
                                 bgBody[1] + this.layout.headingOffsetY, bgBody[2], 0)
+                ::UI.widgetRect(this.nameLabel, bgBody[0],
+                                bgBody[1] + this.layout.nameY, bgBody[2], 0)
             }
             local closeAt = ::UI.widgetRectGet(this.upgradeScroll.window, true)
             if (closeAt != null) {

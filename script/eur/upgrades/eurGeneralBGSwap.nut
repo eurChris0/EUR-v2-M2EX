@@ -34,7 +34,7 @@ class generalBGSwap {
         acceptPanelOffsetX = 0, acceptPanelOffsetY = 0,
         acceptPanelWidthDelta = 0, acceptPanelHeightDelta = 0,
 
-        headingFontSize = 0, bodyFontSize = 12,
+        headingFontSize = 18, bodyFontSize = 12,
         headingY = -40,
         textColour = [0, 0, 0, 255],
         messageColour = [255, 0, 0, 255],
@@ -93,6 +93,7 @@ class generalBGSwap {
     updateButton  = 0
     rankBar       = 0
     headingLabel  = 0
+    nameLabel     = 0
     yesButton     = 0
     noButton      = 0
     cardCache     = null
@@ -121,12 +122,21 @@ class generalBGSwap {
 
         this.headingLabel = ::UI.label("General Upgrades")
         ::UI.placeAbsolute(this.headingLabel)
-        ::UI.setWidgetStyle(this.headingLabel, { [::UI.Font.body] = ::fonts.body,
+        ::UI.setWidgetStyle(this.headingLabel, { [::UI.Font.body] = ::fonts.game.verdana,
                                                  [::UI.Metric.fontSize] = this.layout.headingFontSize,
                                                  [::UI.Metric.alignX] = 1,
                                                  [::UI.Metric.padY] = 0,
                                                  [::UI.Colour.text] = this.layout.textColour })
         ::UI.addChild(this.swapScroll.window, this.headingLabel)
+
+        this.nameLabel = ::UI.label("###bgSwapName")
+        ::UI.placeAbsolute(this.nameLabel)
+        ::UI.setWidgetStyle(this.nameLabel, { [::UI.Font.body] = ::fonts.body,
+                                              [::UI.Metric.fontSize] = this.layout.nameFontSize,
+                                              [::UI.Metric.alignX] = 1,
+                                              [::UI.Metric.padY] = 0,
+                                              [::UI.Colour.text] = this.layout.textColour })
+        ::UI.addChild(this.swapScroll.window, this.nameLabel)
 
         this.aliasInput = ::UI.input("###bgSwapAlias")
         ::UI.setWidgetStyle(this.aliasInput, ::EUR.eurStyles.basic_types.input)
@@ -224,8 +234,6 @@ class generalBGSwap {
         return { x = body[0], y = body[1], width = body[2], height = body[3] }
     }
 
-    // The frame is placed with the game HUD stretch (placeGame), so everything inside it - both
-    // axes, so pictures keep their shape - carries the same one.
     function scaled(v) {
         local k = ::authored.hudStretch()
         return (v * k + (v < 0 ? -0.5 : 0.5)).tointeger()
@@ -441,11 +449,7 @@ class generalBGSwap {
         local leftX = area.x + this.scaled(this.layout.contentX)
         local y = area.y + this.layout.contentY
 
-        ::UI.layoutAt(area.x, area.y + this.layout.nameY)
-        ::UI.pushStyle({ [::UI.Metric.fontSize] = this.layout.nameFontSize, [::UI.Metric.alignX] = 1,
-                         [::UI.Metric.elideWidth] = area.width })
-        ::UI.text(rec.displayName)
-        ::UI.popStyle()
+        ::UI.textSet(this.nameLabel, rec.displayName)
 
         if (::EUR.char_rank) {
             local rank = ::EUR.math.floor(::EUR.char_rank / 10)
@@ -649,6 +653,7 @@ class generalBGSwap {
         ::UI.widgetVisible(this.updateButton, showSwap)
         ::UI.widgetVisible(this.rankBar, showSwap && ::EUR.char_rank != 0)
         ::UI.widgetVisible(this.headingLabel, showSwap)
+        ::UI.widgetVisible(this.nameLabel, showSwap)
         if (showSwap) {
             local screen = ::authored.screen()
             ::EUR.scroll.placeGame(this.swapScroll, this.layout.windowX, this.layout.windowY, this.layout.windowW, this.layout.windowH)
@@ -661,6 +666,8 @@ class generalBGSwap {
                                 panelArea.height - this.layout.panelInsetY * 2 + this.layout.panelHeightDelta)
                 ::UI.widgetRect(this.headingLabel, panelArea.x,
                                 panelArea.y + this.layout.headingY, panelArea.width, 0)
+                ::UI.widgetRect(this.nameLabel, panelArea.x,
+                                panelArea.y + this.layout.nameY, panelArea.width, 0)
             }
             local closeAt = ::UI.widgetRectGet(this.swapScroll.window, true)
             if (closeAt != null) {

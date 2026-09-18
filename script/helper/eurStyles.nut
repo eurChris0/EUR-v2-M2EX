@@ -354,6 +354,7 @@ local TOOLTIP_TOKENS = [
     [::UI.Metric,  "tooltipOffX",   24],
     [::UI.Metric,  "tooltipOffY",   34],
     [::UI.Metric,  "tooltipDelay",  0],
+    [::UI.Metric,  "tooltipWrapWidth", 480],
 ]
 
 if ("tabPadX" in ::UI.Metric) { ::EUR.eurStyles.options_1[::UI.Metric.tabPadX] <- 12 }

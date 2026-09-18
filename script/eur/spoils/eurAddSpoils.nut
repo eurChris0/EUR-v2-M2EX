@@ -189,7 +189,6 @@ class eurAddSpoils {
     function awardPlayerExperience(thisSide) {
         for (local y = 0; y < thisSide.armyCount; y++) {
             local battleArmy = thisSide.armyStats(y)
-            // A wiped-out army keeps its stats record but loses the army behind it.
             if (battleArmy == null || battleArmy.army == null) continue
             if (battleArmy.army.faction != ::EUR.eur_player_faction) continue
             for (local x = 0; x < battleArmy.unitCount; x++) {
