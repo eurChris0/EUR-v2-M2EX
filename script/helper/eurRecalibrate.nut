@@ -12,9 +12,11 @@
 ]
 
 ::EUR.recalibrate <- function() {
-    if ("styledRoots" in ::EUR) { ::EUR.styledRoots.clear() }
-
-    ::UI.clear()
+    // EUR's own roots only: a bare ::UI.clear() takes the whole world, base game UI included.
+    if ("styledRoots" in ::EUR) {
+        foreach (entry in ::EUR.styledRoots) { ::UI.destroy(entry.root) }
+        ::EUR.styledRoots.clear()
+    }
 
     foreach (reset in ::EUR.uiRebuilders) {
         try { reset() }

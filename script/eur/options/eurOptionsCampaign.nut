@@ -6,7 +6,7 @@
               tip = "Restores the default settings for this menu and not those saved from previous campaigns.",
               onClick = function() { ::game.runScriptCommand("play_sound_event", "BUTTON_DOWN"); ::EUR.restoreDefaultSettings() } },
             { label = "Replenishment" },
-            { check = "Enabled",                  bind = ["options_replen"],       tip = "Enable replenishment." },
+            { check = "Enabled##replen",                  bind = ["options_replen"],       tip = "Enable replenishment." },
             { check = "Low Entity Units",         bind = ["options_replen_beast"], tip = "Enables replenishment for low entity units such as Trolls, Ents, Skin-changers etc.",
               onChange = function(v) { ::EUR.replen_beast_value = v ? 0 : 10 } },
             { check = "Field Replenishment",      bind = ["replen_always"],        tip = "Enables replenishment for non-garrisoned armies." },
@@ -54,7 +54,7 @@
         [
             { sep = true },
             { label = "Army Sorting" },
-            { check = "Enabled", bind = ["options_sort"], tip = "Enable army sorting." },
+            { check = "Enabled##sort", bind = ["options_sort"], tip = "Enable army sorting." },
             { label = "Sort order:" },
             { select = "First",  bind = ["sort_order", "a"], options = ["EDU Name", "Category (eg infantry)", "Class (eg heavy)", "Soldier Count", "Experience", "(Default) Category + Class", "AI unit value"] },
             { select = "Second", bind = ["sort_order", "b"], options = ["(Default) EDU Name", "Category (eg infantry)", "Class (eg heavy)", "Soldier Count", "Experience", "Category + Class", "AI unit value"] },
@@ -63,7 +63,7 @@
         [
             { sep = true },
             { label = "Global Recruitment" },
-            { check = "Enabled", bind = ["game_options", "global_recruitment"], tip = "Enable Global Recruitment." },
+            { check = "Enabled##globalrecruit", bind = ["game_options", "global_recruitment"], tip = "Enable Global Recruitment." },
             { slider = "Global queue starting size", bind = ["game_options", "global_recruit_start"], min = 1, max = 20, fmt = "%d", tip = "Global Recruitment starting size (default 2)." },
             { slider = "Global queue limit", bind = ["game_options", "global_recruit_max"], min = 2, max = 20, fmt = "%d", tip = "Global Recruitment queue max size (default 10)." },
             { check = "Waystation increases global queue size", bind = ["game_options", "global_waystation_inc_max"], tip = "Constructing Waystations increases the Global Recruitment queue size (disable to simply use the max queue size)." },

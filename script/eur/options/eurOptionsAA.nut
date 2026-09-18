@@ -98,7 +98,7 @@ local aaTab = {
 }
 
 aaTab.draw <- function() {
-    local r = ::authored.rect(::UI.widgetRectGet(aaTab.canvas))
+    local r = ::UI.widgetRectGet(aaTab.canvas, true)
     if (r == null || r[2] < 64 || r[3] < 64) {
         local screen = ::authored.screen()
         r = [20, 60, screen[0] - 40, screen[1] - 80]
@@ -118,7 +118,7 @@ aaTab.draw <- function() {
         local iy = r[1] + (mapH * spot[1]).tointeger() - icon / 2
         local tint = (i == ::EUR.alt_startAA_choice) ? 255 : 150
 
-        if (::EUR.aa_icon != null && ::UI.imageButton(::EUR.aa_icon.img, icon, icon, ix, iy, 255, 255, 255, tint).clicked) {
+        if (::EUR.aa_icon != null && ::UI.imageButton("##aa" + i, ::EUR.aa_icon.img, icon, icon, ix, iy, 255, 255, 255, tint).clicked) {
             ::EUR.alt_startAA_choice = i
         }
         ::UI.tooltipAt(ix, iy, icon, icon)

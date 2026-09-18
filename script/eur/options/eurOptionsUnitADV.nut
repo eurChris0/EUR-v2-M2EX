@@ -147,12 +147,12 @@ class eurOptionsUnitADV {
         local x = originX
         local y = originY + this.layout.listTopY
         local column = 0
-        foreach (eduType in this.editableList()) {
+        foreach (ei, eduType in this.editableList()) {
             local texture = this.card(eduType)
             if (texture == null || texture.img == 0) continue
             local selected = (eduType == ::EUR.unit_adv_edu)
             local tint = selected ? this.layout.selectedTint : this.layout.idleTint
-            if (::UI.imageButton(texture.img, this.layout.cardW, this.layout.cardH, x, y,
+            if (::UI.imageButton("##unitCard" + ei, texture.img, this.layout.cardW, this.layout.cardH, x, y,
                                  tint[0], tint[1], tint[2], tint[3]).clicked) {
                 ::EUR.unit_adv_edu = eduType
                 ::EUR.unit_adv_slot = 0
@@ -203,7 +203,7 @@ class eurOptionsUnitADV {
             local owned = ::units.get(upType) != null && ::units.get(upType).hasOwnership(::EUR.eur_playerFactionId)
             local selected = (i == ::EUR.unit_adv_slot)
             local tint = selected ? this.layout.selectedTint : this.layout.idleTint
-            if (::UI.imageButton(upTexture.img, this.layout.cardW, this.layout.cardH, cardX, y,
+            if (::UI.imageButton("##upSlot" + i, upTexture.img, this.layout.cardW, this.layout.cardH, cardX, y,
                                  tint[0], tint[1], tint[2], tint[3]).clicked) {
                 ::EUR.unit_adv_slot = i
                 ::game.runScriptCommand("play_sound_event", "BUTTON_DOWN")
@@ -248,10 +248,10 @@ class eurOptionsUnitADV {
         this.refreshFreeList()
         this.refreshBindings()
         if (!("canvas" in ::EUR.unit_adv_section)) return
-        local rect = ::authored.rect(::UI.widgetRectGet(::EUR.unit_adv_section.canvas))
+        local rect = ::UI.widgetRectGet(::EUR.unit_adv_section.canvas, true)
         if (rect == null) return
 
-        ::UI.pushFont(::fonts.body, false, this.layout.bodyFontSize)
+        ::UI.pushFont(::EX.fonts.body, false, this.layout.bodyFontSize)
         this.drawList(rect[0], rect[1])
         ::UI.popFont()
     }
@@ -259,10 +259,10 @@ class eurOptionsUnitADV {
     function drawTitle() {
         if (!::EUR.in_campaign_map || ::EUR.eur_player_faction == null) return
         if (!("canvas" in ::EUR.unit_adv_title)) return
-        local rect = ::authored.rect(::UI.widgetRectGet(::EUR.unit_adv_title.canvas))
+        local rect = ::UI.widgetRectGet(::EUR.unit_adv_title.canvas, true)
         if (rect == null) return
 
-        ::UI.pushFont(::fonts.body, false, this.layout.bodyFontSize)
+        ::UI.pushFont(::EX.fonts.body, false, this.layout.bodyFontSize)
         local unitType = (::EUR.unit_adv_edu != "") ? ::units.get(::EUR.unit_adv_edu) : null
         if (unitType != null) {
             this.line(rect[0], rect[1], "Editing " + unitType.displayName, this.layout.textColour)
@@ -275,10 +275,10 @@ class eurOptionsUnitADV {
     function drawEdit() {
         if (!::EUR.in_campaign_map || ::EUR.eur_player_faction == null) return
         if (!("canvas" in ::EUR.unit_adv_edit)) return
-        local rect = ::authored.rect(::UI.widgetRectGet(::EUR.unit_adv_edit.canvas))
+        local rect = ::UI.widgetRectGet(::EUR.unit_adv_edit.canvas, true)
         if (rect == null) return
 
-        ::UI.pushFont(::fonts.body, false, this.layout.bodyFontSize)
+        ::UI.pushFont(::EX.fonts.body, false, this.layout.bodyFontSize)
         this.drawEditPane(rect[0], rect[1])
         ::UI.popFont()
     }
@@ -289,7 +289,7 @@ class eurOptionsUnitADV {
     function drawTempCard(section, eduType) {
         if (!::EUR.in_campaign_map || ::EUR.eur_player_faction == null) return
         if (eduType == null || !("canvas" in section)) return
-        local rect = ::authored.rect(::UI.widgetRectGet(section.canvas))
+        local rect = ::UI.widgetRectGet(section.canvas, true)
         if (rect == null) return
         local texture = this.card(eduType)
         if (texture == null || texture.img == 0) return

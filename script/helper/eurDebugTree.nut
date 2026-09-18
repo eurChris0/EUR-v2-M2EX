@@ -151,7 +151,7 @@ class eurDebugHud {
             this.rows.append(row)
         }
 
-        this.modules = ::UI.bullet("")
+        this.modules = ::UI.bullet("###debugModules")
         ::UI.setWidgetStyle(this.modules, ::UI.Colour.text, [255, 160, 160, 255])
 
         ::UI.setParent(0)

@@ -6,7 +6,7 @@
     sections = [
         [
             { label = "General Upgrades" },
-            { check = "Enabled", bind = ["options_gen_upgrades"], tip = "Enable general upgrades." },
+            { check = "Enabled##genupgrades", bind = ["options_gen_upgrades"], tip = "Enable general upgrades." },
             { check = "Start with T2", bind = ["game_options", "BG_T2"], tip = "Enables the first level of bodyguard units to be T2 rather than T1 level.",
               onChange = function(v) { ::EUR.rebuildUpgradeLists() } },
             { check = "Show Unit Card", bind = ["show_gen_unit_card"], tip = "Display the bodyguard unit card rather than a generic icon in the UI." },
@@ -30,10 +30,10 @@
               } },
             { slider = "Minimum bodyguard size", bind = ["bg_min_size_multi"], min = 25, max = 75, fmt = "%d%%" },
             { sep = true },
-            { expand = "Advanced Options", body = [
-                { button = "Load defaults", tip = "Restore the bodyguard roster shipped with the mod.",
+            { expand = "Advanced Options##gen", body = [
+                { button = "Load defaults##genload", tip = "Restore the bodyguard roster shipped with the mod.",
                   onClick = function() { ::game.runScriptCommand("play_sound_event", "BUTTON_DOWN"); ::EUR.loadFactoryBodyguards() } },
-                { button = "Save in files", sameLine = true, tip = "Write the current roster over the mod's own data file. Permanent, and a mod update overwrites it.",
+                { button = "Save in files##gensave", sameLine = true, tip = "Write the current roster over the mod's own data file. Permanent, and a mod update overwrites it.",
                   onClick = function() { ::game.runScriptCommand("play_sound_event", "BUTTON_DOWN"); ::EUR.generalWriteDefault() } },
                 { group = [ ::EUR.gen_adv_section ] },
                 { sameLine = true, w = 300, group = [
@@ -47,7 +47,7 @@
         [
             { sep = true },
             { label = "Unit Upgrades" },
-            { check = "Enabled", bind = ["options_unit_upgrades"], tip = "Enable unit upgrades." },
+            { check = "Enabled##unitupgrades", bind = ["options_unit_upgrades"], tip = "Enable unit upgrades." },
             { check = "Display upgrade mini icon", bind = ["game_options", "display_upg"], tip = "Show an icon on the unit card when upgrades are available." },
             { check = "Display sidegrade mini icon", bind = ["game_options", "display_sdg"], tip = "Show an icon on the unit card when upgrades of the same tier are available." },
             { stepper = "Experience requirement reduction", bind = ["unit_upgrades_multi"], min = 0, max = 2, step = 1, tip = "Reduce the experience requirement for unit upgrades, player only." },
@@ -55,10 +55,10 @@
               onChange = function(v) { ::EUR.unitUpgrades.list_edu_recruitable() } },
             { check = "AI Upgrades", bind = ["ai_unit_upgrades"], tip = "Enable unit upgrades for the AI." },
             { sep = true },
-            { expand = "Advanced Options", body = [
-                { button = "Load defaults", tip = "Restore the upgrade table shipped with the mod.",
+            { expand = "Advanced Options##unit", body = [
+                { button = "Load defaults##unitload", tip = "Restore the upgrade table shipped with the mod.",
                   onClick = function() { ::EUR.eurOptionsUnitADV.loadFactory() } },
-                { button = "Save in files", sameLine = true, tip = "Write the current upgrade table over the mod's own data file. Permanent, and a mod update overwrites it.",
+                { button = "Save in files##unitsave", sameLine = true, tip = "Write the current upgrade table over the mod's own data file. Permanent, and a mod update overwrites it.",
                   onClick = function() { ::game.runScriptCommand("play_sound_event", "BUTTON_DOWN"); ::EUR.unitWriteDefault() } },
                 { button = "Add unit", tip = "Start a new upgrade entry. Press again once the pane on the right is filled in to add it to the table.",
                   onClick = function() { ::EUR.eurOptionsUnitADV.startOrAddUnit() } },

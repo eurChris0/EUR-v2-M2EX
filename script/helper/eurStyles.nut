@@ -155,10 +155,10 @@ local function metricSheet(rows) {
     },
 
     basic_4 = {
-        // One scale for the whole window: autoScale sizes the widgets, autoScalePos places
-        // them, autoScaleDraw scales everything the canvases draw. All off 1080p units.
-        [::UI.Cap.autoScalePos]       = 1,
-        [::UI.Cap.autoScaleDraw]      = 1,
+        // One scale for the whole window: autoScale sizes the widgets, autoScaleAbsolute places
+        // them, autoScaleCanvas scales everything the canvases draw. All off 1080p units.
+        [::UI.Cap.autoScaleAbsolute]       = 1,
+        [::UI.Cap.autoScaleCanvas]      = 1,
         [::UI.Metric.fontSize]        = 12,
         [::UI.Metric.gap]             = 1,
         [::UI.Metric.indent]          = 0,
@@ -235,8 +235,8 @@ local function metricSheet(rows) {
     },
 
     fort_button = {
-        [::UI.Cap.autoScalePos]       = 1,
-        [::UI.Cap.autoScaleDraw]      = 1,
+        [::UI.Cap.autoScaleAbsolute]       = 1,
+        [::UI.Cap.autoScaleCanvas]      = 1,
         [::UI.Metric.fontSize]        = 12,
         [::UI.Metric.gap]             = 1,
         [::UI.Metric.indent]          = 0,
@@ -277,10 +277,10 @@ local function metricSheet(rows) {
     },
 
     options_1 = {
-        // One scale for the whole window: autoScale sizes the widgets, autoScalePos places
-        // them, autoScaleDraw scales everything the canvases draw. All off 1080p units.
-        [::UI.Cap.autoScalePos]       = 1,
-        [::UI.Cap.autoScaleDraw]      = 1,
+        // One scale for the whole window: autoScale sizes the widgets, autoScaleAbsolute places
+        // them, autoScaleCanvas scales everything the canvases draw. All off 1080p units.
+        [::UI.Cap.autoScaleAbsolute]       = 1,
+        [::UI.Cap.autoScaleCanvas]      = 1,
         [::UI.Metric.fontSize]        = 12,
         [::UI.Metric.borderWindow]    = 0,
         [::UI.Metric.padX]            = 5,

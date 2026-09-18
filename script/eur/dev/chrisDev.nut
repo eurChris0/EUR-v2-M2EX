@@ -392,9 +392,9 @@ class chrisDev {
 
         ::UI.pushStyle(::EUR.eurStyles.basic_4)
 
-        this.windowScroll = ::EUR.scroll.create(700, 500, 0, 0, function() { ::EUR.extra_window = false })
-        this.windowCanvas = ::UI.canvas(0, 0)
-        ::UI.canvasDraw(this.windowCanvas, function() { self.devWindow() })
+        this.windowScroll = ::EUR.scroll.create("chrisDevWindow", 700, 500, 0, 0)
+        this.windowCanvas = ::UI.canvas("##chrisDevcanvas", 0, 0)
+        ::UI.onDraw(this.windowCanvas, function() { self.devWindow() })
 
         ::UI.setParent(0)
         this.buttons = {}
@@ -448,12 +448,10 @@ class chrisDev {
 
     // the panel body: tile readout and the settlement-spawn controls
     function devWindow() {
-        local rect = ::authored.rect(::UI.widgetRectGet(this.windowScroll.window))
-        if (rect == null) { return }
-        local margins = ::EUR.scroll.setMargins("scroll")
-        if (margins == null) { return }
-        local x = rect[0] + margins[0]
-        local y = rect[1] + margins[1]
+        local body = ::UI.contentRect(this.windowScroll.window, true, true)
+        if (body == null) { return }
+        local x = body[0]
+        local y = body[1]
 
         local tile = ::stratMap.tile(::EUR.map_x, ::EUR.map_y)
         if (tile != null && tile.resource != null) {
@@ -542,7 +540,17 @@ class chrisDev {
             this.shown = ::EUR.extra_window
         }
         if (::EUR.extra_window) {
-            ::EUR.scroll.place(this.windowScroll.window, (screen[0] - 700) / 2, (screen[1] - 500) / 2, 700, 500)
+            ::EUR.scroll.place(this.windowScroll, (screen[0] - 700) / 2, (screen[1] - 500) / 2, 700, 500)
+            local closeAt = ::UI.widgetRectGet(this.windowScroll.window, true)
+            if (closeAt != null) {
+                ::UI.pushHitMode(::UI.Hit.alpha)
+                local close = ::UI.imageButton("##closeChrisDev", ::EX.shared.images.seal, 82, 91,
+                                               closeAt[0] + closeAt[2] - 86, closeAt[1] + closeAt[3] - 91)
+                ::UI.popHitMode()
+                ::UI.tooltip(close, "Close this scroll")
+                ::UI.addChild(this.windowScroll.window, close)
+                if (close.clicked) { ::EUR.extra_window = false }
+            }
             ::UI.raise(this.windowScroll.window)
         }
     }

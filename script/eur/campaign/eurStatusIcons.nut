@@ -16,14 +16,9 @@ class eurStatusIcons {
         this.tipRows = []
         this.tipBody = ::UI.beginTooltip(0)
         ::UI.setWidgetStyle(this.tipBody, ::UI.Metric.gap, 0)
-        local smallId = 0
-        local faces = ::UI.fonts()
-        if (faces != null) {
-            foreach (f in faces) { if (f.name == ::fonts.game.verdanaSml) { smallId = f.id } }
-        }
         for (local i = 0; i < this.layout.tipRows; i += 1) {
-            local row = ::UI.labelColoured("", 255, 255, 255, 255)
-            if (smallId != 0) { ::UI.setWidgetStyle(row, ::UI.Font.body, smallId) }
+            local row = ::UI.label("###statusRow" + i)
+            ::UI.setWidgetStyle(row, ::UI.Font.body, ::fonts.game.verdanaSml)
             ::UI.setWidgetStyle(row, ::UI.Metric.padX, 0)
             ::UI.setWidgetStyle(row, ::UI.Metric.padY, 0)
             this.tipRows.append(row)
@@ -31,10 +26,10 @@ class eurStatusIcons {
         ::UI.endTooltip()
 
         ::UI.setParent(0)
-        this.canvas = ::UI.canvas(0, 0, 0, 0)
-        ::UI.setWidgetStyle(this.canvas, ::UI.Cap.autoScaleDraw, 0)
-        ::UI.setWidgetStyle(this.canvas, ::UI.Cap.autoScalePos, 0)
-        ::UI.canvasDraw(this.canvas, function() { self.drawIcons() })
+        this.canvas = ::UI.canvas("##eurStatusIconscanvas", 0, 0, 0, 0)
+        ::UI.setWidgetStyle(this.canvas, ::UI.Cap.autoScaleCanvas, 0)
+        ::UI.setWidgetStyle(this.canvas, ::UI.Cap.autoScaleAbsolute, 0)
+        ::UI.onDraw(this.canvas, function() { self.drawIcons() })
         ::UI.setParent(0)
 
         this.built = true
