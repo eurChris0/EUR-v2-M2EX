@@ -46,8 +46,6 @@
     ::EUR.alt_checked = false
 }
 
-// Stops after the experience award, exactly where the Lua stopped: the loot PICKER that
-// would follow it was never finished, so every branch of the original returns before it.
 ::EUR.altLootWindow <- function() {
     if (!::EUR.alt_loot) { ::EUR.resetAltLoot(); return }
     if (!::EUR.alt_checked) { ::EUR.checkAltLoot() }

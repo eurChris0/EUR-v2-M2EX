@@ -16,7 +16,8 @@ class eurGlobalRecruitment {
         bgInsetX = -55, bgInsetY = 25,
         bgOffsetX = 0, bgOffsetY = -10,
         bgWidthDelta = 0, bgHeightDelta = 64,
-        headingOffsetY = -40, headingFontSize = 0, bodyFontSize = 12,
+        headingOffsetY = -40, headingFontSize = 18, bodyFontSize = 12,
+        headingColour = [0, 0, 0, 255],
         contentInsetX = 20,
         sectionOffsetX = -40, sectionOffsetY = 20, sectionWidthDelta = 60,
 
@@ -57,6 +58,7 @@ class eurGlobalRecruitment {
     tipBody = 0
     tipRows = null
     canvas = 0
+    headingLabel = 0
     toggleBtn = 0
     sortAzCheck = 0
     sortDistanceCheck = 0
@@ -633,6 +635,15 @@ class eurGlobalRecruitment {
         ::UI.setParent(this.scroll.window)
                 ::UI.onDraw(this.canvas, function() { self.drawWindow() })
 
+        this.headingLabel = ::UI.label("Global Recruitment")
+        ::UI.placeAbsolute(this.headingLabel)
+        ::UI.setWidgetStyle(this.headingLabel, { [::UI.Font.body] = ::fonts.game.verdana,
+                                              [::UI.Metric.fontSize] = this.layout.headingFontSize,
+                                              [::UI.Metric.alignX] = 1,
+                                              [::UI.Metric.padY] = 0,
+                                              [::UI.Colour.text] = this.layout.headingColour })
+        ::UI.addChild(this.scroll.window, this.headingLabel)
+
         this.sortAzCheck = ::UI.checkbox("A-Z")
         ::UI.placeAbsolute(this.sortAzCheck)
         ::UI.tooltip(this.sortAzCheck, "Sort settlements in the UI alphabetically.")
@@ -782,6 +793,7 @@ class eurGlobalRecruitment {
         ::UI.widgetVisible(this.hideEmptyCheck, show)
         ::UI.widgetVisible(this.filterCheck, show)
         ::UI.widgetVisible(this.notifCheck, show)
+        ::UI.widgetVisible(this.headingLabel, show)
         if (!show) {
             this.raised = false
             return
@@ -825,6 +837,8 @@ class eurGlobalRecruitment {
                             (area.y + this.layout.bgInsetY + this.layout.bgOffsetY),
                             (area.width - this.layout.bgInsetX * 2 + this.layout.bgWidthDelta),
                             (area.height - this.layout.bgInsetY * 2 + this.layout.bgHeightDelta))
+            ::UI.widgetRect(this.headingLabel, area.x,
+                            area.y + this.layout.headingOffsetY, area.width, 0)
             local filterX = area.x + this.layout.contentInsetX + this.layout.sectionOffsetX
             local filterY = area.y + this.layout.filterRowY
             ::UI.widgetRect(this.filterCheck, filterX, filterY, 0, 0)
@@ -905,13 +919,6 @@ class eurGlobalRecruitment {
 
         ::UI.pushStyle({ [::UI.Colour.text] = [0, 0, 0, 255] })
 
-        ::UI.layoutAt(area.x, area.y + this.layout.headingOffsetY)
-        ::UI.pushFont(::fonts.body, false, this.layout.headingFontSize)
-        ::UI.pushStyle({ [::UI.Metric.alignX] = 1, [::UI.Metric.elideWidth] = area.width })
-        ::UI.text("Global Recruitment")
-        ::UI.popStyle()
-        ::UI.popFont()
-
         ::UI.pushFont(::EX.fonts.body, false, this.layout.bodyFontSize)
 
         ::EUR.global_recruit_current = this.queueCount()
@@ -984,7 +991,7 @@ class eurGlobalRecruitment {
             this.scrollGrabOffset = -1
         }
         if (this.scrollDragging && travel > 0) {
-            local my = ::UI.mouse.pos()[1]
+            local my = ::authored.of(::UI.mouse.pos()[1])
             if (this.scrollGrabOffset < 0) {
                 this.scrollGrabOffset = (my >= grabY && my < grabY + grabH) ? (my - grabY) : grabH / 2
             }
