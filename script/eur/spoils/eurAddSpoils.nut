@@ -74,7 +74,7 @@ class eurAddSpoils {
         this.spoils_loot = 0
         this.our_num_units = 0
         local thisBattle = null
-        try { thisBattle = ::battle.current() } catch (err) { return }   // TODO: correct battle accessor for this host
+        try { thisBattle = ::battle.recent() } catch (err) { return }
         if (thisBattle == null) return
 
         for (local i = 0; i < thisBattle.sideCount; i++) {
@@ -133,7 +133,7 @@ class eurAddSpoils {
     // returns true if the player lost this battle (recording the loss), else records victory type.
     function getBattleOutcome() {
         ::EUR.logHelper("getBattleOutcome")
-        local thisBattle = ::battle.current()
+        local thisBattle = ::battle.recent()
         if (thisBattle == null) return false
         for (local i = 0; i < thisBattle.sideCount; i++) {
             local thisSide = thisBattle.side(i)
@@ -159,7 +159,7 @@ class eurAddSpoils {
     function getBattleOutcomeWin() {
         ::EUR.logHelper("getBattleOutcomeWin")
         local thisBattle = null
-        try { thisBattle = ::battle.current() } catch (err) { return }   // TODO: correct battle accessor for this host
+        try { thisBattle = ::battle.recent() } catch (err) { return }
         if (thisBattle == null) return
 
         for (local i = 0; i < thisBattle.sideCount; i++) {
@@ -189,6 +189,8 @@ class eurAddSpoils {
     function awardPlayerExperience(thisSide) {
         for (local y = 0; y < thisSide.armyCount; y++) {
             local battleArmy = thisSide.armyStats(y)
+            // A wiped-out army keeps its stats record but loses the army behind it.
+            if (battleArmy == null || battleArmy.army == null) continue
             if (battleArmy.army.faction != ::EUR.eur_player_faction) continue
             for (local x = 0; x < battleArmy.unitCount; x++) {
                 local battleUnit = battleArmy.unitStats(x)
@@ -226,7 +228,8 @@ class eurAddSpoils {
             local battleUnit = battleArmy.unitStats(x)
             if (battleUnit == null) continue
             if (battleUnit.isGeneralUnit == 0) {
-                if (battleUnit.unit.type != null && battleUnit.unit.type.category == 0) {
+                if (battleUnit.unit != null && battleUnit.unit.type != null
+                    && battleUnit.unit.type.category == 0) {
                     ::EUR.alt_loot_units.append({
                         unit = battleUnit.unit,
                         kills = battleUnit.soldiersKilled,

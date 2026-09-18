@@ -8,6 +8,7 @@ if (::EUR.EUR_EVENT_TRIGGERS.battle) {
         if (eventData.faction.isPlayerControlled == 1) {
             ::EUR.show_alt_loot = true
             ::EUR.eurAddSpoils.postBattleChecks(eventData.faction)
+            ::EUR.altLootWindow()
             //wait(restoreSplitUnits, 2, true)
         }
     })
