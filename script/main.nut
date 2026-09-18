@@ -27,6 +27,12 @@
 ::EUR.chris_stuff <- false
 
 local MODULES = [
+    // The shared art and tooltip sheets, which the base main.nut would load if a mod had not
+    // replaced it. First, because the scroll helper draws with them.
+    "core.styles",
+    "core.images",
+    "core.scale",
+    "core.fonts",
     // ::fonts and ::virtualScale, which used to come from the base script tree. First, because
     // everything below draws with them.
     "helper.eurBaseGlobals",
