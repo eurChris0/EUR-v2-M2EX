@@ -49,6 +49,10 @@ class eurStatusIcons {
             if (r == null || r[2] <= 0) continue
             local u = cards.unitAt(i)
             if (u == null || u.general != null) continue
+            // The card pool is one list - a settlement scroll fills it with whatever garrison is on
+            // show, ours or not - so ownership is the only thing separating our cards from theirs.
+            if (u.army == null || u.army.faction == null) continue
+            if (u.army.faction.id != ::game.localFactionId()) continue
 
             this.drawUpgrade(u, r)
             this.drawReplen(u, r)
