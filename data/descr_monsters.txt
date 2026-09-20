@@ -1,0 +1,283 @@
+; Independent creature body profiles. No riders or engines are instantiated.
+
+type creature_sauron
+radius 2
+height 2
+mass 120.0
+melee_radius 2.5
+melee_reach 3.0
+turn_rate 3
+smash_gates 1
+skeleton monster_creature_sauron
+parent_skeleton fs_sauron_elephant_fix
+animation ready stand_a_idle
+animation ready_to_stand_a stand_a_idle
+animation ready_to_advance stand_a_to_walk
+animation advance walk
+animation advance_to_ready walk_to_stand_a
+animation ready_to_combat_jog stand_a_to_run
+animation combat_jog run
+animation combat_jog_to_ready run_to_stand_a
+animation advance_to_combat_jog walk_to_run
+animation combat_jog_to_advance run_to_walk
+animation stand_a_to_ready stand_a_idle
+animation ready_to_charge stand_a_to_charge
+animation charge_to_ready run_to_stand_a
+animation ready_turn_cw_90 stand_a_turn_90_cw_1
+animation ready_turn_ccw_90 stand_a_turn_90_ccw_1
+animation ready_turn_cw_45 stand_a_turn_45_cw_1
+animation ready_turn_ccw_45 stand_a_turn_45_ccw_1
+animation eager_attack_centre_mid_c_slashrl_s0_success attack_mid_high_1
+animation eager_attack_centre_mid_c_slashrl_s0_fail attack_mid_high_1
+animation attack_missile_ready stand_a_idle
+animation attack_missile_hold stand_a_idle
+animation attack_missile_release attack_mid_high_1
+animation attack_missile_reload stand_a_idle
+reference_points siege_engines/Elephant_cannon_lod0.modelReferencePoints
+ranged_timing_skeleton MTW2_Elephant_Artillery_Crew
+
+type goblin_king
+radius 1
+height 2.5
+mass 50
+melee_radius 1.0
+melee_reach 1.3
+turn_rate 3
+smash_gates 1
+skeleton monster_goblin_king
+parent_skeleton lotr_troll
+animation ready stand_a_idle
+animation ready_to_stand_a stand_a_idle
+animation ready_to_advance stand_a_to_walk
+animation advance walk
+animation advance_to_ready walk_to_stand_a
+animation ready_to_combat_jog stand_a_to_charge
+animation combat_jog run
+animation combat_jog_to_ready run_to_stand_a
+animation advance_to_combat_jog walk_to_run
+animation combat_jog_to_advance run_to_walk
+animation stand_a_to_ready stand_a_idle
+animation ready_to_charge stand_a_to_charge
+animation charge_to_ready run_to_stand_a
+animation ready_turn_cw_90 stand_a_turn_90_cw_1
+animation ready_turn_ccw_90 stand_a_turn_90_ccw_1
+animation ready_turn_cw_45 stand_a_turn_45_cw_1
+animation ready_turn_ccw_45 stand_a_turn_45_ccw_1
+animation eager_attack_centre_mid_c_slashrl_s0_success attack_mid_high_1
+animation eager_attack_centre_mid_c_slashrl_s0_fail attack_mid_high_1
+animation attack_missile_ready stand_a_idle
+animation attack_missile_hold stand_a_idle
+animation attack_missile_release attack_mid_high_1
+animation attack_missile_reload stand_a_idle
+reference_points siege_engines/Elephant_cannon_lod0.modelReferencePoints
+ranged_timing_skeleton scribe
+
+type balrog
+radius 1
+height 2
+mass 150
+melee_radius 1.1
+melee_reach 1.6
+turn_rate 3
+smash_gates 1
+skeleton monster_balrog
+parent_skeleton fs_balrog_elephant
+animation ready stand_a_idle
+animation ready_to_stand_a stand_a_idle
+animation ready_to_advance stand_a_to_walk
+animation advance walk
+animation advance_to_ready walk_to_stand_a
+animation ready_to_combat_jog stand_a_to_run
+animation combat_jog run
+animation combat_jog_to_ready run_to_stand_a
+animation advance_to_combat_jog walk_to_run
+animation combat_jog_to_advance run_to_walk
+animation stand_a_to_ready stand_a_idle
+animation ready_to_charge stand_a_to_charge
+animation charge_to_ready run_to_stand_a
+animation ready_turn_cw_90 stand_a_turn_90_cw_1
+animation ready_turn_ccw_90 stand_a_turn_90_ccw_1
+animation ready_turn_cw_45 stand_a_turn_45_cw_1
+animation ready_turn_ccw_45 stand_a_turn_45_ccw_1
+animation eager_attack_centre_mid_c_slashrl_s0_success attack_mid_high_1
+animation eager_attack_centre_mid_c_slashrl_s0_fail attack_mid_high_1
+animation attack_missile_ready stand_a_idle
+animation attack_missile_hold stand_a_idle
+animation attack_missile_release attack_mid_high_1
+animation attack_missile_reload stand_a_idle
+reference_points siege_engines/Elephant_cannon_lod0.modelReferencePoints
+ranged_timing_skeleton MTW2_Elephant_Artillery_Crew
+
+type balrog2
+radius 2.4
+height 2.3
+mass 80
+melee_radius 5
+melee_reach 6
+turn_rate 3
+smash_gates 1
+skeleton monster_balrog2
+parent_skeleton balrog
+animation ready stand_a_idle
+animation ready_to_stand_a stand_a_idle
+animation ready_to_advance stand_a_to_charge
+animation advance walk
+animation advance_to_ready walk_to_stand_a
+animation ready_to_combat_jog stand_a_to_charge
+animation combat_jog walk
+animation combat_jog_to_ready walk_to_stand_a
+animation advance_to_combat_jog walk
+animation combat_jog_to_advance walk
+animation stand_a_to_ready stand_a_idle
+animation ready_to_charge stand_a_to_charge
+animation charge_to_ready walk_to_stand_a
+animation ready_turn_cw_90 stand_a_turn_90_cw_1
+animation ready_turn_ccw_90 stand_a_turn_90_ccw_1
+animation ready_turn_cw_45 stand_a_turn_45_cw_1
+animation ready_turn_ccw_45 stand_a_turn_45_ccw_1
+animation eager_attack_centre_mid_c_slashrl_s0_success attack_mid_low_1
+animation eager_attack_centre_mid_c_slashrl_s0_fail attack_mid_low_1
+animation attack_missile_ready stand_a_idle
+animation attack_missile_hold stand_a_idle
+animation attack_missile_release attack_mid_low_1
+animation attack_missile_reload stand_a_idle
+reference_points siege_engines/balrog_lod0.modelReferencePoints
+ranged_timing_skeleton MTW2_Elephant_Artillery_Crew
+shot_effect fireball_engine_set
+
+type giant_spidersa
+radius 3.4
+height 3.0
+mass 35
+melee_radius 2.2
+melee_reach 4
+turn_rate 3
+smash_gates 1
+skeleton monster_giant_spidersa
+parent_skeleton fs_botet_carnosaur
+animation ready stand_a_idle
+animation ready_to_stand_a stand_a_idle
+animation ready_to_advance stand_a_to_walk
+animation advance walk
+animation advance_to_ready walk_to_stand_a
+animation ready_to_combat_jog stand_a_to_run
+animation combat_jog run
+animation combat_jog_to_ready run_to_stand_a
+animation advance_to_combat_jog walk_to_run
+animation combat_jog_to_advance run_to_walk
+animation stand_a_to_ready stand_a_idle
+animation ready_to_charge stand_a_to_charge
+animation charge_to_ready run_to_stand_a
+animation ready_turn_cw_90 stand_a_turn_90_cw_1
+animation ready_turn_ccw_90 stand_a_turn_90_ccw_1
+animation ready_turn_cw_45 stand_a_turn_45_cw_1
+animation ready_turn_ccw_45 stand_a_turn_45_cw_1
+animation eager_attack_centre_mid_c_slashrl_s0_success attack_mid_high_1
+animation eager_attack_centre_mid_c_slashrl_s0_fail attack_mid_high_1
+
+type armored_balrog
+radius 2.5
+height 2.3
+mass 80
+melee_radius 5
+melee_reach 3
+turn_rate 3
+smash_gates 1
+skeleton monster_armored_balrog
+parent_skeleton balrog
+animation ready stand_a_idle
+animation ready_to_stand_a stand_a_idle
+animation ready_to_advance stand_a_to_charge
+animation advance walk
+animation advance_to_ready walk_to_stand_a
+animation ready_to_combat_jog stand_a_to_charge
+animation combat_jog walk
+animation combat_jog_to_ready walk_to_stand_a
+animation advance_to_combat_jog walk
+animation combat_jog_to_advance walk
+animation stand_a_to_ready stand_a_idle
+animation ready_to_charge stand_a_to_charge
+animation charge_to_ready walk_to_stand_a
+animation ready_turn_cw_90 stand_a_turn_90_cw_1
+animation ready_turn_ccw_90 stand_a_turn_90_ccw_1
+animation ready_turn_cw_45 stand_a_turn_45_cw_1
+animation ready_turn_ccw_45 stand_a_turn_45_ccw_1
+animation eager_attack_centre_mid_c_slashrl_s0_success attack_mid_low_1
+animation eager_attack_centre_mid_c_slashrl_s0_fail attack_mid_low_1
+
+type beorn
+radius 2.0
+height 2.2
+mass 9
+melee_radius 2.2
+melee_reach 2.5
+turn_rate 3
+smash_gates 1
+skeleton monster_beorn
+parent_skeleton fs_botet_carnosaur
+animation ready stand_a_idle
+animation ready_to_stand_a stand_a_idle
+animation ready_to_advance stand_a_to_walk
+animation advance walk
+animation advance_to_ready walk_to_stand_a
+animation ready_to_combat_jog stand_a_to_run
+animation combat_jog run
+animation combat_jog_to_ready run_to_stand_a
+animation advance_to_combat_jog walk_to_run
+animation combat_jog_to_advance run_to_walk
+animation stand_a_to_ready stand_a_idle
+animation ready_to_charge stand_a_to_charge
+animation charge_to_ready run_to_stand_a
+animation ready_turn_cw_90 stand_a_turn_90_cw_1
+animation ready_turn_ccw_90 stand_a_turn_90_ccw_1
+animation ready_turn_cw_45 stand_a_turn_45_cw_1
+animation ready_turn_ccw_45 stand_a_turn_45_cw_1
+animation eager_attack_centre_mid_c_slashrl_s0_success attack_mid_high_1
+animation eager_attack_centre_mid_c_slashrl_s0_fail attack_mid_high_1
+
+type troll_engine_mount
+radius 1
+height 2.5
+mass 50
+melee_radius 1.0
+melee_reach 1.3
+turn_rate 3
+smash_gates 1
+skeleton monster_troll_engine_mount
+parent_skeleton lotr_troll_kick
+animation ready stand_a_idle
+animation ready_to_stand_a stand_a_idle
+animation ready_to_advance stand_a_to_walk
+animation advance walk
+animation advance_to_ready walk_to_stand_a
+animation ready_to_combat_jog stand_a_to_charge
+animation combat_jog run
+animation combat_jog_to_ready run_to_stand_a
+animation advance_to_combat_jog walk_to_run
+animation combat_jog_to_advance run_to_walk
+animation stand_a_to_ready stand_a_idle
+animation ready_to_charge stand_a_to_charge
+animation charge_to_ready run_to_stand_a
+animation ready_turn_cw_90 stand_a_turn_90_cw_1
+animation ready_turn_ccw_90 stand_a_turn_90_ccw_1
+animation ready_turn_cw_45 stand_a_turn_45_cw_1
+animation ready_turn_ccw_45 stand_a_turn_45_ccw_1
+animation eager_attack_centre_mid_c_slashrl_s0_success attack_mid_low_1
+animation eager_attack_centre_mid_c_slashrl_s0_fail attack_mid_low_1
+animation attack_missile_ready stand_a_idle
+animation attack_missile_hold stand_a_idle
+animation attack_missile_release attack_mid_low_1
+animation attack_missile_reload stand_a_idle
+reference_points siege_engines/troll_cannon_lod0.modelReferencePoints
+ranged_timing_skeleton MTW2_Goblin_Elephant_Artillery_Crew
+
+; Ent splash: 100% centre, 66% halfway, 25% edge.
+type ents_melee
+radius 0.8
+height 1.7
+mass 100
+turn_rate 3
+melee_radius 2
+melee_splash_damage 1
+melee_splash_falloff 1.3862943611
+melee_splash_shape 1.7382596216
