@@ -2,8 +2,8 @@ class eurEregion {
     textColour = [0, 0, 0, 255]
     koeScroll = null
     konScroll = null
-    koeCanvas = 0
-    konCanvas = 0
+    koeBody = 0
+    konBody = 0
     built     = false
 
     function lindon_invasion_0() {
@@ -268,16 +268,22 @@ class eurEregion {
         }
     }
 
-    function ensure() {
+    function buildOnce() {
         if (this.built) return
         local self = this
         ::UI.pushStyle(::EUR.eurStyles.basic_4)
-        this.koeScroll = ::EUR.scroll.create(800, 740, 112, 14, function() { ::EUR.show_eregion_choice = false })
-        this.koeCanvas = ::UI.canvas(0, 0)
-        ::UI.canvasDraw(this.koeCanvas, function() { self.drawKoE() })
-        this.konScroll = ::EUR.scroll.create(800, 740, 112, 14, function() { ::EUR.show_kon_choice = false })
-        this.konCanvas = ::UI.canvas(0, 0)
-        ::UI.canvasDraw(this.konCanvas, function() { self.drawKoN() })
+        this.koeScroll = ::EUR.scroll.create("eregionKoe", 800, 740, 112, 14)
+        this.koeBody = ::UI.panel("##eregionKoeBody", 0, 0, 0, 0,
+                                  [::UI.PanelFlag.transparent, ::UI.PanelFlag.borderless,
+                                   ::UI.PanelFlag.absoluteChildren, ::UI.PanelFlag.noScrollBodyY])
+        ::UI.setParent(this.koeScroll.window)
+        ::UI.onDraw(this.koeBody, function() { self.drawKoE() })
+        this.konScroll = ::EUR.scroll.create("eregionKon", 800, 740, 112, 14)
+        this.konBody = ::UI.panel("##eregionKonBody", 0, 0, 0, 0,
+                                  [::UI.PanelFlag.transparent, ::UI.PanelFlag.borderless,
+                                   ::UI.PanelFlag.absoluteChildren, ::UI.PanelFlag.noScrollBodyY])
+        ::UI.setParent(this.konScroll.window)
+        ::UI.onDraw(this.konBody, function() { self.drawKoN() })
         ::UI.popStyle()
         ::UI.setParent(0)
         ::UI.widgetVisible(this.koeScroll.window, false)
@@ -286,18 +292,44 @@ class eurEregion {
     }
 
     function render() {
-        this.ensure()
+        this.buildOnce()
         local onMap = ::EUR.in_campaign_map
         ::UI.widgetVisible(this.koeScroll.window, ::EUR.show_eregion_choice && onMap)
         ::UI.widgetVisible(this.konScroll.window, ::EUR.show_kon_choice && onMap)
+        if (::EUR.show_eregion_choice && onMap) {
+            local closeAt = ::UI.widgetRectGet(this.koeScroll.window, true)
+            if (closeAt != null) {
+                ::UI.pushHitMode(::UI.Hit.alpha)
+                local close = ::UI.imageButton("##closeEregionKoe", ::EX.shared.images.seal, 82, 91,
+                                               closeAt[0] + closeAt[2] - 86, closeAt[1] + closeAt[3] - 91)
+                ::UI.popHitMode()
+                ::UI.tooltip(close, "Close this scroll")
+                ::UI.addChild(this.koeScroll.window, close)
+                if (close.clicked) { ::EUR.show_eregion_choice = false }
+            }
+        }
+        if (::EUR.show_kon_choice && onMap) {
+            local closeAt = ::UI.widgetRectGet(this.konScroll.window, true)
+            if (closeAt != null) {
+                ::UI.pushHitMode(::UI.Hit.alpha)
+                local close = ::UI.imageButton("##closeEregionKon", ::EX.shared.images.seal, 82, 91,
+                                               closeAt[0] + closeAt[2] - 86, closeAt[1] + closeAt[3] - 91)
+                ::UI.popHitMode()
+                ::UI.tooltip(close, "Close this scroll")
+                ::UI.addChild(this.konScroll.window, close)
+                if (close.clicked) { ::EUR.show_kon_choice = false }
+            }
+        }
+        local koe = this.area(this.koeScroll)
+        if (koe != null) { ::UI.widgetRect(this.koeBody, koe.x, koe.y, koe.w, koe.h) }
+        local kon = this.area(this.konScroll)
+        if (kon != null) { ::UI.widgetRect(this.konBody, kon.x, kon.y, kon.w, kon.h) }
     }
 
     function area(scr) {
-        local rect = ::authored.rect(::UI.widgetRectGet(scr.window))
-        if (rect == null) return null
-        local m = ::EUR.scroll.setMargins("scroll")
-        if (m == null) return null
-        return { x = rect[0] + m[0], y = rect[1] + m[1], w = rect[2] - m[0] - m[2], h = rect[3] - m[1] - m[3] }
+        local body = ::UI.contentRect(scr.window, true, true)
+        if (body == null) return null
+        return { x = body[0], y = body[1], w = body[2], h = body[3] }
     }
 
     function drawKoE() {
@@ -321,8 +353,8 @@ class eurEregion {
         local x1 = a.x + a.w / 4 - 50
         local x2 = a.x + a.w * 3 / 4 - 50
         ::UI.pushHitMode(::UI.Hit.alpha)
-        local hit1 = ::UI.imageButton(eregionArt.img, 100, 100, x1, by).clicked
-        local hit2 = ::UI.imageButton(icon, 100, 100, x2, by).clicked
+        local hit1 = ::UI.imageButton("##eregionYes", eregionArt.img, 100, 100, x1, by).clicked
+        local hit2 = ::UI.imageButton("##eregionNo", icon, 100, 100, x2, by).clicked
         ::UI.popHitMode()
         if (hit1) {
             ::game.runScriptCommand("play_sound_event", "BUTTON_DOWN")
@@ -369,8 +401,8 @@ class eurEregion {
         local x1 = a.x + a.w / 4 - 50
         local x2 = a.x + a.w * 3 / 4 - 50
         ::UI.pushHitMode(::UI.Hit.alpha)
-        local hit1 = ::UI.imageButton(kon_icon, 100, 100, x1, by).clicked
-        local hit2 = ::UI.imageButton(icon, 100, 100, x2, by).clicked
+        local hit1 = ::UI.imageButton("##konYes", kon_icon, 100, 100, x1, by).clicked
+        local hit2 = ::UI.imageButton("##konNo", icon, 100, 100, x2, by).clicked
         ::UI.popHitMode()
         if (hit1) {
             ::game.runScriptCommand("play_sound_event", "BUTTON_DOWN")

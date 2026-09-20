@@ -37,6 +37,7 @@
     ::EUR.in_campaign_map = true
     ::EUR.eurGlobalVars()
     if (!::EUR.cas_standalone_set_already) {
+        ::EUR.loadStratCAS()
         ::EUR.setCasStandalone()
         ::EUR.cas_standalone_set_already = true
     }

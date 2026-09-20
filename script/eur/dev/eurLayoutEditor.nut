@@ -3,7 +3,6 @@
     { title = "General BG swap",    holder = "generalBGSwap" },
     { title = "Unit upgrades",      holder = "unitUpgrades" },
     { title = "Global recruitment", holder = "eurGlobalRecruitment" },
-    { title = "Scroll close seal",  holder = "scroll", field = "closeSeal" },
 ]
 
 class eurLayoutEditor {
@@ -43,7 +42,7 @@ class eurLayoutEditor {
     layoutAt    = -1
     styleAt     = -1
 
-    function ensure() {
+    function buildOnce() {
         if (this.built) return
         this.layoutRows = []
         this.styleRows = []
@@ -54,40 +53,40 @@ class eurLayoutEditor {
         ::UI.setWidgetStyle(this.window, ::UI.Surface.window, [20, 22, 28, 235])
         ::UI.setWidgetStyle(this.window, ::UI.Colour.text, [235, 235, 235, 255])
 
-        this.tabs = ::UI.tabs()
+        this.tabs = ::UI.tabs("##eurLayoutEditortabs")
         ::UI.addChild(this.window, this.tabs)
 
-        this.layoutPage = ::UI.panel()
+        this.layoutPage = ::UI.panel("##eurLayoutEditorpanel")
         ::UI.addChild(this.tabs, this.layoutPage)
         local layoutTitles = []
         foreach (t in ::EUR.LAYOUT_TARGETS) { layoutTitles.append(t.title) }
-        this.layoutPick = ::UI.select("", this.layout.pickerW, this.layout.pickerH)
+        this.layoutPick = ::UI.select("###layoutPick", this.layout.pickerW, this.layout.pickerH)
         ::UI.selectOptions(this.layoutPick, layoutTitles)
         ::UI.addChild(this.layoutPage, this.layoutPick)
         ::UI.selectChange(this.layoutPick, function(i) { self.showLayout(i) })
-        this.layoutBody = ::UI.panel()
+        this.layoutBody = ::UI.panel("##eurLayoutEditorpanel2")
         ::UI.addChild(this.layoutPage, this.layoutBody)
 
-        this.stylePage = ::UI.panel()
+        this.stylePage = ::UI.panel("##eurLayoutEditorpanel3")
         ::UI.addChild(this.tabs, this.stylePage)
         this.styleNames = []
         if ("eurStyles" in ::EUR && ::EUR.eurStyles != null) {
             foreach (name, table in ::EUR.eurStyles) { this.styleNames.append(name) }
         }
         this.styleNames.sort()
-        this.stylePick = ::UI.select("", this.layout.pickerW, this.layout.pickerH)
+        this.stylePick = ::UI.select("###stylePick", this.layout.pickerW, this.layout.pickerH)
         ::UI.selectOptions(this.stylePick, this.styleNames)
         ::UI.addChild(this.stylePage, this.stylePick)
         ::UI.selectChange(this.stylePick, function(i) { self.showStyle(i) })
-        this.styleBody = ::UI.panel()
+        this.styleBody = ::UI.panel("##eurLayoutEditorpanel4")
         ::UI.addChild(this.stylePage, this.styleBody)
 
-        this.dumpPage = ::UI.panel()
+        this.dumpPage = ::UI.panel("##eurLayoutEditorpanel5")
         ::UI.addChild(this.tabs, this.dumpPage)
         this.dumpBtn = ::UI.button("Rebuild dump", 140, 24)
         ::UI.addChild(this.dumpPage, this.dumpBtn)
         ::UI.buttonClick(this.dumpBtn, function() { self.refreshDump() })
-        this.dumpField = ::UI.inputMultiline("", this.layout.pickerW, 600)
+        this.dumpField = ::UI.inputMultiline("###layoutDump", this.layout.pickerW, 600)
         ::UI.addChild(this.dumpPage, this.dumpField)
         ::UI.inputMultilineReadOnly(this.dumpField, true)
 
@@ -99,20 +98,23 @@ class eurLayoutEditor {
     }
 
     function buildPreview() {
-        local self = this
         ::UI.setParent(0)
         this.preview = ::UI.window("Style preview", this.layout.previewW, this.layout.previewH,
                                    this.layout.previewX, this.layout.previewY)
-        this.previewCanvas = ::UI.canvas(0, 0)
-        ::UI.addChild(this.preview, this.previewCanvas)
+        ::UI.pushStyle({ [::UI.Metric.sliceBorderScale] = (::EUR.scroll.frameRatio() * 100.0 + 0.5).tointeger() })
+        ::UI.setSurfaceNine(::UI.Surface.panel, ::EX.shared.images.tileable_panel, ::UI.Slice.tile)
+        this.previewCanvas = ::UI.panel("##eurLayoutEditorcanvas", 0, 0, 0, 0,
+                                        [::UI.PanelFlag.borderless,
+                                         ::UI.PanelFlag.absoluteChildren, ::UI.PanelFlag.noScrollBodyY])
+        ::UI.popStyle()
+        ::UI.setParent(this.preview)
+                ::UI.addChild(this.preview, this.previewCanvas)
         ::UI.placeAbsolute(this.previewCanvas)
-        ::UI.canvasDraw(this.previewCanvas, function() { self.drawPreviewFrame() })
 
         ::UI.addChild(this.preview, ::UI.textWrapped("Wrapped paragraph text for the Text colour."))
         ::UI.addChild(this.preview, ::UI.bullet("A bullet line"))
-        ::UI.addChild(this.preview, ::UI.badge("Badge"))
         ::UI.addChild(this.preview, ::UI.link("A link"))
-        ::UI.addChild(this.preview, ::UI.separator())
+        ::UI.addChild(this.preview, ::UI.separator("##eurLayoutEditorseparator"))
         ::UI.addChild(this.preview, ::UI.button("Button"))
         ::UI.addChild(this.preview, ::UI.checkbox("Checkbox"))
         ::UI.addChild(this.preview, ::UI.toggle("Toggle"))
@@ -126,28 +128,20 @@ class eurLayoutEditor {
         ::UI.addChild(this.preview, sel)
         ::UI.selectOptions(sel, ["First", "Second", "Third"])
         ::UI.addChild(this.preview, ::UI.input("Input"))
-        ::UI.addChild(this.preview, ::UI.inputMultiline("", 0, 60))
+        ::UI.addChild(this.preview, ::UI.inputMultiline("###previewInput", 0, 60))
 
-        this.previewTabs = ::UI.tabs()
+        this.previewTabs = ::UI.tabs("##eurLayoutEditortabs2")
         ::UI.addChild(this.preview, this.previewTabs)
-        local one = ::UI.panel()
+        local one = ::UI.panel("##eurLayoutEditorpanel6")
         ::UI.addChild(this.previewTabs, one)
         ::UI.addChild(one, ::UI.textWrapped("Tab page one"))
-        local two = ::UI.panel()
+        local two = ::UI.panel("##eurLayoutEditorpanel7")
         ::UI.addChild(this.previewTabs, two)
         ::UI.addChild(two, ::UI.textWrapped("Tab page two"))
         ::UI.tabsTitles(this.previewTabs, ["Alpha", "Beta"])
 
         ::UI.setParent(0)
         ::UI.widgetVisible(this.preview, false)
-    }
-
-    function drawPreviewFrame() {
-        if (!("scroll" in ::EUR) || ::EUR.scroll == null) return
-        local r = ::authored.rect(::UI.widgetRectGet(this.preview))
-        if (r == null) return
-        ::EUR.scroll.drawSet("panel", r[0], r[1],
-                                      r[2], r[3])
     }
 
     function tokenNames() {
@@ -173,7 +167,7 @@ class eurLayoutEditor {
         ::UI.addChild(parent, slider)
         rows.append(slider)
 
-        local field = ::UI.input("", this.layout.inputW, this.layout.rowH)
+        local field = ::UI.input("###num" + label, this.layout.inputW, this.layout.rowH)
         ::UI.addChild(parent, field)
         rows.append(field)
 
@@ -215,7 +209,7 @@ class eurLayoutEditor {
             }
         }
         if (table == null) {
-            local miss = ::UI.textWrapped("Nothing to edit here yet.")
+            local miss = ::UI.labelWrapped("Nothing to edit here yet.")
             ::UI.addChild(this.layoutBody, miss)
             this.layoutRows.append(miss)
             return
@@ -329,7 +323,7 @@ class eurLayoutEditor {
     }
 
     function toggle() {
-        this.ensure()
+        this.buildOnce()
         this.shown = !this.shown
         ::UI.widgetVisible(this.window, this.shown)
         if (!this.shown) { this.raised = false; return }
@@ -344,6 +338,10 @@ class eurLayoutEditor {
         if (!this.built) return
         local wantPreview = this.shown && ::UI.tabsActiveGet(this.tabs) == 1
         ::UI.widgetVisible(this.preview, wantPreview)
+        if (!wantPreview) return
+        local r = ::UI.widgetRectGet(this.preview, true)
+        if (r == null) return
+        ::UI.widgetRect(this.previewCanvas, r[0], r[1], r[2], r[3])
     }
 }
 

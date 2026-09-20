@@ -34,7 +34,7 @@ class generalBGSwap {
         acceptPanelOffsetX = 0, acceptPanelOffsetY = 0,
         acceptPanelWidthDelta = 0, acceptPanelHeightDelta = 0,
 
-        headingFontSize = 0, bodyFontSize = 12,
+        headingFontSize = 18, bodyFontSize = 12,
         headingY = -40,
         textColour = [0, 0, 0, 255],
         messageColour = [255, 0, 0, 255],
@@ -87,10 +87,13 @@ class generalBGSwap {
     swapCanvas    = 0
     acceptScroll  = null
     acceptCanvas  = 0
-    cardCanvas    = 0
+    cardBtn       = 0
+    upgradeBtn    = 0
     aliasInput    = 0
-    aliasFontSet  = false
     updateButton  = 0
+    rankBar       = 0
+    headingLabel  = 0
+    nameLabel     = 0
     yesButton     = 0
     noButton      = 0
     cardCache     = null
@@ -99,7 +102,7 @@ class generalBGSwap {
     shownLast     = false
     acceptRaised  = false
 
-    function ensure() {
+    function buildOnce() {
         if (this.swapScroll != null) return
         local self = this
         this.cardCache = {}
@@ -107,16 +110,42 @@ class generalBGSwap {
 
         ::UI.pushStyle(::EUR.eurStyles.basic_4)
 
-        this.swapScroll = ::EUR.scroll.create(this.layout.windowW, this.layout.windowH, 0, 0, function() {
-            ::EUR.window_states.swap_bg_window = false
-        })
-        this.swapCanvas = ::UI.canvas(0, 0)
-        ::UI.canvasDraw(this.swapCanvas, function() { self.swapBGWindow() })
+        this.swapScroll = ::EUR.scroll.create("bgSwap", this.layout.windowW, this.layout.windowH, 0, 0)
+        ::UI.pushStyle({ [::UI.Metric.sliceBorderScale] = (::EUR.scroll.frameRatio() * 100.0 + 0.5).tointeger() })
+        ::UI.setSurfaceNine(::UI.Surface.panel, ::EX.shared.images.tileable_panel, ::UI.Slice.tile)
+        this.swapCanvas = ::UI.panel("##eurGeneralBGSwapcanvas", 0, 0, 0, 0,
+                                     [::UI.PanelFlag.borderless,
+                                      ::UI.PanelFlag.absoluteChildren, ::UI.PanelFlag.noScrollBodyY])
+        ::UI.popStyle()
+        ::UI.setParent(this.swapScroll.window)
+        ::UI.onDraw(this.swapCanvas, function() { self.swapBGWindow() })
 
-        this.aliasInput = ::UI.input("")
+        this.headingLabel = ::UI.label("General Upgrades")
+        ::UI.placeAbsolute(this.headingLabel)
+        ::UI.setWidgetStyle(this.headingLabel, { [::UI.Font.body] = ::fonts.game.verdana,
+                                                 [::UI.Metric.fontSize] = this.layout.headingFontSize,
+                                                 [::UI.Metric.alignX] = 1,
+                                                 [::UI.Metric.padY] = 0,
+                                                 [::UI.Colour.text] = this.layout.textColour })
+        ::UI.addChild(this.swapScroll.window, this.headingLabel)
+
+        this.nameLabel = ::UI.label("###bgSwapName")
+        ::UI.placeAbsolute(this.nameLabel)
+        ::UI.setWidgetStyle(this.nameLabel, { [::UI.Font.body] = ::fonts.body,
+                                              [::UI.Metric.fontSize] = this.layout.nameFontSize,
+                                              [::UI.Metric.alignX] = 1,
+                                              [::UI.Metric.padY] = 0,
+                                              [::UI.Colour.text] = this.layout.textColour })
+        ::UI.addChild(this.swapScroll.window, this.nameLabel)
+
+        this.aliasInput = ::UI.input("###bgSwapAlias")
         ::UI.setWidgetStyle(this.aliasInput, ::EUR.eurStyles.basic_types.input)
+        ::UI.setWidgetStyle(this.aliasInput, { [::UI.Font.body] = ::fonts.game.verdanaSml,
+                                               [::UI.Metric.fontSize] = this.layout.bodyFontSize })
         ::UI.placeAbsolute(this.aliasInput)
         this.updateButton = ::UI.button("Update")
+        ::UI.setWidgetStyle(this.updateButton, { [::UI.Font.body] = ::fonts.game.verdanaSml,
+                                                 [::UI.Metric.fontSize] = this.layout.bodyFontSize })
         ::UI.placeAbsolute(this.updateButton)
         ::UI.buttonClick(this.updateButton, function() {
             local text = ::UI.inputTextGet(self.aliasInput)
@@ -125,9 +154,28 @@ class generalBGSwap {
             }
         })
 
-        this.acceptScroll = ::EUR.scroll.create(this.layout.acceptW, this.layout.acceptH, 0, 0)
-        this.acceptCanvas = ::UI.canvas(0, 0)
-        ::UI.canvasDraw(this.acceptCanvas, function() { self.bgSwapAccept() })
+        this.rankBar = ::UI.progress()
+        ::UI.placeAbsolute(this.rankBar)
+        ::UI.progressMax(this.rankBar, this.layout.rankBarMaxRank)
+        ::UI.setWidgetStyle(this.rankBar, { [::UI.Font.small] = ::EX.fonts.body,
+                                            [::UI.Metric.fontSize] = this.layout.bodyFontSize,
+                                            [::UI.Metric.borderFrame] = 0,
+                                            [::UI.Metric.alignX] = 0,
+                                            [::UI.Metric.alignY] = 0,
+                                            [::UI.Metric.alignOffsetX] = this.layout.rankBarTextX,
+                                            [::UI.Metric.alignOffsetY] = this.layout.rankBarTextY,
+                                            [::UI.Metric.elideWidth] = this.layout.rankBarW - this.layout.rankBarTextX * 2,
+                                            [::UI.Colour.text] = this.layout.rankBarTextColour })
+
+        this.acceptScroll = ::EUR.scroll.create("bgSwapAccept", this.layout.acceptW, this.layout.acceptH, 0, 0)
+        ::UI.pushStyle({ [::UI.Metric.sliceBorderScale] = (::EUR.scroll.frameRatio() * 100.0 + 0.5).tointeger() })
+        ::UI.setSurfaceNine(::UI.Surface.panel, ::EX.shared.images.tileable_panel, ::UI.Slice.tile)
+        this.acceptCanvas = ::UI.panel("##eurGeneralBGSwapcanvas2", 0, 0, 0, 0,
+                                       [::UI.PanelFlag.borderless,
+                                        ::UI.PanelFlag.absoluteChildren, ::UI.PanelFlag.noScrollBodyY])
+        ::UI.popStyle()
+        ::UI.onDraw(this.acceptCanvas, function() { self.bgSwapAccept() })
+        ::UI.setParent(this.acceptScroll.window)
 
         this.yesButton = ::UI.button("Yes", this.layout.acceptButtonW, this.layout.acceptButtonH)
         ::UI.placeAbsolute(this.yesButton)
@@ -159,20 +207,15 @@ class generalBGSwap {
 
         ::UI.popStyle()
 
-        ::EUR.scroll.sealOnTop(this.swapScroll)
-        ::EUR.scroll.sealOnTop(this.acceptScroll)
-
         ::UI.setParent(0)
-        this.cardCanvas = ::UI.canvas(this.layout.hudCardSize, this.layout.hudCardSize, this.layout.hudCardX, this.layout.hudCardY)
-        ::UI.setWidgetStyle(this.cardCanvas, ::UI.Cap.autoScaleDraw, 1)   // built outside the sheet push
-        ::UI.setWidgetStyle(this.cardCanvas, ::UI.Cap.autoScalePos, 1)
-        ::UI.canvasDraw(this.cardCanvas, function() { self.checkcard() })
 
         ::UI.setParent(0)
         ::UI.widgetVisible(this.swapScroll.window, false)
         ::UI.widgetVisible(this.acceptScroll.window, false)
         ::UI.widgetVisible(this.aliasInput, false)
         ::UI.widgetVisible(this.updateButton, false)
+        ::UI.widgetVisible(this.rankBar, false)
+        ::UI.widgetVisible(this.headingLabel, false)
         ::UI.widgetVisible(this.yesButton, false)
         ::UI.widgetVisible(this.noButton, false)
         if ("gamePanelWindow" in ::UI) { ::UI.gamePanelWindow(this.swapScroll.window, 0) }
@@ -180,21 +223,20 @@ class generalBGSwap {
     }
 
     function swapArea() {
-        local rect = ::authored.gameRect(::UI.widgetRectGet(this.swapScroll.window))
-        if (rect == null) { return null }
-        local margins = ::EUR.scroll.setMargins("scroll")
-        if (margins == null) { return null }
-        return { x = rect[0] + margins[0], y = rect[1] + margins[1],
-                 width = rect[2] - margins[0] - margins[2], height = rect[3] - margins[1] - margins[3] }
+        local body = ::UI.contentRect(this.swapScroll.window, true, true)
+        if (body == null) { return null }
+        return { x = body[0], y = body[1], width = body[2], height = body[3] }
     }
 
     function acceptArea() {
-        local rect = ::authored.rect(::UI.widgetRectGet(this.acceptScroll.window))
-        if (rect == null) { return null }
-        local margins = ::EUR.scroll.setMargins("scroll")
-        if (margins == null) { return null }
-        return { x = rect[0] + margins[0], y = rect[1] + margins[1],
-                 width = rect[2] - margins[0] - margins[2], height = rect[3] - margins[1] - margins[3] }
+        local body = ::UI.contentRect(this.acceptScroll.window, true, true)
+        if (body == null) { return null }
+        return { x = body[0], y = body[1], width = body[2], height = body[3] }
+    }
+
+    function scaled(v) {
+        local k = ::authored.hudStretch()
+        return (v * k + (v < 0 ? -0.5 : 0.5)).tointeger()
     }
 
     function unitCard(eduType, faction) {
@@ -205,29 +247,27 @@ class generalBGSwap {
         return texture
     }
 
-    function cardButton(img, w, h, x, y, r = 255, g = 255, b = 255, a = 255) {
-        local hit = ::UI.imageButton(img, w, h, x, y, r, g, b, a)
+    function cardButton(id, img, w, h, x, y, on = true, r = 255, g = 255, b = 255, a = 255) {
+        local hit = ::UI.imageButton(id, img, w, h, x, y, r, g, b, a)
+        // a card that is off dims by alpha alone, the way the hand-drawn one did
+        ::UI.setWidgetStyle(hit, ::UI.Metric.disabledFade, 0)
+        ::UI.setEnabled(hit, on)
         if (hit.hovered) {
             ::UI.pushBlend(1)
-            ::UI.drawRect(hit.x, hit.y, hit.w, hit.h, 255, 255, 255,
+            ::UI.drawRect(x, y, w, h, 255, 255, 255,
                           hit.held ? this.layout.cardLiftHeld : this.layout.cardLiftHover)
             ::UI.popBlend()
         }
         return hit.clicked
     }
 
-    // The price tag IS the button: coins + the cost inside a drawn box, with the word after it. A
-    // drawn control rather than a ::UI.button because this row is laid out inside the canvas pass,
-    // and a retained widget here would need its own rect + visibility bookkeeping every frame.
     function guardAddButton(x, y, rec) {
-        local w = this.layout.guardBoxW
+        local w = this.scaled(this.layout.guardBoxW)
         local h = this.layout.guardBoxH
         local hit = ::UI.hitRect(x, y, w, h)
         local fill = hit.held ? this.layout.guardFillHeld : (hit.hovered ? this.layout.guardFillHover : this.layout.guardFill)
         ::UI.drawRect(x, y, w, h, fill[0], fill[1], fill[2], fill[3])
 
-        // Four edges, not a bigger rect behind: a translucent fill over a solid backing rect takes
-        // the backing colour across the whole interior instead of leaving a border.
         local edge = this.layout.guardBorder
         ::UI.drawRect(x, y, w, 1, edge[0], edge[1], edge[2], edge[3])
         ::UI.drawRect(x, y + h - 1, w, 1, edge[0], edge[1], edge[2], edge[3])
@@ -235,12 +275,12 @@ class generalBGSwap {
         ::UI.drawRect(x + w - 1, y, 1, h, edge[0], edge[1], edge[2], edge[3])
 
         if (::EUR.coins != null && ::EUR.coins.img != 0) {
-            ::UI.image(::EUR.coins.img, this.layout.guardCoinSize, this.layout.guardCoinSize,
-                       x + this.layout.guardCoinX, y + (h - this.layout.guardCoinSize) / 2)
+            ::UI.image(::EUR.coins.img, this.scaled(this.layout.guardCoinSize), this.layout.guardCoinSize,
+                       x + this.scaled(this.layout.guardCoinX), y + (h - this.layout.guardCoinSize) / 2)
         }
-        ::UI.layoutAt(x + this.layout.guardCostX, y + this.layout.guardBoxTextY)
+        ::UI.layoutAt(x + this.scaled(this.layout.guardCostX), y + this.layout.guardBoxTextY)
         ::UI.text("" + this.layout.guardCost)
-        ::UI.layoutAt(x + w + this.layout.guardAddGapX, y + this.layout.guardBoxTextY)
+        ::UI.layoutAt(x + w + this.scaled(this.layout.guardAddGapX), y + this.layout.guardBoxTextY)
         ::UI.text("Add")
 
         ::UI.tooltipAt(x, y, w, h)
@@ -253,13 +293,11 @@ class generalBGSwap {
         }
     }
 
-    // The red status line. Centred on the window and WRAPPED: it used to be drawn at a fixed x with
-    // no wrap, so the longest reason ("...not garrisoned in a fort or settlement.") ran off the panel.
     function statusMessage(area, y, message) {
-        local wrapW = area.width - this.layout.messagePadX * 2
+        local wrapW = area.width - this.scaled(this.layout.messagePadX) * 2
         ::UI.pushStyle({ [::UI.Colour.text] = this.layout.messageColour,
                          [::UI.Metric.alignX] = 1, [::UI.Metric.elideWidth] = wrapW })
-        ::UI.layoutAt(area.x + this.layout.messagePadX, y)
+        ::UI.layoutAt(area.x + this.scaled(this.layout.messagePadX), y)
         ::UI.textWrapped(message, wrapW)
         ::UI.popStyle()
     }
@@ -271,7 +309,11 @@ class generalBGSwap {
         return texture
     }
 
+    // Root buttons drawn from render(), so they live independently of the windows they open.
     function checkcard() {
+        if (this.cardBtn != 0) { ::UI.widgetVisible(this.cardBtn, false) }
+        if (this.upgradeBtn != 0) { ::UI.widgetVisible(this.upgradeBtn, false) }
+        if ((::UI.context() & ::Enum.UiContext.campaignLive) == 0) { return }
         ::EUR.syncLeftWindows()
 
         local cm = ::ui.cardManager()
@@ -309,14 +351,15 @@ class generalBGSwap {
 
             if (card != null) {
                 ::UI.pushHitMode(::UI.Hit.alpha)
-                local hit = ::UI.imageButton(card.img, size, size, cardX, cardY)
+                local hit = ::UI.imageButton("##bgCard", card.img, size, size, cardX, cardY)
                 ::UI.popHitMode()
+                this.cardBtn = hit.handle
+                ::UI.widgetVisible(hit, true)
                 if (hit.clicked) {
                     local opening = !::EUR.window_states.swap_bg_window
                     ::EUR.set_active_left_window(opening ? "swap_bg_window" : "")
                     ::game.runScriptCommand("play_sound_event", opening ? "STRAT_SCROLL_OPENS" : "STRAT_SCROLL_CLOSES")
                 }
-                ::UI.tooltipAt(cardX, cardY, size, size)
                 local tip = ""
                 tip += (tip == "" ? "" : "\n") + rec.displayName
                 tip += (tip == "" ? "" : "\n") + tier
@@ -324,33 +367,32 @@ class generalBGSwap {
                 local bg = ::EUR.temp_fort_char.bodyguard
                 tip += (tip == "" ? "" : "\n") + "Upkeep " + ("" + ::EUR.math.ceil((bg.type.upkeep / bg.soldiersMax) * bg.soldiers))
                 if (!inGarrison) { tip += (tip == "" ? "" : "\n") + "Move to fort or settlement to change bodyguard." }
-                ::UI.tooltip(0, tip)
+                ::UI.tooltip(hit, tip)
             }
         } else if (::EUR.sel_unit.type != null) {
             local upgradeable = ::EUR.can_unit_upgrade
             local card = upgradeable ? ((faction in ::EUR.faction_upgrade_card_silver) ? ::EUR.faction_upgrade_card_silver[faction] : null)
                                      : ((faction in ::EUR.faction_upgrade_card_bw) ? ::EUR.faction_upgrade_card_bw[faction] : null)
             if (card != null) {
-                if (upgradeable) {
-                    ::UI.pushHitMode(::UI.Hit.alpha)
-                    local hit = ::UI.imageButton(card.img, size, size, cardX, cardY)
-                    ::UI.popHitMode()
-                    if (hit.clicked) {
-                        ::EUR.alias_text = ""; ::EUR.alias_text_set = false
-                        local opening = !::EUR.window_states.show_upgrade_window
-                        ::EUR.set_active_left_window(opening ? "show_upgrade_window" : "")
-                        ::game.runScriptCommand("play_sound_event", opening ? "STRAT_SCROLL_OPENS" : "STRAT_SCROLL_CLOSES")
-                    }
-                } else {
-                    local tint = this.layout.disabledCardTint
-                    ::UI.image(card.img, size, size, cardX, cardY, tint[0], tint[1], tint[2], tint[3])
+                ::UI.pushHitMode(::UI.Hit.alpha)
+                local hit = ::UI.imageButton("##bgUpgrade", card.img, size, size, cardX, cardY)
+                ::UI.popHitMode()
+                this.upgradeBtn = hit.handle
+                ::UI.widgetVisible(hit, true)
+                // the no-upgrades card dims by alpha alone, the way the hand-drawn one did
+                ::UI.setWidgetStyle(hit, ::UI.Metric.disabledFade, 0)
+                ::UI.setEnabled(hit, upgradeable)
+                if (upgradeable && hit.clicked) {
+                    ::EUR.alias_text = ""; ::EUR.alias_text_set = false
+                    local opening = !::EUR.window_states.show_upgrade_window
+                    ::EUR.set_active_left_window(opening ? "show_upgrade_window" : "")
+                    ::game.runScriptCommand("play_sound_event", opening ? "STRAT_SCROLL_OPENS" : "STRAT_SCROLL_CLOSES")
                 }
-                ::UI.tooltipAt(cardX, cardY, size, size)
                 local tip = ""
                 tip += (tip == "" ? "" : "\n") + ::EUR.sel_unit.type.displayName
                 if (!upgradeable) { tip += (tip == "" ? "" : "\n") + "No upgrades for this unit." }
                 else if (!inGarrison) { tip += (tip == "" ? "" : "\n") + "Move to fort or settlement to upgrade." }
-                ::UI.tooltip(0, tip)
+                ::UI.tooltip(hit, tip)
             }
         }
     }
@@ -368,30 +410,8 @@ class generalBGSwap {
         return true
     }
 
-    function styleAliasFont() {
-        if (this.aliasFontSet) { return }
-        this.aliasFontSet = true
-        local id = 0
-        local rows = ::UI.fonts()
-        if (rows != null) {
-            foreach (f in rows) {
-                if (f.name == ::fonts.game.verdanaSml) { id = f.id }
-            }
-        }
-        if (id != 0) { ::UI.setWidgetStyle(this.aliasInput, ::UI.Font.body, id) }
-        ::UI.setWidgetStyle(this.aliasInput, ::UI.Metric.fontSize, this.layout.bodyFontSize)
-
-        if (id != 0) { ::UI.setWidgetStyle(this.updateButton, ::UI.Font.body, id) }
-        ::UI.setWidgetStyle(this.updateButton, ::UI.Metric.fontSize, this.layout.bodyFontSize)
-    }
-
     function swapBGWindow() {
-        // GAME SPACE: this panel sits in the game's own scroll slot, so its content stretches on x
-        // exactly as the frame does. Composes with Cap.autoScaleDraw's uniform scale to give the
-        // engine's W/1920; 1.0 on 16:9, so nothing moves there. Scoped form - closes on every path.
-        return ::UI.pushTransform(0, 0, ::authored.hudStretch(), 0, 1.0, function() {
-            this.swapBGWindowBody()
-        }.bindenv(this))
+        this.swapBGWindowBody()
     }
 
     function swapBGWindowBody() {
@@ -423,56 +443,32 @@ class generalBGSwap {
         local area = this.swapArea()
         if (area == null) { return }
 
-        ::EUR.scroll.drawSet("panel",
-                             (area.x + this.layout.panelInsetX + this.layout.panelOffsetX),
-                             (area.y + this.layout.panelInsetY + this.layout.panelOffsetY),
-                             (area.width - this.layout.panelInsetX * 2 + this.layout.panelWidthDelta),
-                             (area.height - this.layout.panelInsetY * 2 + this.layout.panelHeightDelta))
-
-        ::UI.layoutAt(area.x, area.y + this.layout.headingY)
-        ::UI.pushFont(::fonts.body, false, this.layout.headingFontSize)
-        ::UI.pushStyle({ [::UI.Metric.alignX] = 1,
-                         [::UI.Metric.elideWidth] = area.width, [::UI.Colour.text] = this.layout.textColour })
-        ::UI.text("General Upgrades")
-        ::UI.popStyle()
-        ::UI.popFont()
-
-        ::UI.pushFont(::fonts.body, false, this.layout.bodyFontSize)
-        this.styleAliasFont()
+        ::UI.pushFont(::EX.fonts.body, false, this.layout.bodyFontSize)
         ::UI.pushStyle({ [::UI.Colour.text] = this.layout.textColour })
 
-        local leftX = area.x + this.layout.contentX
+        local leftX = area.x + this.scaled(this.layout.contentX)
         local y = area.y + this.layout.contentY
 
-        ::UI.layoutAt(area.x, area.y + this.layout.nameY)
-        ::UI.pushStyle({ [::UI.Metric.fontSize] = this.layout.nameFontSize, [::UI.Metric.alignX] = 1,
-                         [::UI.Metric.elideWidth] = area.width })
-        ::UI.text(rec.displayName)
-        ::UI.popStyle()
+        ::UI.textSet(this.nameLabel, rec.displayName)
 
         if (::EUR.char_rank) {
             local rank = ::EUR.math.floor(::EUR.char_rank / 10)
-            local tierText = "Rank: " + rank + " - " + ::EUR.faction_bg_name_list[faction].t1
-            if (::EUR.char_rank >= (::EUR.bg_t3_rank * 10)) {
-                tierText = "Rank: " + rank + " - " + ::EUR.faction_bg_name_list[faction].t3
-            } else if (::EUR.char_rank >= (::EUR.bg_t2_rank * 10)) {
-                tierText = "Rank: " + rank + " - " + ::EUR.faction_bg_name_list[faction].t2
-            }
-            local frac = rank / this.layout.rankBarMaxRank
-            if (frac < 0.0) { frac = 0.0 }
-            if (frac > 1.0) { frac = 1.0 }
+            local tier = ::EUR.faction_bg_name_list[faction].t1
             local fill = this.layout.rankBarFillT1
-            if (::EUR.char_rank >= (::EUR.bg_t3_rank * 10)) { fill = this.layout.rankBarFillT3 }
-            else if (::EUR.char_rank >= (::EUR.bg_t2_rank * 10)) { fill = this.layout.rankBarFillT2 }
-            local back = this.layout.rankBarBack
-            ::UI.drawRect(leftX, y, this.layout.rankBarW, this.layout.rankBarH, back[0], back[1], back[2], back[3])
-            ::UI.drawRect(leftX, y, ::EUR.math.floor(this.layout.rankBarW * frac), this.layout.rankBarH, fill[0], fill[1], fill[2], fill[3])
-            ::UI.layoutAt(leftX + this.layout.rankBarTextX, y + this.layout.rankBarTextY)
-            ::UI.pushStyle({ [::UI.Metric.alignX] = 0,
-                             [::UI.Metric.elideWidth] = this.layout.rankBarW - this.layout.rankBarTextX * 2,
-                             [::UI.Colour.text] = this.layout.rankBarTextColour })
-            ::UI.text(tierText)
-            ::UI.popStyle()
+            if (::EUR.char_rank >= (::EUR.bg_t3_rank * 10)) {
+                tier = ::EUR.faction_bg_name_list[faction].t3
+                fill = this.layout.rankBarFillT3
+            } else if (::EUR.char_rank >= (::EUR.bg_t2_rank * 10)) {
+                tier = ::EUR.faction_bg_name_list[faction].t2
+                fill = this.layout.rankBarFillT2
+            }
+            // both colours are faction-palette tokens a repaint pushes back over, so they are set every frame
+            ::UI.setWidgetStyle(this.rankBar, { [::UI.Colour.accent] = fill,
+                                                [::UI.Surface.progressTrack] = this.layout.rankBarBack,
+                                                [::UI.Metric.elideWidth] = this.scaled(this.layout.rankBarW - this.layout.rankBarTextX * 2) })
+            ::UI.progressValue(this.rankBar, rank)
+            ::UI.progressPercent(this.rankBar, false, "Rank: %.0f - " + tier)
+            ::UI.widgetRect(this.rankBar, leftX, y, this.scaled(this.layout.rankBarW), this.layout.rankBarH)
             y += this.layout.rankBarAdvance
         }
 
@@ -481,8 +477,8 @@ class generalBGSwap {
             ::EUR.alias_text_set = true
             ::UI.textSet(this.aliasInput, ::EUR.alias_text)
         }
-        ::UI.widgetRect(this.aliasInput, leftX, y, this.layout.aliasInputW, this.layout.aliasInputH)
-        ::UI.widgetRect(this.updateButton, leftX + this.layout.aliasInputW + this.layout.aliasUpdateGapX, y,
+        ::UI.widgetRect(this.aliasInput, leftX, y, this.scaled(this.layout.aliasInputW), this.layout.aliasInputH)
+        ::UI.widgetRect(this.updateButton, leftX + this.scaled(this.layout.aliasInputW + this.layout.aliasUpdateGapX), y,
                         0, this.layout.aliasUpdateH)
         ::EUR.alias_text = ::UI.inputTextGet(this.aliasInput)
         local focused = (::UI.focusedWidget() == this.aliasInput)
@@ -494,17 +490,18 @@ class generalBGSwap {
 
         local portrait = this.portrait(rec.portraitPath)
         if (portrait != null && portrait.img != 0) {
-            ::UI.image(portrait.img, this.layout.portraitSize, this.layout.portraitSize, leftX, y)
+            ::UI.image(portrait.img, this.scaled(this.layout.portraitSize), this.scaled(this.layout.portraitSize), leftX, y)
             local bgCard = this.unitCard(::EUR.temp_char_stuff.bodyguard.type.name, faction)
             if (bgCard != null) {
-                local bgx = leftX + this.layout.bodyguardCardX
-                local bgSize = this.layout.bodyguardCardSize
-                ::UI.image(bgCard.img, bgSize, bgSize, bgx, y)
-                ::UI.tooltipAt(bgx, y, bgSize, bgSize)
+                local bgx = leftX + this.scaled(this.layout.bodyguardCardX)
+                local bgSize = this.scaled(this.layout.bodyguardCardSize)
+                local bgW = bgSize
+                ::UI.image(bgCard.img, bgW, bgSize, bgx, y)
+                ::UI.tooltipAt(bgx, y, bgW, bgSize)
                 ::UI.tooltip(0, ::units.get(::EUR.temp_char_stuff.bodyguard.type.name).displayName + "\n" + ::EUR.showEDUStats(::EUR.temp_char_stuff.bodyguard.type.name))
             }
         }
-        y += this.layout.portraitAdvance
+        y += this.scaled(this.layout.portraitAdvance)
 
         ::EUR.char_rank = ::EUR.genRankCheck(null, rec)
         local name = rec.shortName + ("" + rec.label)
@@ -522,7 +519,7 @@ class generalBGSwap {
         ::UI.text(guardText)
         if (!::EUR.tableContains(::EUR.not_increase_guard, rec.label) && rec.personalSecurity < ::EUR.personal_guard_limit
             && ::EUR.eur_player_faction.money >= this.layout.guardCost) {
-            this.guardAddButton(leftX + ::UI.textSize(guardText)[0] + this.layout.guardButtonGapX, y, rec)
+            this.guardAddButton(leftX + ::UI.textSize(guardText)[0] + this.scaled(this.layout.guardButtonGapX), y, rec)
         }
         y += this.layout.guardAdvance
 
@@ -532,10 +529,13 @@ class generalBGSwap {
             { label = ::EUR.faction_bg_name_list[faction].t3, list = "T3", threshold = ::EUR.bg_t3_rank * 10,  sound = "10" },
             { label = "Unique",                         list = null, threshold = 0,               sound = "12" },
         ]
-        local gridX = area.x + this.layout.tierGridX
+        local gridX = area.x + this.scaled(this.layout.tierGridX)
+        local gridRight = area.x + area.width
+        local cardW = this.scaled(::EUR.img_x)
+        local cardH = this.scaled(::EUR.img_y)
         local gy = area.y + this.layout.tierGridY
         foreach (tier in BG_TIERS) {
-            ::UI.layoutAt(gridX, gy); ::UI.text(tier.label); gy += this.layout.tierLabelAdvance
+            ::UI.layoutAt(gridX, gy); ::UI.text(tier.label); gy += this.scaled(this.layout.tierLabelAdvance)
             local cursorX = gridX
             for (local i = 0; i < ::EUR.temp_gen_units.len(); i++) {
                 local edu = ::EUR.temp_gen_units[i]
@@ -543,20 +543,20 @@ class generalBGSwap {
                 local card = this.unitCard(edu, faction)
                 if (card == null) continue
                 local unlocked = ::EUR.char_rank >= tier.threshold
-                if (unlocked) {
-                    if (this.cardButton(card.img, ::EUR.img_x, ::EUR.img_y, cursorX, gy)) {
-                        ::EUR.temp_gen_units_target = i
-                        ::game.runScriptCommand("play_sound_event", "BUTTON_DOWN")
-                    }
-                } else {
-                    local tint = this.layout.disabledCardTint
-                    ::UI.image(card.img, ::EUR.img_x, ::EUR.img_y, cursorX, gy, tint[0], tint[1], tint[2], tint[3])
+                local picked = this.cardButton("##genCard" + tier.list + i, card.img, cardW, cardH, cursorX, gy, unlocked)
+                if (unlocked && picked) {
+                    ::EUR.temp_gen_units_target = i
+                    ::game.runScriptCommand("play_sound_event", "BUTTON_DOWN")
                 }
-                ::UI.tooltipAt(cursorX, gy, ::EUR.img_x, ::EUR.img_y)
+                ::UI.tooltipAt(cursorX, gy, cardW, cardH)
                 ::UI.tooltip(0, ::units.get(edu).displayName + (unlocked ? "" : " Locked.") + "\n" + ::EUR.showEDUStats(edu))
-                cursorX += ::EUR.img_x + this.layout.tierCardGapX
+                cursorX += cardW + this.scaled(this.layout.tierCardGapX)
+                if (cursorX > gridRight - cardW) {
+                    cursorX = gridX
+                    gy += cardH + this.scaled(this.layout.tierRowGapY)
+                }
             }
-            gy += ::EUR.img_y + this.layout.tierRowGapY
+            gy += cardH + this.scaled(this.layout.tierRowGapY)
         }
 
         local charArmy = null
@@ -583,20 +583,20 @@ class generalBGSwap {
                     this.statusMessage(area, msgY, "Cannot change as not garrisoned in a fort or settlement.")
                 } else {
                     local target = this.unitCard(::EUR.temp_gen_units[::EUR.temp_gen_units_target], faction)
-                    local cardX = area.x + (area.width - ::EUR.img_x) / 2
+                    local cardX = area.x + (area.width - this.scaled(::EUR.img_x)) / 2
                     local cardY = msgY + this.layout.targetCardY
                     if (::EUR.coins != null) {
-                        ::UI.image(::EUR.coins.img, this.layout.coinSize, this.layout.coinSize, cardX, msgY)
+                        ::UI.image(::EUR.coins.img, this.scaled(this.layout.coinSize), this.scaled(this.layout.coinSize), cardX, msgY)
                     }
-                    ::UI.layoutAt(cardX + this.layout.costTextX, msgY); ::UI.text("" + ::EUR.cost)
+                    ::UI.layoutAt(cardX + this.scaled(this.layout.costTextX), msgY); ::UI.text("" + ::EUR.cost)
                     if (target != null) {
-                        if (this.cardButton(target.img, ::EUR.img_x, ::EUR.img_y, cardX, cardY)) {
+                        if (this.cardButton("##genTarget", target.img, this.scaled(::EUR.img_x), this.scaled(::EUR.img_y), cardX, cardY)) {
                             ::EUR.bg_target_edu = ::EUR.temp_gen_units[::EUR.temp_gen_units_target]
                             ::EUR.show_bg_accept = true
                             ::EUR.window_states.swap_bg_window = false
                             ::game.runScriptCommand("play_sound_event", "BUTTON_DOWN")
                         }
-                        ::UI.tooltipAt(cardX, cardY, ::EUR.img_x, ::EUR.img_y)
+                        ::UI.tooltipAt(cardX, cardY, this.scaled(::EUR.img_x), this.scaled(::EUR.img_y))
                         ::UI.tooltip(0, ::units.get(::EUR.temp_gen_units[::EUR.temp_gen_units_target]).displayName + "\n" + ::EUR.showEDUStats(::EUR.temp_gen_units[::EUR.temp_gen_units_target]))
                     }
                 }
@@ -617,24 +617,16 @@ class generalBGSwap {
         local area = this.acceptArea()
         if (area == null) { return }
 
-        // Both insets are measured from the content AREA (the window minus the scroll set's
-        // 9-slice margins), so an equal value on each axis puts the panel edge the same
-        // distance inside on both. Negative grows it back out over the frame.
         local panelX = area.x + this.layout.acceptPanelInsetX + this.layout.acceptPanelOffsetX
         local panelW = area.width - this.layout.acceptPanelInsetX * 2 + this.layout.acceptPanelWidthDelta
         local panelY = area.y + this.layout.acceptPanelInsetY + this.layout.acceptPanelOffsetY
         local panelH = area.height - this.layout.acceptPanelInsetY * 2 + this.layout.acceptPanelHeightDelta
-        ::EUR.scroll.drawSet("panel", panelX, panelY,
-                             panelW, panelH)
 
         this.acceptText(panelX, panelY, panelW,
                         area.y + area.height - this.layout.acceptButtonBottomGap,
                         "Swap bodyguard to " + ::EUR.bg_target_edu + "?")
     }
 
-    // Heading face, WRAPPED rather than elided, sat at the midpoint between the panel top and the
-    // buttons instead of pinned near the top. textSize measures inside the pushed font scope, and
-    // with a wrap width it answers the wrapped height, so a two-line message still centres.
     function acceptText(panelX, panelY, panelW, buttonY, message) {
         ::UI.pushFont(::fonts.body, false, this.layout.headingFontSize)
         local wrapW = panelW - this.layout.acceptTextPadX * 2
@@ -648,8 +640,9 @@ class generalBGSwap {
     }
 
     function render() {
-        this.ensure()
+        this.buildOnce()
         ::EUR.syncLeftWindows()
+        this.checkcard()
 
         local showSwap = ::EUR.window_states.swap_bg_window && ::EUR.in_campaign_map
                          && !::EUR.show_bg_accept && ::EUR.can_bg_swap
@@ -658,9 +651,34 @@ class generalBGSwap {
         this.shownLast = showSwap
         ::UI.widgetVisible(this.aliasInput, showSwap)
         ::UI.widgetVisible(this.updateButton, showSwap)
+        ::UI.widgetVisible(this.rankBar, showSwap && ::EUR.char_rank != 0)
+        ::UI.widgetVisible(this.headingLabel, showSwap)
+        ::UI.widgetVisible(this.nameLabel, showSwap)
         if (showSwap) {
             local screen = ::authored.screen()
-            ::EUR.scroll.placeGame(this.swapScroll.window, this.layout.windowX, this.layout.windowY, this.layout.windowW, this.layout.windowH)
+            ::EUR.scroll.placeGame(this.swapScroll, this.layout.windowX, this.layout.windowY, this.layout.windowW, this.layout.windowH)
+            local panelArea = this.swapArea()
+            if (panelArea != null) {
+                ::UI.widgetRect(this.swapCanvas,
+                                panelArea.x + this.layout.panelInsetX + this.layout.panelOffsetX,
+                                panelArea.y + this.layout.panelInsetY + this.layout.panelOffsetY,
+                                panelArea.width - this.layout.panelInsetX * 2 + this.layout.panelWidthDelta,
+                                panelArea.height - this.layout.panelInsetY * 2 + this.layout.panelHeightDelta)
+                ::UI.widgetRect(this.headingLabel, panelArea.x,
+                                panelArea.y + this.layout.headingY, panelArea.width, 0)
+                ::UI.widgetRect(this.nameLabel, panelArea.x,
+                                panelArea.y + this.layout.nameY, panelArea.width, 0)
+            }
+            local closeAt = ::UI.widgetRectGet(this.swapScroll.window, true)
+            if (closeAt != null) {
+                ::UI.pushHitMode(::UI.Hit.alpha)
+                local close = ::UI.imageButton("##closeBgSwap", ::EX.shared.images.seal, 82, 91,
+                                               closeAt[0] + closeAt[2] - 86, closeAt[1] + closeAt[3] - 91)
+                ::UI.popHitMode()
+                ::UI.tooltip(close, "Close this scroll")
+                ::UI.addChild(this.swapScroll.window, close)
+                if (close.clicked) { ::EUR.window_states.swap_bg_window = false }
+            }
             if (!this.swapRaised) { ::UI.raise(this.swapScroll.window) }
         }
         this.swapRaised = showSwap
@@ -669,13 +687,18 @@ class generalBGSwap {
         ::UI.widgetVisible(this.acceptScroll.window, showAccept)
         if (showAccept) {
             local screen = ::authored.screen()
-            ::EUR.scroll.place(this.acceptScroll.window, (screen[0] - this.layout.acceptW) / 2, (screen[1] - this.layout.acceptH) / 2, this.layout.acceptW, this.layout.acceptH)
+            ::EUR.scroll.place(this.acceptScroll, (screen[0] - this.layout.acceptW) / 2, (screen[1] - this.layout.acceptH) / 2, this.layout.acceptW, this.layout.acceptH)
             if (!this.acceptRaised) { ::UI.raise(this.acceptScroll.window) }
         }
         this.acceptRaised = showAccept
 
         local acceptArea = this.acceptArea()
         if (acceptArea != null) {
+            ::UI.widgetRect(this.acceptCanvas,
+                            acceptArea.x + this.layout.acceptPanelInsetX + this.layout.acceptPanelOffsetX,
+                            acceptArea.y + this.layout.acceptPanelInsetY + this.layout.acceptPanelOffsetY,
+                            acceptArea.width - this.layout.acceptPanelInsetX * 2 + this.layout.acceptPanelWidthDelta,
+                            acceptArea.height - this.layout.acceptPanelInsetY * 2 + this.layout.acceptPanelHeightDelta)
             local half = (acceptArea.width - this.layout.acceptButtonW) / 2
             local btnY = acceptArea.y + acceptArea.height - this.layout.acceptButtonBottomGap
             ::UI.widgetRect(this.yesButton, acceptArea.x + half - this.layout.acceptButtonSpreadX, btnY, this.layout.acceptButtonW, this.layout.acceptButtonH)

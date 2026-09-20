@@ -127,7 +127,7 @@ class eurDebugHud {
     modules = 0
     placedW = 0
 
-    function ensure() {
+    function buildOnce() {
         if (this.window != 0) return
 
         this.window = ::UI.window("EUR window gates", 460, 320, 0, 0,
@@ -151,14 +151,14 @@ class eurDebugHud {
             this.rows.append(row)
         }
 
-        this.modules = ::UI.bullet("")
+        this.modules = ::UI.bullet("###debugModules")
         ::UI.setWidgetStyle(this.modules, ::UI.Colour.text, [255, 160, 160, 255])
 
         ::UI.setParent(0)
     }
 
     function render() {
-        this.ensure()
+        this.buildOnce()
 
         local screen = ::authored.screen()
         if (screen[0] != this.placedW) {
@@ -200,7 +200,7 @@ class eurDebugHud {
         + " options_first_run=" + ::EUR.options_first_run)
 
     if ("eurOptionsHandles" in ::EUR) { ::EUR.debugSay("our handles: " + ::EUR.eurOptionsHandles) }
-    else { ::EUR.debugSay("our handles: ABSENT - eurOptions.ensure() did not finish") }
+    else { ::EUR.debugSay("our handles: ABSENT - eurOptions.buildOnce() did not finish") }
 
     local dead = ""
     foreach (m in ::EUR.DEBUG_MODULES) {

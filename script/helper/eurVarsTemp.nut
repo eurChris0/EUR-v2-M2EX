@@ -280,7 +280,7 @@
 
 ::EUR.font_list <- {}
 ::EUR.font_list_names <- {}
-::EUR.alt_loot_units <- {}
+::EUR.alt_loot_units <- []
 ::EUR.alt_loot_anc <- {}
 ::EUR.alt_loot_player_gen <- {}
 ::EUR.alt_loot_enemy_gen <- {}

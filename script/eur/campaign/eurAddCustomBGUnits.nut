@@ -1,10 +1,3 @@
-// Registers a handful of faction-unique bodyguard units as cloned unit types
-// (keys 5001..5006) and wires them into building recruitment pools.
-// Rebound onto the squ database: addEopEduEntryFromEDUID -> units.clone(baseIndex, key)
-// (which names the clone "<baseUnit>_<key>", so we fetch it back by that name),
-// getEduIndexByType -> units.get(type).index, EDB.* -> buildings.*.
-// Field writes on the cloned type (setOwnership/soldierCount/upkeepCost) and
-// pool.unitID assume those are exposed as they were under EOP — verify on the host.
 
 ::EUR.CUSTOM_UNIT_ADD <- [
     { faction = "turks",   eduType = "Grey Company",     newMax = 35, newUpkeep = 600, bu = "hinterland_unique6",         level = 2,    scope = [0.8, 0.036, 1.0, 2], extra = "factions { turks, }" },

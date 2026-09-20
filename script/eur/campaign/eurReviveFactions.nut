@@ -445,20 +445,23 @@ class eurReviveUI {
     }
 
     choiceScroll = null
-    contentCanvas = 0
-    buttonCanvas = 0
+    contentBody = 0
+    reviveBtn = 0
     yesButton = 0
     noButton = 0
     built = false
 
-    function ensure() {
+    function buildOnce() {
         if (this.built) return
         local self = this
         ::UI.pushStyle(::EUR.eurStyles.basic_4)
 
-        this.choiceScroll = ::EUR.scroll.create(610, 310, 207, 229, function() { ::EUR.show_revive_choice = false })
-        this.contentCanvas = ::UI.canvas(0, 0)
-        ::UI.canvasDraw(this.contentCanvas, function() { self.drawChoiceContent() })
+        this.choiceScroll = ::EUR.scroll.create("reviveChoice", 610, 310, 207, 229)
+        this.contentBody = ::UI.panel("##reviveChoiceBody", 0, 0, 0, 0,
+                                      [::UI.PanelFlag.transparent, ::UI.PanelFlag.borderless,
+                                       ::UI.PanelFlag.absoluteChildren, ::UI.PanelFlag.noScrollBodyY])
+        ::UI.setParent(this.choiceScroll.window)
+        ::UI.onDraw(this.contentBody, function() { self.drawChoiceContent() })
 
         this.yesButton = ::UI.button("Yes", 90, 40)
         ::UI.placeAbsolute(this.yesButton)
@@ -475,11 +478,6 @@ class eurReviveUI {
         })
 
         ::UI.setParent(0)
-        this.buttonCanvas = ::UI.canvas(this.layout.buttonSize, this.layout.buttonSize,
-                                        this.layout.buttonX, this.layout.buttonY)
-        ::UI.setWidgetStyle(this.buttonCanvas, ::UI.Cap.autoScaleDraw, 1)   // built outside the sheet push
-        ::UI.setWidgetStyle(this.buttonCanvas, ::UI.Cap.autoScalePos, 1)
-        ::UI.canvasDraw(this.buttonCanvas, function() { self.drawButton() })
 
         ::UI.popStyle()
         ::UI.setParent(0)
@@ -490,8 +488,21 @@ class eurReviveUI {
     }
 
     function render() {
-        this.ensure()
+        this.buildOnce()
+        this.drawButton()
         ::UI.widgetVisible(this.choiceScroll.window, ::EUR.show_revive_choice && ::EUR.in_campaign_map)
+        if (::EUR.show_revive_choice && ::EUR.in_campaign_map) {
+            local closeAt = ::UI.widgetRectGet(this.choiceScroll.window, true)
+            if (closeAt != null) {
+                ::UI.pushHitMode(::UI.Hit.alpha)
+                local close = ::UI.imageButton("##closeReviveChoice", ::EX.shared.images.seal, 82, 91,
+                                               closeAt[0] + closeAt[2] - 86, closeAt[1] + closeAt[3] - 91)
+                ::UI.popHitMode()
+                ::UI.tooltip(close, "Close this scroll")
+                ::UI.addChild(this.choiceScroll.window, close)
+                if (close.clicked) { ::EUR.show_revive_choice = false }
+            }
+        }
         this.positionButtons()
     }
 
@@ -501,18 +512,21 @@ class eurReviveUI {
         ::UI.widgetVisible(this.noButton, visible)
         if (!visible) return
 
-        local rect = ::authored.rect(::UI.widgetRectGet(this.choiceScroll.window))
-        if (rect == null) return
-        local margins = ::EUR.scroll.setMargins("scroll")
-        local areaX = rect[0] + margins[0]
-        local areaWidth = rect[2] - margins[0] - margins[2]
-        local buttonY = rect[1] + rect[3] - margins[3] - 60
+        local body = ::UI.contentRect(this.choiceScroll.window, true, true)
+        if (body == null) return
+        local areaX = body[0]
+        local areaWidth = body[2]
+        local buttonY = body[1] + body[3] - 60
+
+        ::UI.widgetRect(this.contentBody, areaX, body[1], areaWidth, body[3])
 
         ::UI.widgetRect(this.yesButton, areaX + areaWidth / 4 - 45, buttonY, 90, 40)
         ::UI.widgetRect(this.noButton, areaX + areaWidth * 3 / 4 - 45, buttonY, 90, 40)
     }
 
+    // A root button drawn from render(), so it lives independently of the window it opens.
     function drawButton() {
+        if (this.reviveBtn != 0) { ::UI.widgetVisible(this.reviveBtn, false) }
         if (!::EUR.in_campaign_map) return
         local scroll = ::ui.settlementScroll()
         if (scroll == null || scroll.settlement == null) return
@@ -532,7 +546,10 @@ class eurReviveUI {
         local bx = ::authored.hudX(this.layout.buttonX)
         local by = ::authored.hudY(this.layout.buttonY)
         local bs = ::authored.hudX(this.layout.buttonSize)
-        if (::UI.imageButton(icon.img, bs, bs, bx, by).clicked && canAfford && !::EUR.show_revive_choice) {
+        local hit = ::UI.imageButton("##revive", icon.img, bs, bs, bx, by)
+        this.reviveBtn = hit.handle
+        ::UI.widgetVisible(hit, true)
+        if (hit.clicked && canAfford && !::EUR.show_revive_choice) {
             ::EUR.show_revive_choice = true
             ::EUR.revive_sett = sett
             ::EUR.revive_faction = ::EUR.eur_campaign.factionByName(reviveName)
@@ -542,12 +559,11 @@ class eurReviveUI {
 
     function drawChoiceContent() {
         if (!::EUR.show_revive_choice || ::EUR.revive_faction == null || ::EUR.revive_sett == null) return
-        local rect = ::authored.rect(::UI.widgetRectGet(this.choiceScroll.window))
-        if (rect == null) return
-        local margins = ::EUR.scroll.setMargins("scroll")
-        local areaX = rect[0] + margins[0]
-        local areaY = rect[1] + margins[1]
-        local areaWidth = rect[2] - margins[0] - margins[2]
+        local body = ::UI.contentRect(this.choiceScroll.window, true, true)
+        if (body == null) return
+        local areaX = body[0]
+        local areaY = body[1]
+        local areaWidth = body[2]
 
         ::UI.layoutAt(areaX, areaY + 30)
         ::UI.pushStyle({ [::UI.Metric.fontSize] = 18, [::UI.Metric.alignX] = 1, [::UI.Metric.elideWidth] = areaWidth })

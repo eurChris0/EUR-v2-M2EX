@@ -24,7 +24,7 @@ class unitUpgrades {
         bgInsetX = -55, bgInsetY = 25,
         bgOffsetX = 0, bgOffsetY = -10,
         bgWidthDelta = 0, bgHeightDelta = 64,
-        headingOffsetY = -40, headingFontSize = 0, bodyFontSize = 12,
+        headingOffsetY = -40, headingFontSize = 18, bodyFontSize = 12,
         nameY = 0, nameFontSize = 16,
         contentInsetX = -25, contentTopY = 40,
         aliasInputW = 200, aliasInputH = 20,
@@ -52,8 +52,9 @@ class unitUpgrades {
     acceptScroll  = null
     acceptCanvas  = 0
     aliasInput    = 0
-    aliasFontSet  = false
     updateButton  = 0
+    headingLabel  = 0
+    nameLabel     = 0
     ugYesBtn      = 0
     ugNoBtn       = 0
     cardCache     = null
@@ -61,25 +62,49 @@ class unitUpgrades {
     shownLast     = false
     acceptRaised  = false
 
-    function ensure() {
+    function buildOnce() {
         if (this.upgradeScroll != null) return
         local self = this
         this.cardCache = {}
 
         ::UI.pushStyle(::EUR.eurStyles.basic_4)
 
-        this.upgradeScroll = ::EUR.scroll.create(this.layout.windowW, this.layout.windowH, 0, 0, function() {
-            ::EUR.window_states.show_upgrade_window = false
-            ::EUR.alias_text = ""
-            ::EUR.alias_text_set = false
-        })
-        this.upgradeCanvas = ::UI.canvas(0, 0)
-        ::UI.canvasDraw(this.upgradeCanvas, function() { self.upgradeWindow() })
+        this.upgradeScroll = ::EUR.scroll.create("unitUpgrades", this.layout.windowW, this.layout.windowH, 0, 0)
+        ::UI.pushStyle({ [::UI.Metric.sliceBorderScale] = (::EUR.scroll.frameRatio() * 100.0 + 0.5).tointeger() })
+        ::UI.setSurfaceNine(::UI.Surface.panel, ::EX.shared.images.tileable_panel, ::UI.Slice.tile)
+        this.upgradeCanvas = ::UI.panel("##eurUnitUpgradescanvas", 0, 0, 0, 0,
+                                        [::UI.PanelFlag.borderless,
+                                         ::UI.PanelFlag.absoluteChildren, ::UI.PanelFlag.noScrollBodyY])
+        ::UI.popStyle()
+        ::UI.setParent(this.upgradeScroll.window)
+                ::UI.onDraw(this.upgradeCanvas, function() { self.upgradeWindow() })
 
-        this.aliasInput = ::UI.input("")
+        this.headingLabel = ::UI.label("Unit Upgrades")
+        ::UI.placeAbsolute(this.headingLabel)
+        ::UI.setWidgetStyle(this.headingLabel, { [::UI.Font.body] = ::fonts.game.verdana,
+                                                 [::UI.Metric.fontSize] = this.layout.headingFontSize,
+                                                 [::UI.Metric.alignX] = 1,
+                                                 [::UI.Metric.padY] = 0,
+                                                 [::UI.Colour.text] = this.layout.textColour })
+        ::UI.addChild(this.upgradeScroll.window, this.headingLabel)
+
+        this.nameLabel = ::UI.label("###unitUpgradeName")
+        ::UI.placeAbsolute(this.nameLabel)
+        ::UI.setWidgetStyle(this.nameLabel, { [::UI.Font.body] = ::fonts.body,
+                                              [::UI.Metric.fontSize] = this.layout.nameFontSize,
+                                              [::UI.Metric.alignX] = 1,
+                                              [::UI.Metric.padY] = 0,
+                                              [::UI.Colour.text] = this.layout.textColour })
+        ::UI.addChild(this.upgradeScroll.window, this.nameLabel)
+
+        this.aliasInput = ::UI.input("###unitUpgradeAlias")
         ::UI.setWidgetStyle(this.aliasInput, ::EUR.eurStyles.basic_types.input)
+        ::UI.setWidgetStyle(this.aliasInput, { [::UI.Font.body] = ::fonts.game.verdanaSml,
+                                               [::UI.Metric.fontSize] = this.layout.bodyFontSize })
         ::UI.placeAbsolute(this.aliasInput)
         this.updateButton = ::UI.button("Update")
+        ::UI.setWidgetStyle(this.updateButton, { [::UI.Font.body] = ::fonts.game.verdanaSml,
+                                                 [::UI.Metric.fontSize] = this.layout.bodyFontSize })
         ::UI.placeAbsolute(this.updateButton)
         ::UI.buttonClick(this.updateButton, function() {
             local text = ::UI.inputTextGet(self.aliasInput)
@@ -90,9 +115,15 @@ class unitUpgrades {
             }
         })
 
-        this.acceptScroll = ::EUR.scroll.create(this.layout.acceptW, this.layout.acceptH, 0, 0)
-        this.acceptCanvas = ::UI.canvas(0, 0)
-        ::UI.canvasDraw(this.acceptCanvas, function() { self.ugSwapAccept() })
+        this.acceptScroll = ::EUR.scroll.create("unitUpgradesAccept", this.layout.acceptW, this.layout.acceptH, 0, 0)
+        ::UI.pushStyle({ [::UI.Metric.sliceBorderScale] = (::EUR.scroll.frameRatio() * 100.0 + 0.5).tointeger() })
+        ::UI.setSurfaceNine(::UI.Surface.panel, ::EX.shared.images.tileable_panel, ::UI.Slice.tile)
+        this.acceptCanvas = ::UI.panel("##eurUnitUpgradescanvas2", 0, 0, 0, 0,
+                                       [::UI.PanelFlag.borderless,
+                                        ::UI.PanelFlag.absoluteChildren, ::UI.PanelFlag.noScrollBodyY])
+        ::UI.popStyle()
+        ::UI.setParent(this.acceptScroll.window)
+                ::UI.onDraw(this.acceptCanvas, function() { self.ugSwapAccept() })
 
         ::UI.setParent(this.acceptScroll.window)
         this.ugYesBtn = ::UI.button("Yes", this.layout.acceptButtonW, this.layout.acceptButtonH)
@@ -156,18 +187,21 @@ class unitUpgrades {
 
         ::UI.popStyle()
 
-        ::EUR.scroll.sealOnTop(this.upgradeScroll)
-        ::EUR.scroll.sealOnTop(this.acceptScroll)
-
         ::UI.setParent(0)
         ::UI.widgetVisible(this.upgradeScroll.window, false)
         ::UI.widgetVisible(this.acceptScroll.window, false)
         ::UI.widgetVisible(this.aliasInput, false)
         ::UI.widgetVisible(this.updateButton, false)
+        ::UI.widgetVisible(this.headingLabel, false)
         ::UI.widgetVisible(this.ugYesBtn, false)
         ::UI.widgetVisible(this.ugNoBtn, false)
         if ("gamePanelWindow" in ::UI) { ::UI.gamePanelWindow(this.upgradeScroll.window, 0) }
         ::EUR.registerLeftWindow("show_upgrade_window", this.upgradeScroll.window)
+    }
+
+    function scaled(v) {
+        local k = ::authored.hudStretch()
+        return (v * k + (v < 0 ? -0.5 : 0.5)).tointeger()
     }
 
     function unitCard(eduType, faction) {
@@ -178,13 +212,15 @@ class unitUpgrades {
         return texture
     }
 
-    // The general-upgrades card lift, same numbers: an additive white wash on hover, brighter while
-    // held. Additive rather than a plain alpha fill so a dark card brightens instead of greying out.
-    function cardButton(img, w, h, x, y, r = 255, g = 255, b = 255, a = 255) {
-        local hit = ::UI.imageButton(img, w, h, x, y, r, g, b, a)
+    // Additive white wash on hover, brighter while held, so a dark card brightens instead of greying.
+    function cardButton(id, img, w, h, x, y, on = true, r = 255, g = 255, b = 255, a = 255) {
+        local hit = ::UI.imageButton(id, img, w, h, x, y, r, g, b, a)
+        // a card that is off dims by alpha alone, the way the hand-drawn one did
+        ::UI.setWidgetStyle(hit, ::UI.Metric.disabledFade, 0)
+        ::UI.setEnabled(hit, on)
         if (hit.hovered) {
             ::UI.pushBlend(1)
-            ::UI.drawRect(hit.x, hit.y, hit.w, hit.h, 255, 255, 255,
+            ::UI.drawRect(x, y, w, h, 255, 255, 255,
                           hit.held ? this.layout.cardLiftHeld : this.layout.cardLiftHover)
             ::UI.popBlend()
         }
@@ -194,35 +230,16 @@ class unitUpgrades {
     // The red status line. Centred on the window and WRAPPED: it used to be drawn at a fixed x with
     // no wrap, so the longest reason ("...not garrisoned in a fort or settlement.") ran off the panel.
     function statusMessage(area, y, message) {
-        local wrapW = area.width - this.layout.messagePadX * 2
+        local wrapW = area.width - this.scaled(this.layout.messagePadX) * 2
         ::UI.pushStyle({ [::UI.Colour.text] = this.layout.messageColour,
                          [::UI.Metric.alignX] = 1, [::UI.Metric.elideWidth] = wrapW })
-        ::UI.layoutAt(area.x + this.layout.messagePadX, y)
+        ::UI.layoutAt(area.x + this.scaled(this.layout.messagePadX), y)
         ::UI.textWrapped(message, wrapW)
         ::UI.popStyle()
     }
 
-    function styleAliasFont() {
-        if (this.aliasFontSet) { return }
-        this.aliasFontSet = true
-        local id = 0
-        local rows = ::UI.fonts()
-        if (rows != null) {
-            foreach (f in rows) {
-                if (f.name == ::fonts.game.verdanaSml) { id = f.id }
-            }
-        }
-        if (id != 0) { ::UI.setWidgetStyle(this.aliasInput, ::UI.Font.body, id) }
-        ::UI.setWidgetStyle(this.aliasInput, ::UI.Metric.fontSize, this.layout.bodyFontSize)
-    }
-
     function upgradeWindow() {
-        // GAME SPACE: this panel sits in the game's own scroll slot, so its content stretches on x
-        // exactly as the frame does. Composes with Cap.autoScaleDraw's uniform scale to give the
-        // engine's W/1920; 1.0 on 16:9, so nothing moves there. Scoped form - closes on every path.
-        return ::UI.pushTransform(0, 0, ::authored.hudStretch(), 0, 1.0, function() {
-            this.upgradeWindowBody()
-        }.bindenv(this))
+        this.upgradeWindowBody()
     }
 
     function upgradeWindowBody() {
@@ -250,39 +267,19 @@ class unitUpgrades {
         if (unit.type == null) { return }
         if (!(unit.type.name in ::EUR.UNIT_UPGRADES) || !::EUR.UNIT_UPGRADES[unit.type.name]) { return }
 
-        local rect = ::authored.gameRect(::UI.widgetRectGet(this.upgradeScroll.window))
-        if (rect == null) { return }
-        local margins = ::EUR.scroll.setMargins("scroll")
-        if (margins == null) { return }
-        local area = { x = rect[0] + margins[0], y = rect[1] + margins[1],
-                       width = rect[2] - margins[0] - margins[2], height = rect[3] - margins[1] - margins[3] }
+        local body = ::UI.contentRect(this.upgradeScroll.window, true, true)
+        if (body == null) { return }
+        local area = { x = body[0], y = body[1], width = body[2], height = body[3] }
 
-        ::EUR.scroll.drawSet("panel",
-                             (area.x + this.layout.bgInsetX + this.layout.bgOffsetX),
-                             (area.y + this.layout.bgInsetY + this.layout.bgOffsetY),
-                             (area.width - this.layout.bgInsetX * 2 + this.layout.bgWidthDelta),
-                             (area.height - this.layout.bgInsetY * 2 + this.layout.bgHeightDelta))
 
         ::UI.pushStyle({ [::UI.Colour.text] = this.layout.textColour })
 
-        ::UI.layoutAt(area.x, area.y + this.layout.headingOffsetY)
-        ::UI.pushFont(::fonts.body, false, this.layout.headingFontSize)
-        ::UI.pushStyle({ [::UI.Metric.alignX] = 1, [::UI.Metric.elideWidth] = area.width })
-        ::UI.text("Unit Upgrades")
-        ::UI.popStyle()
-        ::UI.popFont()
+        ::UI.pushFont(::EX.fonts.body, false, this.layout.bodyFontSize)
 
-        ::UI.pushFont(::fonts.body, false, this.layout.bodyFontSize)
-        this.styleAliasFont()
-
-        local contentX = area.x + this.layout.contentInsetX
+        local contentX = area.x + this.scaled(this.layout.contentInsetX)
         local y = area.y + this.layout.contentTopY
 
-        ::UI.layoutAt(area.x, area.y + this.layout.nameY)
-        ::UI.pushStyle({ [::UI.Metric.fontSize] = this.layout.nameFontSize, [::UI.Metric.alignX] = 1,
-                         [::UI.Metric.elideWidth] = area.width })
-        ::UI.text(unit.type.displayName)
-        ::UI.popStyle()
+        ::UI.textSet(this.nameLabel, unit.type.displayName)
 
         if (!::EUR.alias_text_set) {
             ::EUR.alias_text = unit.name
@@ -290,8 +287,8 @@ class unitUpgrades {
             ::UI.textSet(this.aliasInput, unit.name)
         }
 
-        ::UI.widgetRect(this.aliasInput, contentX, y, this.layout.aliasInputW, this.layout.aliasInputH)
-        ::UI.widgetRect(this.updateButton, contentX + this.layout.aliasInputW + this.layout.updateButtonGapX, y,
+        ::UI.widgetRect(this.aliasInput, contentX, y, this.scaled(this.layout.aliasInputW), this.layout.aliasInputH)
+        ::UI.widgetRect(this.updateButton, contentX + this.scaled(this.layout.aliasInputW + this.layout.updateButtonGapX), y,
                         0, this.layout.updateButtonH)
 
         ::EUR.alias_text = ::UI.inputTextGet(this.aliasInput)
@@ -308,16 +305,19 @@ class unitUpgrades {
 
         local uCard = this.unitCard(unit.type.name, ::EUR.eur_player_faction.name)
         if (uCard != null && uCard.img != 0) {
-            ::UI.image(uCard.img, this.layout.cardW, this.layout.cardH, contentX, y)
-            ::UI.tooltipAt(contentX, y, this.layout.cardW, this.layout.cardH)
+            ::UI.image(uCard.img, this.scaled(this.layout.cardW), this.scaled(this.layout.cardH), contentX, y)
+            ::UI.tooltipAt(contentX, y, this.scaled(this.layout.cardW), this.scaled(this.layout.cardH))
             ::UI.tooltip(0, ::units.get(unit.type.name).displayName + "\n" + ::EUR.showEDUStats(unit.type.name))
         }
-        y += this.layout.cardH + this.layout.currentCardGapY
+        y += this.scaled(this.layout.cardH + this.layout.currentCardGapY)
 
         ::UI.layoutAt(contentX, y)
         ::UI.text("Upgrades:")
         y += this.layout.upgradesLabelRowH
 
+        local cardW = this.scaled(this.layout.cardW)
+        local cardH = this.scaled(this.layout.cardH)
+        local cardRight = area.x + this.scaled(this.layout.previewOffsetX)
         local cardX = contentX
         local cardY = y
         for (local i = 0; i < ::EUR.UNIT_UPGRADES[unit.type.name].unit.len(); i++) {
@@ -329,7 +329,11 @@ class unitUpgrades {
             if (::EUR.UNIT_UPGRADES[unit.type.name].unit[i] != null) {
                 local eduEntry = ::units.get(::EUR.UNIT_UPGRADES[unit.type.name].unit[i])
                 if (eduEntry == null) {
-                    cardX += this.layout.cardW + this.layout.cardGapX
+                    cardX += cardW + this.scaled(this.layout.cardGapX)
+                    if (cardX > cardRight - cardW) {
+                        cardX = contentX
+                        cardY += cardH + this.scaled(this.layout.currentCardGapY)
+                    }
                     continue
                 }
 
@@ -357,14 +361,10 @@ class unitUpgrades {
 
                 local optCard = this.unitCard(eduEntry.name, ::EUR.eur_player_faction.name)
                 if (optCard != null && optCard.img != 0) {
-                    if (eligible) {
-                        if (this.cardButton(optCard.img, this.layout.cardW, this.layout.cardH, cardX, cardY)) {
-                            ::EUR.temp_unit_choice = i
-                            ::game.runScriptCommand("play_sound_event", "BUTTON_DOWN")
-                        }
-                    } else {
-                        local optTint = this.layout.disabledCardTint
-                        ::UI.image(optCard.img, this.layout.cardW, this.layout.cardH, cardX, cardY, optTint[0], optTint[1], optTint[2], optTint[3])
+                    local picked = this.cardButton("##upOpt" + i, optCard.img, cardW, cardH, cardX, cardY, eligible)
+                    if (eligible && picked) {
+                        ::EUR.temp_unit_choice = i
+                        ::game.runScriptCommand("play_sound_event", "BUTTON_DOWN")
                     }
 
                     if (owned) {
@@ -375,11 +375,15 @@ class unitUpgrades {
                             tip += "\n" + reason
                         }
                         tip += "\n" + ::EUR.showEDUStats(eduEntry.name)
-                        ::UI.tooltipAt(cardX, cardY, this.layout.cardW, this.layout.cardH)
+                        ::UI.tooltipAt(cardX, cardY, cardW, cardH)
                         ::UI.tooltip(0, tip)
                     }
                 }
-                cardX += this.layout.cardW + this.layout.cardGapX
+                cardX += cardW + this.scaled(this.layout.cardGapX)
+                if (cardX > cardRight - cardW) {
+                    cardX = contentX
+                    cardY += cardH + this.scaled(this.layout.currentCardGapY)
+                }
             }
         }
 
@@ -391,11 +395,7 @@ class unitUpgrades {
             }
         }
         ::EUR.temp_upgrade_unit = unit
-
-        // Locked to the left column rather than carrying its own absolute y: the heading sits on the
-        // "Experience:" row and its cards on the unit card below it, so the two columns stay level if
-        // either row height changes. The two offsets are nudges on top of that, not the base.
-        local previewX = area.x + this.layout.previewOffsetX
+        local previewX = area.x + this.scaled(this.layout.previewOffsetX)
         local previewY = area.y + this.layout.contentTopY + this.layout.aliasRowH + this.layout.previewOffsetY
 
         if (unit.experience >= exp_req) {
@@ -405,8 +405,6 @@ class unitUpgrades {
                         if (unit.army != null) {
                             if (unit.army.faction.money >= ::EUR.unit_cost) {
                                 if (!(unit.army.inSettlement() || unit.army.inFort())) {
-                                    // Bottom of the window, same slot as the general-upgrades messages -
-                                    // previewY put it over the current unit card near the top.
                                     this.statusMessage(area, area.y + this.layout.messageOffsetY,
                                                        "Cannot change as not garrisoned in a fort or settlement.")
                                 } else {
@@ -433,12 +431,16 @@ class unitUpgrades {
                                                                 if (edu != null) {
                                                                     local pCard = this.unitCard(edu.name, ::EUR.eur_player_faction.name)
                                                                     if (pCard != null && pCard.img != 0) {
-                                                                        ::UI.image(pCard.img, this.layout.cardW, this.layout.cardH, pathX, pathY)
-                                                                        ::UI.tooltipAt(pathX, pathY, this.layout.cardW, this.layout.cardH)
+                                                                        ::UI.image(pCard.img, this.scaled(this.layout.cardW), this.scaled(this.layout.cardH), pathX, pathY)
+                                                                        ::UI.tooltipAt(pathX, pathY, this.scaled(this.layout.cardW), this.scaled(this.layout.cardH))
                                                                         ::UI.tooltip(0, edu.displayName + "\n" + ::EUR.showEDUStats(edu.name))
                                                                     }
                                                                 }
-                                                                pathX += this.layout.cardW + this.layout.cardGapX
+                                                                pathX += this.scaled(this.layout.cardW + this.layout.cardGapX)
+                                                                if (pathX > area.x + area.width - this.scaled(this.layout.cardW)) {
+                                                                    pathX = previewX
+                                                                    pathY += this.scaled(this.layout.cardH + this.layout.currentCardGapY)
+                                                                }
                                                             }
                                                         }
                                                     } else {
@@ -446,21 +448,19 @@ class unitUpgrades {
                                                     }
                                                 }
 
-                                                // Centred on the content area, coin at the card's left edge - the same
-                                                // three lines eurGeneralBGSwap places its confirm card with.
                                                 local costY = area.y + this.layout.costOffsetY
-                                                local targetX = area.x + (area.width - this.layout.cardW) / 2
-                                                if (::EUR.coins != null && ::EUR.coins.img != 0) { ::UI.image(::EUR.coins.img, this.layout.coinIconW, this.layout.coinIconH, targetX, costY) }
-                                                ::UI.layoutAt(targetX + this.layout.costTextOffsetX, costY)
+                                                local targetX = area.x + (area.width - this.scaled(this.layout.cardW)) / 2
+                                                if (::EUR.coins != null && ::EUR.coins.img != 0) { ::UI.image(::EUR.coins.img, this.scaled(this.layout.coinIconW), this.scaled(this.layout.coinIconH), targetX, costY) }
+                                                ::UI.layoutAt(targetX + this.scaled(this.layout.costTextOffsetX), costY)
                                                 ::UI.text(("" + ::EUR.unit_cost))
                                                 local targetY = costY + this.layout.costCardOffsetY
                                                 local tCard = this.unitCard(::EUR.UNIT_UPGRADES[unit.type.name].unit[::EUR.temp_unit_choice], ::EUR.eur_player_faction.name)
                                                 local haveTCard = tCard != null && tCard.img != 0
                                                 local confirmed = haveTCard
-                                                    ? this.cardButton(tCard.img, this.layout.cardW, this.layout.cardH, targetX, targetY)
-                                                    : ::UI.hitRect(targetX, targetY, this.layout.cardW, this.layout.cardH).clicked
+                                                    ? this.cardButton("##upTarget", tCard.img, this.scaled(this.layout.cardW), this.scaled(this.layout.cardH), targetX, targetY)
+                                                    : ::UI.hitRect(targetX, targetY, this.scaled(this.layout.cardW), this.scaled(this.layout.cardH)).clicked
                                                 if (haveTCard) {
-                                                    ::UI.tooltipAt(targetX, targetY, this.layout.cardW, this.layout.cardH)
+                                                    ::UI.tooltipAt(targetX, targetY, this.scaled(this.layout.cardW), this.scaled(this.layout.cardH))
                                                     ::UI.tooltip(0, ::units.get(::EUR.UNIT_UPGRADES[unit.type.name].unit[::EUR.temp_unit_choice]).displayName + "\n" + ::EUR.showEDUStats(::EUR.UNIT_UPGRADES[unit.type.name].unit[::EUR.temp_unit_choice]))
                                                 }
                                                 if (confirmed) {
@@ -484,12 +484,9 @@ class unitUpgrades {
     }
 
     function acceptArea() {
-        local rect = ::authored.rect(::UI.widgetRectGet(this.acceptScroll.window))
-        if (rect == null) { return null }
-        local margins = ::EUR.scroll.setMargins("scroll")
-        if (margins == null) { return null }
-        return { x = rect[0] + margins[0], y = rect[1] + margins[1],
-                 width = rect[2] - margins[0] - margins[2], height = rect[3] - margins[1] - margins[3] }
+        local body = ::UI.contentRect(this.acceptScroll.window, true, true)
+        if (body == null) { return null }
+        return { x = body[0], y = body[1], width = body[2], height = body[3] }
     }
 
     function ugSwapAccept() {
@@ -499,24 +496,16 @@ class unitUpgrades {
         if (::EUR.temp_upgrade_unit.type == null) { return }
         if (!(::EUR.temp_upgrade_unit.type.name in ::EUR.UNIT_UPGRADES)) { return }
 
-        // Both insets are measured from the content AREA (the window minus the scroll set's
-        // 9-slice margins), so an equal value on each axis puts the panel edge the same
-        // distance inside on both. Negative grows it back out over the frame.
         local panelX = area.x + this.layout.acceptBgInsetX + this.layout.acceptBgOffsetX
         local panelW = area.width - this.layout.acceptBgInsetX * 2 + this.layout.acceptBgWidthDelta
         local panelY = area.y + this.layout.acceptBgInsetY + this.layout.acceptBgOffsetY
         local panelH = area.height - this.layout.acceptBgInsetY * 2 + this.layout.acceptBgHeightDelta
-        ::EUR.scroll.drawSet("panel", panelX, panelY,
-                             panelW, panelH)
 
         this.acceptText(panelX, panelY, panelW,
                         area.y + area.height - this.layout.acceptButtonBottomInset,
                         "Upgrade to " + ::EUR.UNIT_UPGRADES[::EUR.temp_upgrade_unit.type.name].unit[::EUR.temp_unit_choice])
     }
 
-    // Heading face, WRAPPED rather than elided, sat at the midpoint between the panel top and the
-    // buttons instead of pinned near the top. textSize measures inside the pushed font scope, and
-    // with a wrap width it answers the wrapped height, so a two-line message still centres.
     function acceptText(panelX, panelY, panelW, buttonY, message) {
         ::UI.pushFont(::fonts.body, false, this.layout.headingFontSize)
         local wrapW = panelW - this.layout.acceptTextPadX * 2
@@ -637,7 +626,7 @@ class unitUpgrades {
     }
 
     function render() {
-        this.ensure()
+        this.buildOnce()
         ::EUR.syncLeftWindows()
 
         local showUpgrade = ::EUR.window_states.show_upgrade_window && ::EUR.in_campaign_map
@@ -647,8 +636,32 @@ class unitUpgrades {
         this.shownLast = showUpgrade
         ::UI.widgetVisible(this.aliasInput, showUpgrade)
         ::UI.widgetVisible(this.updateButton, showUpgrade)
+        ::UI.widgetVisible(this.headingLabel, showUpgrade)
+        ::UI.widgetVisible(this.nameLabel, showUpgrade)
         if (showUpgrade) {
-            ::EUR.scroll.placeGame(this.upgradeScroll.window, this.layout.windowX, this.layout.windowY, this.layout.windowW, this.layout.windowH)
+            ::EUR.scroll.placeGame(this.upgradeScroll, this.layout.windowX, this.layout.windowY, this.layout.windowW, this.layout.windowH)
+            local bgBody = ::UI.contentRect(this.upgradeScroll.window, true, true)
+            if (bgBody != null) {
+                ::UI.widgetRect(this.upgradeCanvas,
+                                bgBody[0] + this.layout.bgInsetX + this.layout.bgOffsetX,
+                                bgBody[1] + this.layout.bgInsetY + this.layout.bgOffsetY,
+                                bgBody[2] - this.layout.bgInsetX * 2 + this.layout.bgWidthDelta,
+                                bgBody[3] - this.layout.bgInsetY * 2 + this.layout.bgHeightDelta)
+                ::UI.widgetRect(this.headingLabel, bgBody[0],
+                                bgBody[1] + this.layout.headingOffsetY, bgBody[2], 0)
+                ::UI.widgetRect(this.nameLabel, bgBody[0],
+                                bgBody[1] + this.layout.nameY, bgBody[2], 0)
+            }
+            local closeAt = ::UI.widgetRectGet(this.upgradeScroll.window, true)
+            if (closeAt != null) {
+                ::UI.pushHitMode(::UI.Hit.alpha)
+                local close = ::UI.imageButton("##closeUnitUpgrades", ::EX.shared.images.seal, 82, 91,
+                                               closeAt[0] + closeAt[2] - 86, closeAt[1] + closeAt[3] - 91)
+                ::UI.popHitMode()
+                ::UI.tooltip(close, "Close this scroll")
+                ::UI.addChild(this.upgradeScroll.window, close)
+                if (close.clicked) { ::EUR.window_states.show_upgrade_window = false; ::EUR.alias_text = ""; ::EUR.alias_text_set = false }
+            }
             if (!this.upgradeRaised) { ::UI.raise(this.upgradeScroll.window) }
         }
         this.upgradeRaised = showUpgrade
@@ -657,7 +670,7 @@ class unitUpgrades {
         ::UI.widgetVisible(this.acceptScroll.window, showAccept)
         if (showAccept) {
             local screen = ::authored.screen()
-            ::EUR.scroll.place(this.acceptScroll.window, (screen[0] - this.layout.acceptW) / 2, (screen[1] - this.layout.acceptH) / 2, this.layout.acceptW, this.layout.acceptH)
+            ::EUR.scroll.place(this.acceptScroll, (screen[0] - this.layout.acceptW) / 2, (screen[1] - this.layout.acceptH) / 2, this.layout.acceptW, this.layout.acceptH)
             if (!this.acceptRaised) { ::UI.raise(this.acceptScroll.window) }
         }
         this.acceptRaised = showAccept
@@ -665,6 +678,11 @@ class unitUpgrades {
         local area = this.acceptArea()
         local showAcceptButtons = showAccept && area != null
         if (showAcceptButtons) {
+            ::UI.widgetRect(this.acceptCanvas,
+                            area.x + this.layout.acceptBgInsetX + this.layout.acceptBgOffsetX,
+                            area.y + this.layout.acceptBgInsetY + this.layout.acceptBgOffsetY,
+                            area.width - this.layout.acceptBgInsetX * 2 + this.layout.acceptBgWidthDelta,
+                            area.height - this.layout.acceptBgInsetY * 2 + this.layout.acceptBgHeightDelta)
             local half = (area.width - this.layout.acceptButtonW) / 2
             local btnY = area.y + area.height - this.layout.acceptButtonBottomInset
             ::UI.widgetRect(this.ugYesBtn, area.x + half - this.layout.acceptButtonGapX, btnY, this.layout.acceptButtonW, this.layout.acceptButtonH)

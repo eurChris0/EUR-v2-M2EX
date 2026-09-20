@@ -302,7 +302,6 @@ local CHAR_CAS = [
     }
 }
 
-// coordinate -> standalone-prop key, for the hover tooltip below
 ::EUR.coord_lookup <- {}
 foreach (key, data in ::EUR.strat_cas_standalone) {
     if (!(data.xCoord in ::EUR.coord_lookup)) { ::EUR.coord_lookup[data.xCoord] <- {} }
@@ -310,4 +309,24 @@ foreach (key, data in ::EUR.strat_cas_standalone) {
 }
 
 ::EUR.supplyTooltip <- function() {}
-::EUR.tooltipAtCoord <- function() {}
+
+::EUR.tooltipAtCoord <- function() {
+    if ((::UI.context() & ::Enum.UiContext.campaignLive) == 0) return
+    if (::UI.cursorOverGameUi()) return
+
+    local tile = ::UI.hoveredTile()
+    if (tile == null) return
+    if (!(tile.x in ::EUR.coord_lookup)) return
+    local column = ::EUR.coord_lookup[tile.x]
+    if (!(tile.y in column)) return
+
+    local prop = ::EUR.strat_cas_standalone[column[tile.y]]
+    if (prop == null || !("tooltip" in prop) || prop.tooltip == "") return
+
+    local pad = 6
+    local mouse = ::UI.mouse.pos()
+    ::UI.tooltipAt(mouse[0] - pad, mouse[1] - pad, pad * 2, pad * 2)
+    ::UI.tooltip(0, prop.tooltip)
+}
+
+::UI.onFrame(function() { ::EUR.tooltipAtCoord() })

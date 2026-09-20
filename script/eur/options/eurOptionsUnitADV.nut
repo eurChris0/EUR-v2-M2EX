@@ -8,11 +8,9 @@ local function oneDp(value) {
 ::EUR.unit_adv_slot <- 0
 ::EUR.unit_adv_pick <- 0
 
-// "" = neither right pane, "new" = the New entry pane, "edit" = the pane for a live entry. One or the
-// other, never both: Add unit opens the first, clicking a card on the left opens the second.
 ::EUR.unit_adv_mode <- ""
 
-// The New entry pane touches nothing live: these are the temp values Add unit commits in one go.
+
 ::EUR.unit_new_base <- 0
 ::EUR.unit_new_target <- 0
 ::EUR.unit_new_exp <- 2
@@ -20,8 +18,6 @@ local function oneDp(value) {
 
 ::EUR.unit_new_heading <- { text = "New entry" }
 
-// Only units with no entry yet, so Add unit always creates one - and the empty case has a row to
-// say so in rather than a dropdown that silently does nothing.
 ::EUR.unit_new_base_picker <- {
     select = "", options = [],
     onChange = function(i) { ::EUR.unit_new_base = i; ::EUR.eurOptionsUnitADV.pickNewTarget() },
@@ -151,12 +147,12 @@ class eurOptionsUnitADV {
         local x = originX
         local y = originY + this.layout.listTopY
         local column = 0
-        foreach (eduType in this.editableList()) {
+        foreach (ei, eduType in this.editableList()) {
             local texture = this.card(eduType)
             if (texture == null || texture.img == 0) continue
             local selected = (eduType == ::EUR.unit_adv_edu)
             local tint = selected ? this.layout.selectedTint : this.layout.idleTint
-            if (::UI.imageButton(texture.img, this.layout.cardW, this.layout.cardH, x, y,
+            if (::UI.imageButton("##unitCard" + ei, texture.img, this.layout.cardW, this.layout.cardH, x, y,
                                  tint[0], tint[1], tint[2], tint[3]).clicked) {
                 ::EUR.unit_adv_edu = eduType
                 ::EUR.unit_adv_slot = 0
@@ -185,7 +181,7 @@ class eurOptionsUnitADV {
         return y + this.layout.lineH
     }
 
-    // Exp and cost are missing here on purpose: their sliders below carry both numbers now.
+
     function drawEditPane(x, y) {
         local upgrades = this.entry()
         if (upgrades == null) return
@@ -207,7 +203,7 @@ class eurOptionsUnitADV {
             local owned = ::units.get(upType) != null && ::units.get(upType).hasOwnership(::EUR.eur_playerFactionId)
             local selected = (i == ::EUR.unit_adv_slot)
             local tint = selected ? this.layout.selectedTint : this.layout.idleTint
-            if (::UI.imageButton(upTexture.img, this.layout.cardW, this.layout.cardH, cardX, y,
+            if (::UI.imageButton("##upSlot" + i, upTexture.img, this.layout.cardW, this.layout.cardH, cardX, y,
                                  tint[0], tint[1], tint[2], tint[3]).clicked) {
                 ::EUR.unit_adv_slot = i
                 ::game.runScriptCommand("play_sound_event", "BUTTON_DOWN")
@@ -246,18 +242,16 @@ class eurOptionsUnitADV {
         }
     }
 
-    // The left pane: every unit that already carries an upgrade entry. Every per-frame refresh hangs
-    // off this one, because it is the draw that runs whatever the two right panes are showing.
     function draw() {
         if (!::EUR.in_campaign_map || ::EUR.eur_player_faction == null) return
         this.refreshPicker()
         this.refreshFreeList()
         this.refreshBindings()
         if (!("canvas" in ::EUR.unit_adv_section)) return
-        local rect = ::authored.rect(::UI.widgetRectGet(::EUR.unit_adv_section.canvas))
+        local rect = ::UI.widgetRectGet(::EUR.unit_adv_section.canvas, true)
         if (rect == null) return
 
-        ::UI.pushFont(::fonts.body, false, this.layout.bodyFontSize)
+        ::UI.pushFont(::EX.fonts.body, false, this.layout.bodyFontSize)
         this.drawList(rect[0], rect[1])
         ::UI.popFont()
     }
@@ -265,10 +259,10 @@ class eurOptionsUnitADV {
     function drawTitle() {
         if (!::EUR.in_campaign_map || ::EUR.eur_player_faction == null) return
         if (!("canvas" in ::EUR.unit_adv_title)) return
-        local rect = ::authored.rect(::UI.widgetRectGet(::EUR.unit_adv_title.canvas))
+        local rect = ::UI.widgetRectGet(::EUR.unit_adv_title.canvas, true)
         if (rect == null) return
 
-        ::UI.pushFont(::fonts.body, false, this.layout.bodyFontSize)
+        ::UI.pushFont(::EX.fonts.body, false, this.layout.bodyFontSize)
         local unitType = (::EUR.unit_adv_edu != "") ? ::units.get(::EUR.unit_adv_edu) : null
         if (unitType != null) {
             this.line(rect[0], rect[1], "Editing " + unitType.displayName, this.layout.textColour)
@@ -281,10 +275,10 @@ class eurOptionsUnitADV {
     function drawEdit() {
         if (!::EUR.in_campaign_map || ::EUR.eur_player_faction == null) return
         if (!("canvas" in ::EUR.unit_adv_edit)) return
-        local rect = ::authored.rect(::UI.widgetRectGet(::EUR.unit_adv_edit.canvas))
+        local rect = ::UI.widgetRectGet(::EUR.unit_adv_edit.canvas, true)
         if (rect == null) return
 
-        ::UI.pushFont(::fonts.body, false, this.layout.bodyFontSize)
+        ::UI.pushFont(::EX.fonts.body, false, this.layout.bodyFontSize)
         this.drawEditPane(rect[0], rect[1])
         ::UI.popFont()
     }
@@ -295,7 +289,7 @@ class eurOptionsUnitADV {
     function drawTempCard(section, eduType) {
         if (!::EUR.in_campaign_map || ::EUR.eur_player_faction == null) return
         if (eduType == null || !("canvas" in section)) return
-        local rect = ::authored.rect(::UI.widgetRectGet(section.canvas))
+        local rect = ::UI.widgetRectGet(section.canvas, true)
         if (rect == null) return
         local texture = this.card(eduType)
         if (texture == null || texture.img == 0) return
@@ -304,9 +298,7 @@ class eurOptionsUnitADV {
         ::UI.tooltip(0, this.unitTip(eduType, null))
     }
 
-    // selectOptions CLEARS the selection, so refill only when the list actually changed - and the
-    // test is the array's IDENTITY, because buildPlayerUnits replaces it wholesale and two different
-    // factions can easily have the same number of units.
+
     function refreshPicker() {
         local names = ::EUR.player_units_local
         if (names == null || names.len() == 0) return
@@ -324,9 +316,7 @@ class eurOptionsUnitADV {
         }
     }
 
-    // Rebuilt every frame - a couple of hundred string lookups - and compared element-wise, because
-    // the count alone says nothing: Load defaults can hand back a different set of the same size, and
-    // the dropdown's labels would then name units freeNames no longer holds at those indices.
+
     function refreshFreeList() {
         local names = ::EUR.player_units
         local shown = ::EUR.player_units_local
@@ -363,8 +353,7 @@ class eurOptionsUnitADV {
         return true
     }
 
-    // The upgrade target defaults to the first unit that is not the entry unit - upgrading a unit
-    // into itself is the one pick that can never be right.
+
     function pickNewTarget() {
         local baseType = this.newBaseType()
         local names = ::EUR.player_units
@@ -379,16 +368,11 @@ class eurOptionsUnitADV {
         }
     }
 
-    // Rebind rather than push a value: the sliders then read and write the live array elements. The
-    // ENTRY TABLE is part of the key, not just its name and slot - ::UI.bind holds a reference to the
-    // array itself, and rebuildUpgradeLists (the "Start with T2" checkbox, same tab) swaps every
-    // entry for a fresh copy under the same name, which would otherwise leave both sliders driving
-    // arrays nothing reads any more.
+
     function refreshBindings() {
         local upgrades = this.entry()
         local slot = ::EUR.unit_adv_slot
-        // All four arrays are parallel in a well-formed entry, but the table is hand-maintained and a
-        // short one here would throw INSIDE a canvas draw, which takes the rest of the frame with it.
+
         local live = (upgrades != null && slot >= 0 && slot < upgrades.unit.len()
                       && slot < upgrades.expRequirement.len() && slot < upgrades.cost_multi.len())
 
@@ -421,8 +405,7 @@ class eurOptionsUnitADV {
         ::UI.textSet(::EUR.unit_adv_cost.handle, text)
     }
 
-    // One button, two jobs: it opens the New entry pane, and once that pane is up it is what commits
-    // the entry. Nothing else writes to UNIT_UPGRADES.
+
     function startOrAddUnit() {
         if (::EUR.unit_adv_mode != "new") {
             ::EUR.unit_adv_mode = "new"
@@ -432,7 +415,7 @@ class eurOptionsUnitADV {
         this.addNew()
     }
 
-    // Commits the New entry pane in one go - nothing above it has touched UNIT_UPGRADES.
+
     function addNew() {
         local baseType = this.newBaseType()
         local target = this.newTargetType()
@@ -460,8 +443,6 @@ class eurOptionsUnitADV {
         upgrades.expRequirement.append(2)
         upgrades.cost_multi.append(1)
         upgrades.counter.append("")
-        // Some shipped entries carry a fifth parallel array, and eurUnitUpgrades indexes it by the
-        // unit slot guarded only on presence - a short one throws inside that window's draw.
         if (("faction" in upgrades) && upgrades.faction != null) { upgrades.faction.append("") }
         ::EUR.unit_adv_slot = upgrades.unit.len() - 1
         ::game.runScriptCommand("play_sound_event", "BUTTON_DOWN")
@@ -477,8 +458,6 @@ class eurOptionsUnitADV {
         ::game.runScriptCommand("play_sound_event", "BUTTON_DOWN")
     }
 
-    // All four arrays are parallel, so a delete has to take the same index out of each - and an
-    // entry with no upgrades left goes entirely, as the Lua did.
     function deleteUpgrade() {
         local upgrades = this.entry()
         if (upgrades == null || upgrades.unit.len() == 0) return

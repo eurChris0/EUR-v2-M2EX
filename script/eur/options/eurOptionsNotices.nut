@@ -27,12 +27,18 @@ class eurOptionsNotices {
         if (this.legScroll != null) return
         local self = this
 
-        ::UI.pushFont(::fonts.body, false, this.layout.bodyFontSize)
+        ::UI.pushFont(::EX.fonts.body, false, this.layout.bodyFontSize)
         ::UI.pushStyle(::EUR.eurStyles.basic_4)
 
-        this.legScroll = ::EUR.scroll.create(this.layout.noticeW, this.layout.noticeH, 0, 0)
-        this.legCanvas = ::UI.canvas(0, 0)
-        ::UI.canvasDraw(this.legCanvas, function() { self.legendaryChoice() })
+        this.legScroll = ::EUR.scroll.create("noticesLeg", this.layout.noticeW, this.layout.noticeH, 0, 0)
+        ::UI.pushStyle({ [::UI.Metric.sliceBorderScale] = (::EUR.scroll.frameRatio() * 100.0 + 0.5).tointeger() })
+        ::UI.setSurfaceNine(::UI.Surface.panel, ::EX.shared.images.tileable_panel, ::UI.Slice.tile)
+        this.legCanvas = ::UI.panel("##eurOptionsNoticescanvas", 0, 0, 0, 0,
+                                    [::UI.PanelFlag.borderless,
+                                     ::UI.PanelFlag.absoluteChildren, ::UI.PanelFlag.noScrollBodyY])
+        ::UI.popStyle()
+        ::UI.setParent(this.legScroll.window)
+                ::UI.onDraw(this.legCanvas, function() { self.legendaryChoice() })
 
         this.legYesBtn = ::UI.button("Yes", this.layout.buttonW, this.layout.buttonH)
         ::UI.placeAbsolute(this.legYesBtn)
@@ -49,9 +55,15 @@ class eurOptionsNotices {
             ::game.runScriptCommand("play_sound_event", "BUTTON_DOWN")
         })
 
-        this.genScroll = ::EUR.scroll.create(this.layout.noticeW, this.layout.noticeH, 0, 0)
-        this.genCanvas = ::UI.canvas(0, 0)
-        ::UI.canvasDraw(this.genCanvas, function() { self.generalEnabled() })
+        this.genScroll = ::EUR.scroll.create("noticesGen", this.layout.noticeW, this.layout.noticeH, 0, 0)
+        ::UI.pushStyle({ [::UI.Metric.sliceBorderScale] = (::EUR.scroll.frameRatio() * 100.0 + 0.5).tointeger() })
+        ::UI.setSurfaceNine(::UI.Surface.panel, ::EX.shared.images.tileable_panel, ::UI.Slice.tile)
+        this.genCanvas = ::UI.panel("##eurOptionsNoticescanvas2", 0, 0, 0, 0,
+                                    [::UI.PanelFlag.borderless,
+                                     ::UI.PanelFlag.absoluteChildren, ::UI.PanelFlag.noScrollBodyY])
+        ::UI.popStyle()
+        ::UI.setParent(this.genScroll.window)
+                ::UI.onDraw(this.genCanvas, function() { self.generalEnabled() })
 
         this.genOkBtn = ::UI.button("Ok", this.layout.buttonW, this.layout.buttonH)
         ::UI.placeAbsolute(this.genOkBtn)
@@ -63,8 +75,6 @@ class eurOptionsNotices {
         ::UI.popStyle()
         ::UI.popFont()
 
-        ::EUR.scroll.sealOnTop(this.legScroll)
-        ::EUR.scroll.sealOnTop(this.genScroll)
 
         ::UI.setParent(0)
         ::UI.widgetVisible(this.legScroll.window, false)
@@ -75,12 +85,9 @@ class eurOptionsNotices {
     }
 
     function noticeArea(window) {
-        local rect = ::authored.rect(::UI.widgetRectGet(window))
-        if (rect == null) return null
-        local margins = ::EUR.scroll.setMargins("scroll")
-        if (margins == null) return null
-        return { x = rect[0] + margins[0], y = rect[1] + margins[1],
-                 width = rect[2] - margins[0] - margins[2], height = rect[3] - margins[1] - margins[3] }
+        local body = ::UI.contentRect(window, true, true)
+        if (body == null) return null
+        return { x = body[0], y = body[1], width = body[2], height = body[3] }
     }
 
     function bodyguardCard() {
@@ -105,8 +112,6 @@ class eurOptionsNotices {
         local panelW = area.width - this.layout.panelInsetX * 2 + this.layout.panelWidthDelta
         local panelY = area.y + this.layout.panelInsetY + this.layout.panelOffsetY
         local panelH = area.height - this.layout.panelInsetY * 2 + this.layout.panelHeightDelta
-        ::EUR.scroll.drawSet("panel", panelX, panelY,
-                             panelW, panelH)
         return { x = panelX, y = panelY, width = panelW, height = panelH,
                  buttonY = area.y + area.height - this.layout.buttonBottomInset }
     }
@@ -154,7 +159,7 @@ class eurOptionsNotices {
 
     function placeNotice(scroll, buttons) {
         local screen = ::authored.screen()
-        ::EUR.scroll.place(scroll.window, (screen[0] - this.layout.noticeW) / 2,
+        ::EUR.scroll.place(scroll, (screen[0] - this.layout.noticeW) / 2,
                         (screen[1] - this.layout.noticeH) / 2, this.layout.noticeW, this.layout.noticeH)
 
         local area = this.noticeArea(scroll.window)
@@ -176,7 +181,7 @@ class eurOptionsNotices {
         ::UI.widgetVisible(this.legYesBtn, showLeg)
         ::UI.widgetVisible(this.legNoBtn, showLeg)
         if (showLeg) {
-            this.placeNotice(this.legScroll, [this.legYesBtn, this.legNoBtn])
+            this.placeNotice(this.legScroll, this.legCanvas, [this.legYesBtn, this.legNoBtn])
             if (!this.legRaised) { ::UI.raise(this.legScroll.window) }
         }
         this.legRaised = showLeg
@@ -185,7 +190,7 @@ class eurOptionsNotices {
         ::UI.widgetVisible(this.genScroll.window, showGen)
         ::UI.widgetVisible(this.genOkBtn, showGen)
         if (showGen) {
-            this.placeNotice(this.genScroll, [this.genOkBtn])
+            this.placeNotice(this.genScroll, this.genCanvas, [this.genOkBtn])
             if (!this.genRaised) { ::UI.raise(this.genScroll.window) }
         }
         this.genRaised = showGen

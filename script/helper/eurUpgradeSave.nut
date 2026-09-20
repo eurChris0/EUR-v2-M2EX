@@ -1,6 +1,3 @@
-// Serialise a live table back over the data file it was seeded from - the port of the Lua's
-// serializeTable / generalWriteDefault / unitWriteDefault. Whole-file rewrite, not a delta: the
-// shipped default IS the store, so an edit is permanent and a mod update overwrites it.
 
 ::EUR.serialiseString <- function(text) {
     local out = ""
@@ -45,9 +42,6 @@
     return "null"
 }
 
-// The whole file is built in memory BEFORE anything is opened, so a serialiser throw leaves the
-// existing data file untouched rather than truncated. A truncated one would fail to compile, and a
-// module that fails to compile takes every symbol in it with it.
 ::EUR.writeDataFile <- function(relativePath, globalName, value) {
     local body = null
     try {

@@ -1,5 +1,5 @@
 class eurBuildFort {
-    layout = {
+   /* layout = {
         boxX = 595, boxY = 400, boxW = 130, boxH = 86,
         boxPad = 6, boxBorder = 2, textGap = 20,
         headingSize = 20, bodySize = 14,
@@ -29,16 +29,16 @@ class eurBuildFort {
     show_fortaccept = false
     fortcost        = 7500
 
-    function ensure() {
+    function buildOnce() {
         if (this.built) return
         local self = this
         ::UI.pushFont(::fonts.body, false, 12)
         ::UI.pushStyle(::EUR.eurStyles.basic_4)
 
-        this.acceptScroll = ::EUR.scroll.create(this.layout.acceptW, this.layout.acceptH, 0, 0)
+        this.acceptScroll = ::EUR.scroll.create("buildFortAccept", this.layout.acceptW, this.layout.acceptH, 0, 0)
 
-        this.acceptCanvas = ::UI.canvas(0, 0)
-        ::UI.canvasDraw(this.acceptCanvas, function() { self.drawAccept() })
+        this.acceptCanvas = ::UI.canvas("##eurBuildFortcanvas", 0, 0)
+        ::UI.onDraw(this.acceptCanvas, function() { self.drawAccept() })
 
         this.yesButton = ::UI.button("Yes", this.layout.acceptButtonW, this.layout.acceptButtonH)
         ::UI.placeAbsolute(this.yesButton)
@@ -56,9 +56,9 @@ class eurBuildFort {
         ::UI.setParent(0)
 
         ::UI.pushStyle(::EUR.eurStyles.fort_button)
-        this.buttonCanvas = ::UI.canvas(this.layout.boxW * 3, this.layout.boxH,
+        this.buttonCanvas = ::UI.canvas("##eurBuildFortcanvas2", this.layout.boxW * 3, this.layout.boxH,
                                         this.layout.boxX, this.layout.boxY)
-        ::UI.canvasDraw(this.buttonCanvas, function() { self.drawRow() })
+        ::UI.onDraw(this.buttonCanvas, function() { self.drawRow() })
         ::UI.popStyle()
 
         ::UI.setParent(0)
@@ -69,14 +69,14 @@ class eurBuildFort {
     }
 
     function render() {
-        this.ensure()
+        this.buildOnce()
         if (!this.built) return
 
         local open = this.show_fortaccept && ::EUR.build_forts && ::EUR.in_campaign_map
         ::UI.widgetVisible(this.acceptScroll.window, open)
         if (open) {
             local screen = ::authored.screen()
-            ::EUR.scroll.place(this.acceptScroll.window, (screen[0] - this.layout.acceptW) / 2,
+            ::EUR.scroll.place(this.acceptScroll, (screen[0] - this.layout.acceptW) / 2,
                                (screen[1] - this.layout.acceptH) / 2,
                                this.layout.acceptW, this.layout.acceptH)
         }
@@ -97,12 +97,9 @@ class eurBuildFort {
     }
 
     function scrollArea(window) {
-        local rect = ::authored.rect(::UI.widgetRectGet(window))
-        if (rect == null) return null
-        local margins = ::EUR.scroll.setMargins("scroll")
-        if (margins == null) return null
-        return { x = rect[0] + margins[0], y = rect[1] + margins[1],
-                 width = rect[2] - margins[0] - margins[2], height = rect[3] - margins[1] - margins[3] }
+        local body = ::UI.contentRect(window, true, true)
+        if (body == null) return null
+        return { x = body[0], y = body[1], width = body[2], height = body[3] }
     }
 
     function subject() {
@@ -139,7 +136,7 @@ class eurBuildFort {
         local pad = ::authored.hudX(this.layout.boxPad), edge = ::authored.hudX(this.layout.boxBorder)
 
         this.drawBox(bx - pad, by - pad, bw + pad * 2, bh + pad * 2, edge)
-        local hit = ::UI.imageButton(::EUR.fort.img, bw, bh, bx, by)
+        local hit = ::UI.imageButton("##fort", ::EUR.fort.img, bw, bh, bx, by)
 
         local line = capped ? "Maximum number of forts reached in this region."
                             : (afford ? "Cost: " + total + " gold."
@@ -237,7 +234,13 @@ class eurBuildFort {
         // price on screen - so the script only takes the rest.
         ::game.runConsoleCommand("add_money", "-" + (this.fortcost - this.extraCost))
     }
+*/
+
+    function sync() {
+
+    }
+
 }
 
 ::EUR.eurBuildFort <- eurBuildFort()
-::UI.onFrame(function() { ::EUR.eurBuildFort.render() })
+//::UI.onFrame(function() { ::EUR.eurBuildFort.render() })

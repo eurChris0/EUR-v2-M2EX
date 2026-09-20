@@ -52,11 +52,11 @@ class eurOptionsGeneralADV {
         return unitType.displayName + "\n" + ::EUR.showEDUStats(eduType)
     }
 
-    function drawCard(eduType, x, y, selected) {
+    function drawCard(tier, slot, eduType, x, y, selected) {
         local texture = this.card(eduType)
         if (texture == null || texture.img == 0) return false
         local tint = selected ? this.layout.selectedTint : this.layout.idleTint
-        local hit = ::UI.imageButton(texture.img, this.layout.cardW, this.layout.cardH, x, y,
+        local hit = ::UI.imageButton("##advCard" + tier + slot, texture.img, this.layout.cardW, this.layout.cardH, x, y,
                                      tint[0], tint[1], tint[2], tint[3])
         ::UI.tooltipAt(x, y, this.layout.cardW, this.layout.cardH)
         ::UI.tooltip(0, this.unitTip(eduType))
@@ -88,13 +88,12 @@ class eurOptionsGeneralADV {
             for (local i = 0; (i in roster); i++) { slots.append(i) }
         }
 
-        // Wraps rather than running on: a canvas is not clipped to its own rect, so a long tier would
-        // paint straight over the pane beside it.
+        // Wraps to the next row so a long tier stays inside the pane.
         local x = originX + this.layout.rowLabelW
         local column = 0
         foreach (i in slots) {
             local selected = (::EUR.gen_adv_tier == tier && ::EUR.gen_adv_slot == i)
-            if (this.drawCard(roster[i], x, y, selected)) {
+            if (this.drawCard(tier, i, roster[i], x, y, selected)) {
                 ::EUR.gen_adv_tier = tier
                 ::EUR.gen_adv_slot = i
                 ::game.runScriptCommand("play_sound_event", "BUTTON_DOWN")
@@ -115,10 +114,10 @@ class eurOptionsGeneralADV {
     function drawPreview() {
         if (!::EUR.in_campaign_map || ::EUR.eur_player_faction == null) return
         if (!("canvas" in ::EUR.gen_adv_preview)) return
-        local rect = ::authored.rect(::UI.widgetRectGet(::EUR.gen_adv_preview.canvas))
+        local rect = ::UI.widgetRectGet(::EUR.gen_adv_preview.canvas, true)
         if (rect == null) return
 
-        ::UI.pushFont(::fonts.body, false, this.layout.bodyFontSize)
+        ::UI.pushFont(::EX.fonts.body, false, this.layout.bodyFontSize)
         this.previewBody(rect[0], rect[1])
         ::UI.popFont()
     }
@@ -168,17 +167,15 @@ class eurOptionsGeneralADV {
         }
     }
 
-    // The left pane: the tier grid. Every BUTTON in this editor is a def-table row in the section below,
-    // because ::UI.button mints a root widget and calling it from a canvas draw would build a fresh
-    // one every frame; imageButton is the immediate form and is what the cards use.
+    // Draws the left pane: the tier grid of unit cards.
     function draw() {
         if (!::EUR.in_campaign_map || ::EUR.eur_player_faction == null) return
         this.refreshPicker()
         if (!("canvas" in ::EUR.gen_adv_section)) return
-        local rect = ::authored.rect(::UI.widgetRectGet(::EUR.gen_adv_section.canvas))
+        local rect = ::UI.widgetRectGet(::EUR.gen_adv_section.canvas, true)
         if (rect == null) return
 
-        ::UI.pushFont(::fonts.body, false, this.layout.bodyFontSize)
+        ::UI.pushFont(::EX.fonts.body, false, this.layout.bodyFontSize)
         local originX = rect[0]
         local y = rect[1]
 

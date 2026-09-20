@@ -24,13 +24,11 @@ class eurOptions {
         acceptButtonW = 80, acceptButtonH = 50,
         acceptButtonBottomInset = 90, acceptButtonSpreadX = 40,
         openerX = 1170, openerY = 90, openerSize = 50,
-        headingOffsetY = -54, headingFontSize = 0,
+        headingOffsetY = -54, headingFontSize = 16,
         headingColour = [0, 0, 0, 255],
         bodyFontSize = 12,
         controlLabelSlack = 8,
     }
-    headingFontId = 0
-    bodyFontId = 0
     typeStyles = "options_types"
     controlStyles = "options_control"
     types = null
@@ -39,8 +37,9 @@ class eurOptions {
     tabbar = 0
     pages  = null
     rows   = null
-    buttonCanvas = 0
+    openBtn = 0
     contentBgCanvas = 0
+    headingLabel = 0
     tabRect = null
     acceptScroll = null
     acceptCanvas = 0
@@ -55,38 +54,35 @@ class eurOptions {
         this.controls = ::EUR.eurStyles[this.controlStyles]
     }
 
-    function ensure() {
+    function buildOnce() {
         if (this.scroll != null) return
         local self = this
         this.pages = []
         this.rows = []
 
-        ::UI.pushFont(::fonts.body, false, this.layout.bodyFontSize)
+        ::UI.pushFont(::EX.fonts.body, false, this.layout.bodyFontSize)
         ::UI.pushStyle(::EUR.eurStyles.options_1)
 
-        this.scroll = ::EUR.scroll.create(this.layout.windowCreateW, this.layout.windowCreateH,
+        this.scroll = ::EUR.scroll.create("options", this.layout.windowCreateW, this.layout.windowCreateH,
                                           this.layout.windowX, this.layout.windowY)
 
-        this.contentBgCanvas = ::UI.canvas(0, 0)
-        ::UI.placeAbsolute(this.contentBgCanvas)
-        ::UI.canvasDraw(this.contentBgCanvas, function() { self.drawContentBackground(); self.optionsHeading() })
-
-        local rows = ::UI.fonts()
-        if (rows != null) {
-            foreach (f in rows) {
-                if (f.name == ::fonts.game.verdana) { this.headingFontId = f.id }
-                if (f.name == ::fonts.game.verdanaSml) { this.bodyFontId = f.id }
-            }
-        }
+        ::UI.pushStyle({ [::UI.Metric.sliceBorderScale] = (::EUR.scroll.frameRatio() * 100.0 + 0.5).tointeger() })
+        ::UI.setSurfaceNine(::UI.Surface.panel, ::EX.shared.images.tileable_panel, ::UI.Slice.tile)
+        this.contentBgCanvas = ::UI.panel("##eurOptionscanvas", 0, 0, 0, 0,
+                                          [::UI.PanelFlag.borderless,
+                                           ::UI.PanelFlag.absoluteChildren, ::UI.PanelFlag.noScrollBodyY])
+        ::UI.popStyle()
+        ::UI.setParent(this.scroll.window)
+                ::UI.placeAbsolute(this.contentBgCanvas)
 
         local titles = []
-        this.tabbar = ::UI.tabs()
+        this.tabbar = ::UI.tabs("##eurOptionstabs")
         ::UI.placeAbsolute(this.tabbar)
         foreach (tab in ::EUR.EUR_OPTION_TABS) {
             if (("showFn" in tab) && !tab.showFn()) { continue }
             if (("showIf" in tab) && !::EUR[tab.showIf]) { continue }
             titles.append(tab.title)
-            local page = ::UI.panel()
+            local page = ::UI.panel("##page" + tab.title)
             this.stylePage(page)
             foreach (sec in tab.sections) { this.buildSection(page, sec) }
             ::UI.addChild(this.tabbar, page)
@@ -103,6 +99,15 @@ class eurOptions {
         })
 
         ::UI.setParent(this.scroll.window)
+        this.headingLabel = ::UI.label("Options")
+        ::UI.placeAbsolute(this.headingLabel)
+        ::UI.setWidgetStyle(this.headingLabel, { [::UI.Font.body] = ::fonts.body,
+                                                 [::UI.Metric.fontSize] = this.layout.headingFontSize,
+                                                 [::UI.Metric.alignX] = 1,
+                                                 [::UI.Metric.padY] = 0,
+                                                 [::UI.Colour.text] = this.layout.headingColour })
+        ::UI.addChild(this.scroll.window, this.headingLabel)
+
         this.closeBtn = ::UI.button("Close me", this.layout.closeButtonW, this.layout.closeButtonH)
         ::UI.placeAbsolute(this.closeBtn)
         ::UI.buttonClick(this.closeBtn, function() {
@@ -119,22 +124,21 @@ class eurOptions {
         ::UI.popStyle()
         ::UI.popFont()
 
-        ::EUR.scroll.sealOnTop(this.scroll)
         ::UI.addChild(this.scroll.window, this.closeBtn)
 
         ::UI.setParent(0)
-        this.buttonCanvas = ::UI.canvas(this.layout.openerSize, this.layout.openerSize,
-                                        this.layout.openerX, this.layout.openerY)
-        ::UI.setWidgetStyle(this.buttonCanvas, ::UI.Cap.autoScaleDraw, 1)   // built outside the sheet push
-        ::UI.setWidgetStyle(this.buttonCanvas, ::UI.Cap.autoScalePos, 1)
-        ::UI.canvasDraw(this.buttonCanvas, function() { self.optionsButton() })
 
-        ::UI.pushFont(::fonts.body, false, this.layout.bodyFontSize)
+        ::UI.pushFont(::EX.fonts.body, false, this.layout.bodyFontSize)
         ::UI.pushStyle(::EUR.eurStyles.basic_4)
-        this.acceptScroll = ::EUR.scroll.create(this.layout.acceptW, this.layout.acceptH, 0, 0)
-        this.acceptCanvas = ::UI.canvas(0, 0)
-        ::UI.canvasDraw(this.acceptCanvas, function() { self.optionsAccept() })
-        ::EUR.scroll.sealOnTop(this.acceptScroll)
+        this.acceptScroll = ::EUR.scroll.create("optionsAccept", this.layout.acceptW, this.layout.acceptH, 0, 0)
+        ::UI.pushStyle({ [::UI.Metric.sliceBorderScale] = (::EUR.scroll.frameRatio() * 100.0 + 0.5).tointeger() })
+        ::UI.setSurfaceNine(::UI.Surface.panel, ::EX.shared.images.tileable_panel, ::UI.Slice.tile)
+        this.acceptCanvas = ::UI.panel("##eurOptionscanvas3", 0, 0, 0, 0,
+                                       [::UI.PanelFlag.borderless,
+                                        ::UI.PanelFlag.absoluteChildren, ::UI.PanelFlag.noScrollBodyY])
+        ::UI.popStyle()
+        ::UI.setParent(this.acceptScroll.window)
+                ::UI.onDraw(this.acceptCanvas, function() { self.optionsAccept() })
 
         this.yesBtn = ::UI.button("Yes", this.layout.acceptButtonW, this.layout.acceptButtonH)
         ::UI.placeAbsolute(this.yesBtn)
@@ -200,7 +204,7 @@ class eurOptions {
 
         ::UI.setParent(0)
         ::EUR.eurOptionsHandles <- "scrollWindow=" + this.scroll.window + " tabbar=" + this.tabbar
-            + " acceptWindow=" + this.acceptScroll.window + " buttonCanvas=" + this.buttonCanvas
+            + " acceptWindow=" + this.acceptScroll.window + " openBtn=" + this.openBtn
             + " closeBtn=" + this.closeBtn + " yesBtn=" + this.yesBtn + " noBtn=" + this.noBtn
             + " pages=" + this.pages.len()
         ::UI.widgetVisible(this.scroll.window, false)
@@ -226,40 +230,18 @@ class eurOptions {
     }
 
     function scrollArea(window) {
-        local rect = ::authored.rect(::UI.widgetRectGet(window))
-        if (rect == null) return null
-        local margins = ::EUR.scroll.setMargins("scroll")
-        if (margins == null) return null
-        return { x = rect[0] + margins[0], y = rect[1] + margins[1],
-                 width = rect[2] - margins[0] - margins[2], height = rect[3] - margins[1] - margins[3] }
+        local body = ::UI.contentRect(window, true, true)
+        if (body == null) return null
+        return { x = body[0], y = body[1], width = body[2], height = body[3] }
     }
 
     function drawContentBackground() {
         if (this.tabRect == null) return
 
         // tabRect comes from UI.contentRect, which answers PHYSICAL px.
-        ::EUR.scroll.drawSet("panel",
-                             this.tabRect[0], this.tabRect[1],
-                             this.tabRect[2], this.tabRect[3])
     }
 
-    function optionsHeading() {
-        local area = this.scrollArea(this.scroll.window)
-        if (area == null) return
-
-        ::UI.layoutAt(area.x, area.y + this.layout.headingOffsetY)
-        ::UI.pushFont(::fonts.body, false, this.layout.headingFontSize)
-        ::UI.pushStyle({ [::UI.Metric.alignX] = 1,
-                         [::UI.Metric.elideWidth] = area.width, [::UI.Colour.text] = this.layout.headingColour })
-        ::UI.text(::EUR.options_first_run ? "Welcome to EUR" : "Options")
-        ::UI.popStyle()
-        ::UI.popFont()
-    }
-
-    function optionsAccept() {
-        local area = this.scrollArea(this.acceptScroll.window)
-        if (area == null) return
-
+    function acceptPanel(area) {
         // Both insets are measured from the content AREA (the window minus the scroll set's
         // 9-slice margins), so an equal value on each axis puts the panel edge the same
         // distance inside on both. Negative grows it back out over the frame.
@@ -267,10 +249,15 @@ class eurOptions {
         local panelW = area.width - this.layout.acceptPanelInsetX * 2 + this.layout.acceptPanelWidthDelta
         local panelY = area.y + this.layout.acceptPanelInsetY + this.layout.acceptPanelOffsetY
         local panelH = area.height - this.layout.acceptPanelInsetY * 2 + this.layout.acceptPanelHeightDelta
-        ::EUR.scroll.drawSet("panel", panelX, panelY,
-                             panelW, panelH)
+        return { x = panelX, y = panelY, width = panelW, height = panelH }
+    }
 
-        this.acceptText(panelX, panelY, panelW,
+    function optionsAccept() {
+        local area = this.scrollArea(this.acceptScroll.window)
+        if (area == null) return
+
+        local panel = this.acceptPanel(area)
+        this.acceptText(panel.x, panel.y, panel.width,
                         area.y + area.height - this.layout.acceptButtonBottomInset,
                         "Accept and start campaign?")
     }
@@ -290,19 +277,25 @@ class eurOptions {
         ::UI.popFont()
     }
 
+    // A root button drawn from render(), so it lives independently of the window it opens.
     function optionsButton() {
-        if (!::EUR.in_campaign_map || !::EUR.show_options_button || ::EUR.icon_options == null) return
+        if (!::EUR.in_campaign_map || !::EUR.show_options_button || ::EUR.icon_options == null) {
+            if (this.openBtn != 0) { ::UI.widgetVisible(this.openBtn, false) }
+            return
+        }
         // Sits ON the game HUD, so it takes the game's factor rather than our layout's.
         local x = ::authored.hudX(this.layout.openerX)
         local y = ::authored.hudY(this.layout.openerY)
         local size = ::authored.hudX(this.layout.openerSize)
-        if (::UI.imageButton(::EUR.icon_options.img, size, size, x, y).clicked) {
+        local hit = ::UI.imageButton("##optionsOpen", ::EUR.icon_options.img, size, size, x, y)
+        this.openBtn = hit.handle
+        ::UI.widgetVisible(hit, true)
+        ::UI.tooltip(hit, "EUR Options")
+        if (hit.clicked) {
             local opening = !::EUR.show_options_window
             ::EUR.show_options_window = opening
             ::game.runScriptCommand("play_sound_event", opening ? "STRAT_SCROLL_OPENS" : "STRAT_SCROLL_CLOSES")
         }
-        ::UI.tooltipAt(x, y, size, size)
-        ::UI.tooltip(0, "EUR Options")
     }
 
     function sizeControl(w, controlW, text) {
@@ -317,7 +310,7 @@ class eurOptions {
     }
 
     function buildSection(parent, defs) {
-        foreach (o in defs) {
+        foreach (i, o in defs) {
             local w = null
             local kind = null
             local text = null
@@ -350,7 +343,7 @@ class eurOptions {
             if ("expand" in o) {
                 local header = ::UI.collapse(o.expand)
                 ::UI.collapseOpen(header, false)
-                if (this.bodyFontId != 0) { ::UI.setWidgetStyle(header, ::UI.Font.heading, this.bodyFontId) }
+                ::UI.setWidgetStyle(header, ::UI.Font.heading, ::fonts.game.verdanaSml)
                 ::UI.setWidgetStyle(header, ::UI.Metric.fontSize, this.layout.bodyFontSize)
                 if ("tip" in o) { ::UI.tooltip(header, o.tip) }
                 if (parent != null) { ::UI.addChild(parent, header) }
@@ -386,13 +379,16 @@ class eurOptions {
             else if ("button" in o)  { w = ::UI.button(o.button); if ("onClick" in o) ::UI.buttonClick(w, o.onClick); kind = "button" }
             else if ("label" in o)   {
                 w = ::UI.labelWrapped(o.label)
-                if (this.headingFontId != 0) { ::UI.setWidgetStyle(w, ::UI.Font.body, this.headingFontId) }
+                ::UI.setWidgetStyle(w, ::UI.Font.body, ::fonts.game.verdana)
                 ::UI.setWidgetStyle(w, ::UI.Metric.fontSize, this.layout.headingFontSize)
             }
             else if ("text" in o)    { w = ::UI.label(o.text) }
             else if ("desc" in o)    { w = ::UI.bullet(o.desc) }
-            else if ("sep" in o)     { w = ::UI.separator(); kind = "sep" }
-            else if ("draw" in o)    { w = ::UI.canvas(("w" in o) ? o.w : 0, ("h" in o) ? o.h : 0); ::UI.canvasDraw(w, o.draw); o.canvas <- w }
+            else if ("sep" in o)     { w = ::UI.separator("##sep" + i); kind = "sep" }
+            else if ("draw" in o)    { w = ::UI.panel("##draw" + i, ("w" in o) ? o.w : 0, ("h" in o) ? o.h : 0,
+                                                     [::UI.PanelFlag.transparent, ::UI.PanelFlag.borderless,
+                                                      ::UI.PanelFlag.absoluteChildren, ::UI.PanelFlag.noScrollBodyY])
+                                       ::UI.onDraw(w, o.draw); o.canvas <- w }
             if (w == null) continue
             if (kind != null && (kind in this.types)) { ::UI.setWidgetStyle(w, this.types[kind]) }
             if (kind != null && (kind in this.controls)) { this.sizeControl(w, this.controls[kind], text) }
@@ -426,19 +422,22 @@ class eurOptions {
     }
 
     function render() {
-        this.ensure()
+        this.buildOnce()
+        this.optionsButton()
 
         local showAccept = ::EUR.show_options_accept && ::EUR.in_campaign_map
         ::UI.widgetVisible(this.acceptScroll.window, showAccept)
         if (showAccept) {
             local screen = ::authored.screen()
-            ::EUR.scroll.place(this.acceptScroll.window, (screen[0] - this.layout.acceptW) / 2,
+            ::EUR.scroll.place(this.acceptScroll, (screen[0] - this.layout.acceptW) / 2,
                             (screen[1] - this.layout.acceptH) / 2, this.layout.acceptW, this.layout.acceptH)
         }
         this.acceptRaised = showAccept
 
         local accept = this.scrollArea(this.acceptScroll.window)
         if (accept != null) {
+            local panel = this.acceptPanel(accept)
+            ::UI.widgetRect(this.acceptCanvas, panel.x, panel.y, panel.width, panel.height)
             local half = (accept.width - this.layout.acceptButtonW) / 2
             local btnY = accept.y + accept.height - this.layout.acceptButtonBottomInset
             ::UI.widgetRect(this.yesBtn, accept.x + half - this.layout.acceptButtonSpreadX, btnY,
@@ -455,6 +454,7 @@ class eurOptions {
         this.shownLast = showOptions
         if (!showOptions) {
             ::UI.widgetVisible(this.closeBtn, false)
+            ::UI.widgetVisible(this.headingLabel, false)
             this.tabRect = null
             this.optionsRaised = false
             return
@@ -463,22 +463,30 @@ class eurOptions {
         local screen = ::authored.screen()
         local windowW = (this.layout.windowW > 0) ? this.layout.windowW : screen[0] - this.layout.windowMarginX
         local windowH = (this.layout.windowH > 0) ? this.layout.windowH : screen[1] - this.layout.windowMarginY
-        ::EUR.scroll.place(this.scroll.window, this.layout.windowX, this.layout.windowY, windowW, windowH)
+        ::EUR.scroll.place(this.scroll, this.layout.windowX, this.layout.windowY, windowW, windowH)
 
         ::UI.widgetVisible(this.closeBtn, true)
+
+        local head = this.scrollArea(this.scroll.window)
+        // A zero height lets the label measure its own line, and its rect width is the elide limit.
+        if (head != null) {
+            ::UI.widgetRect(this.headingLabel, head.x, head.y + this.layout.headingOffsetY, head.width, 0)
+        }
+        ::UI.textSet(this.headingLabel, ::EUR.options_first_run ? "Welcome to EUR" : "Options")
+        ::UI.widgetVisible(this.headingLabel, head != null)
 
         foreach (row in this.rows) {
             if (row.showFn != null) { ::UI.widgetVisible(row.w, row.showFn() ? true : false) }
             else if (row.showIf != null) { ::UI.widgetVisible(row.w, ::EUR[row.showIf] ? true : false) }
         }
 
-        local body = ::authored.rect(::UI.contentRect(this.scroll.window))
+        local body = ::UI.contentRect(this.scroll.window, true)
         if (body != null) {
             local panelX = body[0] + this.layout.panelInsetX + this.layout.panelOffsetX
             local panelY = body[1] + this.layout.panelInsetY + this.layout.panelOffsetY
             local panelW = body[2] - this.layout.panelInsetX * 2 + this.layout.panelWidthDelta
             local panelH = body[3] - this.layout.panelInsetY * 2 + this.layout.panelHeightDelta
-            this.tabRect = [panelX, panelY, panelW, panelH]
+            ::UI.widgetRect(this.contentBgCanvas, panelX, panelY, panelW, panelH)
             local innerX = panelX + this.layout.panelPadX
             local innerY = panelY + this.layout.panelPadY
             local innerW = panelW - this.layout.panelPadX * 2

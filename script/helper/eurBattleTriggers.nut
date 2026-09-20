@@ -4,10 +4,11 @@ if (::EUR.EUR_EVENT_TRIGGERS.battle) {
         ::EUR.logHelper("onPostBattle")
         if (eventData.faction.name == "slave") { return }
         ::EUR.in_campaign_map = true
-        // disabled (needs battle accessor): ::EUR.eurAddSpoils.getBattleOutcomeWin()
+        ::EUR.eurAddSpoils.getBattleOutcomeWin()
         if (eventData.faction.isPlayerControlled == 1) {
             ::EUR.show_alt_loot = true
-            // disabled: ::EUR.eurAddSpoils.postBattleChecks(eventData.faction)
+            ::EUR.eurAddSpoils.postBattleChecks(eventData.faction)
+            ::EUR.altLootWindow()
             //wait(restoreSplitUnits, 2, true)
         }
     })
