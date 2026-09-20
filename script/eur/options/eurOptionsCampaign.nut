@@ -94,7 +94,7 @@
             { check = "Allied vision", bind = ["game_options", "reveal_allied"], tip = "Reveal fog of war around allied settlements and armies." },
             { check = "Evolving Faction Names", bind = ["options_evolvingnames"], tip = "AI faction names change depending on their size." },
             { check = "Constructable Forts", bind = ["build_forts"], tip = "Build permanent forts in owned regions, scaled costs depending on how many forts are present.",
-              onChange = function(v) { ::EUR.build_forts = (v != 0); ::EUR.eurBuildFort.sync() } },
+              onChange = function(v) { ::EUR.build_forts = (v != 0); ::EUR.eurFortCreationToggle.sync() } },
             { check = "Autosaves", bind = ["game_options", "auto_saves_enabled"], tip = "Enable end turn rolling autosaves." },
             { check = "Settlement messages", bind = ["game_options", "siege_messages"], tip = "Enable events for AI settlement loss, such as capitals.",
               onChange = function(v) { ::game.campaign().setEventCounter("sieged_messages", v ? 1 : 0) } },

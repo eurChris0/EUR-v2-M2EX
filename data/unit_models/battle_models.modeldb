@@ -1,4 +1,4 @@
-22 serialization::archive 3 0 0 0 0 1617 0 0
+22 serialization::archive 3 0 0 0 0 1625 0 0
 5 blank 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 14 MTW2_Swordsman 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 19 ghash_overseer_upg0
 1 1
@@ -343555,3 +343555,1083 @@
 1
 20 MTW2_Javelin_primary
 0 16 -0.09 0 0 -0.35 0.8 0.6
+
+23 monster_creature_sauron
+1 1
+42 unit_models/_Units/Sauron/sauron_lod0.mesh 140000
+29
+7 england
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+5 slave
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+6 aztecs
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+14 teutonic_order
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+7 normans
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+8 portugal
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+7 hungary
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+3 hre
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+5 turks
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+6 norway
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+8 timurids
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+7 mongols
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+5 moors
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+7 ireland
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+6 saxons
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+6 poland
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+6 venice
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+5 spain
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+6 russia
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+6 sicily
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+7 denmark
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+4 merc
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+5 khand
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+6 france
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+9 byzantium
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+8 scotland
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+8 gundabad
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+5 egypt
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+5 milan
+49 unit_models/_Units/Sauron/textures/sauron.texture
+54 unit_models/_Units/Sauron/textures/sauron_norm.texture
+0
+0
+1
+0 
+23 monster_creature_sauron
+23 monster_creature_sauron
+2
+17 MTW2_Mace_Primary
+14 fs_test_shield
+0 -1 0 0 0 0 0 0
+19 monster_goblin_king
+1 1 
+47 unit_models/_Units/Heroes/goblin_king_lod0.mesh 100000 
+1 
+3 hre 
+54 unit_models/_Units/Heroes/textures/goblin_king.texture 
+61 unit_models/_Units/Heroes/textures/goblin_king_normal.texture 
+0
+1 
+3 hre 
+61 unit_models/_Units/Heroes/textures/goblin_king_weapon.texture 
+68 unit_models/_Units/Heroes/textures/goblin_king_weapon_normal.texture 0 
+1
+0 
+19 monster_goblin_king
+19 monster_goblin_king
+0 0 -1 0 0 0 0 0 0 
+14 monster_balrog
+1 1
+50 unit_models/_Units/EN_Lmail_Hmail/balrog_lod0.mesh 140000
+29
+3 hre
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+5 slave
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+7 england
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+6 aztecs
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+14 teutonic_order
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+7 normans
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+8 portugal
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+7 hungary
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+5 turks
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+6 norway
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+8 timurids
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+7 mongols
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+5 moors
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+7 ireland
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+6 saxons
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+6 poland
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+6 venice
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+5 spain
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+6 russia
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+6 sicily
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+7 denmark
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+4 merc
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+5 khand
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+6 france
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+9 byzantium
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+8 scotland
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+8 gundabad
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+5 egypt
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+5 milan
+57 unit_models/_Units/EN_Lmail_Hmail/textures/balrog.texture
+64 unit_models/_Units/EN_Lmail_Hmail/textures/balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+29
+3 hre
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+5 slave
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+7 england
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+6 aztecs
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+14 teutonic_order
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+7 normans
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+8 portugal
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+7 hungary
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+5 turks
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+6 norway
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+8 timurids
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+7 mongols
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+5 moors
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+7 ireland
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+6 saxons
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+6 poland
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+6 venice
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+5 spain
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+6 russia
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+6 sicily
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+7 denmark
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+4 merc
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+5 khand
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+6 france
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+9 byzantium
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+8 scotland
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+8 gundabad
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+5 egypt
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+5 milan
+58 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2.texture
+65 unit_models/_Units/EN_Lmail_Hmail/textures/balrog2_normal.texture 0
+1
+0 
+14 monster_balrog
+14 monster_balrog
+2
+24 MTW2_Balrog_Mace_Primary
+14 fs_test_shield
+0 16 -0.09 0 0 -0.35 0.8 0.6
+15 monster_balrog2
+1 1
+56 unit_models/_Units/EN_Lmail_Hmail/moria_balrog_lod0.mesh 140000
+29
+3 hre
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+7 normans
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+5 slave
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+4 merc
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+7 england
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+6 aztecs
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+14 teutonic_order
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+8 portugal
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+7 hungary
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+5 turks
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+6 norway
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+8 timurids
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+7 mongols
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+5 moors
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+7 ireland
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+6 saxons
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+6 poland
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+6 venice
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+5 spain
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+6 russia
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+6 sicily
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+7 denmark
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+5 khand
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+6 france
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+9 byzantium
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+8 scotland
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+8 gundabad
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+5 egypt
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+5 milan
+63 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog.texture
+70 unit_models/_Units/EN_Lmail_Hmail/textures/moria_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+0
+1
+0 
+15 monster_balrog2
+15 monster_balrog2
+0 0 -1 0 0 0 0 0 0
+22 monster_giant_spidersa
+1 1
+51 unit_models/_units/botet/mount_arachnarok_lod0.mesh 20000
+29
+6 poland
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+7 england
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+4 merc
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+5 slave
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+6 aztecs
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+14 teutonic_order
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+7 normans
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+8 portugal
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+7 hungary
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+3 hre
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+5 turks
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+6 norway
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+8 timurids
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+7 mongols
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+5 moors
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+7 ireland
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+6 saxons
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+6 venice
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+5 spain
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+6 russia
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+6 sicily
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+7 denmark
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+5 khand
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+6 france
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+9 byzantium
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+8 scotland
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+8 gundabad
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+5 egypt
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+5 milan
+43 unit_models/_units/botet/arachnarok.texture
+50 unit_models/_units/botet/arachnarok_normal.texture
+44 unit_sprites/turks_mount_elephant_sprite.spr
+0
+1
+0 
+22 monster_giant_spidersa
+22 monster_giant_spidersa
+0 0 -1 0 0 0 0 0 0
+22 monster_armored_balrog
+1 1
+58 unit_models/_Units/EN_Lmail_Hmail/armored_balrog_lod0.mesh 140000
+29
+7 normans
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+3 hre
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+5 slave
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+4 merc
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+7 england
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+6 aztecs
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+14 teutonic_order
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+8 portugal
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+7 hungary
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+5 turks
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+6 norway
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+8 timurids
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+7 mongols
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+5 moors
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+7 ireland
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+6 saxons
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+6 poland
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+6 venice
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+5 spain
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+6 russia
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+6 sicily
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+7 denmark
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+5 khand
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+6 france
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+9 byzantium
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+8 scotland
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+8 gundabad
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+5 egypt
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+5 milan
+65 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog.texture
+72 unit_models/_Units/EN_Lmail_Hmail/textures/armored_balrog_normal.texture
+46 unit_sprites/sicily_eeents_infantry_sprite.spr
+29
+7 normans
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+3 hre
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+5 slave
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+4 merc
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+7 england
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+6 aztecs
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+14 teutonic_order
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+8 portugal
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+7 hungary
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+5 turks
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+6 norway
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+8 timurids
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+7 mongols
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+5 moors
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+7 ireland
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+6 saxons
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+6 poland
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+6 venice
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+5 spain
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+6 russia
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+6 sicily
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+7 denmark
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+5 khand
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+6 france
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+9 byzantium
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+8 scotland
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+8 gundabad
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+5 egypt
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+5 milan
+62 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog.texture
+69 unit_models/_Units/EN_Lmail_Hmail/textures/mace_balrog_normal.texture 0
+1
+0 
+22 monster_armored_balrog
+22 monster_armored_balrog
+0 0 -1 0 0 0 0 0 0
+13 monster_beorn
+1 1
+52 unit_models/_units/chaos/beast/mount_beast_lod0.mesh 8400
+29
+4 merc
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+8 timurids
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+6 aztecs
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+14 teutonic_order
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+7 normans
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+8 portugal
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+7 hungary
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+3 hre
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+5 turks
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+6 norway
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+7 mongols
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+5 moors
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+7 ireland
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+6 saxons
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+7 england
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+6 poland
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+6 venice
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+5 spain
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+6 russia
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+6 sicily
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+7 denmark
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+5 slave
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+5 khand
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+6 france
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+9 byzantium
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+8 scotland
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+8 gundabad
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+5 egypt
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+5 milan
+44 unit_models/_units/chaos/beast/beast.texture
+51 unit_models/_units/chaos/beast/beast_normal.texture
+42 unit_sprites/brown_red_northern_sprite.spr
+0
+1
+0 
+13 monster_beorn
+13 monster_beorn
+0 0 -1 0 0 0 0 0 0
+26 monster_troll_engine_mount
+1 1
+56 unit_models/_Units/crags/troll_engine_bluecrag_lod0.mesh 100000
+29
+7 normans
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+5 slave
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+3 hre
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+6 aztecs
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+14 teutonic_order
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+8 portugal
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+7 hungary
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+5 turks
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+6 norway
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+8 timurids
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+7 mongols
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+5 moors
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+7 ireland
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+6 saxons
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+7 england
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+6 poland
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+6 venice
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+5 spain
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+6 russia
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+6 sicily
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+7 denmark
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+4 merc
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+5 khand
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+6 france
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+9 byzantium
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+8 scotland
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+8 gundabad
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+5 egypt
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+5 milan
+63 unit_models/_Units/crags/textures/troll_engine_bluecrag.texture
+58 unit_models/_Units/crags/textures/crags_troll_norm.texture
+47 unit_sprites/england_mountain_trolls_sprite.spr
+0
+1
+0 
+26 monster_troll_engine_mount
+26 monster_troll_engine_mount
+0 0 -1 0 0 0 0 0 0

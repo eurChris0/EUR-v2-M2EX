@@ -110,6 +110,7 @@ local MODULES = [
     "eur.battle.eursetBattleMapPKG",
     "eur.campaign.eurRevealAllied",
     "eur.campaign.eurWatchtowers",
+    "eur.campaign.eurForts",
     "eur.campaign.eurSpawnGeneral",
     "eur.campaign.eurAssignFactionTraits",
     "eur.campaign.eurReviveFactions",
